@@ -1,0 +1,15 @@
+<% if(typeof ErrMsg != 'undefined'){ %>
+    <% ErrMsg.news.forEach(function(error){ %>
+        <%= ErrMsg.news %>
+    <% }) %>
+<% } %>
+
+<% if(typeof SucMsg != 'undefined'){ %>
+    <% SucMsg.news.forEach(function(error){ %>
+        <%= SucMsg.news %>
+    <% }) %>
+<% } %>
+
+<% if(error != ''){ %>
+    <%= error %>
+<% } %>

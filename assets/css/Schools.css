@@ -1,0 +1,845 @@
+/* SCHOOL PAGE STARTING --------------------------------- -1920px-------------------------------- */
+/* EDUDICTIVE FOR SCHOOLS - 1920px START */
+.school-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 125px 3vh 3vh 3vh;
+}
+
+.edu-for-sch-block {
+  display: flex;
+  justify-content: space-between;
+  margin: 15vh auto 8vh;
+  width: 90%;
+}
+.edu-for-sch-written {
+  height: auto;
+  width: 47%;
+}
+.edu-for-sch-illust {
+  height: auto;
+  width: 47%;
+  font-family: Proxima-Nova;
+  font-size: 42px;
+  display: flex;
+  align-items: center;
+  color: #4e4e4e;
+  text-align: center;
+}
+
+.illust-school{
+  width:118%;
+  height: 97%;
+}
+
+.illust-image{
+  width:60%;
+  height:60%;
+}
+.edudictive-for {
+  display: flex;
+}
+.edudictive-for img {
+  height: 50px;
+  width: 250px;
+  margin-right: 20px;
+}
+.edudictive-for h2 {
+  font: Italic 43px Sansation;
+  color: #408cff;
+  margin: 0;
+}
+.edu-for-sch-written h1 {
+  font: Bold 120px Avenir-Next;
+  color: #6a11cb;
+  margin: 0;
+}
+.para {
+  text-align: left;
+  font-weight: 200;
+  font-family: Avenir-Next;
+  font-size: 28px;
+  color: #747474;
+}
+.edu-for-sch-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.view-programs {
+  background: linear-gradient(101deg, #8e2de2 0%, #4a00e0 100%);
+  border-radius: 15px;
+  height: 7vh;
+  width: 47%;
+  color: #ffffff;
+  text-align: center;
+  font: Bold 22px Avenir-Next;
+}
+.school-plans {
+  text-align: center;
+  background-color: #ffffff;
+  font: Bold 22px Avenir-Next;
+  border: 3px solid #464646d6;
+  border-radius: 15px;
+  height: 7vh;
+  width: 47%;
+  color: #464646d6;
+}
+
+/* EDUDICTIVE FOR SCHOOLS - 1920px END*/
+
+/* WHAT DO SCHOOLS STUDENTS GET - 1920px START*/
+
+.heading-data{
+  margin-top:10%;
+}
+
+.headline {
+  color: #6a11cb;
+  text-align: center;
+  font: Bold 60px Avenir-Next;
+  margin: 0;
+}
+
+.head-text {
+  font:Bold 30px Avenir-Next;
+  text-align: center;
+  color: #646464;
+  width:70%;
+  margin:20px auto 60px;
+}
+
+.illus-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3vh;
+  width: 100%;
+}
+
+.illus {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+}
+
+.illus-required {
+  display: flex;
+  height: 37.5vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.illus-req {
+  font: 34px Proxima-Nova;
+  color: #4e4e4e;
+  text-align: center;
+}
+
+.illus-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.illus-tag {
+  margin-top: -8%;
+  color: #6a11cb;
+  font: Bold 28px Proxima-Nova;
+  text-align: center;
+}
+
+.illus-content {
+  width: 105%;
+  margin-top:-1%;
+  font: 24px Proxima-Nova;
+  text-align: center;
+  color: #000000d6;
+}
+/* WHAT DO SCHOOLS STUDENTS GET - 1920px START*/
+
+/* LONG TERM PLANS FOR SCHOOLS - 1920px START*/
+.sub-div-a {
+  width: 100%;
+  margin-top: 15vh;
+}
+
+.sub-div-a h1 {
+  text-align: center;
+  font: Bold 60px Avenir-Next;
+  color: #6a11cb;
+}
+
+.sub-div-a p {
+  width: 48%;
+  margin: auto;
+  text-align: center;
+  font:Bold 32px Proxima-Nova;
+  color: #464646d6;
+  margin-top:-1%;
+}
+
+.sub-div-b {
+  margin-top: 6%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 8vh;
+}
+
+.div1 {
+  width: 38%;
+  text-align: center;
+}
+
+.div1 h4 {
+  font: Bold 28px Proxima-Nova;
+  color: #6a11cb;
+}
+
+.div1 p {
+  font: 24px Proxima-Nova;
+  color: black;
+}
+/* LONG TERM PLANS FOR SCHOOLS - 1920px END*/
+/* CAMPS FOR SCHOOLS  -1920px START*/
+
+.all-camps-det {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.all-camps-det .camp {
+  width: 31%;
+  box-shadow: 10px 10px 24px #00000029;
+  border-radius: 45px;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 45px;
+}
+.camp-summer {
+  background: transparent linear-gradient(179deg, #c02425 0%, #f0cb35 100%);
+}
+.camp-winter {
+  background: transparent linear-gradient(0deg, #4ca1af 0%, #2c3e50 100%);
+}
+.camp-skillowl {
+  background: transparent linear-gradient(180deg, #8e2de2 0%, #4a00e0 100%);
+}
+.camp h2 {
+  font-size: 48px;
+  line-height: 70px;
+  font-family: "Product-Sans";
+  margin: 0;
+}
+.inr {
+  font-size: 46px;
+  font-family: "Proxima-Nova";
+  line-height: 62px;
+  margin: 0;
+}
+.onward {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "Proxima-Nova-Extra-Bold";
+  margin: 0;
+}
+.begin-date {
+  font-size: 24px;
+  line-height: 50px;
+  font-family: "Proxima-Nova";
+  color: #ffffffd6;
+}
+.cam-det {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cam-det ul {
+  width: 90%;
+  color: #000000;
+  font-size: 19px;
+  font-family: "Proxima-Nova";
+  list-style: none;
+  opacity: 0.8;
+  padding: 0;
+  letter-spacing: 1px;
+  text-align: left;
+  margin: 5vh auto;
+}
+.cam-det ul li {
+  padding: 10px 0 0 0;
+  display: flex;
+}
+.cam-det ul li img {
+  width: 28px;
+  height: 28px;
+  margin-right: 5px;
+}
+#cross {
+  color: #c0c0c0;
+}
+.cam-det button {
+  border: none;
+  font-size: 20px;
+  font-family: "Product-Sans";
+  color: #ffffff;
+  box-shadow: 6px 6px 20px #00000029;
+  background: #00dc67;
+  width: 80%;
+  margin: 0 auto;
+  height: 7vh;
+  border-radius: 20px;
+  margin: 4vh auto;
+}
+/* CAMPS FOR SCHOOLS  -1920px END*/
+
+/* SCHOOL PAGE STARTING --------------------------------- -480px-------------------------------- */
+@media screen and (max-width: 480px) {
+  .edu-for-sch-block {
+    flex-direction: column-reverse;
+  }
+
+  .edu-for-sch-written {
+    width: 100%;
+    margin: auto;
+  }
+
+  .edu-for-sch-illust {
+    width: 100%;
+    margin: 25vh auto;
+  }
+
+  .para {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+
+  .edudictive-for h2 {
+    font: Italic 43px Sansation;
+  }
+
+  .edu-for-sch-written h1 {
+    font: Bold 15vw Avenir-Next;
+  }
+
+  .edu-for-sch-buttons {
+    display: block;
+  }
+
+  .view-programs {
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .school-plans {
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .school-container {
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .headline {
+    font-size: 8.86vw;
+  }
+
+  .head-text {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+
+  .illus-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .illus {
+    width: 90%;
+  }
+
+  .illus-req {
+    font-size: 20px;
+  }
+
+  .illus-tag {
+    font-size: 6vw;
+  }
+
+  .illus-content {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+
+  .all-camps-det .camp {
+    width: 100%;
+  }
+
+  .all-camps-det {
+    flex-direction: column;
+  }
+
+  .all-camps-det .camp {
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  .camp h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .inr {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .cam-det ul li {
+    padding: 5px 0 0 0;
+  }
+
+  .onward {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .begin-date {
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+  .cam-det ul {
+    font-size: 4vw;
+    margin: 2vh auto;
+  }
+
+  .cam-det button {
+    margin: 2vh auto;
+  }
+
+  .sub-div-a h1 {
+    width: 100%;
+    font-size: 8.86vw;
+  }
+
+  .sub-div-a p {
+    width: 100%;
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+
+  .sub-div-b {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .div1 {
+    width: 100%;
+    margin-top: 5vh;
+  }
+
+  .div1 h4 {
+    font-size: 7vw;
+  }
+
+  .div1 p {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+}
+
+/* Media for tablets */
+@media only screen and (min-width:481px) and (max-width: 768px) {
+  .school-container{
+    width: 90%;
+  }
+
+  .edu-for-sch-block {
+    flex-direction: column;
+  }
+
+  .edu-for-sch-written {
+    width: 100%;
+    margin: auto;
+  }
+
+  .edu-for-sch-illust {
+    width: 100%;
+    margin: 25vh auto;
+  }
+
+  .para {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+
+  .edudictive-for h2 {
+    font: Italic 43px Sansation;
+  }
+
+  .edu-for-sch-written h1 {
+    font: Bold 15vw Avenir-Next;
+  }
+
+  .edu-for-sch-buttons {
+    flex-direction: column;
+  }
+
+  .view-programs {
+    width: 90%;
+    margin-top: 10px;
+    height: 7vh;
+  }
+
+  .school-plans {
+    width: 90%;
+    margin-top: 10px;
+    height: 7vh;
+  }
+
+  .school-container {
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .headline {
+    font-size: 8.86vw;
+  }
+
+  .head-text {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+
+  .illus-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .illus {
+    width: 90%;
+  }
+
+  .illus-req {
+    font-size: 20px;
+  }
+
+  .illus-tag {
+    font-size: 6vw;
+  }
+
+  .illus-content {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+
+  .all-camps-det .camp {
+    width: 100%;
+  }
+
+  .all-camps-det {
+    flex-direction: column;
+  }
+
+  .all-camps-det .camp {
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  .camp h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .inr {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .cam-det ul li {
+    padding: 5px 0 0 0;
+  }
+
+  .onward {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .begin-date {
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+  .cam-det ul {
+    font-size: 4vw;
+    margin: 2vh auto;
+  }
+
+  .cam-det button {
+    margin: 2vh auto;
+  }
+
+  .sub-div-a h1 {
+    width: 100%;
+    font-size: 8.86vw;
+  }
+
+  .sub-div-a p {
+    width: 100%;
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+
+  .sub-div-b {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .div1 {
+    width: 100%;
+    margin-top: 5vh;
+  }
+
+  .div1 h4 {
+    font-size: 7vw;
+  }
+
+  .div1 p {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+
+  .crs_content {
+    margin: 100px auto;
+  }
+
+  .courses h1 {
+    font: Bold 7.86vw Avenir-Next;
+  }
+
+  .crs_card_wrap {
+    width: 100vw;
+    margin: 0;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    overflow-x: scroll;
+  }
+
+  .crs_card {
+    width: 70vw;
+    min-width: 70vw;
+    margin: 0 3vw;
+  }
+
+  .crs_hig {
+    transform: scale(1);
+    margin-right: 3vw;
+    margin-left: 0;
+  }
+
+  .crs_non_hig {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
+    pointer-events: all;
+  }
+
+  .crs_dte {
+    height: 8vw;
+    width: 35vw;
+    font: 3.5vw Avenir-Next;
+    margin-top: 8vw;
+    margin-bottom: 4vw;
+  }
+
+  .crs_nme {
+    min-height: 30vw;
+    padding-right: 0;
+    padding-left: 4vw;
+    box-sizing: border-box;
+  }
+
+  .crs_des {
+    font: 6.86vw Avenir-Next;
+  }
+
+  .crs_tpe {
+    font: 200 4vw Avenir-Next;
+  }
+
+  .crs_rate {
+    padding-left: 4vw;
+    padding-right: 0;
+    font: 3vw Avenir-Next;
+    margin: 0;
+  }
+
+  .stars {
+    width: 18.3vw;
+  }
+
+  .stars img {
+    height: 4vw;
+    width: 4vw;
+    min-height: 4vw;
+    min-width: 4vw;
+  }
+
+  .r_num {
+    margin: 1vw 0 0 7vw;
+  }
+
+  .crs_expl {
+    margin: 4vw;
+  }
+
+  .crs_info,
+  .crs_rgstr {
+    height: 8vw;
+    width: 26vw;
+    font: 3vw Avenir-Next;
+    margin: 0 1vw;
+  }
+
+  .sld_lft,
+  .sld_rgt {
+    display: none;
+  }
+}
+
+/* Media for big tabs */
+@media only screen and (min-width:769px) and (max-width: 912px) {
+  header{
+    display: none;
+  }
+
+  .school-container{
+    width: 90%;
+  }
+
+  .edu-for-sch-buttons{
+    flex-direction: column;
+  }
+
+  .view-programs{
+    width: 90%;
+    margin-top: 10px;
+    height: 7vh;
+  }
+
+  .school-plans{
+    margin-top: 10px;
+    width: 90%;
+    height: 7vh;
+  }
+
+  .all-camps-det{
+    flex-direction: column;
+  }
+
+  .camp{
+    width: 100% !important;
+    margin-bottom: 5vh;
+  }
+
+  .edu-for-sch-block {
+    flex-direction: column;
+  }
+
+  .edu-for-sch-written {
+    width: 100%;
+    margin: auto;
+  }
+
+  .edu-for-sch-illust {
+    width: 100%;
+    margin: 25vh auto;
+    justify-content: center;
+  }
+
+  .para {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+
+  .illus-container{
+    flex-direction: column;
+  }
+
+  .illus{
+    width: 100%;
+  }
+
+  .sub-div-b{
+    flex-direction: column;
+  }
+
+  .div1{
+    width: 100%;
+  }
+}
+
+/* Media for small laptops */
+@media only screen and (min-width:913px) and (max-width: 1200px) {
+  header{
+    display: none;
+  }
+
+  .school-container{
+    width: 90%;
+  }
+
+  .all-camps-det{
+    flex-direction: column;
+  }
+
+  .camp{
+    width: 90% !important;
+    margin-bottom: 5vh;
+  }
+
+  .edu-for-sch-block{
+    width: 90%;
+  }
+
+  .edu-for-sch-buttons{
+    flex-direction: column;
+  }
+
+  .view-programs{
+    width: 90%;
+    margin-top: 10px;
+    height: 7vh;
+  }
+
+  .school-plans{
+    margin-top: 10px;
+    width: 90%;
+    height: 7vh;
+  }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1440px) {
+  header{
+    display: none;
+  }
+
+  .school-container{
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1600px) {
+}
+
+@media only screen and (min-width: 1601px) and (max-width: 1920px) {
+}

@@ -1,0 +1,42 @@
+{
+  "name": "edudictive-v2.0",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BhupenPal/Edudictive-v2.0.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BhupenPal/Edudictive-v2.0/issues"
+  },
+  "homepage": "https://github.com/BhupenPal/Edudictive-v2.0#readme",
+  "dependencies": {
+    "admin-bro": "^2.4.2",
+    "admin-bro-expressjs": "^2.0.5",
+    "admin-bro-mongoose": "^0.5.2",
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "express-formidable": "^1.2.0",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.9.7",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.6",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-linkedin-oauth2": "^2.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

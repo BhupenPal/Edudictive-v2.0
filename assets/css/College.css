@@ -1,0 +1,190 @@
+.edu-for-sch-written h1 {
+  color: #004e92 !important;
+}
+
+.view-programs {
+  background: linear-gradient(101deg, #00063d 0%, #004e92 100%) !important;
+  margin-top:3vh ;
+}
+
+.para{
+  font:Bold 32px Proxima-Nova;
+}
+.school-plans{
+  margin-top:3vh;
+}
+
+.headline {
+  color: #004e92 !important;
+}
+
+.head-text{
+  width:80%;
+}
+
+.illus-tag {
+  color: #004e92 !important;
+}
+
+.sub-div-a h1 {
+  color: #004e92;
+  width: 100%;
+}
+
+.college-illust{
+  width:98%;
+  height: 98%;
+  padding-left: 0%;
+}
+
+.sub-div-a p{
+  width:54%;
+}
+
+.camp-container {
+  justify-content: space-around;
+  width: 80%;
+  margin: 2vh auto;
+  display: flex;
+}
+
+.camp-container-outer h2 {
+  color: white;
+  font: Bold 72px/93px Avenir-Next;
+  width: 60%;
+  margin-left: 9%;
+  padding-top: 10vh;
+}
+
+.camp-container-outer {
+  width: 100%;
+  background: url(../images/svgs/campagebg.svg);
+  height: 75vh;
+  box-shadow: 6px 6px 25px #00000029;
+  background-position: 40% 40%;
+  background-size: cover;
+  border-radius: 54px;
+  background-repeat: no-repeat;
+}
+
+.camp-container img {
+  margin-top: -30vh;
+  margin-left: 10%;
+}
+
+.camp-written p {
+  color: #ffffff;
+  font: 200 28px/34px Avenir-Next;
+  width: 45%;
+}
+
+.camp-written button {
+  background: transparent linear-gradient(99deg, #ffffff 0%, #eaeaead6 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 41px;
+  font: Bold 22px/14px Avenir-Next;
+  width: 384px;
+  height: 84px;
+  margin-top: 2vh;
+  color: #000000;
+}
+@media only screen and (max-width: 480px) {
+  .camp-container-outer h2 {
+    width: 80%;
+    margin-left: 8%;
+    font-size: 7.5vw;
+    line-height: 1.2;
+  }
+
+  .camp-container-outer {
+    height: 65vh;
+    background-position: 10% 50%;
+  }
+
+  .camp-container {
+    width: 84%;
+  }
+
+  .camp-written {
+    width: 100%;
+  }
+
+  .camp-written p {
+    font-size: 3.3vw;
+    line-height: 1.21;
+    width: 90%;
+  }
+
+  .camp-written button {
+    height: 6.5vh;
+    width: 75vw;
+    font-size: 3.7vw;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+  .camp-container-outer h2 {
+    font-size: 5.5vw;
+    width: 80%;
+    line-height: 1.5;
+    margin-left: 6%;
+  }
+
+  .about-camp-insider {
+    flex-direction: column;
+  }
+
+  .camp-written p {
+    font-size: 2.9vw;
+    line-height: 1.2;
+  }
+
+  .camp-written button {
+    width: 300px;
+    height: 70px;
+    font-size: 2.9vw;
+  }
+
+  .camp-container {
+    width: 90%;
+  }
+
+  .camp-container-outer {
+    background-position: 50% 0%;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 913px) {
+  .camp-container-outer h2 {
+    font-size: 5.5vw;
+    width: 80%;
+    line-height: 1.1;
+    margin-left: 6%;
+  }
+
+  #logo-white {
+    margin-left: 6%;
+  }
+
+  .about-camp-insider {
+    flex-direction: column;
+  }
+
+  .camp-written p {
+    font-size: 2.2vw;
+    line-height: 1.2;
+  }
+
+  .camp-written button {
+    width: 300px;
+    height: 70px;
+    font-size: 2.2vw;
+  }
+
+  .camp-container {
+    width: 90%;
+  }
+
+  .camp-container-outer {
+    background-position: 60% 50%;
+  }
+}

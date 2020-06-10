@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/index.css" />
+  <link rel="stylesheet" href="/assets/css/Home.css" />
+  <link rel="stylesheet" href="/assets/css/all.min.css" />
+  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+  <title>Edudictive | Home</title>
+</head>
+
+<body>
+  <%-include("./Components/Header.ejs") %>
+  <div class="content-wrap">
+    <!-- GET SKILLS -->
+    <div class="get-skills">
+      <div class="get-skills-content">
+        <div class="get-skills-header">
+          <div class="get-skills-heading">
+            Getting skilled has never been easier
+          </div>
+          <div class="get-skills-platform">
+            A one-stop educational platform for school and college students
+          </div>
+        </div>
+        <div class="skill-illustrate">
+          <img src="/assets/images/svgs/homepage-hero.svg" />
+        </div>
+      </div>
+      <div class="skill-handle">
+        <button id="skill-register" class="hvr-grow" onclick="ScrollHandler('.crs_content')">
+          Register for programs
+        </button>
+        <button id="skill-offers" class="hvr-grow">Our Offerings</button>
+      </div>
+    </div>
+    <!-- GET SKILLS -->
+    <!-- OUR PROGRAMS -->
+    <div class="our-programs">
+      <h2 class="op-heading">Our various programs got you covered</h2>
+      <h5 class="op-description">
+        Programs for school and college students are laid over a large domain that contain various technical and
+        non-technical sub-domains.
+      </h5>
+      <div class="op-options">
+        <div class="op-option-block">
+          <img src="/assets/images/svgs/school-prog.svg" />
+          <h2>For School Students</h2>
+          <p>
+            Spending an hour a day from the very early age would be better
+            than spending 8 to 10 hours a day at the peak of their careers.
+          </p>
+          <button  class="hvr-grow" onclick="LinkHandle('/programs/schools')">Know more</button>
+        </div>
+        <div class="op-option-block">
+          <img src="/assets/images/svgs/college-prog.svg" />
+          <h2>For College Students</h2>
+          <p>
+            Making the college students financially independent and providing
+            them with a worthy skillset is our only mission.
+          </p>
+          <button class="hvr-grow" onclick="LinkHandle('/programs/colleges')">
+            Know more
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- OUR PROGRAMS -->
+    <!-- SUN BURN -->
+    <div class="sun-burn">
+      <h1>We provide what we promise !</h1>
+      <div class="sun-burn-detailed">
+        <div class="sun-burn-text">
+          <h2>
+            Each of our <span id="blue-span">training programs</span> focuses
+            on practical hands-on learning
+          </h2>
+          <p>
+            The course structure for each training program is curated as per
+            industry standards. All of our programs have an inclination
+            towards entrepreneuship. We have curated courses in various
+            technological, non-technological & financial domains, that will
+            enable you to start your own venture or make you ready to work in
+            industry/corporate. We also provides you a platform, to interact
+            with like minded people.
+          </p>
+          <div class="sun-burn-det-svg">
+            <div class="sun-svg">
+              <img src="/assets/images/svgs/lecture.svg" alt="" />
+              <div>
+                15+ Training Programs <br />
+                done till now
+              </div>
+            </div>
+            <div class="sun-svg">
+              <img src="/assets/images/svgs/raise-hand.svg" alt="" />
+              <div>
+                800+ students <br />
+                participated
+              </div>
+            </div>
+            <div class="sun-svg">
+              <img src="/assets/images/svgs/faculty.svg" alt="" />
+              <div>
+                Top Notch Faculty <br />
+                for students
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="success-flame">
+          <img src="/assets/images/flame.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- SUN BURN -->
+
+    <!-- COURSES -->
+    <%-include("./Components/Courses.ejs") %>
+    <!-- COURSES -->
+
+    <!-- INTERN OPPORTUNITY -->
+    <div class="intern-opt">
+      <h2>Amazing internship opportunities</h2>
+      <p>
+        Top performing students get the opportunity to get referrals into the
+        best companies in various domains.
+      </p>
+      <div class="intern-illustration">
+        <img src="/assets/images/svgs/internship-home.svg" />
+      </div>
+      <div class="company-logo">
+        <img src="/assets/images/svgs/Amazon.svg" id="AmazonLogo" alt="Amazon" />
+        <img src="/assets/images/svgs/Microsoft.svg" alt="Microsoft" />
+        <img src="/assets/images/svgs/Deloitte.svg" alt="Deloitte" />
+      </div>
+    </div>
+    <!-- INTERN OPPORTUNITY -->
+
+    <!-- BLOGS -->
+    <div class="blogs-brief">
+      <h1>Recent Blogs</h1>
+
+      <div class="blog-detail-container">
+        <div class="blog-structure">
+          <h2 class="blog-heading">
+            How to pitch your startup idea to an investor?
+          </h2>
+          <h3 class="blog-writer">
+            By Vaishnavi Puri | Published on 01 April 2020
+          </h3>
+          <h4 class="blog-time">5-Minute Read</h4>
+          <button class="blog-btn hvr-grow" onclick="LinkHandle('http:\/\/blogs.edudictive.in?p=37', 'blank')">
+            Open
+          </button>
+        </div>
+
+        <div class="sub-blog-structure">
+          <div class="sub-blog-secondary">
+            <h2 class="sub-blog-heading">GSOC Preparation</h2>
+            <h3 class="blog-writer">
+              By Vaishnavi Puri | Published on 10 March 2020
+            </h3>
+            <h4 class="blog-time">12-Minute Read</h4>
+            <button class="blog-btn hvr-grow" onclick="LinkHandle('http:\/\/blogs.edudictive.in?p=37', 'blank')">
+              Open
+            </button>
+          </div>
+          <button class="read-more-blogs hvr-grow" onclick="LinkHandle('http:\/\/blogs.edudictive.in', 'blank')">
+            Read More Blogs
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- BLOGS -->
+  </div>
+  <%-include("./Components/Footer.ejs") %>
+  <script src="/assets/scripts/index.js"></script>
+  <script src="/assets/scripts/Home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+.reg-container {
+  padding-top: 125px;
+}
+
+.register {
+  margin: 80px auto;
+  width: 45%;
+  background: white;
+  box-shadow: 6px 6px 25px #00000029;
+  border-radius: 54px;
+}
+
+.reg-info {
+  width: 80%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.reg-heading {
+  color: #408CFF;
+  font: Bold 80px Avenir-Next;
+  padding-bottom: 40px;
+  margin: 0;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-flexer {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-flexer input,
+.input-flexer select {
+  width: 49%;
+}
+
+input,
+select {
+  font: 22px Proxima-Nova;
+  height: 55px;
+  padding-top: 3px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-left: 3%;
+}
+
+.container {
+  font: 20px Avenir-Next;
+  font-weight: 200;
+}
+
+.reg-terms {
+  margin-bottom: 35px;
+  margin-top: 20px;
+}
+
+.reg-btn {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 71px;
+  width: 100%;
+  background: #00dc67;
+  text-align: center;
+  box-shadow: 6px 6px 20px #00000029;
+  border-radius: 15px;
+  font: Bold 21px Product-Sans;
+  color: #ffffff;
+}
+
+.reg-banner {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
+  align-items: center;
+  font: 25px Proxima-Nova;
+  text-align: center
+}
+
+.banner-line {
+  height: 1px;
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.signin-social-med {
+  width: 55%;
+  margin: 40px auto;
+}
+
+.reg-acc {
+  text-align: center;
+  font: 28px Proxima-Nova;
+}
+
+/*  PAGE STARTING --------------------------------- -480px-------------------------------- */
+@media screen and (max-width: 480px) {
+  .reg-container {
+      padding-top: 80px;
+  }
+
+  .register {
+      width: 90%;
+      margin: 6.2vw auto;
+      border-radius: 8.4vw;
+  }
+
+  .reg-info {
+      width: 85%;
+      padding: 9vw 0;
+  }
+
+  .reg-heading {
+      font-size: 10vw;
+      padding-bottom: 6vw;
+  }
+
+  .input-flexer {
+      flex-direction: column;
+  }
+
+  .input-flexer input,
+  .input-flexer select {
+      width: 100%;
+  }
+
+  input,
+  select {
+      font: 3.7vw Proxima-Nova;
+      height: 9.5vw;
+      margin-bottom: 3vw;
+      padding-left: 5%;
+  }
+
+  .container {
+      font-size: 3vw;
+  }
+
+  .checkmark {
+      width: 18px;
+      height: 18px;
+      margin-top: 1vw;
+  }
+
+  .container .checkmark::after {
+      left: 6px;
+      top: 3px;
+      width: 3px;
+      height: 7px;
+  }
+
+  .reg-btn {
+      height: 9.5vw;
+      font-size: 3.7vw;
+      border-radius: 2.5vw;
+  }
+
+  .reg-banner {
+      font-size: 4vw;
+  }
+
+  .banner-line {
+      width: 20%;
+  }
+
+  .signin-social-med {
+      width: 70%;
+      margin: 25px auto;
+  }
+
+  .signin-social-med img {
+      width: 35px;
+      height: 35px;
+  }
+
+  .reg-acc {
+      font-size: 4vw;
+  }
+
+}

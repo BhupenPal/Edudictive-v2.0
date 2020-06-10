@@ -1,0 +1,524 @@
+/* ---------------first division starts---------------------- */
+.main_con_container{
+    padding-top: 125px;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#6A11CB, #2575FC);
+    box-shadow: 6px 6px 25px #00000029;
+}
+
+.main-content {
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+}
+
+.content {
+    margin-top: 1.5vh;
+    height: 80vh;
+    width: 67%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-head h4 {
+    font: 20px Proxima-Nova-Extra-Bold;
+    color: white;
+    letter-spacing: 0.7px;
+}
+
+.content-head h1 {
+    font: bold 60px Avenir-Next;
+    color: white;
+    line-height: 55px;
+}
+
+.content-head h2 {
+    font: 48px Avenir-Next;
+    font-weight: 200;
+    color: white;
+    line-height: 0;
+}
+
+.ratings img {
+    width: 22px;
+}
+
+#half-star-head {
+    width: 24px;
+}
+
+.ratings {
+    margin-top: 2.3vh;
+    color: #FFCA36;
+    font: 22px Proxima-Nova;
+}
+
+.white-text {
+    color: white;
+}
+
+.content-about {
+    display: flex;
+    margin-right: 12%;
+    margin-top: 1.8%;
+}
+
+.about-text {
+    width: 70%;
+}
+
+.about-text a {
+    text-decoration: none;
+    font: 25px Avenir-Next;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.about-text a:hover {
+    color: #FFCA36;
+    transition: 300ms ease;
+}
+
+.about-details {
+    width: 30%;
+}
+
+.write-up h3 {
+    font: 35px Avenir-Next;
+    font-weight: 200;
+    color: white;
+    line-height: 0;
+    margin-top: 5vh;
+}
+
+.write-up p {
+    font: 20px Proxima-Nova;
+    color: white;
+    padding: 1vh 3vw 0 0;
+}
+
+.detail-write-up h3 {
+    font: bold 25px Avenir-Next;
+    color: white;
+    line-height: 0;
+    letter-spacing: 0.5px;
+    margin-top: 4.5vh;
+}
+
+.detail-write-up p {
+    font: 22px Proxima-Nova;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.register {
+    margin-top: 3vh;
+    background: linear-gradient(151deg, #6A11CB 0%, #2575FC 100%);
+    border-radius: 30px;
+    box-shadow: 6px 6px 30px #00000029;
+    width: 33%;
+    padding: 3vw;
+    box-sizing: border-box;
+    right: 10%;
+}
+
+.lang-imgs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7vh;
+}
+
+.reg-details h2 {
+    font: 32px Avenir-Next;
+    font-weight: 200;
+    line-height: 0;
+    color: white;
+}
+
+.reg-details h1 {
+    font: 65px Proxima-Nova;
+    font-weight: bold;
+    color: white;
+    line-height: 0;
+}
+
+#discount {
+    color: #EFEFEF;
+    font: 32px Proxima-Nova;
+    line-height: 0;
+}
+
+#discount span {
+    font-size: 28px;
+}
+
+#discount-tag {
+    border: 1px solid white;
+    border-radius: 7px;
+    width: 220px;
+    padding: 7px;
+    color: white;
+    font: 15px Avenir-Next;
+    font-weight: 200;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.reg-btns {
+    margin-top: 5vh;
+}
+
+.btn {
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 6px 6px 20px #00000029;
+    font: 22px Product-Sans;
+    font-weight: bold;
+}
+
+#cart-btn {
+    color: #4F4F4F;
+    background-color: white;
+}
+
+#cart-btn:hover {
+    background-color: rgba(255, 255, 255, 0.90);
+}
+
+#buy-btn {
+    background-color: #00DC67;
+    color: white;
+}
+
+#buy-btn:hover {
+    background-color: rgba(0, 220, 103, 0.9);
+}
+
+.reg-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3.5vh;
+    color: white;
+    font: 20px Proxima-Nova;
+}
+
+/* ---------------first division ends---------------------- */
+
+
+/* ---------------second division starts------------------- */
+.main-program {
+    margin-left: 200px;
+    width: 46%;
+}
+
+.program-heading h1 {
+    font: Bold 36px Avenir-Next;
+    color: #000000D6;
+}
+
+.program-heading p {
+    font: 22px Proxima-Nova;
+    color: #000000D6;
+    margin-bottom: 3.5vh;
+}
+
+.program-content-main {
+    display: flex;
+}
+
+.program-content-main div {
+    width: 46%;
+}
+
+.program-content-main div span {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.program-content-main div span p {
+    margin: 0 0 0.84%;
+    font: 20px Proxima-Nova;
+    color: black;
+    opacity: 0.8;
+    width: 80%;
+}
+
+.program-content-main div span i {
+    font-size: 20px;
+    margin: 0.42% 0% 1.1%;
+    color: #0065FF;
+    text-shadow: 2px #0065FF;
+}
+
+.program-struct {
+    width: 82%;
+    box-shadow: 6px 6px 25px #00000029;
+    ;
+    border-radius: 54px;
+}
+
+.program-struct-sub {
+    padding: 5% 0 3% 0;
+    margin: auto;
+    width: 86%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.struct-dropbtn {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    font: Bold 32px Proxima-Nova;
+    color: #222222;
+    opacity: 0.75;
+}
+
+.struct-content {
+    display: none;
+    /* z-index: 1; */
+    /* overflow: auto; */
+}
+
+.struct-content h4 {
+    display: block;
+    font: 22px Proxima-Nova;
+    color: #232323D6;
+    margin: 0 0 4%;
+}
+
+.struct-content span {
+    display: block;
+    display: flex;
+}
+
+.struct-content span i {
+    font-size: 20px;
+    color: #0065FF;
+    text-shadow: 2px #0065FF;
+}
+
+.struct-content span p {
+    margin: 0 1.2% 4%;
+    font: 22px Proxima-Nova;
+    color: black;
+    opacity: 0.8;
+}
+
+.show {
+    display: block;
+}
+
+.cloud-down img {
+    float: left;
+}
+
+.cloud-down span {
+    text-decoration: underline;
+    font: 26px Pro-Display;
+    color: #464646D6;
+}
+
+.cloud-down:hover {
+    cursor: pointer;
+}
+
+/* ---------------second division ends------------------- */
+
+/* ---------------third division starts------------------- */
+.caraousel {
+    position: relative;
+    height: 90vh;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.caraousel_images {
+    width: 100%;
+    height: 100%;
+}
+
+.caraousel_track-container {
+    height: 87%;
+    position: relative;
+    overflow: hidden;
+}
+
+.caraousel_track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    /* height: 100%; */
+    transition: transform 250ms ease-in;
+}
+
+.caraousel_slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.caraousel_button--left {
+    left: -55px;
+}
+
+.caraousel_button--right {
+    right: -55px;
+}
+
+.caraousel_button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none;
+}
+
+.caraousel_nav {
+    /* background: rgb(107, 97, 99); */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.caraousel_indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    /* margin: 0 12px; */
+    margin: 0 0.3%;
+    margin-bottom: 0.3%;
+}
+
+.caraousel_indicator.current_slide {
+    background-color: #6a11cb;
+}
+
+.caraousel_indicator:hover {
+    background-color: #6a11cb;
+}
+
+#rev-head {
+    color: #000000d6;
+    font: 36px Avenir-Next;
+    font-weight: bold;
+}
+
+.rev-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 2vh;
+}
+
+.rev {
+    width: 47%;
+    padding: 1.2% 3.5% 3.5% 3.5%;
+    box-sizing: border-box;
+    box-shadow: 6px 6px 20px #00000029;
+    border-radius: 61px;
+    margin-bottom: 2%;
+}
+
+.person-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rev-img {
+    display: flex;
+    align-items: center;
+}
+
+.rev-img img {
+    width: 91px;
+    height: 91px;
+    border-radius: 50%;
+}
+
+.person-details {
+    width: 85%;
+}
+
+.person-details h3 {
+    font: 30px Proxima-Nova-Extra-Bold;
+    color: rgb(48, 48, 48);
+    line-height: 0;
+}
+
+.person-details h5 {
+    font: 18px Product-Sans;
+    color: rgba(53, 53, 53, 0.839);
+    line-height: 10px;
+    margin-bottom: 15px;
+}
+
+.rev-ratings {
+    color: #ffca36;
+    font: 25px Proxima-Nova;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+/* Aligning the rating line */
+.rev-ratings span {
+    position: relative;
+    bottom: 1.4px;
+}
+
+.rev-ratings img {
+    width: 22px;
+}
+
+#half-star-rev {
+    width: 24px;
+}
+
+.rev-content p {
+    color: rgb(97, 96, 96);
+    font: 22px Avenir-Next;
+    margin-top: 5%;
+    margin-bottom: auto;
+}
+
+.rev-slide-btns {
+    display: flex;
+    justify-content: center;
+}
+
+.rev-btn {
+    width: 13px;
+    height: 13px;
+    background: #dadada;
+    border-radius: 50%;
+    margin: 0 0.2%;
+}
+
+.rev-btn:hover {
+    background: #6a11cb;
+}
+
+.active {
+    background: #6a11cb;
+}
+
+#rev-all {
+    color: rgb(48, 48, 48);
+    font: 32px Avenir-Next;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ---------------third division ends------------------- */

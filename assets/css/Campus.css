@@ -1,0 +1,546 @@
+.camp-page-container {
+    width: 100%;
+    height: 90vh;
+    background: url(../images/svgs/campagebg.svg);
+    box-shadow: 6px 6px 25px #00000029;
+    background-size: cover;
+    padding-top: 125px;
+}
+
+.camp-page-container h2 {
+    color: white;
+    font: Bold 72px/93px Avenir-Next;
+    width: 49%;
+    margin-left: 9%;
+    margin-top: 2vh;
+}
+
+#logo-white {
+    margin-left: 9%;
+    margin-top: 12vh;
+}
+
+.camp-container {
+    justify-content: space-between;
+    width: 80%;
+    margin: 2vh auto;
+    display: flex;
+}
+
+.camp-written p {
+    color: #ffffff;
+    font: 200 28px/34px Avenir-Next;
+    width: 45%;
+}
+
+#boy-img {
+    margin-top: -37vh;
+}
+
+.camp-written button {
+    background: transparent linear-gradient(99deg, #FFFFFF 0%, #EAEAEAD6 100%) 0% 0% no-repeat padding-box;
+    border-radius: 41px;
+    font: Bold 22px/14px Avenir-Next;
+    width: 384px;
+    height: 84px;
+    margin-top: 2vh;
+    color: #000000;
+}
+
+.camp-about {
+    width: 80%;
+    margin: auto;
+}
+
+.camp-headline {
+    text-align: center;
+    font: Bold 72px/93px Avenir-Next;
+    color: #004E92;
+}
+
+.about-camp-insider {
+    display: flex;
+    justify-content: space-between;
+}
+
+.camp-about-written {
+    width: 50%;
+}
+
+.camp-para {
+    font: 22px/26px Proxima-Nova;
+    color: #000000;
+}
+
+.camp-about-illus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 22px/26px Proxima-Nova;
+    width: 50%;
+    color: #000000;
+
+}
+
+.camp-responsibilities {
+    width: 54%;
+    margin: auto;
+}
+
+.camp-responsibilities h1 {
+    font-size: 48px !important;
+    margin-top: 5vh;
+}
+
+.text-center {
+    display: table;
+    margin: 0 auto;
+}
+
+.camp-list {
+    list-style: none;
+    margin: 0 auto;
+    font: 22px/27px Proxima-Nova;
+    color: #000000;
+    opacity: 0.8;
+}
+
+.camp-list i {
+    width: 1.8vw;
+    height: 1.8vw;
+    margin-top: 0.6vh;
+    color: #0065FF;
+}
+
+.camp-list li {
+    font: 22px/27px Proxima-Nova;
+    line-height: 5px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    opacity: 0.8;
+}
+
+@media only screen and (max-width: 480px) {
+    #logo-white {
+        margin-top: 7vh;
+        margin-left: 8%;
+        width: 30vw;
+    }
+
+    .camp-page-container h2 {
+        width: 80%;
+        margin-left: 8%;
+        font-size: 7.5vw;
+        line-height: 1.2;
+    }
+
+    .camp-page-container {
+        height: 65vh;
+        margin-top: 12vh;
+    }
+
+    .camp-container {
+        width: 84%;
+    }
+
+    .camp-written {
+        width: 100%;
+    }
+
+    .camp-written p {
+        font-size: 3.5vw;
+        line-height: 1.21;
+        width: 90%;
+    }
+
+    .camp-written button {
+        height: 9.8vw;
+        width: 50vw;
+        font-size: 3.2vw;
+    }
+
+    .about-camp-insider {
+        flex-direction: column-reverse;
+    }
+
+    .camp-about-written {
+        width: 100%;
+    }
+
+    .camp-headline {
+        font-size: 5.5vw;
+        margin-bottom: 0;
+        line-height: 2.18;
+    }
+
+    .camp-para {
+        font-size: 2.6vw;
+        line-height: 1.15;
+        text-align: center;
+    }
+
+    .camp-about-illus {
+        font-size: 2.6vw;
+        line-height: 1.15;
+        width: 100%;
+        margin-top: 4vh;
+    }
+
+    .camp-responsibilities h1 {
+        font-size: 3.7vw !important;
+        line-height: 1.49;
+    }
+
+    .camp-list li {
+        font-size: 1.75vw;
+        line-height: 1;
+    }
+
+    .camp-responsibilities {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+    .camp-page-container h2 {
+        font-size: 6.6vw;
+        width: 80%;
+        line-height: 1.2;
+        margin-left: 6%;
+    }
+
+    #logo-white {
+        margin-top: 9%;
+        margin-left: 6%;
+        width: 180px;
+    }
+
+    .about-camp-insider {
+        flex-direction: column-reverse;
+    }
+
+    .camp-written p {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    .camp-written button {
+        width: 250px;
+        height: 50px;
+        font-size: 17px;
+    }
+
+    .camp-container {
+        width: 90%;
+    }
+
+    .camp-page-container {
+        background-position: 60% 0%;
+        margin-top: 12vh;
+    }
+
+    .camp-about-written {
+        width: 100%;
+    }
+
+    .camp-headline {
+        font-size: 5.5vw;
+        margin-bottom: 0;
+        line-height: 12vw;
+    }
+
+    .camp-para {
+        font-size: 2.6vw;
+        line-height: 3vw;
+        text-align: center;
+    }
+
+    .camp-about-illus {
+        font-size: 2.6vw;
+        line-height: 3vw;
+        width: 100%;
+        margin-top: 4vh;
+    }
+
+    .camp-responsibilities h1 {
+        font-size: 3.7vw !important;
+        line-height: 5.5vw;
+    }
+
+    .camp-list li {
+        font-size: 1.75vw;
+    }
+
+    .camp-responsibilities {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 912px) and (min-width: 769px) {
+
+    #logo-white {
+        margin-top: 21vh;
+        margin-left: 8%;
+        width: 21vw;
+    }
+
+    .camp-page-container h2 {
+        margin-left: 8%;
+        font-size: 4.7vw;
+        line-height: 5.9vw;
+    }
+
+    .camp-container {
+        width: 84%;
+    }
+
+    .camp-written p {
+        font-size: 2.2vw;
+        line-height: 2.5vw;
+    }
+
+    .camp-written button {
+        height: 8vh;
+        width: 35vh;
+        font-size: 1.8vw;
+    }
+
+    .camp-headline {
+        font-size: 4.4vw;
+        margin-bottom: 0;
+        line-height: 10vw;
+    }
+
+    .camp-para {
+        font-size: 1.9vw;
+        line-height: 2.2vw;
+    }
+
+    .camp-about-illus {
+        font-size: 1.8vw;
+        line-height: 2.1vw;
+    }
+
+    .camp-responsibilities h1 {
+        font-size: 3vw !important;
+        line-height: 5.5vw;
+    }
+
+    .camp-list li {
+        font-size: 1.35vw;
+    }
+
+    .camp-responsibilities {
+        width: 63.5%;
+    }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 913px) {
+
+    .camp-page-container {
+        margin-top: 12vh;
+    }
+
+    .camp-page-container h2 {
+        font-size: 5.5vw;
+        width: 80%;
+        line-height: 1.1;
+        margin-left: 6%;
+    }
+
+    #logo-white {
+        margin-left: 6%;
+        margin-top: 9vh;
+        width: 250px;
+    }
+
+    .camp-written p {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .camp-written button {
+        width: 300px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .camp-container {
+        width: 90%;
+    }
+
+    .camp-page-container {
+        background-position: 60% 50%;
+    }
+
+    .camp-headline {
+        font-size: 4.4vw;
+        margin-bottom: 1vw;
+    }
+
+    .camp-para {
+        font-size: 1.7vw;
+        line-height: 2.1vw;
+    }
+
+    .camp-about-illus {
+        font-size: 1.7vw;
+        line-height: 2.1vw;
+    }
+
+    .camp-responsibilities h1 {
+        font-size: 3vw !important;
+        line-height: 5.5vw;
+    }
+
+    .camp-list li {
+        font-size: 1.35vw;
+    }
+
+    .camp-responsibilities {
+        width: 63.5%;
+    }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 1201px) {
+    #logo-white {
+        margin-top: 10vh;
+        margin-left: 6%;
+        width: 18.5vw;
+    }
+
+    .camp-page-container h2 {
+        margin-left: 6%;
+        font-size: 4.5vw;
+        line-height: 5.8vw;
+    }
+
+    .camp-container {
+        width: 88%;
+    }
+
+    #boy-img {
+        width: 41vw;
+        height: 41vw;
+        margin-top: -40vh;
+    }
+
+    .camp-written p {
+        font-size: 1.7vw;
+        line-height: 2vw;
+    }
+
+    .camp-written button {
+        height: 10vh;
+        width: 45vh;
+        font-size: 1.5vw;
+    }
+
+    .camp-headline {
+        font-size: 4.2vw;
+        margin-bottom: 1vw;
+    }
+
+    .camp-para {
+        font-size: 1.4vw;
+        line-height: 1.7vw;
+    }
+
+    .camp-responsibilities h1 {
+        font-size: 3vw !important;
+        line-height: 5vw;
+    }
+
+    .camp-list li {
+        font-size: 1.35vw;
+    }
+
+    .camp-responsibilities {
+        width: 63.5%;
+    }
+}
+
+@media only screen and (max-width: 1600px) and (min-width: 1441px) {
+
+    #logo-white {
+        margin-top: 10vh;
+        margin-left: 7%;
+        width: 18.5vw;
+    }
+
+    .camp-page-container h2 {
+        margin-left: 7%;
+        font-size: 4.5vw;
+        line-height: 5.8vw;
+    }
+
+    .camp-container {
+        width: 86%;
+    }
+
+    #boy-img {
+        width: 41vw;
+        height: 41vw;
+    }
+
+    .camp-written p {
+        font-size: 1.6vw;
+        line-height: 2vw;
+    }
+
+    .camp-written button {
+        height: 10vh;
+        width: 45vh;
+        font-size: 1.5vw;
+    }
+
+    .camp-headline {
+        font-size: 4.2vw;
+        margin-bottom: 1vw;
+    }
+
+    .camp-para {
+        font-size: 1.4vw;
+        line-height: 1.7vw;
+    }
+
+    .camp-responsibilities h1 {
+        font-size: 3vw !important;
+    }
+
+    .camp-list li {
+        font-size: 1.35vw;
+    }
+
+    .camp-responsibilities {
+        width: 63.5%;
+    }
+}
+
+@media only screen and (max-width: 1920px) and (min-width: 1601px) {
+
+    #logo-white {
+        margin-top: 10vh;
+        margin-left: 7%;
+    }
+
+    .camp-page-container h2 {
+        margin-left: 7%;
+        line-height: 82px;
+    }
+
+    .camp-container {
+        width: 86%;
+    }
+
+    #boy-img {
+        width: 80vh;
+        height: 80vh;
+    }
+
+    .camp-responsibilities {
+        width: 63.5%;
+    }
+
+}

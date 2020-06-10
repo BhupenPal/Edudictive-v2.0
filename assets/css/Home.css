@@ -1,0 +1,860 @@
+/* HOME - 1920px start */
+
+.content-wrap {
+  padding-top: 125px;
+}
+
+/* SKILL SECTION */
+.get-skills {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.get-skills-content {
+  display: flex;
+  height: calc(100vh - 125px - 100px);
+}
+
+.get-skills-header {
+  padding-top: 100px;
+  width: 50%;
+}
+
+.get-skills-heading {
+  font: Bold 83px Avenir-Next;
+  line-height: 109px;
+  color: #408cff;
+}
+
+.get-skills-platform {
+  margin-top: 26px;
+  width: 60%;
+  font: Bold 28px Avenir-Next;
+  opacity: 80%;
+  line-height: 36px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.skill-illustrate {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-handle {
+  position: absolute;
+  margin-top: 580px;
+  width: 50%;
+}
+
+.skill-handle button {
+  width: 298px;
+  height: 82px;
+  border-radius: 15px;
+  font: Bold 21px Avenir-Next;
+  line-height: 14px;
+}
+
+#skill-register {
+  background-color: #408cff;
+  color: #ffffff;
+  margin-right: 15px;
+}
+
+#skill-offers {
+  margin-left: 15px;
+  background-color: #ffffff;
+  border: 3px solid #464646d6;
+  color: #464646d6;
+}
+
+/* SKILL SECTION */
+
+/* OUR PROGRAMS */
+.our-programs {
+  margin-top: 100px;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.op-heading {
+  text-align: center;
+  color: #408cff;
+  font: Bold 71px Avenir-Next;
+  margin-bottom: 0;
+}
+
+.op-description {
+  margin-top: 30px;
+  width: 70%;
+  font: 28px Avenir-Next;
+  line-height: 36px;
+  color: #747474;
+}
+
+.op-options {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.op-option-block {
+  width: 500px;
+  height: 680px;
+  margin-left: 80px;
+  margin-right: 80px;
+  box-shadow: 6px 6px 20px #00000029;
+  border-radius: 80px;
+  padding: 50px 20px 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.op-option-block img {
+  width: 250px;
+  height: 250px;
+}
+
+.op-option-block h2 {
+  font: Bold 40px Proxima-Nova;
+  color: #0088ff;
+}
+
+.op-option-block p {
+  font: 25px Proxima-Nova;
+  color: #747474;
+  margin-top: 0;
+  height: 120px;
+}
+
+.op-option-block button {
+  border: 1px solid blue;
+  box-shadow: 6px 6px 20px #00000029;
+  font: Bold 24px Product-Sans;
+  color: #000000;
+  background-color: #fff;
+  border-radius: 15px;
+  width: 50%;
+  height: 6vh;
+  margin: 10px 0;
+}
+
+/* OUR PROGRAMS */
+
+/* SUN BURN */
+.sun-burn {
+  margin: 200px 0;
+}
+
+.sun-burn h1 {
+  text-align: center;
+  font: Bold 80px Avenir-Next;
+  color: #408cff;
+}
+
+.sun-burn-detailed {
+  display: flex;
+}
+
+.sun-burn-text h2 {
+  font: Bold 44px Proxima-Nova;
+}
+
+#blue-span {
+  color: #408cff;
+}
+
+.sun-burn-text p {
+  width: 90%;
+  font: 28px Proxima-Nova;
+  line-height: 32px;
+  color: #000000d6;
+}
+
+.sun-burn-det-svg {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sun-svg {
+  text-align: center;
+  align-items: center;
+  color: #3957ed;
+  font: 25px Avenir-Next;
+  white-space: nowrap;
+}
+
+.sun-svg img {
+  margin-bottom: 15px;
+}
+
+.success-flame {
+  margin-left: 50px;
+}
+
+/* SUN BURN */
+
+/* INTERNSHIP OPPORTUNITY */
+.intern-opt {
+  margin: 200px 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intern-opt h2 {
+  text-align: center;
+  font: Bold 71px Avenir-Next;
+  color: #408cff;
+  margin-bottom: 0;
+}
+
+.intern-opt p {
+  width: 65%;
+  text-align: center;
+  line-height: 50px;
+  font: Bold 40px Proxima-Nova;
+  color: #000000d6;
+}
+
+.intern-illustration {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.intern-illustration img {
+  width: 800px;
+}
+
+.company-logo {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-logo img {
+  margin: 0 auto;
+  width: 30%;
+  height: auto;
+  transform: scale(0.9);
+}
+
+#AmazonLogo {
+  transform: scale(0.8);
+  margin-bottom: -30px;
+}
+
+/* INTERNSHIP OPPORTUNITY */
+
+/* BLOGS - 1920px START */
+.blogs-brief {
+  padding: 90px 0;
+  margin-bottom: 200px;
+  border-radius: 114px;
+  width: 100%;
+  background: transparent linear-gradient(124deg, #9795f0 0%, #fbc8d4 100%);
+}
+
+.blogs-brief h1 {
+  font: Bold 70px Avenir-Next;
+  width: 85%;
+  margin: 0 auto 40px auto;
+  color: #ffffff;
+}
+
+.blog-detail-container {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-structure {
+  width: 48%;
+  height: 550px;
+  background-color: white;
+  box-shadow: 6px 6px 25px #00000029;
+  border-radius: 54px;
+}
+
+.blog-heading {
+  padding: 40px 0px 0px 58px;
+  width: 454px;
+  height: 181px;
+  font: Bold 52px Avenir-Next;
+  color: #408cff;
+}
+
+.sub-blog-structure {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  height: 100%;
+}
+
+.sub-blog-secondary {
+  height: 430px;
+  background: white;
+  box-shadow: 6px 6px 25px #00000029;
+  border-radius: 54px;
+}
+
+.sub-blog-heading {
+  padding: 40px 0px 0px 58px;
+  height: 60px;
+  font: Bold 48px Avenir-Next;
+  color: #408cff;
+}
+
+.blog-writer {
+  padding: 40px 0px 0px 58px;
+  width: 100%;
+  height: 22px;
+  font: Bold 18px Avenir-Next;
+  color: black;
+}
+
+.blog-time {
+  padding: 10px 0px 0px 58px;
+  font: 14px Avenir-Next;
+  color: black;
+}
+
+.blog-btn {
+  margin-left: 58px;
+  width: 200px;
+  height: 55px;
+  background: #408cff;
+  box-shadow: 6px 6px 25px #00000029;
+  border-radius: 15px;
+  font: Bold 24px Avenir-Next;
+  color: white;
+}
+
+.read-more-blogs {
+  margin-top: 40px;
+  height: 75px;
+  background: white;
+  box-shadow: 6px 6px 20px #00000029;
+  border-radius: 25px;
+  text-align: center;
+  font: Bold 24px Avenir-Next;
+  color: black;
+}
+
+/* BLOGS - 1920px END */
+
+@media only screen and (max-width: 480px) {
+
+  /* Home response */
+  .content-wrap {
+    width: 100%;
+    padding-top: 80px;
+  }
+
+  .get-skills {
+    width: 100vw;
+    height: 150vw;
+    margin-top: 7vw;
+  }
+
+  .get-skills-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .get-skills-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .skill-illustrate {
+    width: 100%;
+  }
+
+  .skill-illustrate img {
+    width: 85vw;
+  }
+
+  .get-skills-heading {
+    font: Bold 8.86vw Avenir-Next;
+    width: 85vw;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .get-skills-platform {
+    font: 4vw Avenir-Next;
+    line-height: 5vw;
+    width: 60%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .skill-handle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 127vw;
+  }
+
+  #skill-offers,
+  #skill-register {
+    height: 10.5vw;
+    width: 50vw;
+    margin: 0 !important;
+    font: 3.75vw Avenir-Next;
+    margin-bottom: 15px !important;
+    border-radius: 3vw;
+  }
+
+  .our-programs {
+    margin-top: 20vw;
+  }
+
+  .op-heading {
+    font: Bold 8.86vw Avenir-Next;
+    width: 85vw;
+    margin: 0 auto;
+  }
+
+  .op-description {
+    font: 4.5vw Avenir-Next;
+    width: 70vw;
+    margin: 25px auto;
+  }
+
+  .op-options {
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .op-option-block {
+    width: 85vw;
+    height: 600px;
+    box-sizing: border-box;
+    margin: 30px auto;
+    border-radius: 50px;
+    padding-top: 4.2vw;
+  }
+
+  .op-option-block img {
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .op-option-block h2 {
+    font: Bold 7vw Proxima-Nova;
+  }
+
+  .op-option-block div {
+    font: 5vw Proxima-Nova;
+  }
+
+  .op-option-block button {
+    margin-top : 55px;
+    height: 60px;
+    width: 200px;
+  }
+
+  .sun-burn {
+    margin-top: 100px;
+    margin: 0;
+  }
+
+  .sun-burn h1 {
+    font: Bold 9.8vw Avenir-Next;
+    width: 95vw;
+    margin: 10px auto;
+  }
+
+  .sun-burn-detailed {
+    flex-direction: column-reverse;
+  }
+
+  .success-flame {
+    width: 90vw;
+    margin: 10vw auto;
+  }
+
+  .success-flame img {
+    width: 90vw;
+  }
+
+  .sun-burn-text h2 {
+    font: Bold 6.5vw Proxima-Nova;
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .sun-burn-text p {
+    font: 5vw Proxima-Nova;
+    margin: 20px auto;
+  }
+
+  .sun-burn-det-svg {
+    flex-direction: column;
+  }
+
+  .sun-svg {
+    margin: 20px auto;
+    display: flex;
+    width: 90vw;
+    justify-content: space-around;
+  }
+
+  .sun-svg img {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 0;
+  }
+
+  .sun-svg div {
+    font: 5vw Avenir-Next;
+    width: min-content;
+    margin: 0;
+  }
+
+  .intern-opt {
+    margin-bottom: 5vw;
+    margin-top: 0;
+    height: min-content;
+  }
+
+  .intern-opt h2 {
+    font: Bold 8.86vw Avenir-Next;
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .intern-opt p {
+    font: Bold 4.5vw Proxima-Nova;
+    width: 80vw;
+    color: #747474;
+    margin: 5vw auto;
+    margin-bottom: 0;
+  }
+
+  .intern-illustration img {
+    width: 90vw;
+  }
+
+  .intern-illustration {
+    min-height: 80vw;
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .company-logo {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .company-logo img {
+    height: 20vw;
+    width: 60vw;
+    margin: 1vw 0;
+  }
+
+  #AmazonLogo {
+    margin-bottom: 0;
+    transform: scale(0.9);
+  }
+
+  .blogs-brief {
+    margin-top: 15vw;
+    margin-bottom: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    padding: 10vw 0;
+  }
+
+  .blog-detail-container {
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+  }
+
+  .blogs-brief h1 {
+    font: Bold 8.86vw Avenir-Next;
+  }
+
+  .blog-structure {
+    width: 90vw;
+    margin: 0 auto;
+    height: min-content;
+  }
+
+  .blog-heading {
+    font: Bold 7.88vw Avenir-Next;
+    padding: 0;
+    width: 80vw;
+    margin: 15vw auto 8vw auto;
+    height: min-content;
+  }
+
+  .blog-writer {
+    padding: 0;
+    height: min-content;
+    margin: 0 auto;
+    width: 80vw;
+    font: Bold 5.5vw Avenir-Next;
+    color: #747474;
+  }
+
+  .sub-blog-structure {
+    display: none;
+  }
+
+  .blog-time {
+    padding: 0;
+    margin: 1vw auto;
+    width: 80vw;
+    font: bold 5vw Avenir-Next;
+    color: #747474;
+  }
+
+  .blog-btn {
+    margin: 5vw 0 10vw 5vw;
+    height: 50px;
+    width: 120px;
+  }
+}
+
+/* Media for tablets */
+/* @media only screen and (max-width: 768px) {
+  .get-skills-heading {
+    font-size: 9.8vw;
+    width: 100%;
+    margin-top: 5vh;
+  }
+
+  .get-skills-platform {
+    width: 80%;
+  }
+  #skill-register {
+    margin-right: 0;
+  }
+  #skill-offers {
+    margin-left: 0;
+    margin-top: 2vh;
+  }
+
+  .op-options {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .op-option-block {
+    width: 80%;
+    margin-top: 2vh;
+  }
+
+  .sun-burn {
+    margin-top: 100px;
+  }
+
+  .sun-burn h1 {
+    font-size: 9.8vw;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .sun-burn-detailed {
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .success-flame {
+    width: 90%;
+    margin-left: 0;
+    margin: 5vh auto;
+  }
+
+  .success-flame img {
+    width: 100%;
+  }
+
+  .sun-burn-text h2 {
+    font: Bold 6.5vw Proxima-Nova;
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .sun-burn-text p {
+    font: 5vw Proxima-Nova;
+    margin: 20px auto;
+  }
+
+  .sun-svg img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .intern-opt h2 {
+    font-size: 9.8vw;
+    width: 100%;
+  }
+
+  .intern-opt p {
+    width: 100%;
+  }
+
+  .blog-detail-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-structure {
+    width: 95%;
+  }
+
+  .sub-blog-structure {
+    width: 95%;
+    margin-top: 5vh;
+  }
+
+  .blog-structure h2 {
+    font-size: 6vw;
+  }
+} */
+
+/* Media for big tabs */
+@media only screen and (max-width: 918px) {}
+
+/* Media for small laptops */
+/* @media only screen and (max-width: 1440px) and (min-width: 918px) {
+  .get-skills-heading {
+    font-size: 5vw;
+  }
+
+  .get-skills-platform {
+    font-size: 1.8vw;
+  }
+
+  .skill-handle button {
+    width: 20vw;
+    height: 10vh;
+    font-size: 1.5vw;
+  }
+
+  #skill-offers {
+    font-size: 1.5w;
+  }
+
+  .intern-opt h2 {
+    font-size: 4vw;
+  }
+
+  .intern-opt p {
+    width: 75%;
+    font-size: 2.5vw;
+  }
+
+  .company-logo {
+    width: 80%;
+  }
+
+  .company-logo img {
+    width: 30%;
+    height: auto;
+    transform: scale(0.9);
+  }
+
+  #AmazonLogo {
+    transform: scale(0.8);
+    margin-bottom: -30px;
+  }
+
+  .blogs-brief {
+    padding: 50px 0;
+  }
+
+  .blogs-brief h1 {
+    font-size: 4.5vw;
+  }
+
+  .blog-structure {
+    height: auto;
+  }
+
+  .blog-heading {
+    font-size: 2.8vw;
+    height: auto;
+    width: 75%;
+    padding-top: 0;
+    padding-left: 35px;
+  }
+
+  .blog-writer {
+    padding-left: 35px;
+    font-size: 1.2vw;
+    padding-top: 1.2vw;
+    margin: 0;
+  }
+
+  .blog-time {
+    font-size: 1.2vw;
+    margin-top: 0;
+    padding-left: 35px;
+  }
+
+  .sub-blog-structure {
+    height: auto;
+  }
+
+  .sub-blog-heading {
+    font-size: 3vw;
+    padding-top: 0;
+    padding-left: 35px;
+  }
+
+  .sub-blog-secondary {
+    height: auto;
+    padding-bottom: 10%;
+  }
+
+  .blog-btn {
+    margin-left: 35px;
+    width: 150px;
+    font-size: 1.8vw;
+    height: 45px;
+  }
+
+  .read-more-blogs {
+    font-size: 1.5vw;
+    margin-top: 20px;
+    height: 40px;
+  }
+} */

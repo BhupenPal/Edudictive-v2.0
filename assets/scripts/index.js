@@ -360,11 +360,10 @@ function animatedsub(){
 }
 
 window.addEventListener('load', function toggle(e){
-  var list = document.querySelectorAll(".hvr-underline-from-left");
-  var path = window.location.href;
-  var exactpath = path.substr(21)
+  var list = document.querySelectorAll(".nav");
+  var path = window.location.pathname;
   list.forEach(function(item){
-    if(item.getAttribute("href") === exactpath){
+    if(item.getAttribute("href") === path){
       item.classList.add("active-nav");
     }
     else{

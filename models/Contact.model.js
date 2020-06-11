@@ -2,20 +2,20 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 const contactSchema = new Schema({
-    name:{
+    Name:{
         type: String,
         required: true,
     },
-    email:{
+    Email:{
         type: String,
         required: true
     },
-    phoneNumber:{
+    Number:{
         type: Number,
         required: true
 
     },
-    role: {
+    Role: {
         type: String,
         required: true
     }
@@ -23,4 +23,4 @@ const contactSchema = new Schema({
 
 
 
-module.exports = mongoose.model("Contact", contactSchema);
+module.exports = mongoose.model("Contact Us", contactSchema);

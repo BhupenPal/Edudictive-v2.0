@@ -1,19 +1,4 @@
-@font-face {
-  font-family: "Proxima-Nova";
-  src: url("../fonts/ProximaNovaRegular.otf");
-}
-
-@font-face {
-  font-family: "Avenir-Next";
-  src: url("../fonts/AvenirNextBold.otf");
-  font-weight: Bold;
-}
-@font-face {
-  font-family: "Avenir-Next";
-  src: url("../fonts/AvenirNextDemi.otf");
-}
-
-.about-us{
+.about-us {
   padding-top: 125px;
 
 }
@@ -21,11 +6,9 @@
 .intro-div {
   height: 75vh;
   width: 100%;
-  background-image: linear-gradient(
-      to top,
+  background-image: linear-gradient(to top,
       rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.25)
-    ),
+      rgba(0, 0, 0, 0.25)),
     url("/assets/images/about-us\ banner.jpg");
   background-size: cover;
   background-position: 0px 60%;
@@ -35,16 +18,17 @@
 .intro-div h1 {
   text-align: center;
   font: Bold 64px Avenir-Next;
+  line-height: 95px;
   color: #ffffff;
-  padding-top: 15vh;
+  padding-top: 12vh;
   margin-top: 0;
 }
 
 .about-edu {
   width: 80%;
-  padding-bottom: 15vh;
+  padding-bottom: 8vh;
   padding-top: 5vh;
-  margin-top: -19% !important;
+  margin-top: -17% !important;
   box-shadow: 6px 6px 25px #00000029;
   border-radius: 54px;
   margin: auto;
@@ -59,23 +43,21 @@
 
 .about-edu-block {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
   margin-top: 8vh;
 }
 
-.about-edu-written {
+.about-edu-block p {
   width: 40%;
-}
-
-.about-edu-written p {
   text-align: left;
-  font: 22px Proxima-Nova;
+  font: 26px Proxima-Nova;
   color: #232323d6;
 }
 
 .about-edu-illust {
   justify-content: center;
-  width: 40%;
   align-items: center;
 }
 
@@ -104,24 +86,23 @@
 .our-mission-block {
   display: flex;
   margin: 5vh auto;
+  margin-bottom: 12vh;
   justify-content: space-around;
   align-items: center;
 }
 
-.our-mission-illust {
-  font: 22px Proxima-Nova;
-  color: #4e4e4e;
-  width: 30%;
+.our-mission-illust img {
+  width: 650px;
 }
 
 .our-mission-para {
-  font: 22px Proxima-Nova;
+  font: 26px Proxima-Nova;
   color: #232323d6;
-  width: 55%;
+  width: 40%;
 }
 
 .our-mission-imgs {
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -187,58 +168,59 @@
 
 /* recent developments */
 
-.rec_dvlpmnts{
- height: 80vh; 
- margin: 100px 0;
+.rec_dvlpmnts {
+  height: 80vh;
+  margin: 100px 0;
 }
 
-.rec_dvlpmnts h1{
+.rec_dvlpmnts h1 {
   text-align: center;
   font: Bold 72px Avenir-Next;
   color: #408cff;
 }
 
-.rd_contain{
+.rd_contain {
   position: relative;
   width: 60%;
   height: 600px;
   margin: 100px auto;
   background-image: linear-gradient(#0000002b, #0000002b),
-  url("/assets/images/recent-developments.jpg");
+    url("/assets/images/recent-developments.jpg");
+  background-position: bottom;
   background-size: cover;
   border-radius: 54px;
 }
 
-.rd_pretext{
+.rd_pretext {
   visibility: visible;
   opacity: 1;
   transition: 0.6s;
   position: absolute;
   width: 60%;
-  left: 3%;
+  left: 5%;
   top: 40%;
 }
 
-.rd_hdline{
+.rd_hdline {
   font: Bold 48px Avenir-Next;
   color: #ffffff;
 }
 
-.rd_aftrtexthead{
+.rd_aftrtexthead {
   font: bold 42px Avenir-Next;
 }
 
-.rd_cbtn{
+.rd_cbtn {
   box-shadow: 6px 6px 20px #00000029;
   background-color: #ffffff;
   border-radius: 50px;
   height: 6vh;
   width: 30%;
   color: #000000d6;
-  font: Bold 16px Avenir-Next;
+  font: Bold 18px Avenir-Next;
 }
 
-.rd_aftrtext{
+.rd_aftrtext {
   visibility: hidden;
   opacity: 0;
   transition: 0.6s;
@@ -251,7 +233,7 @@
   background-color: #00000096;
 }
 
-.rd_aftrtext p{
+.rd_aftrtext p {
   color: #ffffffd6;
   font: 22px Proxima-Nova;
 }
@@ -359,120 +341,144 @@
   font: Bold 13px Avenir-Next;
   color: #000000d6;
 }
-@media only screen and (max-width: 480px){
 
-  .about-us{
+@media only screen and (max-width: 480px) {
+
+  .about-us {
     padding-top: 0;
   }
 
-  .about-edu{
+  .about-edu {
     width: 90%;
     margin-top: -50% !important;
   }
-  
-  .rd_contain{
-    width: 100%;
-  }
-  
-  .rd_pretext{
+
+  .rd_contain {
     width: 100%;
   }
 
-  .about-us h1{
+  .rd_pretext {
+    width: 100%;
+  }
+
+  .about-us h1 {
     font-size: 9vw !important;
   }
-  .about-edu-block{
+
+  .about-edu-block {
     flex-direction: column;
   }
-  .about-edu-written{
-    width: 95%;
-    margin: 0 auto;
-  }
-  .about-edu-illust{
+
+  .about-edu-illust {
     width: 95%;
   }
-  .our-mission-block{
+
+  .our-mission-block {
     flex-direction: column;
   }
-  .our-mission-illust{
+
+  .our-mission-illust {
     width: 95%;
   }
-  .our-mission-para{
+
+  .our-mission-para {
     width: 95%;
     text-align: center;
   }
-  .our-mission-imgs{
+
+  .our-mission-imgs {
     flex-direction: column;
     width: 95%;
   }
-  .our-mission-imgs div{
+
+  .our-mission-imgs div {
     margin-top: 2vh;
   }
-  .student-get-block{
+
+  .student-get-block {
     flex-direction: column;
   }
-  .student-get-content{
+
+  .student-get-content {
     width: 95%;
   }
-  .our-team-row{
+
+  .our-team-row {
     flex-direction: column;
   }
-  .team-member{
+
+  .team-member {
     width: 95%;
   }
-  .edu-story{
+
+  .edu-story {
     flex-direction: column;
   }
-  .edu-story2{
+
+  .edu-story2 {
     width: 95%;
     margin-top: 5vh;
   }
-  .edu-story2 p{
+
+  .edu-story2 p {
     width: 90%;
   }
 
 }
-@media only screen and (max-width: 912px) and (min-width: 768px){
-  
+
+@media only screen and (max-width: 912px) and (min-width: 768px) {
+
   .intro-div h1 {
     font-size: 4.6vw;
   }
+
   .about-edu {
     width: 95%;
   }
+
   .about-edu h1 {
     font-size: 4.2vw;
   }
-  .about-edu-written p {
+
+  .about-edu-block p {
     font-size: 1.4vw;
   }
+
   .about-edu-illust h4 {
     font-size: 2.2vw;
   }
+
   .our-mission {
     width: 95%;
   }
+
   .our-mission h1 {
     font-size: 4.2vw;
   }
+
   .our-mission-illust {
     font-size: 1.8vw;
   }
+
   .our-mission-para {
     font-size: 1.5vw;
     width: 50%;
   }
+
   .our-mission-imgs img {
     height: 11vw;
     width: 11vw;
   }
+
   .our-mission-imgs {
     width: 95%;
     justify-content: space-around;
   }
+
   .our-mission-imgs div {
     font-size: 2vw;
   }
+
   .student-get h1 {
     font-size: 5.2vw;
   }
@@ -485,10 +491,12 @@
   .student-get-block {
     width: 95%;
   }
+
   .student-get-content {
     width: 45%;
     text-align: center;
   }
+
   .student-get-content img {
     height: 16vh;
   }
@@ -500,6 +508,7 @@
   .student-get-content p {
     font-size: 1.8vw;
   }
+
   .rec_dvlpmnts {
     height: 60vh;
     margin: 10vw 0;
@@ -514,6 +523,7 @@
     height: 45vw;
     margin: 5vw auto;
   }
+
   .rd_hdline {
     font-size: 3.2vw;
   }
@@ -526,6 +536,7 @@
     height: 5vh;
     font-size: 1.4vw;
   }
+
   .rd_aftrtext p {
     font-size: 1.6vw;
   }
@@ -534,38 +545,49 @@
     font-size: 4.2vw;
     margin-top: 10vw;
   }
+
   .member-img {
     width: 15vw;
     height: 15vw;
   }
+
   .our-team-row {
     width: 95%;
   }
+
   .team-member {
     height: 28vw;
   }
+
   .team-member h3 {
     font-size: 2vw;
   }
+
   .team-member h4 {
     font-size: 2vw;
   }
+
   .edu-news h1 {
     font-size: 4.2vw;
   }
+
   .edu-story {
     width: 95%;
   }
+
   .edu-story2 h4 {
     font-size: 1.5vw;
   }
+
   .edu-story2 p {
     font-size: 1.2vw;
     width: 80%;
   }
+
   #edu-by2 {
     margin-top: 5vh;
   }
+
   .edu-story2 button {
     font-size: 1.2vw;
   }
@@ -574,39 +596,48 @@
     color: #0065ff;
     font-size: 4.2vw;
   }
+
   .about-us .qry-content {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  
+
 }
 
 @media only screen and (max-width: 1600px) and (min-width: 1201px) {
   .intro-div h1 {
     font-size: 4.2vw;
   }
+
   .about-edu h1 {
     font-size: 4.2vw;
   }
-  .about-edu-written p {
+
+  .about-edu-block p {
     font-size: 1.2vw;
   }
+
   .about-edu-illust h4 {
     font-size: 2.2vw;
   }
+
   .our-mission {
     width: 75%;
   }
+
   .our-mission h1 {
     font-size: 4.2vw;
   }
+
   .our-mission-illust {
     font-size: 1.5vw;
   }
+
   .our-mission-para {
     font-size: 1.2vw;
   }
+
   .our-mission-imgs img {
     height: 9vw;
     width: 9vw;
@@ -615,6 +646,7 @@
   .our-mission-imgs div {
     font-size: 2vw;
   }
+
   .student-get h1 {
     font-size: 4.2vw;
   }
@@ -627,10 +659,12 @@
   .student-get-block {
     width: 70%;
   }
+
   .student-get-content {
     width: 45%;
     text-align: center;
   }
+
   .student-get-content img {
     height: 16vh;
   }
@@ -642,6 +676,7 @@
   .student-get-content p {
     font-size: 1.4vw;
   }
+
   .rec_dvlpmnts {
     height: 80vh;
     margin: 10vw 0;
@@ -656,6 +691,7 @@
     height: 32vw;
     margin: 5vw auto;
   }
+
   .rd_hdline {
     font-size: 3.2vw;
   }
@@ -668,6 +704,7 @@
     height: 5vh;
     font-size: 1.4vw;
   }
+
   .rd_aftrtext p {
     font-size: 1.2vw;
   }
@@ -675,26 +712,33 @@
   .our-team h1 {
     font-size: 4.3w;
   }
+
   .member-img {
     width: 15vw;
     height: 15vw;
   }
+
   .team-member h3 {
     font-size: 2vw;
   }
+
   .team-member h4 {
     font-size: 2vw;
   }
+
   .edu-news h1 {
     font-size: 4.2vw;
   }
+
   .edu-story2 h4 {
     font-size: 1.5vw;
   }
+
   .edu-story2 p {
     font-size: 1.2vw;
     width: 80%;
   }
+
   #edu-by2 {
     margin-top: 5vh;
   }
@@ -704,36 +748,45 @@
     font-size: 4.2vw;
   }
 
-  
 
-  
-  
+
+
+
 }
+
 @media only screen and (max-width: 1200px) and (min-width: 913px) {
   .intro-div h1 {
     font-size: 3.8vw;
   }
+
   .about-edu h1 {
     font-size: 4.2vw;
   }
-  .about-edu-written p {
+
+  .about-edu-block p {
     font-size: 1.2vw;
   }
+
   .about-edu-illust h4 {
     font-size: 2.2vw;
   }
+
   .our-mission {
     width: 75%;
   }
+
   .our-mission h1 {
     font-size: 4.2vw;
   }
+
   .our-mission-illust {
     font-size: 1.5vw;
   }
+
   .our-mission-para {
     font-size: 1.2vw;
   }
+
   .our-mission-imgs img {
     height: 9vw;
     width: 9vw;
@@ -742,6 +795,7 @@
   .our-mission-imgs div {
     font-size: 2vw;
   }
+
   .student-get h1 {
     font-size: 4.2vw;
   }
@@ -754,10 +808,12 @@
   .student-get-block {
     width: 70%;
   }
+
   .student-get-content {
     width: 45%;
     text-align: center;
   }
+
   .student-get-content img {
     height: 16vh;
   }
@@ -784,6 +840,7 @@
     height: 36vw;
     margin: 5vw auto;
   }
+
   .rd_hdline {
     font-size: 3.2vw;
   }
@@ -796,32 +853,41 @@
     height: 5vh;
     font-size: 1.4vw;
   }
+
   .rd_aftrtext p {
     font-size: 1.3vw;
   }
+
   .our-team h1 {
     font-size: 4.3w;
   }
+
   .member-img {
     width: 15vw;
     height: 15vw;
   }
+
   .team-member h3 {
     font-size: 2vw;
   }
+
   .team-member h4 {
     font-size: 2vw;
   }
+
   .edu-news h1 {
     font-size: 4.2vw;
   }
+
   .edu-story2 h4 {
     font-size: 1.5vw;
   }
+
   .edu-story2 p {
     font-size: 1.2vw;
     width: 80%;
   }
+
   #edu-by2 {
     margin-top: 5vh;
   }
@@ -838,41 +904,49 @@
   .about-us .qry-heading {
     color: #0065ff;
   }
+
   .about-us .qry-img {
     height: auto;
   }
+
   .about-us .qry-img img {
     height: 100%;
     position: relative;
   }
+
   .about-us .qry-data {
     font-size: 1.5vw;
     margin-top: 3vh;
     height: 3vw;
   }
+
   .about-us .qry-role select {
     font-size: 1.2vw;
   }
+
   .about-us .qry-contact {
     width: 55%;
     padding-left: 5%;
   }
+
   .about-us .qry-contact input {
     font-size: 1.5vw;
     width: 100%;
   }
+
   .about-us .qry-contact div {
     font-size: 1.5vw;
   }
+
   .about-us .qry-role {
     margin-top: 2vw;
     height: 3vw;
     width: 100%;
   }
+
   .about-us .qry-submit {
     margin-top: 2vw;
     height: 3.1vw;
     font-size: 1.5vw;
   }
 }
-

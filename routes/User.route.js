@@ -32,7 +32,7 @@ router.get("/reset", UserController.getReset);
 
 router.get("/dashboard", ensureAuthenticated, UserController.getDashboard);
 
-router.get("/myprofile", UserController.myProfile);
+
 
 
 /* FOR ADMINS ONLY */

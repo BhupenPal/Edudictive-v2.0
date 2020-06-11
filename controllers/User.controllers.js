@@ -243,8 +243,5 @@ module.exports = {
       }
     })
   },
-
-myProfile: (req,res,next)=>{
-  res.render("myprofile");
-}  
+  
 };

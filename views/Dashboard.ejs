@@ -16,6 +16,11 @@
     <%-include('./Components/Header.ejs') %>
     <div class="profile-container">
         <div class="profile-heads" id="prof-head">
+            <div>
+                <a href="#" class="open-slide" onclick="openSlideMenu()">
+                  <i class="fa fa-bars"></i>
+                </a>
+          </div>
             <div >
                 <a href="/user/myprofile" class="heads inactive-head">My Profile</a>
                 <div class="underline active_under"></div>
@@ -40,20 +45,16 @@
                 <a href="/faq" class="heads inactive-head">FAQ</a>
                 <div class="underline"></div>
             </div>
-            <div>
-                  <a href="#" class="open-slide" onclick="openSlideMenu()">
-                    <i class="fa fa-bars"></i>
-                  </a>
-            </div>
+            
             
   <div id="side-menu" class="side-nav">
-    <a href="/user/myprofile" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-    <a href="/user/myprofile">My Profile</a>
-    <a href="/user/myprofile">My Programs</a>
-    <a href="/user/myprofile">Preferences</a>
-    <a href="/users/myprofile">Community</a>
-    <a href="/user/myprofile">Help Center</a>
-    <a href="/user/myprofile">FAQ</a>
+    <a href="/user/dashboard" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <a href="/user/dashboard">My Profile</a>
+    <a href="/user/dashboard">My Programs</a>
+    <a href="/user/dashboard">Preferences</a>
+    <a href="/users/dashboard">Community</a>
+    <a href="/user/dashboard">Help Center</a>
+    <a href="/user/dashboard">FAQ</a>
   </div>
         </div>
         <!-- Profile box starts -->

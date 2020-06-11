@@ -6,7 +6,8 @@ const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/Edudictive", {
   useNewUrlParser: !0,
   useUnifiedTopology: !0,
-  useCreateIndex: 1,
+  useCreateIndex: !0,
+  useFindAndModify: !0
 });
 
 //View Engine & Static File Routing

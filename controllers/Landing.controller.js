@@ -1,10 +1,6 @@
-const Product = require("../models/Product.model");
 const Cart = require("../models/Cart.model");
 const Contact = require("../models/Contact.model");
 const Course = require("../models/Course.model");
-const fs = require('fs'); 
-const multer = require('multer')
-const path = require('path')
 
 /* Home Routes */
 module.exports = {
@@ -73,20 +69,13 @@ module.exports = {
     })
   },
   getCourse: (req,res,next)=>{
-    const requestedCourseId = req.params.cID;
+    const { cID } = req.params;
 
-  Course.findOne({key: requestedCourseId}, function(err, course){
-    res.render("Course", {
-      title: course.courseTitle,
-      mode : course.mode,
-      about : course.about,
-      duration : course.duration,
-      price : course.price,
-      contents : course.contents,
-      whoShouldOpt:course.whoShouldOpt
-    });
-  });
+    Course.findOne({ Key : cID }, (err, doc) => {
+      res.render('Course', { doc })
+    })
   },
+
   campusAmbassador :(req,res,next)=>{
       res.render('Campus')
   },

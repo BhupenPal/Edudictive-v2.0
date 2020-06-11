@@ -20,8 +20,8 @@
             <div class="content">
                 <div class="content-head">
                     <h4>Technical Courses <i class="fal fa-lg fa-angle-right"></i> Web Development</h4>
-                    <h1><%=title%></h1>
-                    <h2><%=mode%> Training Program</h2>
+                    <h1><%= doc.Title %></h1>
+                    <h2><%= doc.Mode %> Training Program</h2>
                 </div>
                 <div class="ratings">
                     <img src="/assets/images/svgs/Filled-Star.svg" />
@@ -37,13 +37,13 @@
                         <div class="write-up">
                             <h3>About this program</h3>
                             <p>
-                               <%=about%>
+                               <%= doc.About %>
                             </p>
                         </div>
                         <div class="write-up">
                             <h3>What you will learn</h3>
                             <p>
-                               <%=contents%>
+                               <%= doc.WhatULean %>
                             </p>
                         </div>
                         <br />
@@ -61,7 +61,7 @@
                         <div class="detail-write-up">
                             <h3>Program Length</h3>
                             <p>
-                                <%=duration%>
+                                <%= doc.duration %>
                             </p>
                         </div>
                         <div class="detail-write-up">
@@ -91,7 +91,7 @@
                     <h2>Register Now</h2>
                     <h1> <img src="/assets/images/svgs/indian-rupee-symbol.svg" /> 900</h1>
                     <h2 id="discount">
-                        <span style="text-decoration: line-through">₹ <%=price%></span>
+                        <span style="text-decoration: line-through">₹ <%= doc.Price %></span>
                         <span>25% off</span>
                     </h2>
                     <div id="discount-tag">
@@ -125,7 +125,7 @@
     <div class="main-program">
         <div class="program-heading">
             <h1>WHO SHOULD OPT FOR THIS PROGRAM</h1>
-            <p><%=whoShouldOpt%></p>
+            <p><%= doc.WhoShouldOpt %></p>
         </div>
 
         <div class="program-heading">
@@ -645,7 +645,6 @@
     <%-include('./Components/Footer.ejs') %>
     <script src="/assets/scripts/webDev.js"></script>
 
-</body>
 </body>
 
 </html>

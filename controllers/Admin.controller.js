@@ -6,7 +6,7 @@ require('../models/Cart.model')
 require('../models/Contact.model')
 require('../models/Course.model')
 require('../models/HOMEOFFER')
-require('../models/Product.model')
+require('../models/Course.model')
 require('../models/User.model')
 
 AdminBro.registerAdapter(AdminBroMongoose);

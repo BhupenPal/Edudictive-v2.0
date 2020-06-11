@@ -20,10 +20,8 @@ router.post("/to-cart/:id", LandingController.addToCart);
 
 //COURSE HANDLE
 router.get("/course/:cID", LandingController.getCourse);
-//router.get("/learn-more", LandingController.getwebDev);
+
 //Campus Ambassador
 router.get("/campus-ambassador", LandingController.campusAmbassador);
-
-
 
 module.exports = router;

@@ -32,7 +32,8 @@ router.get("/reset", UserController.getReset);
 
 router.get("/dashboard", ensureAuthenticated, UserController.getDashboard);
 
-router.get("/logout", UserController.logout);
+router.get("/myprofile", UserController.myProfile);
+
 
 /* FOR ADMINS ONLY */
 //ADD COURSES

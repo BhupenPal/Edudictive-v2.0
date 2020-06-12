@@ -881,12 +881,20 @@ footer h4 {
   box-shadow: 0.75rem 0.75rem 1.25rem #00000029;
   border-radius: 0.9rem;
 }
+.qry-enter-data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .qry-enter-data *{
   transition: 0.5s ease-in-out;
 }
 
 #contactForm{
   position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .success-submission{

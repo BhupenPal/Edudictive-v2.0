@@ -100,9 +100,7 @@
     padding: 0;
     margin:2rem auto 2rem 1rem;
 }
-/* .profile-heads .icon {
-    display: none;
-  } */
+
 .side-nav{
     display: none;
 }
@@ -139,7 +137,7 @@
 .side-nav a{
   padding:2rem 10px 10px 30px;
   text-decoration:none;
-  font-size:22px;
+  font:1.2rem Avenir-Next;
   color:black;
   display:block;
   transition:0.3s;
@@ -387,9 +385,16 @@
     position: absolute;
     top: 9rem;
     left: 5rem;
+    font-size: 1.3rem;
 }
     .inactive-head{
         display: none;
+    }
+    .profile-heads .active-head {
+        font: Bold 2.5rem Avenir-Next;
+        color: #0065FF;
+        margin: 0rem ;
+        cursor: pointer;
     }
     .profile-box {
     display: flex;

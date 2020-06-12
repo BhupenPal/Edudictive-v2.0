@@ -1,462 +1,233 @@
-.profile-container {
-    padding-top: 325px;
+.form-container{
+    padding-top: 10rem;
+    margin-left: 30rem;
 }
-.profile-heads {
+.form-heading{
+    color:#6a11cb;
+    font:bold 4rem Avenir-Next;
+    
+}
+.form-subheading{
+    color:#6a11cb;
+    font:bold 2rem Avenir-Next;
+    margin-top: -2rem;
+}
+.pers-details{
+    color: #408CFF;
+  font: 1.5rem Avenir-Next;
+
+    margin-top: 5rem;
+}
+.input-container{
     display: flex;
-    align-items: baseline;
-    position: absolute;
-    top: 12rem;
-    left: 200px;
-}
-
-.profile-heads .inactive-head {
-    color: #C0C0C0;
-    font: Bold 2rem Avenir-Next;
-    cursor: pointer;
-    margin-left: 3rem;
-}
-
-.active_under {
-    height: 8px;
-    width: 0%;
-    background-color: #408CFF;
-    opacity: 0.4;
-    animation: wchange 0.4s 1 forwards;
-}
-
-@keyframes wchange {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 60%;
-    }
-}
-.profile-heads .active-head {
-    font: Bold 2rem Avenir-Next;
-    color: #0065FF;
-    margin: 0rem ;
-    cursor: pointer;
-}
-
-
-.profile-box {
-    display: flex;
-    left:15rem;
-    height: 42rem;
-    width: 73%;
-    margin: 0  1rem auto;
-    border-radius: 5rem;
-    position: relative;
-    font-family: Avenir-Next;
-    font-weight: 200;
-    padding-left: 40px;
-    padding-top: 40px;
-    box-sizing: border-box;
-    box-shadow: 6px 6px 20px #00000029;
-    background: white;
-}
-.profile-info{
+    flex-direction: column;
+    align-items: left;
     width: 50%;
-    margin: 3rem 3rem auto;
-     
+    margin-bottom: 4rem;
 }
- .info-head{
-    font-size: 1.2rem;
-    font-family:Avenir-Next;
-     margin-bottom: 0.5rem;
-      margin-left: 6rem;
+input{
+    margin-bottom: 2rem;
+    height: 3.5rem;
 }
-.info-det{
-    font:  2rem Avenir-Next;
-    opacity: 0.6;
-    margin-bottom: 1rem;
-    margin-left: 6rem;
-}
-.reg-encloser{
-    margin-left: 5rem;
-    
-}
-.reg-encloser .edit_profile {
-    background:  #0065FF;
-    height: 4rem;
-    width: 12rem;
-    border-radius: 0.5rem;
-    color: white;
-    font: 1.5rem Avenir-Next;
-    transition: 0.2s;
-    padding: 0;
-    margin:2rem auto 2rem 1rem;
-}
-.reg-encloser .update_password{
-    background:  #0065FF;
-    height: 4rem;
-    width: 13rem;
-    border-radius: 0.5rem;
-    color: white;
-    font: 1.5rem Avenir-Next;
-    transition: 0.2s;
-    padding: 0;
-    margin:2rem auto 2rem 1rem;
-}
-
-.side-nav{
-    display: none;
-}
-.open-slide{
-    display: none;
-}
-.profile-image{
-    margin: 12rem auto auto auto;
-}
-@media screen and (max-width: 480px) {
-    .profile-image{
-    margin: 2rem auto auto auto;
-        width: 50%;
-}
-    .open-slide{
-    display: block;
-        margin-right: 2rem;
-}
-    .side-nav{
-        display: block;
-  height:100%;
-  width:0;
-  position:fixed;
-  z-index:1;
-  top:4rem;
-  left:0;
-  background-color:white;
-  opacity: 1;
-  overflow-x:hidden;
-  padding-top:60px;
-  transition:0.5s;
-}
-
-.side-nav a{
-  padding:2rem 10px 10px 30px;
-  text-decoration:none;
-  font:1.2rem Avenir-Next;
-  color:black;
-  display:block;
-  transition:0.3s;
-}
-
-.side-nav a:hover{
-  color:#fff;
-}
-
-.side-nav .btn-close{
-  position:absolute;
-  top:2rem;
-  right:22px;
-  font-size:36px;
-  margin-left:50px;
-}
-
-
-
-    .profile-heads {
-    display: flex;
-    align-items: baseline;
-    position: absolute;
-    top: 9rem;
-    left: 2rem;
-}
-    .inactive-head{
-        display: none;
-    }
-    /* .profile-heads .active-head {
-        font: Bold 2rem Avenir-Next;
-        color: #0065FF;
-        margin: 0rem ;
-        cursor: pointer;
-    } */
-    .profile-box {
-    display: flex;
-    flex-direction: column;    
-    left:1rem;
-    height: 50rem;
-    width: 84%;
-    margin: -4rem  1rem auto;
-    border-radius: 5rem;
-    position: relative;
-    font-family: Avenir-Next;
-    font-weight: 200;
-    padding-top: 40px;
-    box-sizing: border-box;
-    box-shadow: 6px 6px 20px #00000029;
-    background: white;
-}
-.profile-info{
+.input-flexer{
     width: 100%;
-    margin:1rem auto 1rem -6rem;
-     
+    height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+   margin-bottom: 2rem;   
 }
- .info-head{
-    font-size: 1rem;
-    font-family:Avenir-Next;
-     margin-bottom: 0.5rem;
-      margin-left: 6rem;
+.input-flexer input,
+.input-flexer select {
+  width: 49%;
 }
-.info-det{
-    font:  1.5rem Avenir-Next;
-    opacity: 0.6;
-    margin-bottom: 1rem;
-    margin-left: 6rem;
+.availability{
+    height: 3.5rem;
+    width: 35%;
+    margin-bottom: 5rem;
 }
-.reg-encloser{
-    margin-left: 5rem;
+.questions .question-head{
+    color: #408CFF;
+  font: 1.5rem Avenir-Next;
+}
+.questions .question-1{
+     font: 1.5rem Avenir-Next;
+    opacity: 0.7;
+}
+textarea{
+      height: 15rem;
+    width: 100%;
+    border-radius: 20px;
+    text-indent: 2rem;
+   
+}
+ textarea::placeholder{
+    font: 1.3rem Avenir-Next;
+}
+.sub-buttons{
+    display: flex;
+    margin-bottom: 10rem;
+}
+.draft-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 24%;
+  background: #00dc67;
+  text-align: center;
+  box-shadow: 6px 6px 20px #00000029;
+  border-radius: 15px;
+  font: Bold 21px Product-Sans;
+  color: #ffffff;   
+}
+.sub-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 25%;
+    margin-left: 1rem;
+  background: white;
+  text-align: center;
+  box-shadow: 6px 6px 20px #00000029;
+  border-radius: 15px;
+  font: Bold 21px Product-Sans;
+  color: black;   
+}
+.form-container{
+    padding-top: 10rem;
+    margin-left: 30rem;
+}
+.form-heading{
+    color:#6a11cb;
+    font:bold 4rem Avenir-Next;
     
 }
-.reg-encloser .edit_profile {
-    background:  #0065FF;
-    height: 3rem;
-    width: 7rem;
-    border-radius: 0.5rem;
-    color: white;
-    font: 1rem Avenir-Next;
-    transition: 0.2s;
-    padding: 0;
-    margin:2rem auto 2rem 1rem;
+.form-subheading{
+    color:#6a11cb;
+    font:bold 2rem Avenir-Next;
+    margin-top: -2rem;
 }
-.reg-encloser .update_password{
-    background:  #0065FF;
-    height: 3rem;
-    width: 10rem;
-    border-radius: 0.5rem;
-    color: white;
-    font: 1rem Avenir-Next;
-    transition: 0.2s;
-    padding: 0;
-    margin:-1rem auto 2rem 1rem;
+.pers-details{
+    color: #408CFF;
+  font: 1.5rem Avenir-Next;
+
+    margin-top: 5rem;
 }
-  
+.input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 50%;
+    margin-bottom: 4rem;
+}
+input{
+    margin-bottom: 2rem;
+    height: 3.5rem;
+}
+.input-flexer{
+    width: 100%;
+    height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+   margin-bottom: 2rem;   
+}
+.input-flexer input,
+.input-flexer select {
+  width: 49%;
+}
+.availability{
+    height: 3.5rem;
+    width: 35%;
+    margin-bottom: 5rem;
+}
+.questions .question-head{
+    color: #408CFF;
+  font: 1.5rem Avenir-Next;
+}
+.questions .question-1{
+     font: 1.5rem Avenir-Next;
+    opacity: 0.7;
+}
+textarea{
+      height: 15rem;
+    width: 100%;
+    border-radius: 20px;
+    text-indent: 2rem;
+   
+}
+ textarea::placeholder{
+    font: 1.3rem Avenir-Next;
+}
+.sub-buttons{
+    display: flex;
+    margin-bottom: 10rem;
+}
+.draft-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 24%;
+  background: #00dc67;
+  text-align: center;
+  box-shadow: 6px 6px 20px #00000029;
+  border-radius: 15px;
+  font: Bold 21px Product-Sans;
+  color: #ffffff;   
+}
+.sub-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 25%;
+    margin-left: 1rem;
+  background: white;
+  text-align: center;
+  box-shadow: 6px 6px 20px #00000029;
+  border-radius: 15px;
+  font: Bold 21px Product-Sans;
+  color: black;   
 }
 @media screen and (max-width: 1024px ) and (min-width: 768px) {
-    .profile-heads {
-    display: flex;
-    align-items: baseline;
-    position: absolute;
-    top: 9rem;
-    left: 4rem;
-}
-
-.profile-heads .inactive-head {
-    color: #C0C0C0;
-    font: Bold 1.6rem Avenir-Next;
-    cursor: pointer;
-    margin-left: 2rem;
-}
-
-.active_under {
-    height: 8px;
-    width: 0%;
-    background-color: #408CFF;
-    opacity: 0.4;
-    animation: wchange 0.4s 1 forwards;
-}
-
-@keyframes wchange {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 60%;
-    }
-}
-.profile-heads .active-head {
-    font: Bold 1.7rem Avenir-Next;
-    color: #0065FF;
-    margin: 0rem ;
-    cursor: pointer;
-}
-   
-    .profile-box {
-    display: flex;
-    left:1rem;
-    height: 42rem;
-    width: 88%;
-    margin: -5rem  2rem auto;
-    border-radius: 5rem;
-    position: relative;
-    font-family: Avenir-Next;
-    font-weight: 200;
-    padding-top: 40px;
-    box-sizing: border-box;
-    box-shadow: 6px 6px 20px #00000029;
-    background: white;
-}
-.profile-info{
-    width: 100%;
-    margin:1rem auto 1rem -3rem;
-     
-}
-    .profile-image{
-        margin-right: 9rem;
-        margin-top: 12rem;
-    }
- .info-head{
-    font-size: 1.5rem;
-    font-family:Avenir-Next;
-     margin-bottom: 0.5rem;
-      margin-left: 6rem;
-}
-.info-det{
-    font:  2rem Avenir-Next;
-    opacity: 0.6;
-    margin-bottom: 1rem;
+    .form-container{
+    padding-top: 6rem;
     margin-left: 6rem;
 }
-.reg-encloser{
-    margin-left: 5rem;
-    
+    .input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 75%;
+    margin-bottom: 4rem;
 }
-.reg-encloser .edit_profile {
-    background:  #0065FF;
-    height: 3.5rem;
-    width: 8rem;
-    border-radius: 0.5rem;
-    color: white;
-    font: 1.4rem Avenir-Next;
-    transition: 0.2s;
-    padding: 0;
-    margin:2rem auto 2rem 1rem;
-}
-.reg-encloser .update_password{
-    background:  #0065FF;
-    height: 3.5rem;
-    width: 13rem;
-    border-radius: 0.5rem;
-    color: white;
-    font: 1.4rem Avenir-Next;
-    transition: 0.2s;
-    padding: 0;
-    margin:-1rem auto 2rem 1rem;
-}
-  
 }
 @media only screen and (max-width: 768px) and (min-width:481px) {
-    .open-slide{
-        display: block;
-            margin-right: 2rem;
-    }
-        .side-nav{
-            display: block;
-      height:100%;
-      width:0;
-      position:fixed;
-      z-index:1;
-      top:4rem;
-      left:0;
-      background-color:white;
-      opacity: 1;
-      overflow-x:hidden;
-      padding-top:60px;
-      transition:0.5s;
-    }
-    
-    .side-nav a{
-      padding:2rem 10px 10px 30px;
-      text-decoration:none;
-      font-size:22px;
-      color:black;
-      display:block;
-      transition:0.3s;
-    }
-    
-    .side-nav a:hover{
-      color:#fff;
-    }
-    
-    .side-nav .btn-close{
-      position:absolute;
-      top:2rem;
-      right:22px;
-      font-size:36px;
-      margin-left:50px;
-    }
-    
-    .profile-heads {
-    display: flex;
-    align-items: baseline;
-    position: absolute;
-    top: 9rem;
-    left: 5rem;
-    font-size: 1.3rem;
-}
-    .inactive-head{
-        display: none;
-    }
-    .profile-heads .active-head {
-        font: Bold 2.5rem Avenir-Next;
-        color: #0065FF;
-        margin: 0rem ;
-        cursor: pointer;
-    }
-    .profile-box {
-    display: flex;
-    left:1rem;
-    height: 42rem;
-    width: 84%;
-    margin: -4rem  1rem auto;
-    border-radius: 5rem;
-    position: relative;
-    font-family: Avenir-Next;
-    font-weight: 200;
-    padding-top: 40px;
-    box-sizing: border-box;
-    box-shadow: 6px 6px 20px #00000029;
-    background: white;
-}
-.profile-info{
-    width: 100%;
-    margin:1rem auto 1rem -6rem;
-     
-}
-    .profile-image{
-        margin-right: 4rem;
-        margin-top: 12rem;
-    }
- .info-head{
-    font-size: 1.5rem;
-    font-family:Avenir-Next;
-     margin-bottom: 0.5rem;
-      margin-left: 6rem;
-}
-.info-det{
-    font:  2rem Avenir-Next;
-    opacity: 0.6;
-    margin-bottom: 1rem;
-    margin-left: 6rem;
-}
-.reg-encloser{
+    .form-container{
+    padding-top: 6rem;
     margin-left: 5rem;
-    
 }
-.reg-encloser .edit_profile {
-    background:  #0065FF;
-    height: 3.5rem;
-    width: 8rem;
-    border-radius: 0.5rem;
-    color: white;
-    font: 1.4rem Avenir-Next;
-    transition: 0.2s;
-    padding: 0;
-    margin:2rem auto 2rem 1rem;
+    .input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 80%;
+    margin-bottom: 4rem;
 }
-.reg-encloser .update_password{
-    background:  #0065FF;
-    height: 3.5rem;
-    width: 13rem;
-    border-radius: 0.5rem;
-    color: white;
-    font: 1.4rem Avenir-Next;
-    transition: 0.2s;
-    padding: 0;
-    margin:-1rem auto 2rem 1rem;
 }
-  
+@media screen and (max-width: 480px) {
+       .form-container{
+    padding-top: 6rem;
+    margin-left: 1rem;
 }
+    .input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 80%;
+    margin-bottom: 4rem;
+}
+}
+
+

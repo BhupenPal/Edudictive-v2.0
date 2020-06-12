@@ -1,19 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/index.css">
-    <link rel="stylesheet" href="/assets/css/all.min.css">
-    <link rel="stylesheet" href="/assets/css/dashboard.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/dashboard.css" />
+    <title>Profile</title>
 </head>
+
 <body>
-    <%-include('./Components/Header.ejs') %> 
-    <div class="dash-wrapper">
-        Hi <%= user.ufName %>
-    </div>
-    <%-include('./Components/Footer.ejs') %> 
-    <script src="/assets//scripts/index.js"></script>
+
+    <%-include('./Components/Header.ejs') %>
+    <div class="profile-container">
+        <div class="profile-heads" id="prof-head">
+            <div>
+                <a href="#" class="open-slide" onclick="openSlideMenu()">
+                  <i class="fa fa-bars fa-2x"></i>
+                </a>
+          </div>
+            <div >
+                <a href="/user/myprofile" class="heads inactive-head">My Profile</a>
+                <div class="underline active_under"></div>
+            </div>
+            <div >
+                <a href="/user/myprograms" class="heads inactive-head">My Programs</a>
+                <div class="underline"></div>
+            </div>
+            <div>
+                <a href="/user/preferences" class="heads inactive-head">Preferences</a>
+                <div class="underline"></div>
+            </div>
+            <div>
+                <a href="/comunity" class="heads inactive-head">Community</a>
+                <div class="underline"></div>
+            </div>
+            <div >
+                <a href="/helpcenter" class="heads inactive-head">Help Center</a>
+                <div class="underline"></div>
+            </div>
+            <div >
+                <a href="/faq" class="heads inactive-head">FAQ</a>
+                <div class="underline"></div>
+            </div>
+            
+            
+  <div id="side-menu" class="side-nav">
+    <a href="/user/dashboard" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <a href="/user/dashboard">My Profile</a>
+    <a href="/user/dashboard">My Programs</a>
+    <a href="/user/dashboard">Preferences</a>
+    <a href="/users/dashboard">Community</a>
+    <a href="/user/dashboard">Help Center</a>
+    <a href="/user/dashboard">FAQ</a>
+  </div>
+        </div>
+        <!-- Profile box starts -->
+            <div class="profile-box">
+                <div class="profile-info">
+                    <div class="info-head">full Name</div>
+                    <div class = "info-det"> Parth Khandelwal</div>
+
+                    <div class="info-head">Username</div>
+                    <div class = "info-det">@abcd</div>
+
+                    <div class="info-head">Email</div>
+                    <div class = "info-det">Email</div>
+
+                    <div class="info-head">Institution</div>
+                    <div class = "info-det">Email</div>
+
+                    <div class="info-head">Registered Mobile No.</div>
+                    <div class = "info-det">4254353455</div>
+                    <div class="reg-encloser">
+                        <button class="edit_profile"> Edit Profile</button>
+                        <button class="update_password">Update Password</button>
+                    </div>
+                </div>
+                <div class="profile-image">IMAGE</div>
+            </div>
+            
+            
+   </div>
+
+    <%-include('./Components/ContactForm.ejs') %>
+    <%-include('./Components/Footer.ejs') %>
+    <script>
+        function openSlideMenu(){
+      document.getElementById('side-menu').style.width = '250px'
+    }
+
+    function closeSlideMenu(){
+      document.getElementById('side-menu').style.width = '0'; 
+    }
+        </script>
+
+    <script src="/assets/scripts/index.js"></script>
+    <script src="/assets/scripts/profile.js"></script>
+
 </body>
+
 </html>

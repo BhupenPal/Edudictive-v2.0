@@ -22,42 +22,50 @@ heads[1].onclick = function(){
 
 // For slider
 let slide = document.querySelectorAll(".wslide")
-let s_control = document.querySelector(".slider-controller").children
-slide[0].style.cssText = "visibility: visible; opacity:1"
-function slider(x){
-        if(x==1){
-                for(let i=0; i<slide.length; i++) slide[i].removeAttribute("style");
+let s_control = document.querySelectorAll(".slider-controller div")
+let interval = null;
 
-                for(let i=0; i<s_control.length; i++){
-                        s_control[i].classList.add("inactive-slide") 
-                        s_control[i].classList.remove("active-slide")
+s_control.forEach(element => {
+        element.addEventListener("click",slider)
+});
+function slider(){
+        clearInterval(interval)
+        let currsl = 0
+        let currel = this.getAttribute('data-identity')
+        for(let el=0; el<s_control.length;el++){
+                if(s_control[el].classList.contains("active-slide")){
+                        currsl = el;
+                        s_control[el].classList.remove("active-slide")
+                        s_control[el].classList.add('inactive-slide')
+                        slide[el].classList.remove("active-wslide")
+                        break
                 }
-                
-                slide[0].style.cssText = "visibility: visible; opacity:1"
-                s_control[0].classList.add("active-slide")
         }
-
-        if(x==2){
-                for(let i=0; i<slide.length; i++) slide[i].removeAttribute("style");
-
-                for(let i=0; i<s_control.length; i++){
-                        s_control[i].classList.add("inactive-slide") 
-                        s_control[i].classList.remove("active-slide")
-                }
-
-                slide[1].style.cssText = "visibility: visible; opacity:1"
-                s_control[1].classList.add("active-slide")
-        }
-
-        if(x==3){
-                for(let i=0; i<slide.length; i++) slide[i].removeAttribute("style");
-
-                for(let i=0; i<s_control.length; i++){
-                        s_control[i].classList.add("inactive-slide") 
-                        s_control[i].classList.remove("active-slide")
-                }
-                
-                slide[2].style.cssText = "visibility: visible; opacity:1"
-                s_control[2].classList.add("active-slide")
-        }
+        slide[currel].classList.add('active-wslide')
+        s_control[currel].classList.add('active-slide')
+        interval = setInterval(another,5000)
 }
+
+
+function another(){
+                let currsl = 0
+                let nextsl = 0
+                for(let el=0; el<s_control.length;el++){
+                        if(s_control[el].classList.contains("active-slide")){
+                                currsl = el;
+                                s_control[el].classList.remove("active-slide")
+                                s_control[el].classList.add('inactive-slide')
+                                slide[el].classList.remove("active-wslide")
+                                break
+                        }
+                }
+                if(currsl<2){
+                        nextsl = currsl+1
+                }else{
+                        nextsl = 0
+                }
+                slide[nextsl].classList.add('active-wslide')
+                s_control[nextsl].classList.add('active-slide')
+        }
+
+interval = setInterval(another, 5000)

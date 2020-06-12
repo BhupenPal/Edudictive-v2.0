@@ -34,7 +34,7 @@ function react() {
 		html:
 		 '12-14 Hours Training (2 hours a day)\
 		 <br>\
-		 Starting from 15th June\
+		 Starting from 22nd June\
 		 <br>\
 		 Online doubt clearing sessions\
 		 <br>\

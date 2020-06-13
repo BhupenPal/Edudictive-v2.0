@@ -36,13 +36,7 @@
 .success{
     margin: 0rem 5rem 5rem 5rem;
 }
-.tick-img img{ 
-    margin-top: 3rem;
-    margin-left: 6rem;
-    height: 15rem;
-    width: 53%;
-    margin-bottom: 2rem;
-}
+
 .msg{
     font: 1.4rem Avenir-Next;
     opacity: 0.7;
@@ -63,6 +57,21 @@ border-radius: 15px;
 font: Bold 21px Product-Sans;
 color: #ffffff;
 }
+
+.tick-icon {
+    margin: 5rem auto 4rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    color: #ffffff;
+    font-size: 100px;
+    font-weight: bolder;
+    text-shadow: #00ca5e;
+    background-color: #00dc67;
+  }
 @media screen and (max-width: 1024px ) and (min-width: 768px) {
   .form-container{
   padding-top: 6rem;
@@ -112,13 +121,6 @@ color: #ffffff;
     box-shadow: 6px 6px 20px #00000029;
     background: white;
 }
-    .tick-img img{ 
-    margin-top: 3rem;
-    margin-left: 5rem;
-    height: 15rem;
-    width: 60%;
-    margin-bottom: 2rem;
-}
 }
 @media screen and (max-width: 480px) {
      .form-container{
@@ -146,23 +148,31 @@ color: #ffffff;
     position: relative;
     font-family: Avenir-Next;
     padding-left: 5px;
-    padding-right: 5px;
+    padding-right: 7px;
  
     box-sizing: border-box;
     box-shadow: 6px 6px 20px #00000029;
     background: white;
 }
-    .tick-img img{ 
-    margin-top: 1rem;
-    margin-left: -2rem;
-    height: 13rem;
-    width: 15rem;
-    margin-bottom: 0rem;
-}
+    .tick-icon {
+    margin: 2rem auto 3rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    color: #ffffff;
+    font-size: 100px;
+    font-weight: bolder;
+    text-shadow: #00ca5e;
+    background-color: #00dc67;
+  }
+ 
     .msg{
         width: 100%;;
     font: 1.4rem Avenir-Next;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 }

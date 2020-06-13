@@ -14,6 +14,10 @@
   margin-top:3vh;
 }
 
+.edu-for-sch-illust img{
+  padding-left:100px
+}
+
 .headline {
   color: #004e92 !important;
 }
@@ -94,6 +98,10 @@
     margin-left: 8%;
     font-size: 7.5vw;
     line-height: 1.2;
+  }
+
+  .edu-for-sch-illust img{
+    padding-left:0px
   }
 
   .camp-container-outer {

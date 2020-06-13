@@ -345,83 +345,255 @@
 @media only screen and (max-width: 480px) {
 
   .about-us {
+    padding-top: 80px;
+  }
+
+  .intro-div {
+    height: 500px;
+  }
+
+  .intro-section {
+    height: 275px;
+    display: flex;
+    align-items: center;
+  }
+
+  .intro-div h1 {
+    font-size: 8vw;
+    line-height: 10vw;
+    width: 95%;
+    margin: 0 auto;
     padding-top: 0;
   }
 
   .about-edu {
     width: 90%;
-    margin-top: -50% !important;
+    margin-top: -225px !important;
   }
 
-  .rd_contain {
-    width: 100%;
-  }
-
-  .rd_pretext {
-    width: 100%;
-  }
-
-  .about-us h1 {
-    font-size: 9vw !important;
+  .about-edu h1 {
+    margin: 5vw auto;
+    font-size: 8.3vw;
   }
 
   .about-edu-block {
     flex-direction: column;
+    margin-top: 5vw;
+  }
+
+  .about-edu-block p {
+    width: 95%;
+    font-size: 4vw;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .about-edu-illust {
-    width: 95%;
+    margin-top: 5vh;
+    text-align: center;
+  }
+
+  .about-edu-illust img {
+    width: 85%;
+  }
+
+  .our-mission {
+    margin: 18vw auto !important;
+    margin-bottom: 10vw;
+    width: 90%;
+  }
+
+  .our-mission h1 {
+    font-size: 11vw;
   }
 
   .our-mission-block {
     flex-direction: column;
+    margin: 6.5vw auto;
+    margin-bottom: 0;
   }
 
   .our-mission-illust {
-    width: 95%;
-  }
-
-  .our-mission-para {
-    width: 95%;
     text-align: center;
   }
 
+  .our-mission-illust img {
+    width: 85%;
+  }
+
+  .our-mission-para {
+    width: 90%;
+    font-size: 4.5vw;
+    text-align: center;
+    margin-top: 6.5vw;
+  }
+
   .our-mission-imgs {
-    flex-direction: column;
     width: 95%;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .our-mission-imgs div {
     margin-top: 2vh;
+    font-size: 4vw;
+    margin: 0 30px;
+  }
+
+  .our-mission-imgs div img {
+    width: 25vw;
+    height: 25vw;
+    margin-top: 40px;
+  }
+
+  .our-mission-imgs div div {
+    margin: 0;
+    margin-top: 1vw;
+  }
+
+  .student-get h1 {
+    width: 90%;
+    margin: auto;
+    font-size: 11vw;
+  }
+
+  .student-get p {
+    margin: 5vw auto;
+    width: 85%;
+    font-size: 4vw;
   }
 
   .student-get-block {
     flex-direction: column;
+    width: 90%;
+    align-items: center;
+    margin: 0 auto;
   }
 
   .student-get-content {
+    margin: 3vw 0;
     width: 95%;
   }
 
-  .our-team-row {
+  .student-get-content img {
+    height: 22vw;
+  }
+
+  .student-get-content h4 {
+    font-size: 5vw;
+  }
+
+  .student-get-content p {
+    font-size: 4vw;
+  }
+
+  .rec_dvlpmnts {
+    height: auto;
+    width: 90%;
+    margin: 8vw auto;
+  }
+
+  .rec_dvlpmnts h1 {
+    font-size: 11vw;
+  }
+
+  .rd_contain {
+    width: 100%;
+    height: 100vw;
+    margin: 10vw auto;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(#00000065, #00000065), url(/assets/images/recent-developments.jpg);
+  }
+
+  .rd_pretext {
+    width: 90%;
+    margin: 0 auto;
+    position: static;
+    text-align: center;
+  }
+
+  .rd_hdline {
+    font-size: 8vw;
+  }
+
+  .rd_cbtn {
+    height: 9vw;
+    font-size: 3vw;
+    margin-top: 18vw;
+  }
+
+  .rd_aftrtexthead {
+    font-size: 4vw;
+  }
+
+  .rd_aftrtext p {
+    font-size: 2.8vw;
+  }
+
+  .rd_aftrtext .rd_cbtn {
+    margin-top: 0;
+  }
+
+  .our-team h1 {
+    font-size: 12vw;
+    margin-top: 15vw;
   }
 
   .team-member {
-    width: 95%;
+    width: 40%;
+    height: 50vw;
+  }
+
+  .member-img {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .team-member h3 {
+    font-size: 6vw;
+  }
+
+  .team-member h4 {
+    font-size: 5vw;
+  }
+
+  .edu-news h1 {
+    font-size: 11vw;
   }
 
   .edu-story {
     flex-direction: column;
+    width: 80%;
   }
 
   .edu-story2 {
-    width: 95%;
-    margin-top: 5vh;
+    width: 90%;
+    margin-bottom: 8vw;
+    padding: 0;
   }
 
+  .edu-story2 h4 {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 7vw;
+    font-size: 6vw;
+  }
+  
   .edu-story2 p {
     width: 90%;
+    margin: 0 auto;
+    margin-top: 4vw;
+    font-size: 4vw;
+  }
+
+  #edu-by2 {
+    margin-top: 7vw;
+  }
+
+  .edu-story2 button {
+    margin-top: 5vw;
   }
 
 }

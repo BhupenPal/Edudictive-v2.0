@@ -1,6 +1,7 @@
 const Cart = require("../models/Cart.model");
 const Contact = require("../models/Contact.model");
 const Course = require("../models/Course.model");
+const studentPartner = require("../models/studentPartner.model");
 
 /* Home Routes */
 module.exports = {
@@ -78,5 +79,25 @@ module.exports = {
 
   campusAmbassador :(req,res,next)=>{
       res.render('Campus')
+  },
+
+  getEspForm:(req,res,next)=>{
+    res.render('espForm')
+  },
+
+  postEspForm:(req,res,next)=>{
+    console.log(req.body);
+    const NewStudentPartner = new studentPartner(req.body);
+    NewStudentPartner.save((err)=>{
+      if(err){
+        res.send("error");
+      }
+      else{
+        res.render("espFormSuccess");
+      }
+    })
+  },
+  getEspFormSuccess:(req,res,next)=>{
+    res.render('espFormSuccess')
   },
 }

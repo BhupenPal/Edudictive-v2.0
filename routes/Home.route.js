@@ -24,4 +24,7 @@ router.get("/course/:cID", LandingController.getCourse);
 //Campus Ambassador
 router.get("/campus-ambassador", LandingController.campusAmbassador);
 
+router.get('/espform', LandingController.getEspForm);
+
+router.post('/espform', LandingController.postEspForm);
 module.exports = router;

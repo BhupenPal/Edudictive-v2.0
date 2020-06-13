@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/espFormSuccess.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%-include('./Components/Header.ejs') %>
+    <div class="form-container">
+       <h1 class= "form-heading">Edudictive Student Partner</h1>
+       <h3 class= "form-subheading">Application Form</h3>
+       <div class="box">
+           <div class="success">
+               
+                <div class="tick-icon"><i class="fas fa-check"></i></div>
+              
+              <div class="msg"> Your application has been successfully submitted we will review it and contact you further</div>
+              <a href="/"><button class="finish-btn"> Finish </button></a>
+           </div>
+       </div>
+    </div>
+    
+
+    <%-include('./Components/Footer.ejs') %>
+    <script src="/assets/scripts/index.js"></script>
+  </body>
+</html>

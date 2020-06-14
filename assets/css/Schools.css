@@ -301,6 +301,10 @@
     flex-direction: column-reverse;
   }
 
+  .crs_card_wrap{
+    width: 100%;
+  }
+
   .edu-for-sch-written {
     width: 100%;
     margin: auto;
@@ -376,6 +380,7 @@
 
   .illus-tag {
     font-size: 6vw;
+    margin-top: 0;
   }
 
   .illus-content {
@@ -458,6 +463,11 @@
     font-size: 4vw;
     line-height: 5vw;
   }
+  .edu-for-sch-illust img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 /* Media for tablets */
@@ -524,8 +534,13 @@
     line-height: 5vw;
   }
 
+  .edu-for-sch-illust img{
+    height: 100%;
+    width: 100%;
+  }
+
   .illus-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 
@@ -631,7 +646,7 @@
   }
 
   .crs_card_wrap {
-    width: 100vw;
+    width: 100%;
     margin: 0;
     padding: 20px 20px;
     box-sizing: border-box;

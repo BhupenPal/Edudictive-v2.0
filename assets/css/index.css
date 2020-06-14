@@ -1336,14 +1336,44 @@ footer h4 {
   .user-handle {
     display: none !important;
   }
-  .qry-content{
+  .cc-wrap{
     flex-direction: column;
   }
-  .qry-img{
+
+  .form-container{
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .contact-inp{
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .default-code{
+    min-width: max-content;
+    width: max-content;
+  }
+
+  .query-info{
+    flex-direction: column;
+  }
+
+  .contact-num{
+    justify-content: flex-start;
+  }
+
+  .num-input{
+    width: -webkit-fill-available;
+  }
+
+  .img-container img{
+    height: 100%;
     width: 100%;
   }
-  .contact{
-    width: 100%;
+
+  .contact-wrapper{
+    margin: 3rem 0;
   }
 }
 
@@ -1353,6 +1383,7 @@ footer h4 {
     position: fixed;
     top: -1px;
     z-index: 10;
+    display: block;
   }
 
   .hamburger {
@@ -1446,14 +1477,44 @@ footer h4 {
   .user-handle {
     display: none !important;
   }
-  .qry-content{
+  .cc-wrap{
     flex-direction: column;
   }
-  .qry-img{
+
+  .form-container{
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .contact-inp{
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .default-code{
+    min-width: max-content;
+    width: max-content;
+  }
+
+  .query-info{
+    flex-direction: column;
+  }
+
+  .contact-num{
+    justify-content: flex-start;
+  }
+
+  .num-input{
+    width: -webkit-fill-available;
+  }
+
+  .img-container img{
+    height: 100%;
     width: 100%;
   }
-  .contact{
-    width: 100%;
+
+  .contact-wrapper{
+    margin: 3rem 0;
   }
 }
 
@@ -1490,6 +1551,26 @@ footer h4 {
   .header-menu ul li a,.prog_menu span{
     margin-right: 30px;
   }
+
+  .img-container{
+    display: flex;
+    align-items: center;
+  }
+
+  .img-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .contact-inp{
+    width: 20rem;
+    margin: 0.5rem auto;
+  }
+
+  .query-info{
+    flex-direction: column;
+  }
 }
 
 @media only screen and (max-width:1750px) and (min-width:1500px){
@@ -1511,6 +1592,11 @@ footer h4 {
 
   .prog_menu span {
     margin-right: 0 !important;
+  }
+  .img-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
   }
 }
 

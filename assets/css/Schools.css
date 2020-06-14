@@ -18,18 +18,10 @@
 }
 .edu-for-sch-illust {
   height: auto;
-  width: 47%;
-  font-family: Proxima-Nova;
-  font-size: 42px;
+  width: 0%;
   display: flex;
-  align-items: center;
-  color: #4e4e4e;
-  text-align: center;
-}
-
-.illust-school{
-  width:118%;
-  height: 97%;
+  margin-top: -33%;
+  margin-left: 50px;
 }
 
 .illust-image{
@@ -53,6 +45,10 @@
   font: Bold 120px Avenir-Next;
   color: #6a11cb;
   margin: 0;
+}
+
+.edu-for-sch-detailed{
+  display:flex;
 }
 .para {
   text-align: left;
@@ -108,6 +104,7 @@
   width:70%;
   margin:20px auto 60px;
 }
+
 
 .illus-container {
   display: flex;
@@ -299,8 +296,13 @@
 
 /* SCHOOL PAGE STARTING --------------------------------- -480px-------------------------------- */
 @media screen and (max-width: 480px) {
-  .edu-for-sch-block {
+
+  .edu-for-sch-detailed{
     flex-direction: column-reverse;
+  }
+
+  .crs_card_wrap{
+    width: 100%;
   }
 
   .edu-for-sch-written {
@@ -310,12 +312,18 @@
 
   .edu-for-sch-illust {
     width: 100%;
-    margin: 25vh auto;
+    margin: 10vw auto;
   }
 
+  .edu-for-sch-illust img{
+    width:100%;
+  }
+
+
   .para {
-    font-size: 4vw;
+    font-size: 5vw;
     line-height: 5vw;
+    text-align:center ;
   }
 
   .edudictive-for h2 {
@@ -333,11 +341,13 @@
   .view-programs {
     width: 90%;
     margin-top: 10px;
+    margin-left: 20px;
   }
 
   .school-plans {
     width: 90%;
     margin-top: 10px;
+    margin-left:20px;
   }
 
   .school-container {
@@ -370,6 +380,7 @@
 
   .illus-tag {
     font-size: 6vw;
+    margin-top: 0;
   }
 
   .illus-content {
@@ -452,6 +463,11 @@
     font-size: 4vw;
     line-height: 5vw;
   }
+  .edu-for-sch-illust img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 /* Media for tablets */
@@ -518,8 +534,13 @@
     line-height: 5vw;
   }
 
+  .edu-for-sch-illust img{
+    height: 100%;
+    width: 100%;
+  }
+
   .illus-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 
@@ -625,7 +646,7 @@
   }
 
   .crs_card_wrap {
-    width: 100vw;
+    width: 100%;
     margin: 0;
     padding: 20px 20px;
     box-sizing: border-box;

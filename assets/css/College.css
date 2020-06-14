@@ -14,6 +14,10 @@
   margin-top:3vh;
 }
 
+.edu-for-sch-illust img{
+  padding-left:100px
+}
+
 .headline {
   color: #004e92 !important;
 }
@@ -96,6 +100,15 @@
     line-height: 1.2;
   }
 
+  .illus-tag {
+    font-size: 6vw;
+    margin-top: 0 !important;
+  }
+  
+  .crs_card_wrap{
+    width: 100%;
+  }
+
   .camp-container-outer {
     height: 65vh;
     background-position: 10% 50%;
@@ -130,6 +143,11 @@
     margin-left: 6%;
   }
 
+  
+  .crs_card_wrap{
+    width: 100%;
+  }
+
   .about-camp-insider {
     flex-direction: column;
   }
@@ -137,6 +155,11 @@
   .camp-written p {
     font-size: 2.9vw;
     line-height: 1.2;
+  }
+
+  .illus-tag {
+    font-size: 6vw;
+    margin-top: 0 !important;
   }
 
   .camp-written button {

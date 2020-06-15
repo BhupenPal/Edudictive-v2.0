@@ -6,36 +6,23 @@
   padding: 125px 3vh 3vh 3vh;
 }
 
-.edu-for-sch-block {
+.headline_wrap{
   display: flex;
-  justify-content: space-between;
-  margin: 15vh auto 8vh;
-  width: 90%;
+  position: relative;
+  width: 100%;
 }
+
 .edu-for-sch-written {
   height: auto;
-  width: 47%;
-}
-.edu-for-sch-illust {
-  height: auto;
-  width: 47%;
-  font-family: Proxima-Nova;
-  font-size: 42px;
-  display: flex;
-  align-items: center;
-  color: #4e4e4e;
-  text-align: center;
+  width: 100%;
+  margin: 10rem auto 15rem auto;
 }
 
 .illust-school{
-  width:118%;
-  height: 97%;
+  position: absolute;
+  right: 0;
 }
 
-.illust-image{
-  width:60%;
-  height:60%;
-}
 .edudictive-for {
   display: flex;
 }
@@ -54,6 +41,11 @@
   color: #6a11cb;
   margin: 0;
 }
+
+.para-contain{
+  width: 40%;
+}
+
 .para {
   text-align: left;
   font-weight: 200;
@@ -64,7 +56,7 @@
 .edu-for-sch-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 .view-programs {
   background: linear-gradient(101deg, #8e2de2 0%, #4a00e0 100%);
@@ -299,9 +291,6 @@
 
 /* SCHOOL PAGE STARTING --------------------------------- -480px-------------------------------- */
 @media screen and (max-width: 480px) {
-  .edu-for-sch-block {
-    flex-direction: column-reverse;
-  }
 
   .crs_card_wrap{
     width: 100%;
@@ -309,7 +298,17 @@
 
   .edu-for-sch-written {
     width: 100%;
-    margin: auto;
+    margin: 8rem auto 6rem;
+  }
+
+  .illust-school{
+    height: 90vw;
+    width: 90vw;
+    bottom: 0;
+  }
+
+  .edudictive-for{
+    justify-content: center;
   }
 
   .edu-for-sch-illust {
@@ -317,9 +316,27 @@
     margin: 25vh auto;
   }
 
+  .edudictive-for img{
+    width: 10rem;
+  }
+  
+  .headline_wrap{
+    flex-direction: column;
+    height: 120vw;
+  }
+
+  .para-contain{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .para {
     font-size: 4vw;
     line-height: 5vw;
+    text-align: center;
   }
 
   .edudictive-for h2 {
@@ -328,20 +345,29 @@
 
   .edu-for-sch-written h1 {
     font: Bold 15vw Avenir-Next;
+    text-align: center;
   }
 
   .edu-for-sch-buttons {
     display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-top: 5vw;
   }
 
   .view-programs {
     width: 90%;
     margin-top: 10px;
+    font: bold 0.8rem Avenir-Next;
   }
 
   .school-plans {
     width: 90%;
     margin-top: 10px;
+    font: bold 0.8rem Avenir-Next;
   }
 
   .school-container {
@@ -374,7 +400,7 @@
 
   .illus-tag {
     font-size: 6vw;
-    margin-top: 0;
+    margin-top: 10vw;
   }
 
   .illus-content {
@@ -468,10 +494,6 @@
 @media only screen and (min-width:481px) and (max-width: 768px) {
   .school-container{
     width: 90%;
-  }
-
-  .edu-for-sch-block {
-    flex-direction: column;
   }
 
   .edu-for-sch-written {
@@ -766,10 +788,6 @@
     margin-bottom: 5vh;
   }
 
-  .edu-for-sch-block {
-    flex-direction: column;
-  }
-
   .edu-for-sch-written {
     width: 100%;
     margin: auto;
@@ -820,10 +838,6 @@
   .camp{
     width: 90% !important;
     margin-bottom: 5vh;
-  }
-
-  .edu-for-sch-block{
-    width: 90%;
   }
 
   .edu-for-sch-buttons{

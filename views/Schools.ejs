@@ -19,17 +19,22 @@
             <h2>for</h2>
           </div>
           <h1>Schools</h1>
-          <p class="para">
-            School students can benefit from our specially curated courses that are designed specifically as per their requirements. A skilled student would not only groom himself rather he would help the school groom itself as well. 
-          </p>
-          <div class="edu-for-sch-buttons">
-            <button class="view-programs">View Programs</button>
-            <button class="school-plans">School Plans</button>
+          <div class='edu-for-sch-detailed'>
+            <div class='edu-for-sch-text'>
+              <p class="para">
+                School students can benefit from our specially curated courses that are designed specifically as per their requirements. A skilled student would not only groom himself rather he would help the school groom itself as well. 
+              </p>
+              <div class="edu-for-sch-buttons">
+                <button class="view-programs">View Programs</button>
+                <button class="school-plans">School Plans</button>
+              </div>
+            </div>
+            <div class="edu-for-sch-illust">
+              <img src="/assets/images/svgs/school-hero.svg">
+            </div>
           </div>
         </div>
-        <div class="edu-for-sch-illust">
-          <img class="illust-school" src="/assets/images/svgs/school-hero.svg">
-        </div>
+        
       </div>
 
       <!-- second division -->
@@ -278,8 +283,8 @@
           </div>
         </div>
       </div>
-
-    <%-include('./Components/ContactForm.ejs') %>
+      <%-include('./Components/ContactForm.ejs') %>
+    </div>
     <%-include('./Components/Footer.ejs') %>
     <script src="/assets/scripts/index.js"></script>
   </body>

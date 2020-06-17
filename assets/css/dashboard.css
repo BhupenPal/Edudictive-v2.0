@@ -1,3 +1,233 @@
-.dash-wrapper{
-    padding-top: 125px;
+.form-container{
+    padding-top: 10rem;
+    margin-left: 30rem;
 }
+.form-heading{
+    color:#6a11cb;
+    font:bold 4rem Avenir-Next;
+    
+}
+.form-subheading{
+    color:#6a11cb;
+    font:bold 2rem Avenir-Next;
+    margin-top: -2rem;
+}
+.pers-details{
+    color: #408CFF;
+  font: 1.5rem Avenir-Next;
+
+    margin-top: 5rem;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 50%;
+    margin-bottom: 4rem;
+}
+input{
+    margin-bottom: 2rem;
+    height: 3.5rem;
+}
+.input-flexer{
+    width: 100%;
+    height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+   margin-bottom: 2rem;   
+}
+.input-flexer input,
+.input-flexer select {
+  width: 49%;
+}
+.availability{
+    height: 3.5rem;
+    width: 35%;
+    margin-bottom: 5rem;
+}
+.questions .question-head{
+    color: #408CFF;
+  font: 1.5rem Avenir-Next;
+}
+.questions .question-1{
+     font: 1.5rem Avenir-Next;
+    opacity: 0.7;
+}
+textarea{
+      height: 15rem;
+    width: 100%;
+    border-radius: 20px;
+    text-indent: 2rem;
+   
+}
+ textarea::placeholder{
+    font: 1.3rem Avenir-Next;
+}
+.sub-buttons{
+    display: flex;
+    margin-bottom: 10rem;
+}
+.draft-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 24%;
+  background: #00dc67;
+  text-align: center;
+  box-shadow: 6px 6px 20px #00000029;
+  border-radius: 15px;
+  font: Bold 21px Product-Sans;
+  color: #ffffff;   
+}
+.sub-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 25%;
+    margin-left: 1rem;
+  background: white;
+  text-align: center;
+  box-shadow: 6px 6px 20px #00000029;
+  border-radius: 15px;
+  font: Bold 21px Product-Sans;
+  color: black;   
+}
+.form-container{
+    padding-top: 10rem;
+    margin-left: 30rem;
+}
+.form-heading{
+    color:#6a11cb;
+    font:bold 4rem Avenir-Next;
+    
+}
+.form-subheading{
+    color:#6a11cb;
+    font:bold 2rem Avenir-Next;
+    margin-top: -2rem;
+}
+.pers-details{
+    color: #408CFF;
+  font: 1.5rem Avenir-Next;
+
+    margin-top: 5rem;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 50%;
+    margin-bottom: 4rem;
+}
+input{
+    margin-bottom: 2rem;
+    height: 3.5rem;
+}
+.input-flexer{
+    width: 100%;
+    height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+   margin-bottom: 2rem;   
+}
+.input-flexer input,
+.input-flexer select {
+  width: 49%;
+}
+.availability{
+    height: 3.5rem;
+    width: 35%;
+    margin-bottom: 5rem;
+}
+.questions .question-head{
+    color: #408CFF;
+  font: 1.5rem Avenir-Next;
+}
+.questions .question-1{
+     font: 1.5rem Avenir-Next;
+    opacity: 0.7;
+}
+textarea{
+      height: 15rem;
+    width: 100%;
+    border-radius: 20px;
+    text-indent: 2rem;
+   
+}
+ textarea::placeholder{
+    font: 1.3rem Avenir-Next;
+}
+.sub-buttons{
+    display: flex;
+    margin-bottom: 10rem;
+}
+.draft-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 24%;
+  background: #00dc67;
+  text-align: center;
+  box-shadow: 6px 6px 20px #00000029;
+  border-radius: 15px;
+  font: Bold 21px Product-Sans;
+  color: #ffffff;   
+}
+.sub-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 25%;
+    margin-left: 1rem;
+  background: white;
+  text-align: center;
+  box-shadow: 6px 6px 20px #00000029;
+  border-radius: 15px;
+  font: Bold 21px Product-Sans;
+  color: black;   
+}
+@media screen and (max-width: 1024px ) and (min-width: 768px) {
+    .form-container{
+    padding-top: 6rem;
+    margin-left: 6rem;
+}
+    .input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 75%;
+    margin-bottom: 4rem;
+}
+}
+@media only screen and (max-width: 768px) and (min-width:481px) {
+    .form-container{
+    padding-top: 6rem;
+    margin-left: 5rem;
+}
+    .input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 80%;
+    margin-bottom: 4rem;
+}
+}
+@media screen and (max-width: 480px) {
+       .form-container{
+    padding-top: 6rem;
+    margin-left: 1rem;
+}
+    .input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 80%;
+    margin-bottom: 4rem;
+}
+}
+
+

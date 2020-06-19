@@ -19,7 +19,7 @@
         <div class="main-content">
             <div class="content">
                 <div class="content-head">
-                    <h4>Technical Courses <i class="fal fa-lg fa-angle-right"></i> Web Development</h4>
+                    <h4>Technical Courses <i class="fal fa-lg fa-angle-right"></i> <%= doc.NickName %></h4>
                     <h1><%= doc.Title %></h1>
                     <h2><%= doc.Mode %> Training Program</h2>
                 </div>
@@ -30,7 +30,7 @@
                     <img src="/assets/images/svgs/Filled-Star.svg" />
                     <img id="half-star" src="/assets/images/svgs/half filled star.svg" />
                     &ensp;4.5 (90 ratings)
-                    &emsp;<span class="white-text">150 students enrolled</span>
+                    &emsp;<span class="white-text"><%= doc.EnrolledStudents %> enrolled students</span>
                 </div>
                 <div class="content-about">
                     <div class="about-text">
@@ -55,19 +55,19 @@
                         <div class="detail-write-up">
                             <h3>Starts on</h3>
                             <p>
-                                June 1, 2020
+                                <%= doc.StartDate %>
                             </p>
                         </div>
                         <div class="detail-write-up">
                             <h3>Program Length</h3>
                             <p>
-                                <%= doc.duration %>
+                                <%= doc.Duration %>
                             </p>
                         </div>
                         <div class="detail-write-up">
                             <h3>Location</h3>
                             <p>
-                                Delhi Technological University, New Delhi
+                                <%= doc.Location %>
                             </p>
                         </div>
                         <div class="detail-write-up">
@@ -89,10 +89,10 @@
                 </div>
                 <div class="reg-details">
                     <h2>Register Now</h2>
-                    <h1> <img src="/assets/images/svgs/indian-rupee-symbol.svg" /> 900</h1>
+                    <h1> <img src="/assets/images/svgs/indian-rupee-symbol.svg" /> <% var Price = doc.Price - doc.Price*doc.Discount/100 %> <%= Price %></h1>
                     <h2 id="discount">
                         <span style="text-decoration: line-through">₹ <%= doc.Price %></span>
-                        <span>25% off</span>
+                        <span><%= doc.Discount %>%</span>
                     </h2>
                     <div id="discount-tag">
                         Early Bird Discount Applied
@@ -133,18 +133,11 @@
 
             <div class="program-content-main">
                 <div>
-                    <span><i class="far fa-check-circle"></i>
-                        <p>Certificate of Completion</p>
+                    <% doc.WhatUGet.map(item => { %>
+                        <span><i class="far fa-check-circle"></i>
+                        <p><%= item %></p>
                     </span>
-                    <span><i class="far fa-check-circle"></i>
-                        <p>Doubt clearing and AMA sessions</p>
-                    </span>
-                    <span> <i class="far fa-check-circle"></i>
-                        <p>Industry-level projects to work on</p>
-                    </span>
-                    <span><i class="far fa-check-circle"></i>
-                        <p>Internship/referral opportunities based on performance</p>
-                    </span>
+                    <% }) %>
                 </div>
 
                 <div>

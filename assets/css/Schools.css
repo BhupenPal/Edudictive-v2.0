@@ -6,28 +6,23 @@
   padding: 125px 3vh 3vh 3vh;
 }
 
-.edu-for-sch-block {
+.headline_wrap{
   display: flex;
-  justify-content: space-between;
-  margin: 15vh auto 8vh;
-  width: 90%;
-}
-.edu-for-sch-written {
-  height: auto;
-  width: 47%;
-}
-.edu-for-sch-illust {
-  height: auto;
-  width: 0%;
-  display: flex;
-  margin-top: -33%;
-  margin-left: 50px;
+  position: relative;
+  width: 100%;
 }
 
-.illust-image{
-  width:60%;
-  height:60%;
+.edu-for-sch-written {
+  height: auto;
+  width: 100%;
+  margin: 10rem auto 15rem auto;
 }
+
+.illust-school{
+  position: absolute;
+  right: 0;
+}
+
 .edudictive-for {
   display: flex;
 }
@@ -47,9 +42,10 @@
   margin: 0;
 }
 
-.edu-for-sch-detailed{
-  display:flex;
+.para-contain{
+  width: 40%;
 }
+
 .para {
   text-align: left;
   font-weight: 200;
@@ -60,7 +56,7 @@
 .edu-for-sch-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 .view-programs {
   background: linear-gradient(101deg, #8e2de2 0%, #4a00e0 100%);
@@ -297,13 +293,23 @@
 /* SCHOOL PAGE STARTING --------------------------------- -480px-------------------------------- */
 @media screen and (max-width: 480px) {
 
-  .edu-for-sch-detailed{
-    flex-direction: column-reverse;
+  .crs_card_wrap{
+    width: 100%;
   }
 
   .edu-for-sch-written {
     width: 100%;
-    margin: auto;
+    margin: 8rem auto 6rem;
+  }
+
+  .illust-school{
+    height: 90vw;
+    width: 90vw;
+    bottom: 0;
+  }
+
+  .edudictive-for{
+    justify-content: center;
   }
 
   .edu-for-sch-illust {
@@ -315,11 +321,27 @@
     width:100%;
   }
 
+  .edudictive-for img{
+    width: 10rem;
+  }
+  
+  .headline_wrap{
+    flex-direction: column;
+    height: 120vw;
+  }
+
+  .para-contain{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .para {
     font-size: 5vw;
     line-height: 5vw;
-    text-align:center ;
+    text-align: center;
   }
 
   .edudictive-for h2 {
@@ -328,22 +350,29 @@
 
   .edu-for-sch-written h1 {
     font: Bold 15vw Avenir-Next;
+    text-align: center;
   }
 
   .edu-for-sch-buttons {
     display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-top: 5vw;
   }
 
   .view-programs {
     width: 90%;
     margin-top: 10px;
-    margin-left: 20px;
+    font: bold 0.8rem Avenir-Next;
   }
 
   .school-plans {
     width: 90%;
     margin-top: 10px;
-    margin-left:20px;
+    font: bold 0.8rem Avenir-Next;
   }
 
   .school-container {
@@ -376,6 +405,7 @@
 
   .illus-tag {
     font-size: 6vw;
+    margin-top: 10vw;
   }
 
   .illus-content {
@@ -458,16 +488,17 @@
     font-size: 4vw;
     line-height: 5vw;
   }
+  .edu-for-sch-illust img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 /* Media for tablets */
 @media only screen and (min-width:481px) and (max-width: 768px) {
   .school-container{
     width: 90%;
-  }
-
-  .edu-for-sch-block {
-    flex-direction: column;
   }
 
   .edu-for-sch-written {
@@ -524,8 +555,13 @@
     line-height: 5vw;
   }
 
+  .edu-for-sch-illust img{
+    height: 100%;
+    width: 100%;
+  }
+
   .illus-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 
@@ -631,7 +667,7 @@
   }
 
   .crs_card_wrap {
-    width: 100vw;
+    width: 100%;
     margin: 0;
     padding: 20px 20px;
     box-sizing: border-box;
@@ -757,10 +793,6 @@
     margin-bottom: 5vh;
   }
 
-  .edu-for-sch-block {
-    flex-direction: column;
-  }
-
   .edu-for-sch-written {
     width: 100%;
     margin: auto;
@@ -811,10 +843,6 @@
   .camp{
     width: 90% !important;
     margin-bottom: 5vh;
-  }
-
-  .edu-for-sch-block{
-    width: 90%;
   }
 
   .edu-for-sch-buttons{

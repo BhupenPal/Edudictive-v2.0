@@ -648,23 +648,57 @@
 }
 
 /* Media for tablets */
-/* @media only screen and (max-width: 768px) {
+ @media only screen and (max-width: 768px) and (min-width: 481px) {
+     .content-wrap {
+       margin-left: 1rem;
+    margin-top: -15rem;
+    width: 100% ; 
+   }
   .get-skills-heading {
-    font-size: 9.8vw;
+    font-size: 2.4rem;
     width: 100%;
-    margin-top: 5vh;
+    margin-top: 10rem;
+    font: Bold 2.5rem Avenir-Next;
+    color: #408cff;
+  }
+   .skill-illustrate {
+     margin-right: 2rem;
+     margin-top: 0rem;
+     
   }
 
+
   .get-skills-platform {
-    width: 80%;
+    width: 100%;
+    margin-top:5rem;
   }
-  #skill-register {
-    margin-right: 0;
-  }
-  #skill-offers {
-    margin-left: 0;
-    margin-top: 2vh;
-  }
+ 
+.skill-handle {
+  display: flex;  
+  position: absolute;
+  margin-top: 45rem;
+  width: 95%;
+}
+
+.skill-handle button {
+  width: 63rem;
+  height: 5rem;
+  border-radius: 15px;
+  font: Bold 21px Avenir-Next;
+}
+
+#skill-register {
+  background-color: #408cff;
+  color: #ffffff;
+  margin-right: 1rem;
+}
+
+#skill-offers {
+  margin-left: 1rem;
+  background-color: #ffffff;
+  border: 3px solid #464646d6;
+  color: #464646d6;
+}
 
   .op-options {
     flex-direction: column;
@@ -747,113 +781,384 @@
   .blog-structure h2 {
     font-size: 6vw;
   }
-} */
+}
 
 /* Media for big tabs */
-@media only screen and (max-width: 918px) {}
-
-/* Media for small laptops */
-/* @media only screen and (max-width: 1440px) and (min-width: 918px) {
+@media only screen and (max-width: 1200px) and (min-width:769px) {
+  .content-wrap {
+       margin-left: 1rem;
+    margin-top: -3rem;
+    width: 100% ; 
+   }
   .get-skills-heading {
-    font-size: 5vw;
+    width: 100%;
+    margin-top: 0rem;
+    font: Bold 3.8rem Avenir-Next;
+    color: #408cff;
   }
+   .skill-illustrate {
+     margin-right: 2rem;
+     margin-top: 0rem;
+  }
+
 
   .get-skills-platform {
-    font-size: 1.8vw;
+    width: 100%;
+    margin-top:5rem;
+    font-size: 2rem;
+  }
+ 
+.skill-handle {
+  display: flex;  
+  position: absolute;
+  margin-top: 40rem;
+  width: 95%;
+}
+
+.skill-handle button {
+  width: 63rem;
+  height: 5rem;
+  border-radius: 15px;
+  font: Bold 21px Avenir-Next;
+}
+
+#skill-register {
+  background-color: #408cff;
+  color: #ffffff;
+  margin-right: 1rem;
+}
+
+#skill-offers {
+  margin-left: 1rem;
+  background-color: #ffffff;
+  border: 3px solid #464646d6;
+  color: #464646d6;
+}
+  .our-programs{
+    margin-top: 15rem;
   }
 
-  .skill-handle button {
-    width: 20vw;
-    height: 10vh;
-    font-size: 1.5vw;
+  .op-options {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
   }
 
-  #skill-offers {
-    font-size: 1.5w;
+  .op-option-block {
+    width: 80%;
+    margin-top: 2vh;
+  }
+
+  .sun-burn {
+    margin-top: 100px;
+
+  }
+
+  .sun-burn h1 {
+    font-size: 5rem;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .sun-burn-detailed {
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+.sun-burn-text h2 {
+  font: Bold 1rem Proxima-Nova;
+}
+
+
+
+.sun-burn-text p {
+  width: 90%;
+  font: 1rem Proxima-Nova;
+}
+
+  .success-flame {
+    width: 90%;
+    margin-left: 0;
+    margin: 5vh auto;
+  }
+
+  .success-flame img {
+    width: 100%;
+  }
+
+  .sun-burn-text h2 {
+    font: Bold 6.5vw Proxima-Nova;
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .sun-burn-text p {
+    font: 5vw Proxima-Nova;
+    margin: 20px auto;
+  }
+
+  .sun-svg img {
+    height: 100px;
+    width: 100px;
   }
 
   .intern-opt h2 {
-    font-size: 4vw;
+    font-size: 9.8vw;
+    width: 100%;
   }
 
   .intern-opt p {
-    width: 75%;
-    font-size: 2.5vw;
+    width: 100%;
   }
-
   .company-logo {
-    width: 80%;
-  }
+  margin: 5rem auto 10rem auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .company-logo img {
-    width: 30%;
-    height: auto;
-    transform: scale(0.9);
-  }
+.company-logo img {
+  margin: 0 auto;
+  width: 30%;
+  height: auto;
+  transform: scale(0.9);
+}
 
-  #AmazonLogo {
-    transform: scale(0.8);
-    margin-bottom: -30px;
-  }
-
+#AmazonLogo {
+  transform: scale(0.8);
+  margin-bottom: -30px;
+}
   .blogs-brief {
-    padding: 50px 0;
-  }
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25rem;
+  margin-bottom: 200px;
+  border-radius: 114px;
+  width: 90%;
+  background: transparent linear-gradient(124deg, #9795f0 0%, #fbc8d4 100%);
+}
 
-  .blogs-brief h1 {
-    font-size: 4.5vw;
+.blogs-brief h1 {
+  font: Bold 70px Avenir-Next;
+  width: 85%;
+  margin: 0 auto 4rem auto;
+  color: #ffffff;
+}
+
+  .blog-detail-container {
+    flex-direction: column;
+    align-items: center;
   }
 
   .blog-structure {
-    height: auto;
-  }
-
-  .blog-heading {
-    font-size: 2.8vw;
-    height: auto;
-    width: 75%;
-    padding-top: 0;
-    padding-left: 35px;
-  }
-
-  .blog-writer {
-    padding-left: 35px;
-    font-size: 1.2vw;
-    padding-top: 1.2vw;
-    margin: 0;
-  }
-
-  .blog-time {
-    font-size: 1.2vw;
-    margin-top: 0;
-    padding-left: 35px;
+    width: 95%;
   }
 
   .sub-blog-structure {
-    height: auto;
+    width: 95%;
+    margin-top: 5vh;
   }
 
-  .sub-blog-heading {
-    font-size: 3vw;
-    padding-top: 0;
-    padding-left: 35px;
+  .blog-structure h2 {
+    font-size: 3.3rem;
+  }
+  .blog-writer {
+    font-size: 1.4rem;
+  }
+  .blog-time{
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 1500px) and (min-width:1200px) {
+  .content-wrap {
+       margin-left: 1rem;
+    margin-top: -3rem;
+    width: 100% ; 
+   }
+  .get-skills-heading {
+    width: 100%;
+    margin-top: 0rem;
+    font: Bold 3.8rem Avenir-Next;
+    color: #408cff;
+  }
+   .skill-illustrate {
+     margin-right: 2rem;
+     margin-top: 0rem;
   }
 
-  .sub-blog-secondary {
-    height: auto;
-    padding-bottom: 10%;
+
+  .get-skills-platform {
+    width: 100%;
+    margin-top:5rem;
+    font-size: 2rem;
+  }
+ 
+.skill-handle {
+  display: flex;  
+  position: absolute;
+  margin-top: 40rem;
+  width: 95%;
+}
+
+.skill-handle button {
+  width: 63rem;
+  height: 5rem;
+  border-radius: 15px;
+  font: Bold 21px Avenir-Next;
+}
+
+#skill-register {
+  background-color: #408cff;
+  color: #ffffff;
+  margin-right: 1rem;
+}
+
+#skill-offers {
+  margin-left: 1rem;
+  background-color: #ffffff;
+  border: 3px solid #464646d6;
+  color: #464646d6;
+}
+  .our-programs{
+    margin-top: 15rem;
   }
 
-  .blog-btn {
-    margin-left: 35px;
-    width: 150px;
-    font-size: 1.8vw;
-    height: 45px;
+  .op-options {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
   }
 
-  .read-more-blogs {
-    font-size: 1.5vw;
-    margin-top: 20px;
-    height: 40px;
+  .op-option-block {
+    width: 80%;
+    margin-top: 2vh;
   }
-} */
+
+  .sun-burn {
+    margin-top: 100px;
+
+  }
+
+  .sun-burn h1 {
+    font-size: 5rem;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .sun-burn-detailed {
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+.sun-burn-text h2 {
+  font: Bold 1rem Proxima-Nova;
+}
+
+
+
+.sun-burn-text p {
+  width: 90%;
+  font: 1rem Proxima-Nova;
+}
+
+  .success-flame {
+    width: 90%;
+    margin-left: 0;
+    margin: 5vh auto;
+  }
+
+  .success-flame img {
+    width: 100%;
+  }
+
+  .sun-burn-text h2 {
+    font: Bold 6.5vw Proxima-Nova;
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .sun-burn-text p {
+    font: 5vw Proxima-Nova;
+    margin: 20px auto;
+  }
+
+  .sun-svg img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .intern-opt h2 {
+    font-size: 9.8vw;
+    width: 100%;
+  }
+
+  .intern-opt p {
+    width: 100%;
+  }
+  .company-logo {
+  margin: 5rem auto 10rem auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-logo img {
+  margin: 0 auto;
+  width: 30%;
+  height: auto;
+  transform: scale(0.9);
+}
+
+#AmazonLogo {
+  transform: scale(0.8);
+  margin-bottom: -30px;
+}
+  .blogs-brief {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30rem;
+  margin-bottom: 200px;
+  border-radius: 114px;
+  width: 90%;
+  background: transparent linear-gradient(124deg, #9795f0 0%, #fbc8d4 100%);
+}
+
+.blogs-brief h1 {
+  font: Bold 70px Avenir-Next;
+  width: 85%;
+  margin: 0 auto 4rem auto;
+  color: #ffffff;
+}
+
+  .blog-detail-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-structure {
+    width: 95%;
+  }
+
+  .sub-blog-structure {
+    width: 95%;
+    margin-top: 5vh;
+  }
+
+  .blog-structure h2 {
+    font-size: 3.3rem;
+  }
+  .blog-writer {
+    font-size: 1.4rem;
+  }
+  .blog-time{
+    font-size: 1.2rem;
+  }
+}

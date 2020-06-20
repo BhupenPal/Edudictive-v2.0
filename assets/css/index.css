@@ -610,6 +610,7 @@ footer h4 {
 
 .crs_card_wrap {
   display: flex;
+  width: 100%;
   align-items: center;
   overflow: hidden;
   padding: 75px 0px 75px 15px;
@@ -628,6 +629,7 @@ footer h4 {
   margin: 0 20px;
   box-shadow: 6px 6px 26px #00000059;
   cursor: pointer;
+  padding: 1px;
 }
 
 .crs_hig {
@@ -1015,18 +1017,29 @@ footer h4 {
   }
 
   /*COURSES*/
+
+  .courses{
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    overflow-x: scroll;
+    margin-bottom: 0;
+  }
+
   .crs_content {
     margin: 100px auto;
   }
 
   .courses h1 {
     font: Bold 7.86vw Avenir-Next;
+    padding-left: 20px;
+    box-sizing: border-box;
   }
 
   .crs_card_wrap {
-    width: 100vw;
+    width: 100%;
     margin: 0;
-    padding: 20px 20px;
+    padding: 30px 20px;
     box-sizing: border-box;
     overflow-x: scroll;
   }
@@ -1034,7 +1047,7 @@ footer h4 {
   .crs_card {
     width: 70vw;
     min-width: 70vw;
-    margin: 0 3vw;
+    margin: 0 4vw;
   }
 
   .crs_hig {
@@ -1343,6 +1356,14 @@ footer h4 {
   .form-container{
     width: 90%;
     margin: 1rem auto;
+  }
+
+  .crs_card_wrap {
+    width: 100%;
+    margin: 0;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    overflow-x: scroll;
   }
 
   .contact-inp{

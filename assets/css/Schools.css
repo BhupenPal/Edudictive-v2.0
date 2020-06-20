@@ -293,18 +293,17 @@
 /* SCHOOL PAGE STARTING --------------------------------- -480px-------------------------------- */
 @media screen and (max-width: 480px) {
 
-  .crs_card_wrap{
-    width: 100%;
-  }
-
   .edu-for-sch-written {
     width: 100%;
-    margin: 8rem auto 6rem;
+    margin: 0;
   }
 
   .illust-school{
     height: 90vw;
     width: 90vw;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     bottom: 0;
   }
 
@@ -340,7 +339,7 @@
 
   .para {
     font-size: 5vw;
-    line-height: 5vw;
+    line-height: 8vw;
     text-align: center;
   }
 
@@ -376,9 +375,8 @@
   }
 
   .school-container {
-    padding: 0;
-    width: 90%;
-    margin: 0 auto;
+    padding: 8rem 0 0 0;
+    width: 100%;
   }
 
   .headline {
@@ -411,6 +409,8 @@
   .illus-content {
     font-size: 4vw;
     line-height: 5vw;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .all-camps-det .camp {
@@ -419,6 +419,8 @@
 
   .all-camps-det {
     flex-direction: column;
+    width: 90%;
+    margin: 3rem auto 5rem auto;
   }
 
   .all-camps-det .camp {
@@ -473,6 +475,8 @@
   .sub-div-b {
     display: flex;
     flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .div1 {
@@ -498,7 +502,26 @@
 /* Media for tablets */
 @media only screen and (min-width:481px) and (max-width: 768px) {
   .school-container{
+    width: 100%;
+    padding: 10rem 0 0 0;
+  }
+
+  .headline_wrap{
+    justify-content: center;
+    height: 110vw;
+  }
+
+  .para-contain{
     width: 90%;
+    margin: 0 auto;
+  }
+
+  .illust-school{
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 2.5rem;
   }
 
   .edu-for-sch-written {
@@ -514,6 +537,7 @@
   .para {
     font-size: 4vw;
     line-height: 5vw;
+    text-align: center;
   }
 
   .edudictive-for h2 {
@@ -526,6 +550,7 @@
 
   .edu-for-sch-buttons {
     flex-direction: column;
+    align-items: center;
   }
 
   .view-programs {
@@ -538,12 +563,6 @@
     width: 90%;
     margin-top: 10px;
     height: 7vh;
-  }
-
-  .school-container {
-    padding: 0;
-    width: 90%;
-    margin: 0 auto;
   }
 
   .headline {
@@ -575,6 +594,7 @@
 
   .illus-tag {
     font-size: 6vw;
+    margin-top: 0;
   }
 
   .illus-content {
@@ -588,6 +608,8 @@
 
   .all-camps-det {
     flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .all-camps-det .camp {
@@ -641,7 +663,17 @@
 
   .sub-div-b {
     display: flex;
+    width: 90%;
+    margin: 0 auto;
     flex-direction: column;
+  }
+
+  .contact-heading{
+    font-size: 2.5rem;
+  }
+
+  .contact-wrapper{
+    margin: 8rem 0 3rem 0;
   }
 
   .div1 {
@@ -664,14 +696,6 @@
 
   .courses h1 {
     font: Bold 7.86vw Avenir-Next;
-  }
-
-  .crs_card_wrap {
-    width: 100%;
-    margin: 0;
-    padding: 20px 20px;
-    box-sizing: border-box;
-    overflow-x: scroll;
   }
 
   .crs_card {
@@ -770,6 +794,28 @@
 
   .edu-for-sch-buttons{
     flex-direction: column;
+  }
+
+  .headline_wrap{
+    height: 75vw;
+  }
+
+  .headline_div{
+    margin: 0 auto;
+  }
+
+  .para-contain{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .illust-school{
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    height: 20rem;
+    right: 0;
+    margin: 0 auto;
   }
 
   .view-programs{

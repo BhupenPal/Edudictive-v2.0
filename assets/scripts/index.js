@@ -367,7 +367,7 @@ window.addEventListener('load', function toggle(e){
       item.classList.add("active-nav");
     }
     else{
-      console.log("NO!");
+      
     }
   })
 })

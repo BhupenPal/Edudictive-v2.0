@@ -36,6 +36,11 @@
   src: url("../fonts/SFProDisplay-Black.ttf");
 }
 
+@font-face{
+  font-family: "Sansation";
+  src: url("../fonts/Sansation_Light_Italic.ttf");
+}
+
 html,
 body {
   margin: 0;
@@ -529,11 +534,38 @@ footer h4 {
   text-align: left;
 }
 
+.log0-w-info{
+  width: 35%;
+}
+
+.log0-w-info p{
+  font-family: Proxima-Nova;
+  line-height: 1.5rem;
+  font-size: 18px;
+  width: 75%;
+  color: #5a5a5a;
+}
+
+
+.f-logo img{
+  height: min-content;
+  margin: 0 10px;
+}
+
+.f-logo img:first-child{
+  width: 4rem;
+  height: 4rem;
+}
+
+.f-logo img:last-child{
+  width: 50rem;
+}
+
 .f-logo {
-  margin-top: 50px;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
 }
 
 .insidef-container ul a li {
@@ -612,9 +644,28 @@ footer h4 {
   display: flex;
   width: 100%;
   align-items: center;
-  overflow: hidden;
-  padding: 75px 0px 75px 15px;
+  overflow: auto;
+  padding: 75px 20px;
   scroll-behavior: smooth;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.crs_card_wrap .crs_card:last-child{
+  position: relative;
+}
+
+.extra-space{
+  position: absolute;
+  top: 0;
+  height: 1px;
+  width: 20px;
+  right: -20px;
 }
 
 .crs_card_wrap::-webkit-scrollbar {
@@ -1203,6 +1254,29 @@ footer h4 {
   .responsive-task {
     width: 80%;
   }
+
+  .log0-w-info{
+    width: 80%;
+    margin-top: 50px;
+  }
+
+  .log0-w-info p{
+    width: 100%;
+  }
+  
+  .f-logo img{
+    height: 50px;
+    margin: 0 5px;
+  }
+
+  .f-logo img:first-child{
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .f-logo img:last-child{
+    width: 50vw;
+  }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 480px) {
@@ -1395,6 +1469,29 @@ footer h4 {
 
   .contact-wrapper{
     margin: 3rem 0;
+  }
+  
+  .log0-w-info{
+    width: 80%;
+    margin-top: 50px;
+  }
+
+  .log0-w-info p{
+    width: 100%;
+  }
+  
+  .f-logo img{
+    height: 50px;
+    margin: 0 5px;
+  }
+
+  .f-logo img:first-child{
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .f-logo img:last-child{
+    width: 50vw;
   }
 }
 

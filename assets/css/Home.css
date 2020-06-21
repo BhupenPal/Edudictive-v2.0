@@ -1,7 +1,8 @@
 /* HOME - 1920px start */
-
+html{
+  overflow-x: hidden;
+}
 .content-wrap {
-  overflow-x:hidden;
   padding-top: 125px;
 }
 
@@ -87,6 +88,7 @@
   color: #408cff;
   font: Bold 71px Avenir-Next;
   margin-bottom: 0;
+  width: 85%;
 }
 
 .op-description {
@@ -359,7 +361,7 @@
 
 /* BLOGS - 1920px END */
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
 
   /* Home response */
   .content-wrap {
@@ -645,165 +647,12 @@
   }
 }
 
-@media only screen and (max-width: 600px) and (min-width: 551px) {
-  .content-wrap {
-    overflow-x: hidden;
-       margin-left: 1rem;
-    margin-top: -15rem;
-    width: 100% ; 
-   }
-  .get-skills-heading {
-    font-size: 2.4rem;
-    width: 100%;
-    margin-top: 10rem;
-    font: Bold 2.5rem Avenir-Next;
-    color: #408cff;
-  }
-   .skill-illustrate {
-     margin-right: 2rem;
-     
-  }
-
-   .skill-illustrate img{
-     width:100%;
-     height:50rem;
-     
-  }
-
-
-  .get-skills-platform {
-    width: 100%;
-    margin-top:5rem;
-  }
- 
-.skill-handle {
-  display: flex;  
-  position: absolute;
-  margin-top: 45rem;
-  width: 95%;
-}
-
-.skill-handle button {
-  width: 60rem;
-  height: 4.5rem;
-  border-radius: 15px;
-  font: Bold 21px Avenir-Next;
-}
-
-#skill-register {
-  background-color: #408cff;
-  color: #ffffff;
-  margin:0px auto 0px auto;
-}
-
-#skill-offers {
-  margin-left: 1rem;
-  background-color: #ffffff;
-  border: 3px solid #464646d6;
-  color: #464646d6;
- }
-/*   .op-heading{
-    font-size: 4rem;
-  } */ 
-  .op-options {
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-  }
-
-  .op-option-block {
-    width: 80%;
-    margin-top: 2vh;
-  }
-
-  .sun-burn {
-    margin-top: 100px;
-    width: 90%;
-  }
-
-  .sun-burn h1 {
-    font-size: 3.5rem;;
-    width: 100%;
-    margin: 10px auto;
-  }
-
-  .sun-burn-detailed {
-    flex-direction: column-reverse;
-    width: 100%;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-  }
-  .sun-svg{
-    margin-right: 5px;
-  }
-
-  .success-flame {
-    width: 90%;
-    margin-left: 0;
-    margin: 5vh auto;
-  }
-
-  .success-flame img {
-    width: 100%;
-  }
-
-  .sun-burn-text h2 {
-    font: Bold 6.5vw Proxima-Nova;
-    width: 90vw;
-    margin: 0 auto;
-  }
-
-  .sun-burn-text p {
-    font: 5vw Proxima-Nova;
-    margin: 20px auto;
-  }
-
-  .sun-svg img {
-    height: 100px;
-    width: 100px;
-  }
-
-  .intern-opt h2 {
-    font-size: 9.8vw;
-    width: 100%;
-  }
-
-  .intern-opt p {
-    width: 90%;
-  }
-  .blogs-brief{
-    width: 95%;
-  }
-
-  .blog-detail-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .blog-structure {
-    width: 100%;
-  }
-
-  .sub-blog-structure {
-    width: 95%;
-    margin-top: 5rem;
-  }
-
-  .blog-structure h2 {
-    font-size: 2rem;
-  }
-  .blog-writer{
-    font-size: 1rem;
-  }
-}
 /* Media for tablets */
  @media only screen and (max-width: 768px) and (min-width: 601px) {
      .content-wrap {
        margin-left: 1rem;
-    margin-top: -15rem;
-    width: 100% ; 
-       overflow-x: hidden;
+       margin-top: -15rem;
+       width: 100%;
    }
   .get-skills-heading {
     font-size: 2.4rem;
@@ -877,8 +726,8 @@
   }
 
   .sun-burn h1 {
-    font-size: 4rem;;
-    width: 100%;
+    font-size: 4rem;
+    width: 90%;
     margin: 10px auto;
   }
 
@@ -894,23 +743,19 @@
    }
 
   .success-flame {
-    width: 90%;
-    margin-left: 0;
-    margin: 5vh auto;
+    margin-left: 0px;
+    margin: 5rem auto;
   }
 
-  .success-flame img {
-    width: 100%;
-  }
 
   .sun-burn-text h2 {
-    font: Bold 6.5vw Proxima-Nova;
+    font: Bold 2.5rem Proxima-Nova;
     width: 90vw;
     margin: 0 auto;
   }
 
   .sun-burn-text p {
-    font: 5vw Proxima-Nova;
+    font: 2rem Proxima-Nova;
     margin: 20px auto;
   }
 
@@ -925,9 +770,21 @@
   }
 
   .intern-opt p {
-    width: 100%;
+    width: 80%;
   }
+  .intern-illustration img{
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
 
+  .blogs-brief{
+    width:90%;
+  }
+  
   .blog-detail-container {
     flex-direction: column;
     align-items: center;
@@ -1024,8 +881,8 @@
   }
 
   .sun-burn h1 {
-    font-size: 5rem;
-    width: 100%;
+    font-size: 4.5rem;
+    width: 90%;
     margin: 10px auto;
   }
 
@@ -1037,35 +894,25 @@
     justify-content: center;
   }
  
-.sun-burn-text h2 {
-  font: Bold 1rem Proxima-Nova;
-}
 
-
-
-.sun-burn-text p {
-  width: 90%;
-  font: 1rem Proxima-Nova;
-}
 
   .success-flame {
-    width: 90%;
-    margin-left: 0;
-    margin: 5vh auto;
+    width: 70%;
+   align-items:center;
+    margin-top: 5vh;
+    margin-right:10rem;
+    margin-left:auto;
   }
 
-  .success-flame img {
-    width: 100%;
-  }
 
   .sun-burn-text h2 {
-    font: Bold 6.5vw Proxima-Nova;
+    font: Bold 2.5rem Proxima-Nova;
     width: 90vw;
     margin: 0 auto;
   }
 
   .sun-burn-text p {
-    font: 5vw Proxima-Nova;
+    font: 2rem Proxima-Nova;
     margin: 20px auto;
   }
 
@@ -1073,15 +920,15 @@
     height: 100px;
     width: 100px;
   }
+  .sun-burn-det-svg{
+     width: 95%;
+   }
 
   .intern-opt h2 {
-    font-size: 9.8vw;
-    width: 100%;
+    font-size: 4.5rem;
+    width: 80%;
   }
 
-  .intern-opt p {
-    width: 100%;
-  }
   .company-logo {
   margin: 5rem auto 10rem auto;
   width: 90%;
@@ -1142,11 +989,11 @@
     font-size: 1.2rem;
   }
 }
-@media only screen and (max-width: 1600px) and (min-width:1200px) {
+@media only screen and (max-width: 1600px) and (min-width:1201px) {
   .content-wrap {
        margin-left: 1rem;
-    margin-top: -3rem;
-    width: 100% ; 
+       margin-top: -3rem;
+       width: 100%;
    }
   .get-skills-heading {
     width: 100%;
@@ -1222,21 +1069,21 @@
   }
  
 .sun-burn-text h2 {
-  font: Bold 1rem Proxima-Nova;
+  font: Bold 3rem Proxima-Nova;
 }
 
 
 
 .sun-burn-text p {
   width: 90%;
-  font: 1rem Proxima-Nova;
+  font: 3rem Proxima-Nova;
 }
   .sun-burn-det-svg{
     width: 90%;
   }
 
   .success-flame {
-    width: 90%;
+
     margin-left: 0;
     margin: 5vh auto;
   }
@@ -1245,16 +1092,6 @@
     width: 100%;
   }
 
-  .sun-burn-text h2 {
-    font: Bold 6.5vw Proxima-Nova;
-    width: 90vw;
-    margin: 0 auto;
-  }
-
-  .sun-burn-text p {
-    font: 5vw Proxima-Nova;
-    margin: 20px auto;
-  }
 
   .sun-svg img {
     height: 100px;
@@ -1262,13 +1099,11 @@
   }
 
   .intern-opt h2 {
-    font-size: 9.8vw;
+    font-size: 5rem;
     width: 100%;
   }
 
-  .intern-opt p {
-    width: 100%;
-  }
+
   .company-logo {
   margin: 5rem auto 10rem auto;
   width: 90%;

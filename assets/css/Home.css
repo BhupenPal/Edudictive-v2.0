@@ -1,6 +1,7 @@
 /* HOME - 1920px start */
 
 .content-wrap {
+  overflow-x:hidden;
   padding-top: 125px;
 }
 
@@ -10,12 +11,10 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  position: relative;
 }
 
 .get-skills-content {
   display: flex;
-  height: calc(100vh - 125px - 100px);
 }
 
 .get-skills-header {
@@ -46,8 +45,7 @@
 }
 
 .skill-handle {
-  position: absolute;
-  margin-top: 580px;
+  margin-top: -10rem;
   width: 50%;
 }
 
@@ -361,7 +359,7 @@
 
 /* BLOGS - 1920px END */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 550px) {
 
   /* Home response */
   .content-wrap {
@@ -418,7 +416,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 127vw;
+    margin-top: 3rem;
   }
 
   #skill-offers,
@@ -456,7 +454,7 @@
 
   .op-option-block {
     width: 85vw;
-    height: 600px;
+    height: 660px;
     box-sizing: border-box;
     margin: 30px auto;
     border-radius: 50px;
@@ -477,8 +475,8 @@
   }
 
   .op-option-block button {
-    margin-top : 55px;
-    height: 60px;
+    margin-top : auto;
+    height: 70px;
     width: 200px;
   }
 
@@ -647,9 +645,9 @@
   }
 }
 
-/* Media for tablets */
- @media only screen and (max-width: 768px) and (min-width: 481px) {
-     .content-wrap {
+@media only screen and (max-width: 600px) and (min-width: 551px) {
+  .content-wrap {
+    overflow-x: hidden;
        margin-left: 1rem;
     margin-top: -15rem;
     width: 100% ; 
@@ -663,7 +661,12 @@
   }
    .skill-illustrate {
      margin-right: 2rem;
-     margin-top: 0rem;
+     
+  }
+
+   .skill-illustrate img{
+     width:100%;
+     height:50rem;
      
   }
 
@@ -677,6 +680,158 @@
   display: flex;  
   position: absolute;
   margin-top: 45rem;
+  width: 95%;
+}
+
+.skill-handle button {
+  width: 60rem;
+  height: 4.5rem;
+  border-radius: 15px;
+  font: Bold 21px Avenir-Next;
+}
+
+#skill-register {
+  background-color: #408cff;
+  color: #ffffff;
+  margin:0px auto 0px auto;
+}
+
+#skill-offers {
+  margin-left: 1rem;
+  background-color: #ffffff;
+  border: 3px solid #464646d6;
+  color: #464646d6;
+ }
+/*   .op-heading{
+    font-size: 4rem;
+  } */ 
+  .op-options {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .op-option-block {
+    width: 80%;
+    margin-top: 2vh;
+  }
+
+  .sun-burn {
+    margin-top: 100px;
+    width: 90%;
+  }
+
+  .sun-burn h1 {
+    font-size: 3.5rem;;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .sun-burn-detailed {
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .sun-svg{
+    margin-right: 5px;
+  }
+
+  .success-flame {
+    width: 90%;
+    margin-left: 0;
+    margin: 5vh auto;
+  }
+
+  .success-flame img {
+    width: 100%;
+  }
+
+  .sun-burn-text h2 {
+    font: Bold 6.5vw Proxima-Nova;
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .sun-burn-text p {
+    font: 5vw Proxima-Nova;
+    margin: 20px auto;
+  }
+
+  .sun-svg img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .intern-opt h2 {
+    font-size: 9.8vw;
+    width: 100%;
+  }
+
+  .intern-opt p {
+    width: 90%;
+  }
+  .blogs-brief{
+    width: 95%;
+  }
+
+  .blog-detail-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-structure {
+    width: 100%;
+  }
+
+  .sub-blog-structure {
+    width: 95%;
+    margin-top: 5rem;
+  }
+
+  .blog-structure h2 {
+    font-size: 2rem;
+  }
+  .blog-writer{
+    font-size: 1rem;
+  }
+}
+/* Media for tablets */
+ @media only screen and (max-width: 768px) and (min-width: 601px) {
+     .content-wrap {
+       margin-left: 1rem;
+    margin-top: -15rem;
+    width: 100% ; 
+       overflow-x: hidden;
+   }
+  .get-skills-heading {
+    font-size: 2.4rem;
+    width: 100%;
+    margin-top: 10rem;
+    font: Bold 2.5rem Avenir-Next;
+    color: #408cff;
+  }
+   .skill-illustrate {
+     margin-right: 2rem;
+     margin-top: 15rem;
+     
+  }
+  .skill-illustrate img{
+    width: 100%;
+    
+ }
+
+
+  .get-skills-platform {
+    width: 100%;
+    margin-top:5rem;
+  }
+ 
+.skill-handle {
+  display: flex;  
+  position: absolute;
+  margin: 43rem auto 0rem auto;
   width: 95%;
 }
 
@@ -699,6 +854,12 @@
   border: 3px solid #464646d6;
   color: #464646d6;
 }
+.our-programs{
+  margin-top:200px;
+}
+   .op-heading{
+     font-size: 4rem;
+   }
 
   .op-options {
     flex-direction: column;
@@ -716,7 +877,7 @@
   }
 
   .sun-burn h1 {
-    font-size: 9.8vw;
+    font-size: 4rem;;
     width: 100%;
     margin: 10px auto;
   }
@@ -728,6 +889,9 @@
     align-items: center;
     justify-content: center;
   }
+   .sun-burn-det-svg{
+     width: 95%;
+   }
 
   .success-flame {
     width: 90%;
@@ -779,7 +943,8 @@
   }
 
   .blog-structure h2 {
-    font-size: 6vw;
+    font-size: 3rem;
+    text-align:left;
   }
 }
 
@@ -799,6 +964,10 @@
    .skill-illustrate {
      margin-right: 2rem;
      margin-top: 0rem;
+  }
+   .skill-illustrate img{
+     width:100%;
+     height:fit-content;
   }
 
 
@@ -973,7 +1142,7 @@
     font-size: 1.2rem;
   }
 }
-@media only screen and (max-width: 1500px) and (min-width:1200px) {
+@media only screen and (max-width: 1600px) and (min-width:1200px) {
   .content-wrap {
        margin-left: 1rem;
     margin-top: -3rem;
@@ -996,11 +1165,10 @@
     margin-top:5rem;
     font-size: 2rem;
   }
- 
-.skill-handle {
+ .skill-handle {
   display: flex;  
   position: absolute;
-  margin-top: 40rem;
+  margin-top: 45rem;
   width: 95%;
 }
 
@@ -1010,6 +1178,7 @@
   border-radius: 15px;
   font: Bold 21px Avenir-Next;
 }
+ 
 
 #skill-register {
   background-color: #408cff;
@@ -1067,6 +1236,9 @@
   width: 90%;
   font: 1rem Proxima-Nova;
 }
+  .sun-burn-det-svg{
+    width: 90%;
+  }
 
   .success-flame {
     width: 90%;
@@ -1161,4 +1333,13 @@
   .blog-time{
     font-size: 1.2rem;
   }
+}
+@media only screen and (max-width: 1800px) and (min-width:1600px) {
+  .skill-handle {
+  display: flex;  
+  position: absolute;
+  margin-top: 40rem;
+  width: 95%;
+}
+
 }

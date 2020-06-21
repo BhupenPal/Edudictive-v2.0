@@ -1165,15 +1165,10 @@
     margin-top:5rem;
     font-size: 2rem;
   }
- .skill-handle {
-  display: flex;  
-  position: absolute;
-  margin-top: 45rem;
-  width: 95%;
-}
+
 
 .skill-handle button {
-  width: 63rem;
+  width: 40%;
   height: 5rem;
   border-radius: 15px;
   font: Bold 21px Avenir-Next;

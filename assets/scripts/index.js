@@ -18,7 +18,6 @@ for (var index = 0; index < courseCards.length; index++) {
 
 function SlideRightPlease(x) {
   var crsWrap = x.parentElement;
-  crsWrap.scrollTo(500, 0);
 
   let cptcrsTech = document.querySelectorAll(
     ".tech_crs .crs_card_wrap .crs_card"
@@ -56,6 +55,7 @@ function SlideRightPlease(x) {
       if (cptcrsNontech[i].classList.contains("crs_hig") && i < 3) {
         cptcrsNontech[i].classList.remove("crs_hig");
         cptcrsNontech[i + 1].classList.add("crs_hig");
+        crsWrap.scrollTo(1800, 0);
         break;
       }
     }
@@ -74,6 +74,12 @@ function SlideRightPlease(x) {
       document.getElementsByClassName("sld_rgt")[1].style.display = "flex";
     }
   }
+  
+  function scroller(){
+    crsWrap.scrollTo(1800, 0);
+  }
+
+  setTimeout(scroller,100)
 }
 
 
@@ -135,6 +141,7 @@ function SlideLeftPlease(x) {
       document.getElementsByClassName("sld_rgt")[1].style.display = "flex";
     }
   }
+  crsWrap.scrollTo(-1800, 0);
 }
 
 function hamoperation(x) {
@@ -367,7 +374,7 @@ window.addEventListener('load', function toggle(e){
       item.classList.add("active-nav");
     }
     else{
-      console.log("NO!");
+      
     }
   })
 })

@@ -26,7 +26,7 @@
     transform: scale(0);
 }
 
-.imgblender{
+.imgblender {
     background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 100%);
     height: 38rem;
     width: 62rem;
@@ -37,7 +37,7 @@
     z-index: 1 !important;
 }
 
-.active-wslide{
+.active-wslide {
     visibility: visible;
     opacity: 1;
     transform: scale(1);
@@ -417,7 +417,7 @@ i {
     .sessions-heads {
         width: 100%;
         left: 0;
-        top: 80px;
+        top: 90px;
     }
 
     .webinars {
@@ -446,6 +446,10 @@ i {
         height: 22%;
     }
 
+    .imgblender {
+        width: 100%;
+    }
+
     .wslide img {
         object-position: 15%;
         filter: brightness(80%);
@@ -456,15 +460,17 @@ i {
     }
 
     .slide-heading {
-        margin: 30px auto;
+        margin: 0 auto;
+        padding-bottom: 30px;
         width: 90%;
-        font-size: 9.5vw;
+        font-size: 9vw;
         line-height: 12vw;
     }
 
     .web-info {
         width: 90%;
         margin: 10px auto;
+        font-size: 3.4vw;
     }
 
     .reg-encloser {
@@ -500,7 +506,6 @@ i {
 
     .live-section {
         margin: 0;
-        display: block;
     }
 
     .live-sec {
@@ -569,7 +574,6 @@ i {
         height: 10vw;
     }
 
-    /* --------------------Sessions----------------------- */
     .sessions {
         width: 90%;
     }
@@ -653,4 +657,1043 @@ i {
         width: 12px;
         height: 12px;
     }
+}
+
+/*  PAGE STARTING ---------------------------------768px-------------------------------- */
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    .event-container {
+        padding-top: 250px;
+    }
+
+    .sessions-heads {
+        width: 80%;
+        left: 0;
+        top: 90px;
+    }
+
+    .sessions-heads .active-head {
+        font-size: 8vw;
+        margin-left: 6.3vw;
+        margin-right: 0;
+    }
+
+    .sessions-heads .inactive-head {
+        font-size: 5.5vw;
+        margin-left: 6.3vw;
+    }
+
+    .webinars {
+        width: 90%;
+    }
+
+    .web-slider {
+        width: 100%;
+        height: 90vw;
+    }
+
+    .wslide {
+        width: 80%;
+        justify-content: center;
+        height: 90vw;
+    }
+
+    .imgblender {
+        width: 100%;
+        height: 100%;
+    }
+
+    .wslide img {
+        object-position: 15%;
+        filter: brightness(80%);
+    }
+
+    .wslide * {
+        padding-left: 0;
+    }
+
+    .slide-heading {
+        margin: 0 auto;
+        padding-bottom: 8vw;
+        width: 90%;
+        font-size: 7.3vw;
+        line-height: 9vw;
+    }
+
+    .web-info {
+        width: 90%;
+        margin: 10px auto;
+        font-size: 3.1vw;
+    }
+
+    .reg-encloser {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3vw;
+    }
+
+    .reg-encloser button {
+        width: 24vw;
+        height: 7vw;
+        font-size: 2.5vw;
+    }
+
+    .reg-encloser button:nth-child(1) {
+        margin: 0;
+    }
+
+    .reg-encloser button:nth-child(2) {
+        margin: 0;
+        margin-top: 3vw;
+    }
+
+    .slider-controller {
+        margin: 0 auto;
+        margin-top: 4vw;
+    }
+
+    .slider-controller div {
+        width: 2.7vw;
+        height: 2.7vw;
+        margin: 0 1vw;
+    }
+
+    .live-section {
+        margin: 0;
+    }
+
+    .live-sec {
+        height: 7vw;
+        width: 27vw;
+        border-width: 2px;
+        font-size: 2.8vw;
+        margin-top: 80px;
+    }
+
+    .live-session {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .live-session img {
+        filter: brightness(80%);
+    }
+
+    .lsession-info {
+        width: 95%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .lsession-info span:first-child {
+        font-size: 6vw;
+    }
+
+    .lsession-info span:last-child {
+        font-size: 2.7vw;
+        margin: 2vw 0;
+    }
+
+    .v-ini {
+        width: 24vw;
+        height: 7vw;
+        font-size: 2.5vw;
+        position: static;
+        margin-top: 70px;
+    }
+
+    .archive-section h1 {
+        margin: 80px 0;
+        margin-bottom: 0px;
+        text-align: center;
+        font-size: 9.5vw;
+    }
+
+    .archive-encloser {
+        flex-direction: column;
+    }
+
+    .archives {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .archives h2 {
+        margin: 0;
+        padding-bottom: 3vw;
+        text-align: center;
+        font-size: 5.5vw;
+    }
+
+    .archives span {
+        font-size: 2.3vw;
+    }
+
+    .archives .v-ini {
+        width: 37vw;
+        height: 7vw;
+        font-size: 2.5vw;
+        margin-top: 9vw;
+    }
+
+    .sessions {
+        width: 80%;
+    }
+
+    .session-container {
+        flex-direction: column-reverse;
+        margin-top: -40px;
+        margin-bottom: 9vw;
+    }
+
+    .container-2 {
+        flex-direction: column;
+        margin-top: -50px;
+    }
+
+    .session-details {
+        width: 100%;
+        height: 100%;
+        border-radius: 40px;
+        padding: 4vw 5%;
+    }
+
+    .session-det-head {
+        font-size: 5vw;
+        text-align: center;
+        margin: 2vw 0;
+    }
+
+    .session-det-para {
+        text-align: center;
+        font-size: 3vw;
+    }
+
+    .session-img {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        top: 40px;
+        border-radius: 40px 40px 0 0;
+        object-position: bottom;
+    }
+
+    .img-2 {
+        top: 55px;
+    }
+
+    .session-arrows {
+        margin: 0;
+        width: 100%;
+        height: 65%;
+    }
+
+    .arrow-2 {
+        height: 57%;
+    }
+
+    .fa-stack-2x {
+        font-size: 1.5em;
+    }
+
+    .fa-lg {
+        font-size: 1em;
+    }
+
+    .fa-angle-right:before,
+    .fa-angle-left:before {
+        position: relative;
+        bottom: 8px;
+    }
+
+    .session-btns {
+        width: 22%;
+        margin: 0 auto;
+    }
+
+    .btn-2 {
+        margin: 0;
+    }
+
+    .round-btn {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/*  PAGE STARTING ---------------------------------912px-------------------------------- */
+@media screen and (max-width: 912px) and (min-width: 769px) {
+    .event-container {
+        padding-top: 250px;
+    }
+
+    .sessions-heads {
+        width: 80%;
+        left: 0;
+        top: 80px;
+    }
+
+    .sessions-heads .active-head {
+        font-size: 6.5vw;
+        margin-left: 5.5vw;
+        margin-right: 0;
+    }
+
+    .sessions-heads .inactive-head {
+        font-size: 4vw;
+        margin-left: 5vw;
+    }
+
+    .webinars {
+        width: 90%;
+    }
+
+    .web-slider {
+        width: 100%;
+        height: 80vw;
+    }
+
+    .wslide {
+        width: 70%;
+        justify-content: center;
+        height: 80vw;
+    }
+
+    .imgblender {
+        width: 100%;
+        height: 100%;
+    }
+
+    .wslide img {
+        object-position: 15%;
+        filter: brightness(80%);
+    }
+
+    .wslide * {
+        padding-left: 0;
+    }
+
+    .slide-heading {
+        margin: 0 auto;
+        padding-bottom: 8vw;
+        width: 90%;
+        font-size: 6.2vw;
+        line-height: 7.5vw;
+    }
+
+    .web-info {
+        width: 90%;
+        margin: 10px auto;
+        font-size: 2.5vw;
+    }
+
+    .reg-encloser {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3vw;
+    }
+
+    .reg-encloser button {
+        width: 20vw;
+        height: 5.8vw;
+        font-size: 2.1vw;
+    }
+
+    .reg-encloser button:nth-child(1) {
+        margin: 0;
+    }
+
+    .reg-encloser button:nth-child(2) {
+        margin: 0;
+        margin-top: 3vw;
+    }
+
+    .slider-controller {
+        margin: 0 auto;
+        margin-top: 3vw;
+    }
+
+    .live-section {
+        margin: 0;
+    }
+
+    .live-sec {
+        height: 5.8vw;
+        width: 24vw;
+        border-width: 2px;
+        font-size: 2.4vw;
+        margin-top: 80px;
+    }
+
+    .live-session {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .live-session img {
+        filter: brightness(80%);
+    }
+
+    .lsession-info {
+        width: 95%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .lsession-info span:first-child {
+        font-size: 5.5vw;
+    }
+
+    .lsession-info span:last-child {
+        font-size: 2.4vw;
+        margin: 2vw 0;
+    }
+
+    .v-ini {
+        width: 18vw;
+        height: 5.8vw;
+        font-size: 2.1vw;
+        position: static;
+        margin-top: 70px;
+    }
+
+    .archive-section h1 {
+        margin: 80px 0;
+        margin-bottom: 0px;
+        text-align: center;
+        font-size: 9vw;
+    }
+
+    .archive-encloser {
+        flex-direction: column;
+    }
+
+    .archives {
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .archives h2 {
+        margin: 0;
+        padding-bottom: 3vw;
+        text-align: center;
+        font-size: 4.8vw;
+    }
+
+    .archives span {
+        font-size: 2vw;
+    }
+
+    .archives .v-ini {
+        width: 30vw;
+        height: 5.8vw;
+        font-size: 2vw;
+        margin-top: 7.5vw;
+    }
+
+    .sessions {
+        width: 75%;
+    }
+
+    .session-container {
+        flex-direction: column-reverse;
+        margin-top: -40px;
+        margin-bottom: 9vw;
+    }
+
+    .container-2 {
+        flex-direction: column;
+        margin-top: -50px;
+    }
+
+    .session-details {
+        width: 100%;
+        height: 100%;
+        border-radius: 40px;
+        padding: 3vw 5%;
+    }
+
+    .session-det-head {
+        font-size: 4.2vw;
+        text-align: center;
+        margin: 2vw 0;
+    }
+
+    .session-det-para {
+        text-align: center;
+        font-size: 2.5vw;
+        line-height: 3.2vw;
+    }
+
+    .session-img {
+        width: 100%;
+        height: 400px;
+        position: relative;
+        top: 40px;
+        border-radius: 40px 40px 0 0;
+        object-position: bottom;
+    }
+
+    .img-2 {
+        top: 55px;
+    }
+
+    .session-arrows {
+        margin: 0;
+        width: 100%;
+        height: 65%;
+    }
+
+    .arrow-2 {
+        height: 57%;
+    }
+
+    .fa-stack-2x {
+        font-size: 1.5em;
+    }
+
+    .fa-lg {
+        font-size: 1em;
+    }
+
+    .fa-angle-right:before,
+    .fa-angle-left:before {
+        position: relative;
+        bottom: 8px;
+    }
+
+    .session-btns {
+        width: 22%;
+        margin: 0 auto;
+    }
+
+    .btn-2 {
+        margin: 0;
+    }
+
+    .round-btn {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/*  PAGE STARTING ---------------------------------1200px-------------------------------- */
+@media screen and (max-width: 1200px) and (min-width: 913px) {
+    .event-container {
+        padding-top: 290px;
+    }
+
+    .sessions-heads {
+        width: 80%;
+        left: 70px;
+        top: 120px;
+    }
+
+    .sessions-heads .active-head {
+        font-size: 5.5vw;
+        margin-left: 4.5vw;
+        margin-right: 0;
+    }
+
+    .sessions-heads .inactive-head {
+        font-size: 3.3vw;
+        margin-left: 4vw;
+    }
+
+    .web-slider {
+        width: 80vw;
+        height: 50vw;
+    }
+
+    .wslide * {
+        padding-left: 0;
+    }
+
+    .wslide {
+        width: 80vw;
+        height: 50vw;
+    }
+
+    .imgblender {
+        width: 100%;
+        height: 100%;
+    }
+
+    .wslide img {
+        object-position: 15%;
+        filter: brightness(80%);
+    }
+
+    .slide-heading {
+        margin: 0 auto;
+        padding: 9vw 0 3vw;
+        width: 90%;
+        font-size: 5vw;
+        line-height: 5.5vw;
+    }
+
+    .web-info {
+        width: 90%;
+        margin: 10px auto;
+        font-size: 1.8vw;
+    }
+
+    .reg-encloser {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .reg-encloser button {
+        width: 15vw;
+        height: 4vw;
+        font-size: 1.5vw;
+    }
+
+    .slider-controller {
+        margin: 0 auto;
+        margin-top: 3vw;
+    }
+
+    .live-section {
+        margin: 0;
+    }
+
+    .live-sec {
+        height: 4.7vw;
+        width: 17vw;
+        font-size: 1.8vw;
+        margin-top: 8vw;
+    }
+
+    .live-session {
+        width: 55vw;
+        height: 33vw;
+    }
+
+    .live-session img {
+        filter: brightness(80%);
+    }
+
+    .lsession-info {
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 8vw;
+    }
+
+    .lsession-info span:first-child {
+        font-size: 3.5vw;
+    }
+
+    .lsession-info span:last-child {
+        font-size: 1.5vw;
+        margin: 0.8vw 0;
+    }
+
+    .v-ini {
+        width: 17vw;
+        height: 5vw;
+        font-size: 1.5vw;
+    }
+
+    .archive-section h1 {
+        margin: 8vw 0 4vw;
+        font-size: 6vw;
+    }
+
+    .archives {
+        height: 31vw;
+        padding: 0 2.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .archives h2 {
+        margin: 0;
+        padding-bottom: 2.5vw;
+        font-size: 2.7vw;
+    }
+
+    .archives span {
+        font-size: 1.32vw;
+    }
+
+    .archives .v-ini {
+        width: 15vw;
+        height: 5vw;
+        font-size: 1.3vw;
+        margin: 5vw 0 0 auto;
+        position: static;
+    }
+
+    .session-container {
+        margin-bottom: 8vw;
+    }
+
+    .session-details {
+        padding: 3vw 4%;
+        height: 54vw;
+        width: 52%;
+    }
+
+    .session-img {
+        height: 54vw;
+        width: 54%;
+    }
+
+    .session-det-head {
+        font-size: 3.7vw;
+        text-align: center;
+    }
+
+    .session-det-para {
+        font-size: 1.9vw;
+    }
+
+    .session-arrows {
+        margin-left: 10%;
+    }
+
+    .arrow-2 {
+        margin-left: 0%;
+        margin-right: 10%;
+    }
+
+    .fa-stack-2x {
+        font-size: 1.5em;
+    }
+
+    .fa-lg {
+        font-size: 1em;
+    }
+
+    .fa-angle-right:before,
+    .fa-angle-left:before {
+        position: relative;
+        bottom: 8px;
+    }
+
+    .session-btns {
+        width: 24%;
+        margin-left: 10%;
+    }
+
+    .btn-2 {
+        margin-right: 10%;
+        margin-left: 0;
+    }
+
+    .round-btn {
+        width: 1.4vw;
+        height: 1.4vw;
+    }
+}
+
+/*  PAGE STARTING ---------------------------------1440px-------------------------------- */
+@media screen and (max-width: 1440px) and (min-width: 1201px) {
+    .event-container {
+        padding-top: 290px;
+    }
+
+    .sessions-heads {
+        width: 80%;
+        left: 70px;
+        top: 120px;
+    }
+
+    .sessions-heads .active-head {
+        margin-left: 4.5vw;
+        margin-right: 0;
+    }
+
+    .sessions-heads .inactive-head {
+        margin-left: 4vw;
+    }
+
+    .web-slider {
+        height: 38rem;
+        width: 62rem;
+    }
+
+    .wslide * {
+        padding-left: 0;
+    }
+
+    .imgblender {
+        width: 100%;
+        height: 100%;
+    }
+
+    .wslide img {
+        object-position: 15%;
+        filter: brightness(80%);
+    }
+
+    .slide-heading {
+        margin: 0 auto;
+        padding: 10vw 0 3vw;
+        width: 90%;
+        line-height: 4.5vw;
+    }
+
+    .web-info {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .reg-encloser {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .slider-controller {
+        margin: 0 auto;
+        margin-top: 2.5vw;
+    }
+
+    .live-section {
+        margin: 0;
+    }
+
+    .live-sec {
+        height: 4.7vw;
+        width: 17vw;
+        font-size: 1.8vw;
+        margin-top: 8vw;
+    }
+
+    .live-session img {
+        filter: brightness(80%);
+    }
+
+    .lsession-info {
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 8vw;
+    }
+
+    .archive-section h1 {
+        margin: 8vw 0 4vw;
+    }
+
+    .archives {
+        height: 27vw;
+        padding: 0 2.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .archives h2 {
+        margin: 0;
+        padding-bottom: 2.5vw;
+        font-size: 2.7vw;
+    }
+
+    .archives .v-ini {
+        width: 17.3vw;
+        margin: 5vw 0 0 auto;
+        position: static;
+    }
+
+    .session-container {
+        margin-bottom: 8vw;
+    }
+
+    .session-details {
+        padding: 2.5vw 4%;
+        height: 48vw;
+        width: 52%;
+    }
+
+    .session-img {
+        height: 48vw;
+        width: 54%;
+    }
+
+    .session-det-head {
+        font-size: 3.2vw;
+        text-align: center;
+    }
+
+    .session-det-para {
+        font-size: 1.8vw;
+    }
+
+    .session-arrows {
+        margin-left: 10%;
+    }
+
+    .arrow-2 {
+        margin-left: 0%;
+        margin-right: 10%;
+    }
+
+    .session-btns {
+        width: 24%;
+        margin-left: 10%;
+    }
+
+    .btn-2 {
+        margin-right: 10%;
+        margin-left: 0;
+    }
+
+}
+
+/*  PAGE STARTING ---------------------------------1600px-------------------------------- */
+@media screen and (max-width: 1600px) and (min-width: 1441px) {
+    .event-container {
+        padding-top: 290px;
+    }
+
+    .sessions-heads {
+        width: 80%;
+        left: 120px;
+        top: 120px;
+    }
+
+    .sessions-heads .active-head {
+        margin-left: 2.5vw;
+        margin-right: 0;
+    }
+
+    .sessions-heads .inactive-head {
+        margin-left: 2.5vw;
+    }
+
+    .web-slider {
+        height: 38rem;
+        width: 62rem;
+    }
+
+    .wslide * {
+        padding-left: 0;
+    }
+
+    .imgblender {
+        width: 100%;
+        height: 100%;
+    }
+
+    .wslide img {
+        object-position: 15%;
+        filter: brightness(80%);
+    }
+
+    .slide-heading {
+        margin: 0 auto;
+        padding: 10vw 0 3vw;
+        width: 90%;
+        line-height: 4.5vw;
+    }
+
+    .web-info {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .reg-encloser {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .slider-controller {
+        margin: 0 auto;
+        margin-top: 2.5vw;
+    }
+
+    .live-section {
+        margin: 0;
+    }
+
+    .live-sec {
+        height: 4vw;
+        width: 14vw;
+        margin-top: 8vw;
+    }
+
+    .live-session img {
+        filter: brightness(80%);
+    }
+
+    .lsession-info {
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 8vw;
+    }
+
+    .archive-section h1 {
+        margin: 8vw 0 4vw;
+    }
+
+    .archives {
+        padding: 0 2.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .archives h2 {
+        margin: 0;
+        padding-bottom: 2.5vw;
+    }
+
+    .archives .v-ini {
+        margin: 3vw 0 0 auto;
+        position: static;
+    }
+
+    .session-container {
+        margin-bottom: 6vw;
+    }
+
+    .session-details {
+        padding: 2vw 5%;
+        width: 52%;
+    }
+
+    .session-img {
+        width: 54%;
+    }
+
+    .session-arrows {
+        margin-left: 10%;
+    }
+
+    .arrow-2 {
+        margin-left: 0%;
+        margin-right: 10%;
+    }
+
+    .session-btns {
+        width: 22%;
+        margin-left: 10%;
+    }
+
+    .btn-2 {
+        margin-right: 10%;
+        margin-left: 0;
+    }
+
 }

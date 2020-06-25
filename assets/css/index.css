@@ -532,10 +532,15 @@ footer h4 {
 .insidef-container {
   width: 18%;
   text-align: left;
+  min-height: 300px;
 }
 
 .log0-w-info{
   width: 35%;
+}
+
+.log0-w-info .insidef-container{
+  min-height: 0;
 }
 
 .log0-w-info p{
@@ -606,7 +611,7 @@ footer h4 {
 
 .responsive-task {
   display: flex;
-  width: 32%;
+  width: 25%;
   justify-content: space-around;
 }
 
@@ -619,9 +624,8 @@ footer h4 {
 }
 
 .recent-updates {
-  margin-top:20px;
-  margin-bottom: 55px;
   font-family: Proxima-Nova;
+  width: 14%;
 }
 
 /* FOOTER - 1920px END */

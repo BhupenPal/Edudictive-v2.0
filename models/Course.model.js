@@ -7,7 +7,6 @@ const courseSchema = new Schema({
     Key: {
         type: Number,
         required: true,
-        index: true,
         unique: true
     },
     Title: {
@@ -25,8 +24,9 @@ const courseSchema = new Schema({
     Discount: {
         type: Number
     },
-    Technical: {
-        type: Boolean,
+    Category: {
+        type: String,
+        enum: ['Technical', 'Finance'],
         required: true
     },
     Mode: {
@@ -59,17 +59,9 @@ const courseSchema = new Schema({
         required: true
     },
     WhatUGet: [String],
-    WeekendBatch: {
-        details: {
-            Exists: Boolean,
-            Date: String
-        }
-    },
-    WeekdayBatch: {
-        details: {
-            Exists: Boolean,
-            Date: String
-        }
+    Batch: {
+        WeekendDate: String,
+        WeekdayDate: String
     },
     Structure: [{
         NumOfWeek: Number,

@@ -1,28 +1,9 @@
-
 // -----------------program structure----------------------
 
-function myFunction() {
-    document.querySelector('#myDropdown').classList.toggle("show");
-    document.querySelector('#change-icon').classList.toggle("fa-rotate-180");
-
-  }
-
-  function myFunction1() {
-    document.querySelector('#myDropdown1').classList.toggle("show");
-    document.querySelector('#change-icon1').classList.toggle("fa-rotate-180");
-  }
-  
-
-  function myFunction2() {
-    document.querySelector('#myDropdown2').classList.toggle("show");
-    document.querySelector('#change-icon2').classList.toggle("fa-rotate-180");
-  }
-  
-
-  function myFunction3() {
-    document.querySelector('#myDropdown3').classList.toggle("show");
-    document.querySelector('#change-icon3').classList.toggle("fa-rotate-180");
-  }
+function myFunction(ele) {
+  ele.nextElementSibling.classList.toggle("show")
+  document.querySelector("#change-icon").classList.toggle("fa-rotate-180");
+}
 
 // ---------------------slider------------------------
 
@@ -76,4 +57,3 @@ dotsNav.addEventListener("click", (e) => {
   currentDot.classList.remove("current_slide");
   targetdot.classList.add("current_slide");
 });
-

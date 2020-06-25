@@ -163,9 +163,11 @@
 
             <div class="program-struct-sub">
 
-                <button onclick="myFunction()" class="struct-dropbtn">Week 1 - HTML<i id="change-icon"
-                        class="fas fa-chevron-down"></i></button>
-                <div id="myDropdown" class="struct-content">
+                <% doc.Structure.map(item => { %>
+                    <button onclick="myFunction(this)" class="struct-dropbtn">
+                        Week 1 - HTML <i id="change-icon" class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="myDropdown" class="struct-content">
                     <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
                         ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
                         dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.</h4>
@@ -183,69 +185,7 @@
                     </span>
                     <hr /><br />
                 </div>
-
-                <button onclick="myFunction1()" class="struct-dropbtn">Week 2 - CSS<i id="change-icon1"
-                        class="fas fa-chevron-down"></i></button>
-                <div id="myDropdown1" class="struct-content">
-                    <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.</h4>
-                    <span><i class="far fa-check-circle"></i>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                    </span>
-                    <span><i class="far fa-check-circle"></i>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                    </span>
-                    <span><i class="far fa-check-circle"></i>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                    </span>
-                    <span><i class="far fa-check-circle"></i>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                    </span>
-                    <hr /><br />
-                </div>
-
-                <button onclick="myFunction2()" class="struct-dropbtn">Week 3 - Javascript<i id="change-icon2"
-                        class="fas fa-chevron-down"></i></button>
-                <div id="myDropdown2" class="struct-content">
-                    <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.</h4>
-                    <span><i class="far fa-check-circle"></i>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                    </span>
-                    <span><i class="far fa-check-circle"></i>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                    </span>
-                    <span><i class="far fa-check-circle"></i>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                    </span>
-                    <span><i class="far fa-check-circle"></i>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                    </span>
-                    <hr /><br />
-                </div>
-
-                <button onclick="myFunction3()" class="struct-dropbtn">Week 4 - Project<i id="change-icon3"
-                        class="fas fa-chevron-down"></i></button>
-                <div id="myDropdown3" class="struct-content">
-                    <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.</h4>
-                    <span><i class="far fa-check-circle"></i>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                    </span>
-                    <span><i class="far fa-check-circle"></i>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                    </span>
-                    <span><i class="far fa-check-circle"></i>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                    </span>
-                    <span><i class="far fa-check-circle"></i>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
-                    </span>
-                    <hr /><br />
-                </div>
+                <% }) %>
 
                 <p class="cloud-down">
                     <img src="/assets/images/downcloud.png" alt="">&emsp;<span>Download full course structure ( 2MB

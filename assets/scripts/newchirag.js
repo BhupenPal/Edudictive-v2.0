@@ -38,3 +38,20 @@ function eventini(x){
         },200)
     }
 }
+
+let team_img = document.querySelectorAll(".member-img")
+
+  for (var i = 0; i < team_img.length; i++) {
+    (function(i) {
+      team_img[i].addEventListener('mouseenter', function() {
+        let anid = document.createElement('div')
+        anid.classList.add("anid")
+        anid.innerHTML= `<lottie-player src="/assets/Json/Linkedin.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop autoplay></lottie-player>`
+        this.appendChild(anid)
+      });
+      team_img[i].addEventListener("mouseleave", function() {
+        let parent = this
+        parent.removeChild(parent.children[1])
+      });
+    })(i);
+  }

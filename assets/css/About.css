@@ -183,6 +183,7 @@
   background-position: bottom;
   background-size: cover;
   border-radius: 54px;
+  overflow: hidden;
 }
 
 .rd_pretext {

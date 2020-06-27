@@ -262,9 +262,49 @@
 .member-img {
   width: 25vh;
   height: 25vh;
-  background-color: darkorange;
   border-radius: 50vh;
   margin: 2vw auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.anid{
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 0%;
+  width: 0%;
+  background-color: #006097e0;
+  z-index: 2;
+  border-radius: 100%;
+  animation: link-anim 0.5s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes link-anim{
+  0%{
+    height: 0%;
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.member-img img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
 }
 
 .team-member h3 {
@@ -276,7 +316,7 @@
 
 .team-member h4 {
   color: #4e4e4e;
-  font: 34px Proxima-Nova;
+  font: 1rem Proxima-Nova;
   text-align: center;
   margin: 1vh;
 }
@@ -537,7 +577,7 @@
   }
 
   .team-member {
-    width: 40%;
+    width: 50%;
     height: 50vw;
   }
 
@@ -547,11 +587,11 @@
   }
 
   .team-member h3 {
-    font-size: 6vw;
+    font-size: 5vw;
   }
 
   .team-member h4 {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 
   .edu-news h1 {
@@ -805,11 +845,11 @@
   }
 
   .team-member h3 {
-    font-size: 4vw;
+    font-size: 3vw;
   }
 
   .team-member h4 {
-    font-size: 3vw;
+    font-size: 1rem;
   }
 
   .edu-news h1 {
@@ -1069,11 +1109,11 @@
   }
 
   .team-member h3 {
-    font-size: 4vw;
+    font-size: 3vw;
   }
 
   .team-member h4 {
-    font-size: 3.5vw;
+    font-size: 1rem;
   }
 
   .edu-news h1 {
@@ -1306,7 +1346,7 @@
   }
 
   .team-member h4 {
-    font-size: 1.8vw;
+    font-size: 1rem;
   }
 
   .edu-news h1 {
@@ -1524,7 +1564,7 @@
   }
 
   .team-member h4 {
-    font-size: 1.8vw;
+    font-size: 1rem;
   }
 
   .edu-news h1 {
@@ -1742,7 +1782,7 @@
   }
 
   .team-member h4 {
-    font-size: 1.8vw;
+    font-size: 1rem;
   }
 
   .edu-news h1 {
@@ -1960,7 +2000,7 @@
   }
 
   .team-member h4 {
-    font-size: 1.8vw;
+    font-size: 1rem;
   }
 
   .edu-news h1 {

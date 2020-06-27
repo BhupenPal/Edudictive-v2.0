@@ -7,7 +7,7 @@ function webd() {
 		html:
 		 '12-14 Hours Training (2 hours a day)\
 		 <br>\
-		 Starting from 8th June\
+		 Starting: TBA\
 		 <br>\
 		 Online doubt clearing sessions\
 		 <br>\
@@ -25,33 +25,6 @@ function webd() {
 	}
 )}
 
-function react() {
-	Swal.fire({
-		title: '<strong>Web Development Bootcamp <br> React</strong>',
-		imageUrl: '/assets/images/HOMEOFFER/react.svg',
-		imageWidth:  250,
-		imageHeight: 250,
-		html:
-		 '12-14 Hours Training (2 hours a day)\
-		 <br>\
-		 Starting from 22nd June\
-		 <br>\
-		 Online doubt clearing sessions\
-		 <br>\
-		 Hands On Learning\
-		 <br>\
-		 Prerequisite: HTML, CSS, JS',
-		 showCloseButton: true,
-		 confirmButtonText: 'Register',
-		 showCancelButton: 'Close'
-	  })
-	  .then((okay) => {
-		if(okay.value){
-			window.location.href = "http://www.edudictive.in/summerbootcamp/register"
-		}
-	}
-)}
-
 function finance() {
 	Swal.fire({
 		title: '<strong>Understanding Finance</strong>',
@@ -61,7 +34,7 @@ function finance() {
 		html:
 		 '12-14 Hours Training (2 hours a day)\
 		 <br>\
-		 Starting from 22nd June\
+		 Starting from 3rd July\
 		 <br>\
 		 Online doubt clearing sessions\
 		 <br>\
@@ -88,7 +61,7 @@ function uiux() {
 		html:
 		 '12-14 Hours Training (2 hours a day)\
 		 <br>\
-		 Starting from 8th June\
+		 Starting: TBA\
 		 <br>\
 		 Online doubt clearing sessions\
 		 <br>\
@@ -114,7 +87,7 @@ function graphics() {
 		html:
 		 '12-14 Hours Training (2 hours a day)\
 		 <br>\
-		 Starting from 15th June\
+		 Starting: Already Started\
 		 <br>\
 		 Online doubt clearing sessions\
 		 <br>\

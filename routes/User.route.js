@@ -29,6 +29,7 @@ router.post("/register", UserController.postRegister);
 router.get("/verify", UserController.getVerify);
 
 router.get("/reset", UserController.getReset);
+router.post("/reset", UserController.postReset);
 
 router.get("/dashboard", ensureAuthenticated, UserController.getDashboard);
 

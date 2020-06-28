@@ -12,25 +12,16 @@
     <%-include('./Components/Header.ejs') %>
     <div class="sign-help">
       <div class="sign-block">
-        <form class="sign-container">
+        <form class="sign-container" method="POST">
           <h1 class="heading">Sign in help</h1>
 
           <input
             class="enter-data"
             id="enter-email"
             type="email"
+            name="uEmail"
             placeholder="Enter your Email ID or Phone number"
           />
-          <div class="forgot">
-            <div class="forgot1">
-              <input type="radio" name="details" class="frgt-radio-btn" />
-              <p>Forgot Username</p>
-            </div>
-            <div class="forgot1">
-              <input type="radio" name="details" class="frgt-radio-btn" />
-              <p>Forgot Password</p>
-            </div>
-          </div>
 
           <button class="continue">Continue</button>
         </form>

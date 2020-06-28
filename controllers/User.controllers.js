@@ -19,24 +19,26 @@ module.exports = {
 
   postLogin: (req, res, next) => {
     if (req.xhr) {
+      const { remember } = req.body;
       try {
         passport.authenticate("local", (err, user, info) => {
           if (err) {
             res.send(err);
-            res.end();
           }
           if (info) {
             res.send(info.message);
-            res.end();
           }
           if (user) {
             req.login(user, (err) => {
               if (err) {
                 res.send(err);
-                res.end();
               } else {
+                if (!remember || remember === 'on') {
+                  req.session.cookie.expires = false;
+                } else {
+                  req.session.cookie.maxAge = 30 * 24 * 60 * 60 * 1000;
+                }
                 res.send("Login Success");
-                res.end();
               }
             });
           }
@@ -192,6 +194,41 @@ module.exports = {
 
   getReset: (req, res, next) => {
     res.render("ForgotPass");
+  },
+
+  postReset: async (req, res, next) => {
+
+    const { uEmail } = req.body;
+    
+    let user = null;
+    
+    if(isNaN(uEmail)) {
+      user = await UserModel.findOne({ uEmail })
+    } else {
+      user = await UserModel.findOne({ upNum: uEmail })
+    }
+
+    if(!user) {
+      ErrMsg.news.push('User not found!')
+      return res.send(ErrMsg)
+    }
+
+    let KeyToken = GenerateRandom(16);
+
+    user.ResetToken = KeyToken
+    user.save()
+
+    let mailOptions = {
+      from: '"Edudictive" <contact@edudictive.in>', // sender address
+      to: uEmail, // list of receivers
+      subject: "Edudictive Password Reset", // Subject line
+      html: resetMail(user.ufName, KeyToken), // html body
+    };
+
+    transporter.sendMail(mailOptions)
+
+    SucMsg.news.push('Rest Mail Send')
+    return res.send(SucMsg)
   },
 
   getVerify: async (req, res, next) => {

@@ -17,9 +17,11 @@ app.use("/assets", express.static("assets"));
 //Environment Variables
 require("dotenv").config();
 
+///////////////////////////////////TO BE DELETED
 //ADMIN ROUTES
 const AdminController = require("./controllers/Admin.controller");
 app.use("/admin", AdminController)
+///////////////////////////////////TO BE DELETED
 
 //Parsing Body
 app.use(express.json());
@@ -31,14 +33,11 @@ require("./controllers/auth/passport")(passport);
 
 //Creating a session
 const session = require("express-session");
-const MongoStore = require("connect-mongo")(session);
 app.use(
   session({
     secret: process.env.SECRET,
     resave: true,
-    saveUninitialized: false,
-    store: new MongoStore({ mongooseConnection: mongoose.connection }),
-    cookie: { maxAge: 180 * 60 * 1000 },
+    saveUninitialized: false
   })
 );
 
@@ -53,6 +52,7 @@ app.use(function (req, res, next) {
   next();
 });
 
+///////////////////////////////////TO BE DELETED
 app.get('/summerbootcamp', (req, res) => {
   res.render('OFFERINDEX')
 })
@@ -78,6 +78,7 @@ app.post('/summerbootcamp/register', (req, res) => {
 
   res.render('confirm');
 })
+///////////////////////////////////TO BE DELETED
 
 // INTIALISING ROUTES
 const HomeRoute = require("./routes/Home.route");

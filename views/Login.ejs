@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/assets/css/index.css" />
   <link rel="stylesheet" href="/assets/css/SignIn.css" />
   <link rel="stylesheet" href="/assets/css/all.min.css" />
-  <title>Document</title>
+  <title>Edudictive | Login</title>
 </head>
 
 <body>
@@ -15,8 +15,8 @@
   <div class="login_container">
     <form class="signin-parent" id="user-login-form">
       <h1 class="sign-heading">Sign in</h1>
-      <input type="text" placeholder="Username, Email ID or Phone Number" name="uEmail" autofocus />
-      <input type="password" placeholder="Password" name="uPass" />
+      <input type="text" placeholder="Username, Email ID or Phone Number" name="uEmail" autofocus required />
+      <input type="password" placeholder="Password" name="uPass" required />
       <div class="signin-subdiv">
         <div class="signin-sub-a">
           <label class="container">
@@ -30,7 +30,10 @@
         </div>
       </div>
   
-      <button class="signin-btn" type="submit">Sign in</button>
+      <button class="signin-btn" type="submit">
+        <div class="loader"></div>
+        Sign in
+      </button>
   
       <div class="signin-banner">
         <div class="banner-line"></div>
@@ -51,6 +54,7 @@
   </div>
 
   <%-include('./Components/Footer.ejs') %>
+  <script src="/assets/scripts/sweetalert/swal.js"></script>
   <script src="/assets/scripts/index.js"></script>
   <script src="/assets/scripts/ajax/signHandle.js"></script>
 </body>

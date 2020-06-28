@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/assets/css/all.min.css" />
   <link rel="stylesheet" href="/assets/css/Register.css" />
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
-  <title>Register</title>
+  <title>Edudictive | Register</title>
 </head>
 
 <body>
@@ -35,7 +35,7 @@
             <input type="number" placeholder="Contact Number" name="upNum" required />
           </div>
           <input type="text" placeholder="Institute" name="uInstitute" required />
-          <input type="password" placeholder="Address" name="uAddr" required />
+          <input type="text" placeholder="Address" name="uAddr" required />
           <div class="input-flexer">
             <select name="uState" required>
               <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -80,12 +80,13 @@
         </div>
         <div class="reg-terms">
           <label class="container">
-            <input type="checkbox" />
+          <input type="checkbox" name="agreement" onclick="{this.value = this.checked}" />
             <span class="checkmark"></span>
             By signing up, you agree with Edudictive's terms and conditons.
           </label>
         </div>
         <button class="reg-btn">
+          <div class="loader"></div>
           Sign Up
         </button>
         <div class="reg-banner">

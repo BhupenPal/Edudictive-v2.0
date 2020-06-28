@@ -2,32 +2,24 @@ if (urlCheck(['register'])) {
   const FormElement = document.getElementById("user-register-form");
   preventer(FormElement, Ajax);
   function Ajax() {
+    document.getElementsByClassName('loader')[0].style.display = 'block'
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "/user/register", true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.getResponseHeader("Content-Type", "application/json");
     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-    xhr.onerror = function () {
-      Swal.fire({
-        position: "top-end",
-        icon: "error",
-        title: "COULD NOT CONNECT TO THE SERVER",
-        showConfirmButton: false,
-        showCancelButton: true,
-        timer: 2500,
-      });
-    };
     xhr.onload = function () {
       if (this.status === 200) {
+        document.getElementsByClassName('loader')[0].style.display = 'none'
         let data = JSON.parse(this.response);
-        console.log(data);
         if (data.news[0] == "Email Sent") {
           let timerInterval;
           Swal.fire({
+            position: 'top-end',
             icon: "success",
-            title: "Auto close alert!",
-            html: "You will be redirected to login page in <b>5</b> seconds.",
-            timer: 5000,
+            title: "Registration Successful! Please check your mail for verification.",
+            html: "You will be redirected to login page in <b>8</b> seconds.",
+            timer: 8000,
             timerProgressBar: true,
             onBeforeOpen: () => {
               timerInterval = setInterval(() => {
@@ -74,6 +66,7 @@ if (urlCheck(["login"])) {
   const FormElement = document.getElementById("user-login-form");
   preventer(FormElement, Ajax);
   function Ajax() {
+    document.getElementsByClassName('loader')[0].style.display = 'block'
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "/user/login", true);
     xhr.setRequestHeader("Content-Type", "application/json");
@@ -81,12 +74,28 @@ if (urlCheck(["login"])) {
     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
     xhr.onload = function () {
       if (this.status === 200) {
-        console.log(this.response);
-        if (this.response == "Login Success") {
-          window.location.replace(document.referrer);
+        document.getElementsByClassName('loader')[0].style.display = 'none'
+        let data = this.response;
+        if (data == "Login Success") {
+          window.location.href = "/user/dashboard";
+        } else {
+          Swal.fire({
+            position: "top-end",
+            icon: "warning",
+            title: data,
+            showConfirmButton: false,
+            timer: 1500,
+          });
         }
       } else {
-        console.log("ERROR: AJAX COULD NOT CONNECT");
+        Swal.fire({
+          position: "top-end",
+          icon: "error",
+          title: "COULD NOT CONNECT TO THE SERVER",
+          showConfirmButton: false,
+          showCancelButton: true,
+          timer: 2500,
+        });
       }
     };
     xhr.send(getFields(FormElement));
@@ -94,7 +103,7 @@ if (urlCheck(["login"])) {
 }
 
 const addToCartButton = document.getElementById("add-to-cart");
-if(urlCheck(["cart"])){
+if (urlCheck(["cart"])) {
   addToCartButton.addEventListener("click", (e) => {
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "/to-cart/id", true);

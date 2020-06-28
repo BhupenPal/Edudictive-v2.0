@@ -97,7 +97,13 @@ module.exports = {
           uPinCode,
           uInsti,
           ucPass,
+          agreement
         } = req.body;
+
+        if(!agreement || agreement === 'on') {
+          ErrMsg.news.push("You must agree with T&C's")
+          return res.send(ErrMsg)
+        }
 
         //Check required fields
         if (
@@ -120,8 +126,7 @@ module.exports = {
         }
 
         if (ErrMsg.news.length > 0) {
-          res.send(ErrMsg);
-          res.end();
+          return res.send(ErrMsg);
         } else {
           UserModel.findOne({ uEmail: uEmail }).then((user) => {
             if (user) {
@@ -186,7 +191,7 @@ module.exports = {
   },
 
   getReset: (req, res, next) => {
-    res.render("forgotPassword");
+    res.render("ForgotPass");
   },
 
   getVerify: async (req, res, next) => {
@@ -216,8 +221,6 @@ module.exports = {
   },
 
   postAddCourse: (req, res, next) => {
-    console.log(req.body);
-    console.log(req.file);
     //const { name, price, description, cimage } = req.body;
     const newCourse = new Course({
       courseTitle : req.body.courseID,

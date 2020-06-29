@@ -174,7 +174,11 @@ const LinkHandle = (URL, NewWindow) => {
     var j = `pseudoStyle${diff}`;
     this.className += " " + j;
     i.innerHTML += " ." + j + ":" + d + "{" + e + ":" + f + "}";
-    h.appendChild(i);
+    if(h.contains(i)){
+      return this;
+    }else{
+      h.appendChild(i);
+    }
     return this;
   };
 })();

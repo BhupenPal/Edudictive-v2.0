@@ -1144,7 +1144,6 @@
     font-size: 1.5rem;
     width: 100%;
   }
-
   
   .crs_card_wrap{
     overflow-x: scroll;
@@ -1483,32 +1482,6 @@
 }
 
 @media only screen and (min-width: 1601px) and (max-width: 1920px) {
-  
-  .courses{
-    width: 99%;
-    margin: 0 auto;
-  }
-
-  .crs_card_wrap{
-    overflow-x: scroll;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .crs_content {
-    margin: 100px auto;
-  }
-
-  .courses h1 {
-    font: Bold 2.5rem Avenir-Next;
-  }
-
-  .crs_hig {
-    transform: scale(1.1);
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-
   .illus-tag{
     margin: 30px auto 50px auto;
   }

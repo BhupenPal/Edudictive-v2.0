@@ -1,445 +1,306 @@
-.profile-container {
-  padding-top: 325px;
+.dashboard-container{
+  padding-top: 125px;
+  min-height: 80vh;
 }
-.profile-heads {
+
+.dash-navigation{
+  margin: 3rem auto;
+  width: max-content;
+}
+
+.dash-navigation ul {
   display: flex;
-  align-items: baseline;
-  position: absolute;
-  top: 12rem;
-  left: 200px;
+  align-items: center;
 }
-.profile-heads .inactive-head {
+
+.heads{
+  margin: 0 1.8rem;
+  transition: 0.2s;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.inactive-head {
   color: #C0C0C0;
-  font: Bold 2rem Avenir-Next;
-  cursor: pointer;
-  margin-left: 3rem;
-}
-.active_under {
-  height: 8px;
-  width: 0%;
-  background-color: #408CFF;
-  opacity: 0.4;
-  animation: wchange 0.4s 1 forwards;
-}
-@keyframes wchange {
-  0% {
-      width: 0;
-  }
-  100% {
-      width: 60%;
-  }
-}
-.profile-heads .active-head {
-  font: Bold 2rem Avenir-Next;
-  color: #0065FF;
-  margin: 0rem ;
+  font: Bold 24px Avenir-Next;
   cursor: pointer;
 }
-.profile-box {
+
+.active-head{
+  font: Bold 32px Avenir-Next;
+  color: #408CFF;
+  cursor: pointer;
+}
+
+.profile-section{
+  padding: 1rem 0 5rem 0;
   display: flex;
-  left:15rem;
-  height: 42rem;
-  width: 73%;
-  margin: 0  1rem auto;
-  border-radius: 5rem;
-  position: relative;
-  font-family: Avenir-Next;
-  font-weight: 200;
-  padding-left: 40px;
-  padding-top: 40px;
-  box-sizing: border-box;
-  box-shadow: 6px 6px 20px #00000029;
-  background: white;
 }
-.profile-info{
+
+.profile-card{
+  margin: auto;
+  height: 550px;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 6px 6px 25px #00000029;
   width: 50%;
-  margin: 3rem 3rem auto;
-   
-}
-.info-head{
-  font-size: 1.2rem;
-  font-family:Avenir-Next;
-   margin-bottom: 0.5rem;
-    margin-left: 6rem;
-}
-.info-det{
-  font:  2rem Avenir-Next;
-  opacity: 0.6;
-  margin-bottom: 1rem;
-  margin-left: 6rem;
-}
-.reg-encloser{
-  margin-left: 5rem;
-  
-}
-.reg-encloser .edit_profile {
-  background:  #0065FF;
-  height: 4rem;
-  width: 12rem;
-  border-radius: 0.5rem;
-  color: white;
-  font: 1.5rem Avenir-Next;
-  transition: 0.2s;
-  padding: 0;
-  margin:2rem auto 2rem 1rem;
-}
-.reg-encloser .update_password{
-  background:  #0065FF;
-  height: 4rem;
-  width: 13rem;
-  border-radius: 0.5rem;
-  color: white;
-  font: 1.5rem Avenir-Next;
-  transition: 0.2s;
-  padding: 0;
-  margin:2rem auto 2rem 1rem;
-}
-.side-nav{
-  display: none;
-}
-.open-slide{
-  display: none;
-}
-.profile-image{
-  margin: 12rem auto auto auto;
-}
-@media screen and (max-width: 480px) {
-  .profile-image{
-  margin: 2rem auto auto auto;
-      width: 50%;
-}
-  .open-slide{
-  display: block;
-      margin-right: 2rem;
-}
-  .side-nav{
-      display: block;
-height:100%;
-width:0;
-position:fixed;
-z-index:1;
-top:4rem;
-left:0;
-background-color:white;
-opacity: 1;
-overflow-x:hidden;
-padding-top:60px;
-transition:0.5s;
-}
-.side-nav a{
-padding:2rem 10px 10px 30px;
-text-decoration:none;
-font:1.2rem Avenir-Next;
-color:black;
-display:block;
-transition:0.3s;
-}
-.side-nav a:hover{
-color:#fff;
-}
-.side-nav .btn-close{
-position:absolute;
-top:2rem;
-right:22px;
-font-size:36px;
-margin-left:50px;
-}
-  .profile-heads {
   display: flex;
-  align-items: baseline;
-  position: absolute;
-  top: 9rem;
-  left: 2rem;
-}
-  .inactive-head{
-      display: none;
-  }
-  /* .profile-heads .active-head {
-      font: Bold 2rem Avenir-Next;
-      color: #0065FF;
-      margin: 0rem ;
-      cursor: pointer;
-  } */
-  .profile-box {
-  display: flex;
-  flex-direction: column;    
-  left:1rem;
-  height: 50rem;
-  width: 84%;
-  margin: -4rem  1rem auto;
-  border-radius: 5rem;
-  position: relative;
-  font-family: Avenir-Next;
-  font-weight: 200;
-  padding-top: 40px;
-  box-sizing: border-box;
-  box-shadow: 6px 6px 20px #00000029;
-  background: white;
-}
-.profile-info{
-  width: 100%;
-  margin:1rem auto 1rem -6rem;
-   
-}
-.info-head{
-  font-size: 1rem;
-  font-family:Avenir-Next;
-   margin-bottom: 0.5rem;
-    margin-left: 6rem;
-}
-.info-det{
-  font:  1.5rem Avenir-Next;
-  opacity: 0.6;
-  margin-bottom: 1rem;
-  margin-left: 6rem;
-}
-.reg-encloser{
-  margin-left: 5rem;
-  
-}
-.reg-encloser .edit_profile {
-  background:  #0065FF;
-  height: 3rem;
-  width: 7rem;
-  border-radius: 0.5rem;
-  color: white;
-  font: 1rem Avenir-Next;
-  transition: 0.2s;
-  padding: 0;
-  margin:2rem auto 2rem 1rem;
-}
-.reg-encloser .update_password{
-  background:  #0065FF;
-  height: 3rem;
-  width: 10rem;
-  border-radius: 0.5rem;
-  color: white;
-  font: 1rem Avenir-Next;
-  transition: 0.2s;
-  padding: 0;
-  margin:-1rem auto 2rem 1rem;
 }
 
-}
-@media screen and (max-width: 1024px ) and (min-width: 768px) {
-  .profile-heads {
+.profile-details{
+  height: 100%;
+  width: 50%;
   display: flex;
-  align-items: baseline;
-  position: absolute;
-  top: 9rem;
-  left: 4rem;
-}
-.profile-heads .inactive-head {
-  color: #C0C0C0;
-  font: Bold 1.6rem Avenir-Next;
-  cursor: pointer;
-  margin-left: 2rem;
-}
-.active_under {
-  height: 8px;
-  width: 0%;
-  background-color: #408CFF;
-  opacity: 0.4;
-  animation: wchange 0.4s 1 forwards;
-}
-@keyframes wchange {
-  0% {
-      width: 0;
-  }
-  100% {
-      width: 60%;
-  }
-}
-.profile-heads .active-head {
-  font: Bold 1.7rem Avenir-Next;
-  color: #0065FF;
-  margin: 0rem ;
-  cursor: pointer;
-}
- 
-  .profile-box {
-  display: flex;
-  left:1rem;
-  height: 42rem;
-  width: 88%;
-  margin: -5rem  2rem auto;
-  border-radius: 5rem;
-  position: relative;
-  font-family: Avenir-Next;
-  font-weight: 200;
-  padding-top: 40px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
   box-sizing: border-box;
-  box-shadow: 6px 6px 20px #00000029;
-  background: white;
-}
-.profile-info{
-  width: 100%;
-  margin:1rem auto 1rem -3rem;
-   
-}
-  .profile-image{
-      margin-right: 9rem;
-      margin-top: 12rem;
-  }
-.info-head{
-  font-size: 1.5rem;
-  font-family:Avenir-Next;
-   margin-bottom: 0.5rem;
-    margin-left: 6rem;
-}
-.info-det{
-  font:  2rem Avenir-Next;
-  opacity: 0.6;
-  margin-bottom: 1rem;
-  margin-left: 6rem;
-}
-.reg-encloser{
-  margin-left: 5rem;
-  
-}
-.reg-encloser .edit_profile {
-  background:  #0065FF;
-  height: 3.5rem;
-  width: 8rem;
-  border-radius: 0.5rem;
-  color: white;
-  font: 1.4rem Avenir-Next;
-  transition: 0.2s;
-  padding: 0;
-  margin:2rem auto 2rem 1rem;
-}
-.reg-encloser .update_password{
-  background:  #0065FF;
-  height: 3.5rem;
-  width: 13rem;
-  border-radius: 0.5rem;
-  color: white;
-  font: 1.4rem Avenir-Next;
-  transition: 0.2s;
-  padding: 0;
-  margin:-1rem auto 2rem 1rem;
 }
 
+.det_sp{
+  font-family: Proxima-Nova;
+  display: flex;
+  flex-direction: column;
+  margin: 0.3rem 0;
 }
-@media only screen and (max-width: 768px) and (min-width:481px) {
-  .open-slide{
-      display: block;
-          margin-right: 2rem;
+
+.det_sp_label{
+  font-size: 20px;
+  color: #a7a7a7;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.det_sp_content{
+  font-size: 32px;
+  font-weight: bold;
+  color: #707070;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pro-btns button{
+  padding: 1rem;
+  background-color: #0065ff;
+  color: #fff;
+  font: bold 20px Proxima-Nova;
+  border-radius: 7px;
+  margin: 1.5rem 0.5rem 0 0;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.pro-btns button:hover{
+  opacity: 1;
+}
+
+.profile-pic{
+  display: flex;
+  height: 300px;
+  width: 300px;
+  border-radius: 300px;
+  overflow: hidden;
+  margin: auto;
+  box-shadow: 10px 10px 50px #00000080;
+}
+
+.profile-pic img{
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.mobile-dash-nav{
+  display: none;
+}
+
+@media only screen and (max-width: 600px){
+  .dashboard-container{
+    padding-top: 80px;
   }
-      .side-nav{
-          display: block;
-    height:100%;
-    width:0;
-    position:fixed;
-    z-index:1;
-    top:4rem;
-    left:0;
-    background-color:white;
+  
+  .dash-navigation{
+    display: none;
+  }
+
+  .mobile-dash-nav{
+    display: flex;
+  }
+
+  .profile-card{
+    width: 100%;
+    flex-direction: column-reverse;
+    height: min-content;
+    padding: 2rem 1rem;
+    border-radius: 0;
+  }
+
+  .profile-pic{
+    height: 12rem;
+    width: 12rem;
+  }
+
+  .profile-details{
+    width: 100%;
+    padding: 0;
+    align-items: center;
+    margin: 2rem 0 0 0;
+  }
+
+  .det_sp{
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .det_sp_label{
+    font-size: 1rem;
+  }
+
+  .det_sp_content{
+    font-size: 1.1rem;
+  }
+
+  .pro-btns{
+    margin: 2rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pro-btns button{
+    width: 80%;
+    margin: 0.2rem auto;
     opacity: 1;
-    overflow-x:hidden;
-    padding-top:60px;
-    transition:0.5s;
   }
-  
-  .side-nav a{
-    padding:2rem 10px 10px 30px;
-    text-decoration:none;
-    font-size:22px;
-    color:black;
-    display:block;
-    transition:0.3s;
-  }
-  
-  .side-nav a:hover{
-    color:#fff;
-  }
-  
-  .side-nav .btn-close{
-    position:absolute;
-    top:2rem;
-    right:22px;
-    font-size:36px;
-    margin-left:50px;
-  }
-  
-  .profile-heads {
-  display: flex;
-  align-items: baseline;
-  position: absolute;
-  top: 9rem;
-  left: 5rem;
-  font-size: 1.3rem;
-}
-  .inactive-head{
-      display: none;
-  }
-  .profile-heads .active-head {
-      font: Bold 2.5rem Avenir-Next;
-      color: #0065FF;
-      margin: 0rem ;
-      cursor: pointer;
-  }
-  .profile-box {
-  display: flex;
-  left:1rem;
-  height: 42rem;
-  width: 84%;
-  margin: -4rem  1rem auto;
-  border-radius: 5rem;
-  position: relative;
-  font-family: Avenir-Next;
-  font-weight: 200;
-  padding-top: 40px;
-  box-sizing: border-box;
-  box-shadow: 6px 6px 20px #00000029;
-  background: white;
-}
-.profile-info{
-  width: 100%;
-  margin:1rem auto 1rem -6rem;
-   
-}
-  .profile-image{
-      margin-right: 4rem;
-      margin-top: 12rem;
-  }
-.info-head{
-  font-size: 1.5rem;
-  font-family:Avenir-Next;
-   margin-bottom: 0.5rem;
-    margin-left: 6rem;
-}
-.info-det{
-  font:  2rem Avenir-Next;
-  opacity: 0.6;
-  margin-bottom: 1rem;
-  margin-left: 6rem;
-}
-.reg-encloser{
-  margin-left: 5rem;
-  
-}
-.reg-encloser .edit_profile {
-  background:  #0065FF;
-  height: 3.5rem;
-  width: 8rem;
-  border-radius: 0.5rem;
-  color: white;
-  font: 1.4rem Avenir-Next;
-  transition: 0.2s;
-  padding: 0;
-  margin:2rem auto 2rem 1rem;
-}
-.reg-encloser .update_password{
-  background:  #0065FF;
-  height: 3.5rem;
-  width: 13rem;
-  border-radius: 0.5rem;
-  color: white;
-  font: 1.4rem Avenir-Next;
-  transition: 0.2s;
-  padding: 0;
-  margin:-1rem auto 2rem 1rem;
 }
 
+@media only screen and (max-width: 768px) and (min-width: 601px){
+  .dashboard-container{
+    padding-top: 80px;
+  }
+  
+  .dash-navigation{
+    display: none;
+  }
+
+  .mobile-dash-nav{
+    display: flex;
+  }
+
+  .profile-card{
+    width: 100%;
+    flex-direction: row-reverse;
+    height: min-content;
+    padding: 2rem 1rem;
+    border-radius: 0;
+  }
+
+  .profile-pic{
+    height: 12rem;
+    width: 12rem;
+    margin: 2rem auto 0 auto;
+  }
+
+  .profile-details{
+    width: 50%;
+    padding: 0;
+    align-items: center;
+    margin: 2rem 0 0 0;
+    margin: 2rem;
+  }
+
+  .det_sp{
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .det_sp_label{
+    font-size: 1rem;
+  }
+
+  .det_sp_content{
+    font-size: 1.1rem;
+  }
+
+  .pro-btns{
+    margin: 2rem 0;
+    width: 100%;
+  }
+
+  .pro-btns button{
+    width: 100%;
+    margin: 0.2rem 0;
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 769px){
+  .dashboard-container{
+    padding-top: 80px;
+  }
+  
+  .dash-navigation{
+    display: none;
+  }
+
+  .mobile-dash-nav{
+    display: flex;
+  }
+
+  .profile-card{
+    width: 90%;
+    flex-direction: row-reverse;
+    height: min-content;
+    padding: 2rem 1rem;
+    border-radius: 20px;
+  }
+
+  .profile-pic{
+    height: 15rem;
+    width: 15rem;
+    margin: auto;
+    border-radius: 15px;
+  }
+
+  .profile-details{
+    width: 50%;
+    padding: 0;
+    align-items: center;
+    margin: 2rem 0 0 0;
+    margin: 2rem;
+  }
+
+  .det_sp{
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .det_sp_label{
+    font-size: 1rem;
+  }
+
+  .det_sp_content{
+    font-size: 1.1rem;
+  }
+
+  .pro-btns{
+    margin: 2rem 0;
+    width: 100%;
+  }
+
+  .pro-btns button{
+    width: 100%;
+    margin: 0.2rem 0;
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width:1300px) and (min-width:1101px){
+  .profile-card{
+    width: 80%;
+  }
 }

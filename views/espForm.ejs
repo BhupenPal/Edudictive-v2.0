@@ -10,15 +10,15 @@
   </head>
   <body>
     <%-include('./Components/Header.ejs') %>
-    <div class="form-container">
-       <h1 class= "form-heading">Edudictive Student Partner</h1>
-       <h3 class= "form-subheading">Application Form</h3>
-       <h5 class = "pers-details">Enter your personal details</h5>
-        <form method="POST" class = "espform">
-            <div class="input-container">
+    <div class="espForm-container">
+      <span class="espForm-Headings">Edudictive Student Partner</span>
+      <span class="espForm-Headings">Application Form</span>
+      <span class="espForm-Headings">Enter your personal details</span>
+      <div class="form-sub-container">
+        <form class="espform" method="POST">
+          <div class="form-part_primary">
             <input type="text" placeholder="Full Name" name="fName" required />
             <input type="text" placeholder="College Name" name="cName" required />
-
             <div class="input-flexer">
               <input type="hidden" name="country" id="countryId" value="IN"/>
                 <select name="pState" class="states order-alpha" id="stateId" required>
@@ -29,34 +29,29 @@
                 </select>
               </div>
               <input type="email" placeholder="Email Address" name="pEmail" required />
-              <input type="number" placeholder="Contact Number" name="ppNum" required />
-              <select name="pAvailability" class="availability">
-                <option value="">Availability</option>
-                <option value="3">3 Months</option>
-              <option value="6">6 months</option>
-            </select>
-            <div class="questions">
-                <h5 class="question-head">Answer the following questions</h5>
-                <h5 class ="question-1">What makes you fit to be an Edudictive Student Partner</h5>
-                <textarea name="Q1" placeholder="Enter your answer in not more than 700 words" rows="4" cols="50"></textarea>
-
-                <h5 class ="question-1">How would you host an event organized by Edudictive at your institution</h5>
-                <textarea name="Q2" placeholder="Enter your answer in not more than 1000 words" rows="4" cols="50"></textarea>
-
-                <h5 class ="question-1">Brief your relevant past experiences(if any)</h5>
-                <textarea name="Q3" placeholder="Enter your answer here" rows="4" cols="50"></textarea>
-            </div>
-         </div>
-         <div class="sub-buttons">
-             <button class="sub-btn"> Submit </button>
-            </div>
-         
+                <input type="number" placeholder="Contact Number" name="ppNum" required />
+                <select name="pAvailability" class="availability">
+                  <option value="">Availability</option>
+                  <option value="3">3 Months</option>
+                <option value="6">6 months</option>
+              </select>  
+          </div>
+          <div class="form-part_secondary">
+              <h5 class="question-head">Answer the following questions</h5>
+              <h5 class ="question-1">What makes you fit to be an Edudictive Student Partner</h5>
+              <textarea name="Q1" placeholder="Enter your answer in not more than 700 words" rows="4" cols="50"></textarea>
+              <h5 class ="question-1">How would you host an event organized by Edudictive at your institution</h5>
+              <textarea name="Q2" placeholder="Enter your answer in not more than 1000 words" rows="4" cols="50"></textarea>
+              <h5 class ="question-1">Brief your relevant past experiences(if any)</h5>
+              <textarea name="Q3" placeholder="Enter your answer here" rows="4" cols="50"></textarea>
+          </div>
+          <div class="form-submit">
+            <button class="sub-btn" type="submit"> Submit </button>
+          </div>
         </form>
+      </div>
     </div>
-
     <%-include('./Components/Footer.ejs') %>
     <script src="/assets/scripts/index.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
-<script src="//geodata.solutions/includes/statecity.js"></script>
   </body>
 </html>

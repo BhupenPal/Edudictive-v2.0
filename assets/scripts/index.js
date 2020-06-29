@@ -174,7 +174,11 @@ const LinkHandle = (URL, NewWindow) => {
     var j = `pseudoStyle${diff}`;
     this.className += " " + j;
     i.innerHTML += " ." + j + ":" + d + "{" + e + ":" + f + "}";
-    h.appendChild(i);
+    if(h.contains(i)){
+      return this;
+    }else{
+      h.appendChild(i);
+    }
     return this;
   };
 })();
@@ -366,15 +370,15 @@ function animatedsub(){
 
 }
 
-window.addEventListener('load', function toggle(e){
-  var list = document.querySelectorAll(".nav");
-  var path = window.location.pathname;
-  list.forEach(function(item){
-    if(item.getAttribute("href") === path){
-      item.classList.add("active-nav");
-    }
-    else{
+// window.addEventListener('load', function toggle(e){
+//   var list = document.querySelectorAll(".nav");
+//   var path = window.location.pathname;
+//   list.forEach(function(item){
+//     if(item.getAttribute("href") === path){
+//       item.classList.add("active-nav");
+//     }
+//     else{
       
-    }
-  })
-})
+//     }
+//   })
+// })

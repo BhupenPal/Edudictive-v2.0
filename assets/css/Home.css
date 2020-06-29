@@ -456,7 +456,7 @@ html{
 
   .op-option-block {
     width: 85vw;
-    height: 660px;
+    height: max-content;
     box-sizing: border-box;
     margin: 30px auto;
     border-radius: 50px;
@@ -468,6 +468,11 @@ html{
     height: 50vw;
   }
 
+  .op-option-block p {
+    height: min-content;
+    margin-bottom: 0;
+  }
+
   .op-option-block h2 {
     font: Bold 7vw Proxima-Nova;
   }
@@ -477,7 +482,7 @@ html{
   }
 
   .op-option-block button {
-    margin-top : 3rem;
+    margin : 2rem 0 3rem 0;
     height: 70px;
     width: 200px;
   }
@@ -649,65 +654,84 @@ html{
 
 /* Media for tablets */
  @media only screen and (max-width: 768px) and (min-width: 601px) {
-     .content-wrap {
-       margin-top: -15rem;
-       width: 100%;
-   }
-  .get-skills-heading {
-    font-size: 2.4rem;
+  .content-wrap {
     width: 100%;
-    margin-top: 10rem;
-    font: Bold 2.5rem Avenir-Next;
-    color: #408cff;
+    padding-top: 80px;
   }
-   .skill-illustrate {
-     margin-right: 2rem;
-     margin-top: 15rem;
-     
-  }
-  .skill-illustrate img{
-    width: 100%;
-    
- }
 
+   .get-skills {
+    width: 100vw;
+    height: 150vw;
+    margin-top: 7vw;
+  }
+
+  .get-skills-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .get-skills-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .skill-illustrate {
+    width: 100%;
+  }
+
+  .skill-illustrate img {
+    width: 85vw;
+  }
+
+  .get-skills-heading {
+    font: Bold 8.86vw Avenir-Next;
+    width: 85vw;
+    margin: 0 auto;
+    text-align: center;
+  }
 
   .get-skills-platform {
-    width: 100%;
-    margin-top:5rem;
+    font: 4vw Avenir-Next;
+    line-height: 5vw;
+    width: 60%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
- 
-.skill-handle {
-  display: flex;  
-  position: absolute;
-  margin: 43rem auto 0rem auto;
-  width: 95%;
-}
 
-.skill-handle button {
-  width: 63rem;
-  height: 5rem;
-  border-radius: 15px;
-  font: Bold 21px Avenir-Next;
-}
+  .skill-handle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
 
-#skill-register {
-  background-color: #408cff;
-  color: #ffffff;
-  margin-right: 1rem;
-}
+  #skill-offers,
+  #skill-register {
+    height: 10.5vw;
+    width: 50vw;
+    margin: 0 !important;
+    font: 3.75vw Avenir-Next;
+    margin-bottom: 15px !important;
+    border-radius: 3vw;
+  }
 
-#skill-offers {
-  margin-left: 1rem;
-  background-color: #ffffff;
-  border: 3px solid #464646d6;
-  color: #464646d6;
-}
-.our-programs{
-  margin-top:200px;
-}
-   .op-heading{
-     font-size: 4rem;
-   }
+  .our-programs{
+    margin-top: 1rem;
+  }
+
+  .op-heading{
+    font-size: 3rem;
+  }
+
+  .op-description{
+    font-size: 1.5rem;
+  }
 
   .op-options {
     flex-direction: column;
@@ -717,7 +741,12 @@ html{
 
   .op-option-block {
     width: 80%;
-    margin-top: 2vh;
+    margin: 2rem auto;
+  }
+
+  .hvr-grow{
+    padding: 1rem;
+    height: max-content !important;
   }
 
   .sun-burn {
@@ -742,6 +771,12 @@ html{
    .sun-burn-det-svg{
      width: 95%;
      flex-wrap: wrap;
+     margin: 0 auto;
+   }
+
+   .sun-svg{
+     margin: 2rem auto;
+     padding: 1rem;
    }
 
   .success-flame {
@@ -760,8 +795,10 @@ html{
   }
 
   .sun-burn-text p {
-    font: 2rem Proxima-Nova;
-    margin: 20px auto;
+    font: 1.5rem Proxima-Nova;
+    margin: 2rem 0;
+    width: 95%;
+    text-align: justify;
   }
 
   .sun-svg img {
@@ -769,45 +806,98 @@ html{
     width: 100px;
   }
 
+  .intern-opt{
+    margin: 0;
+    height: max-content;
+  }
+
   .intern-opt h2 {
-    font-size: 9.8vw;
+    font-size: 3rem;
     width: 100%;
   }
 
   .intern-opt p {
     width: 80%;
+    font-size: 1.5rem;
   }
+
   .intern-illustration img{
-  height: 70%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 60px;
-}
+    height: 70%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  #AmazonLogo{
+    margin-bottom: -1rem;
+  }
 
   .blogs-brief{
     width:90%;
-    margin: 20rem auto 3rem auto;
+    margin: 6rem auto 3rem auto;
+    border-radius: 1rem;
+    padding: 2rem 0;
+  }
+
+  .blogs-brief h1{
+    font-size: 3rem;
   }
   
   .blog-detail-container {
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    padding: 0;
   }
 
-  .blog-structure {
+  .blog-structure, .sub-blog-secondary {
     width: 95%;
+    border-radius: 1rem;
+    height: max-content;
+    padding: 2rem 0;
+    box-sizing: border-box;
+    margin: 0 auto;
   }
 
   .sub-blog-structure {
-    width: 95%;
-    margin-top: 5vh;
+    width: 100%;
+    margin: 2rem 0 0 0;
+    height: min-content;
   }
 
-  .blog-structure h2 {
-    font-size: 3rem;
+  .blog-structure h2, .sub-blog-heading {
+    font-size: 2rem;
     text-align:left;
+    padding: 1rem;
+    margin: 1rem;
+    height: max-content;
+  }
+
+  .blog-writer{
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 0;
+    margin: 1rem 2rem;
+    height: max-content;
+    width: max-content;
+  }
+
+  .blog-time{
+    padding: 0;
+    margin: 1rem 2rem;
+    width: max-content;
+  }
+
+  .blog-btn{
+    margin: 1rem 2rem;
+  }
+
+  .read-more-blogs{
+    width: 95%;
+    margin: 2rem auto 0 auto;
+    border-radius: 0.5rem;
   }
 }
 

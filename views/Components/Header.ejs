@@ -33,7 +33,13 @@
          <div id="cntrl_img" onclick="acccontrol()"><img src="/assets/images/svgs/account.svg"></div>
          <div class="cntrl_sett">
             <div class="cntrl_links">
-               <div class="cntrl_lhead">Hey user !</div>
+               <div class="cntrl_lhead">
+                  <% if(!user){ %>
+                     Hey user !
+                  <% } else { %>
+                     Hi <%= user.ufName %>
+                  <% } %>
+               </div>
                <div class="cntrl_lcontain">
                   <ul>
                      <li><a href="/user/dashboard">My Profile</a></li>
@@ -47,12 +53,27 @@
             </div>
             <div class="cntrl_buttons">
                <div class="sh_cntrl_txt">
-                  <div class="empty_container">unknown</div>
-                  <span>Sign in to continue</span>
+                  <div class="empty_container">
+                     <% if(!user){ %>
+                        unknown
+                     <% } else { %>
+                        verified
+                     <% } %>
+                  </div>
+                  <% if(!user){ %>
+                     <span>Sign in to continue</span>
+                  <% } else { %>
+                     <span>Hope you are doing good</span>
+                  <% } %>
                </div>
                <div class="cntrl_btncontain">
-                  <button class="log-in" onclick="LinkHandle('/user/login')">Sign in</button>
-                  <button class="sign-up" onclick="LinkHandle('/user/register')">Create new account</button>
+                  <% if(!user){ %>
+                     <button class="log-in" onclick="LinkHandle('/user/login')">Sign in</button>
+                     <button class="sign-up" onclick="LinkHandle('/user/register')">Create new account</button>
+                  <% } else { %>
+                     <button class="log-in" onclick="LinkHandle('/user/dashboard')">Profile</button>
+                     <button class="sign-up" onclick="LinkHandle('/user/logout')">Logout</button>
+                  <% } %>
                </div>
             </div>
          </div>

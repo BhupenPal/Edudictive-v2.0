@@ -40,24 +40,20 @@
             <div class="profile-card">
                 <div class="profile-details">
                     <div class="det_sp">
-                        <span class="det_sp_label">full Name</span>
-                        <span class="det_sp_content">Varun Dev</span>
-                    </div>
-                    <div class="det_sp">
-                        <span class="det_sp_label">Username</span>
-                        <span class="det_sp_content">Mercurial Vampire</span>
+                        <span class="det_sp_label">Full Name</span>
+                        <span class="det_sp_content"><%= user.ufName %> <%= user.ulName %></span>
                     </div>
                     <div class="det_sp">
                         <span class="det_sp_label">Email</span>
-                        <span class="det_sp_content">dudevarun7777@gmail.com</span>
+                        <span class="det_sp_content"><%= user.uEmail %></span>
                     </div>
                     <div class="det_sp">
                         <span class="det_sp_label">Institute</span>
-                        <span class="det_sp_content">MAIT</span>
+                        <span class="det_sp_content"><%= user.uInsti %></span>
                     </div>
                     <div class="det_sp">
                         <span class="det_sp_label">Registered Phone</span>
-                        <span class="det_sp_content">9548879665</span>
+                        <span class="det_sp_content"><%= user.upNum %></span>
                     </div>
                     <div class="pro-btns">
                         <button>Edit Profile</button>
@@ -65,7 +61,7 @@
                     </div>
                 </div>
                 <div class="profile-pic">
-                    <img src="/assets/images/Team Members/Varun.jpg">
+                    <img src="/assets/images/svgs/account.svg">
                 </div>
             </div>
         </div>

@@ -288,7 +288,6 @@ function preventer(FormElement, CallBack) {
   });
 }
 
-
 function urlCheck(ToCheck) {
   let flag = false;
   ToCheck.map( x => {
@@ -363,18 +362,4 @@ function animatedsub(){
     fill: "forwards"
   })
  },500)
-
 }
-
-window.addEventListener('load', function toggle(e){
-  var list = document.querySelectorAll(".nav");
-  var path = window.location.pathname;
-  list.forEach(function(item){
-    if(item.getAttribute("href") === path){
-      item.classList.add("active-nav");
-    }
-    else{
-      
-    }
-  })
-})

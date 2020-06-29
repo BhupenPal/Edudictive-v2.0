@@ -82,22 +82,18 @@ module.exports = {
   },
 
   getEspForm:(req,res,next)=>{
-    res.render('espForm')
+    res.render('ESPForm')
   },
 
   postEspForm:(req,res,next)=>{
-    console.log(req.body);
     const NewStudentPartner = new studentPartner(req.body);
     NewStudentPartner.save((err)=>{
       if(err){
         res.send("error");
       }
       else{
-        res.render("espFormSuccess");
+        res.render("ESPFormSuccess");
       }
     })
-  },
-  getEspFormSuccess:(req,res,next)=>{
-    res.render('espFormSuccess')
-  },
+  }
 }

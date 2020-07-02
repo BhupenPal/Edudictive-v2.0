@@ -21,20 +21,29 @@
             <input type="text" placeholder="College Name" name="cName" required />
             <div class="input-flexer">
               <input type="hidden" name="country" id="countryId" value="IN"/>
-                <select name="pState" class="states order-alpha" id="stateId" required>
-                  <option value="">Select State</option>
-                </select>
-                <select name="pCity" class="cities order-alpha" id="cityId">
-                  <option value="">Select City</option>
-                </select>
+                <div class="styled-arrow">
+                  <select name="pState" class="states order-alpha" id="stateId" required data-state="closed">
+                    <option value="">Select State</option>
+                  </select>
+                  <img src="/assets/images/svgs/arrow-down.svg" class="down-chev-arrow">
+                </div>
+                <div class="styled-arrow">
+                  <select name="pCity" class="cities order-alpha" id="cityId" data-state="closed">
+                    <option value="">Select City</option>
+                  </select>
+                  <img src="/assets/images/svgs/arrow-down.svg" class="down-chev-arrow">
+                </div>
               </div>
               <input type="email" placeholder="Email Address" name="pEmail" required />
                 <input type="number" placeholder="Contact Number" name="ppNum" required />
-                <select name="pAvailability" class="availability">
-                  <option value="">Availability</option>
-                  <option value="3">3 Months</option>
-                <option value="6">6 months</option>
-              </select>  
+                <div class="styled-arrow">
+                  <select name="pAvailability" class="availability" data-state="closed">
+                    <option value="">Availability</option>
+                    <option value="3">3 Months</option>
+                  <option value="6">6 months</option>
+                </select>  
+                <img src="/assets/images/svgs/arrow-down.svg" class="down-chev-arrow">
+                </div>
           </div>
           <div class="form-part_secondary">
               <h5 class="question-head">Answer the following questions</h5>
@@ -53,5 +62,6 @@
     </div>
     <%-include('./Components/Footer.ejs') %>
     <script src="/assets/scripts/index.js"></script>
+    <script src="/assets/scripts/esForm..js"></script>
   </body>
 </html>

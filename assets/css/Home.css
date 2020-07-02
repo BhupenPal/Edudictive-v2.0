@@ -659,10 +659,22 @@ html{
     padding-top: 80px;
   }
 
-   .get-skills {
-    width: 100vw;
-    height: 150vw;
-    margin-top: 7vw;
+  .ham-menu{
+    height: calc(100vh - 80px);
+  }
+
+  .list-items ul li,.search-box input{
+    font: 200 1.5rem Avenir-Next;
+  }
+
+  .search-box i{
+    font-size: 1.5rem;
+  }
+
+  .get-skills {
+   width: 100vw;
+   height: 150vw;
+   margin-top: 7vw;
   }
 
   .get-skills-content {
@@ -744,7 +756,7 @@ html{
     margin: 2rem auto;
   }
 
-  .hvr-grow{
+  .op-option-block button {
     padding: 1rem;
     height: max-content !important;
   }
@@ -789,8 +801,9 @@ html{
   }
 
   .sun-burn-text h2 {
-    font: Bold 2.5rem Proxima-Nova;
+    font: Bold 2rem Proxima-Nova;
     width: 90vw;
+    text-align: justify;
     margin: 0 auto;
   }
 

@@ -1,46 +1,45 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
-const espSchema = new Schema({
-    fName:{
+const ESPSchema = new Schema({
+    FullName:{
         type: String,
         required: true,
     },
-    cName:{
+    CollegeName:{
         type: String,
         required: true
     },
-    pState:{
+    State:{
         type: String,
         required:true,
     },
-    pCity:{
-        type: String,
-    },
-    pEmail:{
+    Email:{
         type: String,
         required: true,
     },
-    ppNum:{
+    Phone:{
         type: Number,
         required: true
-
     },
-    pAvailability: {
+    Availability: {
         type: String,
         required: true
     },
-    Q1:{
+    Ques1:{
         type: String,
+        required: true
     },
-    Q2:{
+    Ques2:{
         type: String,
+        required: true
     },
-    Q3:{
+    Ques3:{
         type: String,
+        required: true
     },
 })
 
 
 
-module.exports = mongoose.model("Student_Partner", espSchema);
+module.exports = mongoose.model("Student Partner", ESPSchema);

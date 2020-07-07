@@ -52,7 +52,7 @@ module.exports = function (passport) {
       {
         clientID: process.env.GCLIENTID,
         clientSecret: process.env.GCLIENTSECRET,
-        callbackURL: "http://localhost:8080/user/login/google/confirm",
+        callbackURL: "https://www.edudictive.in/user/auth/google/confirm",
         passReqToCallback: true,
       },
       (request, accessToken, refreshToken, profile, done) => {
@@ -91,7 +91,7 @@ module.exports = function (passport) {
       {
         clientID: process.env.FAPPID,
         clientSecret: process.env.FCLIENTSECRET,
-        callbackURL: "http://localhost:8080/user/login/fb/confirm",
+        callbackURL: "https://www.edudictive.in/user/login/fb/confirm",
         profileFields: [
           "id",
           "displayName",
@@ -136,7 +136,7 @@ module.exports = function (passport) {
       {
         clientID: process.env.LCLIENTID,
         clientSecret: process.env.LCLIENTSECRET,
-        callbackURL: "http://localhost:8080/user/login/linkedin/confirm",
+        callbackURL: "https://www.edudictive.in/login/linkedin/confirm",
         scope: ["r_liteprofile", "r_emailaddress"],
         profileFields: ["id", "firstName", "lastName", "handle"],
       },

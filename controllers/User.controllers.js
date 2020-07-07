@@ -21,7 +21,7 @@ Router.get("/login", (req, res, next) => {
   res.render("Login");
 });
 
-Router.post("/register", (req, res, next) => {
+Router.post("/login", (req, res, next) => {
   if (req.xhr) {
     const { remember } = req.body;
     try {
@@ -57,7 +57,7 @@ Router.post("/register", (req, res, next) => {
   }
 });
 
-Router.get(
+Router.post(
   "/login/google",
   passport.authenticate("google", {
     scope: ["profile", "email"],

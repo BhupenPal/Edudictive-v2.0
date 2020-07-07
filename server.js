@@ -80,12 +80,9 @@ app.post('/summerbootcamp/register', (req, res) => {
 })
 ///////////////////////////////////TO BE DELETED
 
-// INTIALISING ROUTES
-const HomeRoute = require("./routes/Home.route");
-app.use("/", HomeRoute);
-
-const UserRoute = require("./routes/User.route");
-app.use("/user", UserRoute);
+// INTIALISING Controllers
+app.use("/", require('./controllers/Home.controller'));
+app.use("/user", require('./controllers/User.controllers'));
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, console.log(`Server started on ${PORT}`));

@@ -3,19 +3,18 @@ const Router = express.Router();
 const passport = require("passport");
 const UserModel = require("../models/User.model");
 const CourseModel = require("../models/Course.model");
-const transporter = require("./mail/config/transport");
+const transporter = require("../helper/mail/config");
 let ErrMsg = { news: [] };
 let SucMsg = { news: [] };
 
 //Services
-const { GenerateRandom, PassCheck, HashSalt } = require("./services/service");
-const { ensureAuthenticated, forwardAuthenticated } = require("./auth/auth");
+const { GenerateRandom, PassCheck, HashSalt, ensureAuthenticated, forwardAuthenticated } = require("../helper/service");
 
 //SERVICES
-const { courseUpload } = require("./services/UploadManager");
+const { courseUpload } = require("../helper/UploadManager");
 
 //Mails
-const { verificationMail } = require("./mail/content/mails");
+const { verificationMail } = require("../helper/mail/content");
 
 Router.get("/login", (req, res, next) => {
   res.render("Login");

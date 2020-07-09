@@ -1,6 +1,26 @@
 const bcrypt = require("bcryptjs");
 
 module.exports = {
+
+  ensureAuthenticated: function (req, res, next) {
+    if (req.isAuthenticated()) {
+      return next();
+    }
+    req.session.redirectTo = req.originalUrl;
+    res.redirect("/user/login");
+  },
+
+  forwardAuthenticated: function (req, res, next) {
+    if (!req.isAuthenticated()) {
+      return next();
+    }
+    res.redirect("/user/dashboard");
+  },
+
+  GenerateOTP: () => {
+    return Math.floor(100000 + Math.random() * 900000);
+  },
+
   GenerateRandom: (digits) => {
     var RandomString = "";
     var possible =
@@ -61,7 +81,7 @@ module.exports = {
   EmailCheck: (userEmail, ErrMsg) => {
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     userEmail = userInput.value.replace(/\s/g, "");
-    if(userEmail.match(mailformat)){
+    if (userEmail.match(mailformat)) {
       return
     } else {
       ErrMsg.news.push("EMAIL NOT VALID")

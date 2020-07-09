@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "backend": "node server.js",
+    "scss": "node-sass assets/scss --output=assets/css/",
+    "dev": "concurrently -n 'scss,server' \"npm run scss\" \"nodemon server.js\""
   },
   "repository": {
     "type": "git",
@@ -17,17 +18,13 @@
   },
   "homepage": "https://github.com/BhupenPal/Edudictive-v2.0#readme",
   "dependencies": {
-    "admin-bro": "^2.4.2",
-    "admin-bro-expressjs": "^2.0.5",
-    "admin-bro-mongoose": "^0.5.2",
     "bcryptjs": "^2.4.3",
+    "bootstrap": "^4.5.0",
     "connect-flash": "^0.1.1",
-    "connect-mongo": "^3.2.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.2",
     "express": "^4.17.1",
-    "express-formidable": "^1.2.0",
-    "express-session": "^1.17.0",
+    "express-session": "^1.17.1",
     "mongoose": "^5.9.7",
     "multer": "^1.4.2",
     "nodemailer": "^6.4.6",
@@ -37,6 +34,8 @@
     "passport-linkedin-oauth2": "^2.0.0",
     "passport-local": "^1.0.0"
   },
-  "devDependencies": {},
-  "description": ""
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "node-sass": "^4.14.1"
+  }
 }

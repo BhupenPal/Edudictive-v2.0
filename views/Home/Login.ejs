@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/index.css" />
+  <link rel="stylesheet" href="/assets/css/SignIn.css" />
+  <link rel="stylesheet" href="/assets/css/all.min.css" />
+  <title>Edudictive | Login</title>
+</head>
+
+<body>
+  <%-include('../Components/Header.ejs') %>
+  <div class="login_container">
+    <form class="signin-parent" id="user-login-form">
+      <h1 class="sign-heading">Sign in</h1>
+      <input type="text" placeholder="Username, Email ID or Phone Number" name="uEmail" autofocus required />
+      <input type="password" placeholder="Password" name="uPass" required />
+      <div class="signin-subdiv">
+        <div class="signin-sub-a">
+          <label class="container">
+            <input type="checkbox" name="remember" onclick="{this.value = this.checked}">
+            <span class="checkmark"></span>
+            Remember Me
+          </label>
+        </div>
+        <div class="signin-sub-c">
+          <a href="/user/reset">Need help signing in?</a>
+        </div>
+      </div>
+  
+      <button class="signin-btn" type="submit">
+        <div class="loader"></div>
+        Sign in
+      </button>
+  
+      <div class="signin-banner">
+        <div class="banner-line"></div>
+        <div class="banner-text">or you can log in with</div>
+        <div class="banner-line"></div>
+      </div>
+  
+      <div class="signin-social-med">
+        <button onclick="LinkHandle('/user/login/google')"><img src="/assets/images/svgs/Google_icon.svg" /></button>
+        <button onclick="LinkHandle('/user/login/fb')"><img src="/assets/images/svgs/Facebook logo 2019.svg" /></button>
+        <button onclick="LinkHandle('/user/login/linkedin')"><img src="/assets/images/svgs/linkedin (1).svg" /></button>
+      </div>
+  
+      <div class="signin-acc">
+        <a href="/user/register">Create a new account</a>
+      </div>
+    </form>
+  </div>
+
+  <%-include('../Components/Footer.ejs') %>
+  <script src="/assets/scripts/sweetalert/swal.js"></script>
+  <script src="/assets/scripts/index.js"></script>
+  <script src="/assets/scripts/ajax/signHandle.js"></script>
+</body>
+
+</html>

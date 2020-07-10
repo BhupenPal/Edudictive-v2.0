@@ -10,6 +10,14 @@ module.exports = {
     res.redirect("/user/login");
   },
 
+  ensureAdmin: function (req, res, next) {
+    if (req.isAuthenticated() && req.user.isAdmin) {
+      return next();
+    }
+    req.session.redirectTo = req.originalUrl;
+    res.redirect("/user/login");
+  },
+
   forwardAuthenticated: function (req, res, next) {
     if (!req.isAuthenticated()) {
       return next();

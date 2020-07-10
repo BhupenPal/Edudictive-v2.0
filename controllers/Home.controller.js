@@ -5,27 +5,27 @@ const ContactModel = require("../models/Contact.model");
 const ESPModel = require("../models/ESP.model");
 
 Router.get("/", (req, res, next) => {
-    res.render("Home");
+    res.render("Home/Home");
 });
 
 Router.get("/programs/schools", (req, res, next) => {
-    res.render("Schools");
+    res.render("Home/Schools");
 });
 
 Router.get("/programs/colleges", (req, res, next) => {
-    res.render("Colleges");
+    res.render("Home/Colleges");
 });
 
 Router.get("/events", (req, res, next) => {
-    res.render("Events");
+    res.render("Home/Events");
 });
 
 Router.get("/about-us", (req, res, next) => {
-    res.render("About");
+    res.render("Home/About");
 });
 
 Router.get("/contact-us", (req, res, next) => {
-    res.render("Contact");
+    res.render("Home/Contact");
 });
 
 Router.post("/contact-us", (req, res, next) => {
@@ -40,16 +40,16 @@ Router.post("/contact-us", (req, res, next) => {
 Router.get("/course/:Key", (req, res, next) => {
     const { Key } = req.params;
     Course.findOne({ Key }, (err, doc) => {
-        res.render("Course", { doc });
+        res.render("Home/Course", { doc });
     });
 });
 
 Router.get("/edudictive-student-partner", (req, res, next) => {
-    res.render("StudentPartner");
+    res.render("Home/StudentPartner");
 });
 
 Router.get("/edudictive-student-partner/apply", (req, res, next) => {
-    res.render("ESPForm");
+    res.render("Home/ESPForm");
 });
 
 Router.post("/edudictive-student-partner/apply", (req, res, next) => {

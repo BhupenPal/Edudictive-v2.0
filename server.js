@@ -46,10 +46,7 @@ app.use(function (req, res, next) {
 // INTIALISING Controllers
 app.use("/", require('./controllers/Home.controller'));
 app.use("/user", require('./controllers/User.controllers'));
-
-app.get('/test', (req, res) => {
-  res.render('TEST')
-})
+app.use("/user/dashboard", require('./controllers/Dashboard.controller'));
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, console.log(`Server started on ${PORT}`));

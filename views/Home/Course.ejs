@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev</title>
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/Course.css" />
+
+</head>
+
+<body>
+        <%-include('../Components/Header.ejs') %>
+        <div class="main_con_container">
+        <div class="main">
+        <!-- first division starts -->
+        <div class="main-content">
+            <div class="content">
+                <div class="content-head">
+                    <h4>Technical Courses <i class="fal fa-lg fa-angle-right"></i> <%= doc.NickName %></h4>
+                    <h1><%= doc.Title %></h1>
+                    <h2><%= doc.Mode %> Training Program</h2>
+                </div>
+                <div class="ratings">
+                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                    <img id="half-star" src="/assets/images/svgs/half filled star.svg" />
+                    &ensp;4.5 (90 ratings)
+                    &emsp;<span class="white-text"><%= doc.EnrolledStudents %> enrolled students</span>
+                </div>
+                <div class="content-about">
+                    <div class="about-text">
+                        <div class="write-up">
+                            <h3>About this program</h3>
+                            <p>
+                               <%= doc.About %>
+                            </p>
+                        </div>
+                        <div class="write-up">
+                            <h3>What you will learn</h3>
+                            <p>
+                               <%= doc.WhatULean %>
+                            </p>
+                        </div>
+                        <br />
+                        <!-- Add the id of program structure HERE -->
+                        <a href="#program-structure">Read complete program structure &ensp;<i
+                                class="fas fa-angle-down"></i></a>
+                    </div>
+                    <div class="about-details">
+                        <div class="detail-write-up">
+                            <h3>Starts on</h3>
+                            <p>
+                                <%= doc.StartDate %>
+                            </p>
+                        </div>
+                        <div class="detail-write-up">
+                            <h3>Program Length</h3>
+                            <p>
+                                <%= doc.Duration %>
+                            </p>
+                        </div>
+                        <div class="detail-write-up">
+                            <h3>Location</h3>
+                            <p>
+                                <%= doc.Location %>
+                            </p>
+                        </div>
+                        <div class="detail-write-up">
+                            <h3>Batches</h3>
+                            <p>
+                                Weekend batches
+                                <br />Weekday batches
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="register">
+                <div class="lang-imgs">
+                    <img src="/assets/images/svgs/html-logo.svg" />
+                    <img src="/assets/images/svgs/css-logo.svg" />
+                    <img src="/assets/images/svgs/js-logo.svg" />
+                </div>
+                <div class="reg-details">
+                    <h2>Register Now</h2>
+                    <h1> <img src="/assets/images/svgs/indian-rupee-symbol.svg" /> <% var Price = doc.Price - doc.Price*doc.Discount/100 %> <%= Price %></h1>
+                    <h2 id="discount">
+                        <span style="text-decoration: line-through">₹ <%= doc.Price %></span>
+                        <span><%= doc.Discount %>%</span>
+                    </h2>
+                    <div id="discount-tag">
+                        Early Bird Discount Applied
+                    </div>
+                </div>
+                <div class="reg-btns">
+                    <div id="cart-btn" class="btn">
+                        <i class="fal fa-cart-plus"></i>&ensp;Add to cart
+                    </div>
+                    <br />
+                    <div id="buy-btn" class="btn">
+                        <i class="fal fa-bags-shopping"></i>&ensp;Buy Now
+                    </div>
+                </div>
+                <div class="reg-icons">
+                    <span>
+                        <i class="fal fa-heart"></i>&ensp;Add to wishlist
+                    </span>
+                    <span>
+                        <i class="fal fa-share"></i>&ensp;Share
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /><br />
+    <!-- first division ends -->
+
+    <!-- second division starts -->
+    <div class="main-program">
+        <div class="program-heading">
+            <h1>WHO SHOULD OPT FOR THIS PROGRAM</h1>
+            <p><%= doc.WhoShouldOpt %></p>
+        </div>
+
+        <div class="program-heading">
+            <h1>WHAT YOU GET</h1>
+
+            <div class="program-content-main">
+                <div>
+                    <% doc.WhatUGet.map(item => { %>
+                        <span><i class="far fa-check-circle"></i>
+                        <p><%= item %></p>
+                    </span>
+                    <% }) %>
+                </div>
+
+                <div>
+                    <span><i class="far fa-check-circle"></i>
+                        <p>Certificate of Completion</p>
+                    </span>
+                    <span><i class="far fa-check-circle"></i>
+                        <p>Doubt clearing and AMA sessions</p>
+                    </span>
+                    <span> <i class="far fa-check-circle"></i>
+                        <p>Industry-level projects to work on</p>
+                    </span>
+                    <span><i class="far fa-check-circle"></i>
+                        <p>Internship/referral opportunities based on performance</p>
+                    </span>
+                </div>
+            </div>
+            <br />
+            <h1 id="program-structure">PROGRAM STRUCTURE</h1><br />
+        </div>
+
+        <div class="program-struct" id="program-structure">
+
+            <div class="program-struct-sub">
+
+                <% doc.Structure.map(item => { %>
+                    <button onclick="myFunction(this)" class="struct-dropbtn">
+                        Week 1 - HTML <i id="change-icon" class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="myDropdown" class="struct-content">
+                    <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.</h4>
+                    <span><i class="far fa-check-circle"></i>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+                    </span>
+                    <span><i class="far fa-check-circle"></i>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+                    </span>
+                    <span><i class="far fa-check-circle"></i>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+                    </span>
+                    <span><i class="far fa-check-circle"></i>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+                    </span>
+                    <hr /><br />
+                </div>
+                <% }) %>
+
+                <p class="cloud-down">
+                    <img src="/assets/images/downcloud.png" alt="">&emsp;<span>Download full course structure ( 2MB
+                        )</span>
+                </p>
+
+            </div>
+        </div>
+        <br /><br /><br />
+
+    </div>
+    <!-- second division ends -->
+
+    <!-- third division starts -->
+
+    <div class="caraousel">
+        <h1 id="rev-head">Featured Reviews</h1>
+        <button class="caraousel_button caraousel_button--left">left</button>
+        <div class="caraousel_track-container">
+            <ul class="caraousel_track">
+                <li class="caraousel_slide current_slide rev-container">
+                    <div class="rev">
+                        <div class="person-container">
+                            <div class="rev-img">
+                                <img src="/assets/images/sandeepsingh.png" />
+                            </div>
+                            <br />
+                            <div class="person-details">
+                                <h3>Sandeep Singh</h3>
+                                <h5>Civil Eng., Delhi Technological University</h5>
+                                <div class="rev-ratings">
+                                    <span>4.5</span>&ensp;
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img id="half-star-rev" src="/assets/images/svgs/half filled star.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rev-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
+                                expedita. Consectetur possimus nulla illum officiis nemo?
+                                Ipsum ea voluptatibus distinctio quidem dignissimos quaerat
+                                omnis adipisci repudiandae, dolorem perferendis, error dolor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="rev">
+                        <div class="person-container">
+                            <div class="rev-img">
+                                <img src="/assets/images/sandeepsingh.png" />
+                            </div>
+                            <br />
+                            <div class="person-details">
+                                <h3>Sandeep Singh</h3>
+                                <h5>Civil Eng., Delhi Technological University</h5>
+                                <div class="rev-ratings">
+                                    <span>4.5</span>&ensp;
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img id="half-star-rev" src="/assets/images/svgs/half filled star.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rev-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
+                                expedita. Consectetur possimus nulla illum officiis nemo?
+                                Ipsum ea voluptatibus distinctio quidem dignissimos quaerat
+                                omnis adipisci repudiandae, dolorem perferendis, error dolor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="rev">
+                        <div class="person-container">
+                            <div class="rev-img">
+                                <img src="/assets/images/sandeepsingh.png" />
+                            </div>
+                            <br />
+                            <div class="person-details">
+                                <h3>Sandeep Singh</h3>
+                                <h5>Civil Eng., Delhi Technological University</h5>
+                                <div class="rev-ratings">
+                                    <span>4.5</span>&ensp;
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img id="half-star-rev" src="/assets/images/svgs/half filled star.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rev-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
+                                expedita. Consectetur possimus nulla illum officiis nemo?
+                                Ipsum ea voluptatibus distinctio quidem dignissimos quaerat
+                                omnis adipisci repudiandae, dolorem perferendis, error dolor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="rev">
+                        <div class="person-container">
+                            <div class="rev-img">
+                                <img src="/assets/images/sandeepsingh.png" />
+                            </div>
+                            <br />
+                            <div class="person-details">
+                                <h3>Sandeep Singh</h3>
+                                <h5>Civil Eng., Delhi Technological University</h5>
+                                <div class="rev-ratings">
+                                    <span>4.5</span>&ensp;
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img id="half-star-rev" src="/assets/images/svgs/half filled star.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rev-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
+                                expedita. Consectetur possimus nulla illum officiis nemo?
+                                Ipsum ea voluptatibus distinctio quidem dignissimos quaerat
+                                omnis adipisci repudiandae, dolorem perferendis, error dolor.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="caraousel_slide rev-container">
+                    <div class="rev">
+                        <div class="person-container">
+                            <div class="rev-img">
+                                <img src="/assets/images/sandeepsingh.png" />
+                            </div>
+                            <br />
+                            <div class="person-details">
+                                <h3>Sandeep Singh</h3>
+                                <h5>Civil Eng., Delhi Technological University</h5>
+                                <div class="rev-ratings">
+                                    <span>4.5</span>&ensp;
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img id="half-star-rev" src="/assets/images/svgs/half filled star.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rev-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
+                                expedita. Consectetur possimus nulla illum officiis nemo?
+                                Ipsum ea voluptatibus distinctio quidem dignissimos quaerat
+                                omnis adipisci repudiandae, dolorem perferendis, error dolor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="rev">
+                        <div class="person-container">
+                            <div class="rev-img">
+                                <img src="/assets/images/sandeepsingh.png" />
+                            </div>
+                            <br />
+                            <div class="person-details">
+                                <h3>Sandeep Singh</h3>
+                                <h5>Civil Eng., Delhi Technological University</h5>
+                                <div class="rev-ratings">
+                                    <span>4.5</span>&ensp;
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img id="half-star-rev" src="/assets/images/svgs/half filled star.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rev-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
+                                expedita. Consectetur possimus nulla illum officiis nemo?
+                                Ipsum ea voluptatibus distinctio quidem dignissimos quaerat
+                                omnis adipisci repudiandae, dolorem perferendis, error dolor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="rev">
+                        <div class="person-container">
+                            <div class="rev-img">
+                                <img src="/assets/images/sandeepsingh.png" />
+                            </div>
+                            <br />
+                            <div class="person-details">
+                                <h3>Sandeep Singh</h3>
+                                <h5>Civil Eng., Delhi Technological University</h5>
+                                <div class="rev-ratings">
+                                    <span>4.5</span>&ensp;
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img id="half-star-rev" src="/assets/images/svgs/half filled star.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rev-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
+                                expedita. Consectetur possimus nulla illum officiis nemo?
+                                Ipsum ea voluptatibus distinctio quidem dignissimos quaerat
+                                omnis adipisci repudiandae, dolorem perferendis, error dolor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="rev">
+                        <div class="person-container">
+                            <div class="rev-img">
+                                <img src="/assets/images/sandeepsingh.png" />
+                            </div>
+                            <br />
+                            <div class="person-details">
+                                <h3>Sandeep Singh</h3>
+                                <h5>Civil Eng., Delhi Technological University</h5>
+                                <div class="rev-ratings">
+                                    <span>4.5</span>&ensp;
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img id="half-star-rev" src="/assets/images/svgs/half filled star.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rev-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
+                                expedita. Consectetur possimus nulla illum officiis nemo?
+                                Ipsum ea voluptatibus distinctio quidem dignissimos quaerat
+                                omnis adipisci repudiandae, dolorem perferendis, error dolor.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="caraousel_slide rev-container">
+                    <div class="rev">
+                        <div class="person-container">
+                            <div class="rev-img">
+                                <img src="/assets/images/sandeepsingh.png" />
+                            </div>
+                            <br />
+                            <div class="person-details">
+                                <h3>Sandeep Singh</h3>
+                                <h5>Civil Eng., Delhi Technological University</h5>
+                                <div class="rev-ratings">
+                                    <span>4.5</span>&ensp;
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img id="half-star-rev" src="/assets/images/svgs/half filled star.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rev-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
+                                expedita. Consectetur possimus nulla illum officiis nemo?
+                                Ipsum ea voluptatibus distinctio quidem dignissimos quaerat
+                                omnis adipisci repudiandae, dolorem perferendis, error dolor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="rev">
+                        <div class="person-container">
+                            <div class="rev-img">
+                                <img src="/assets/images/sandeepsingh.png" />
+                            </div>
+                            <br />
+                            <div class="person-details">
+                                <h3>Sandeep Singh</h3>
+                                <h5>Civil Eng., Delhi Technological University</h5>
+                                <div class="rev-ratings">
+                                    <span>4.5</span>&ensp;
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img id="half-star-rev" src="/assets/images/svgs/half filled star.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rev-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
+                                expedita. Consectetur possimus nulla illum officiis nemo?
+                                Ipsum ea voluptatibus distinctio quidem dignissimos quaerat
+                                omnis adipisci repudiandae, dolorem perferendis, error dolor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="rev">
+                        <div class="person-container">
+                            <div class="rev-img">
+                                <img src="/assets/images/sandeepsingh.png" />
+                            </div>
+                            <br />
+                            <div class="person-details">
+                                <h3>Sandeep Singh</h3>
+                                <h5>Civil Eng., Delhi Technological University</h5>
+                                <div class="rev-ratings">
+                                    <span>4.5</span>&ensp;
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img id="half-star-rev" src="/assets/images/svgs/half filled star.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rev-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
+                                expedita. Consectetur possimus nulla illum officiis nemo?
+                                Ipsum ea voluptatibus distinctio quidem dignissimos quaerat
+                                omnis adipisci repudiandae, dolorem perferendis, error dolor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="rev">
+                        <div class="person-container">
+                            <div class="rev-img">
+                                <img src="/assets/images/sandeepsingh.png" />
+                            </div>
+                            <br />
+                            <div class="person-details">
+                                <h3>Sandeep Singh</h3>
+                                <h5>Civil Eng., Delhi Technological University</h5>
+                                <div class="rev-ratings">
+                                    <span>4.5</span>&ensp;
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img src="/assets/images/svgs/Filled-Star.svg" />
+                                    <img id="half-star-rev" src="/assets/images/svgs/half filled star.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rev-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad,
+                                expedita. Consectetur possimus nulla illum officiis nemo?
+                                Ipsum ea voluptatibus distinctio quidem dignissimos quaerat
+                                omnis adipisci repudiandae, dolorem perferendis, error dolor.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <button class="caraousel_button caraousel_button--right">right</button>
+
+        <div class="caraousel_nav">
+            <button class="caraousel_indicator current_slide"></button>
+            <button class="caraousel_indicator"></button>
+            <button class="caraousel_indicator"></button>
+        </div>
+        <div id="rev-all">
+            <span>Read all reviews</span>
+        </div>
+    </div>
+    <br /><br /><br /><br />
+
+    <!-- third divsion ends -->
+</div>
+
+    <%-include('../Components/Footer.ejs') %>
+    <script src="/assets/scripts/webDev.js"></script>
+
+</body>
+
+</html>

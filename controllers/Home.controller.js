@@ -21,7 +21,7 @@ Router.get("/events", (req, res, next) => {
 });
 
 Router.get("/event-register",(req,res,next)=>{
-    res.render("Event");
+    res.render("Home/Event");
 });
 Router.get("/about-us", (req, res, next) => {
     res.render("Home/About");

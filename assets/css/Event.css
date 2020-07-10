@@ -1,0 +1,260 @@
+.event-container{
+    padding-top:200px;
+    background-color: black;
+    
+}
+
+.event-head{
+    text-align: left;
+    font: Bold 71px/108px Avenir Next LT Pro;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    margin-top: 6%;
+    padding-left: 11%;
+    z-index: 2;
+}
+
+.userRole-contact{
+    display: flex;
+    flex-direction: row;
+}
+
+.event-time{
+    
+    text-align: left;
+    font: 28px Avenir Next LT Pro;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    padding-left: 11%;
+    width: 100%;
+    z-index: 2;
+    position: static;
+}
+
+.event-date{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font: 28px Avenir Next LT Pro;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    width: 20%;
+    opacity: 1;
+    position: relative;
+    margin-right: 30px;
+    padding-bottom: 3%;
+}
+
+.gargi-association {
+    display: flex;
+    flex-direction: column;
+}
+
+.association-with{
+    font-size: 20px;
+    margin: 10px auto;
+}
+
+.association-with p{
+    display: inline-flex;
+    text-align: left;
+    font:26px/58px Avenir Next LT Pro;
+    letter-spacing: 0px;
+    color: #4F4F4F;
+    opacity: 1;
+    margin-right: 1%;
+    width: 33%;
+}
+
+.placement-cell{
+    text-align: left;
+    font: Bolder 25px Bebas Kai;
+    letter-spacing: 0px;
+    color: #566F57;
+    opacity: 1;
+    margin: 10px auto;
+}
+
+.gargi-association img{
+    margin: 0px auto;
+    width: 40%;
+    height: 100%;
+}
+
+.webinar{
+    display: flex;
+    flex-direction: row;
+}
+
+.webinar-description{
+    width: 55%;
+}
+
+.event-info{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+
+.event-info-div{
+    width: 90%;
+    padding-left: 20%;
+}
+.info-heading{
+    text-align: left;
+    font: Bolder 40px Proxima Nova;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.about-description{
+    margin-top: 4%;
+    text-align: left;
+    font: 28px/32px Proxima Nova;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    width: 75%;
+}
+
+.spacing{
+    margin-top: 8%;
+}
+
+.speakers{
+    display: flex;
+    width: 75%;
+    flex-wrap: wrap;
+    margin: 2vh;
+    justify-content: center;
+}
+
+.speaker-member{
+    margin: 5%;
+    margin-top: 2%;
+}
+.speaker-image{
+    border-radius: 50vh;
+    margin: 2vw auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.speaker-image img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.speaker-info h3{
+    text-align: center;
+    font: Bolder 32px Proxima Nova;
+    letter-spacing: 0px;
+    color: #4E4E4E;
+    opacity: 1;
+    margin: 1vh;
+}
+
+.speaker-info h4{
+    text-align: center;
+    font: 26px Proxima Nova;
+    letter-spacing: 0px;
+    color: #4E4E4E;
+    opacity: 1;
+    margin:1vh
+}
+
+/* Registration Form */
+
+.registration-form{
+    margin-left: 4rem;
+}
+
+.form-div{
+    padding-top: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+.form-heading{
+    text-align: center;
+    font:Bolder 30px Avenir Next LT Pro;
+    letter-spacing: 0px;
+    color: #4F4F4F;
+    opacity: 1;
+}
+
+.Name{
+    width: 100%;
+    display: flex;
+    align-content: space-between;
+    
+}
+
+.Name div{
+    border: 2px solid #707070;
+    border-radius: 9px;
+    opacity: 0.5;
+    margin: auto;
+}
+
+#eventInputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.event-inp{
+    border-radius: 9px;
+    height: 64px;
+    width: 50%;
+    color: #000000 !important;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font: 1.2rem Proxima-Nova;
+    margin: 1rem 1rem;
+    border: 2px solid #707070;
+    opacity: 0.5;
+}
+
+.email-inp,.inst-inp{
+    width: 95% !important;
+}
+
+.shorter-inp{
+    width: 36%;
+}
+.longer-inp{
+    width: auto !important;
+}
+
+.contact-num{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 0px;
+}
+
+.ph-input{
+    height: 90%;
+    border: none;
+    box-sizing: border-box;
+    font: 1.2rem Proxima-Nova;
+}
+
+.event-submit{
+    background-color: #00DC67;
+    color: white;
+    font: 20px Product-Sans;
+    border-radius: 15px;
+    margin: 1rem auto;
+    box-shadow: 6px 6px 20px #00000029;
+    padding: 10px;
+    height: 70px;
+    width: 95%;
+}

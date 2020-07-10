@@ -63,12 +63,24 @@
     position: static;
     z-index: 2;
 }
-
+.test-div{
+    display: flex;
+    flex-direction: column;
+}
 .web-info {
     display: flex;
     flex-direction: column;
     padding: 0;
     margin: 10px 0;
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+}
+
+
+
+.X-translation{
+    transform: translateX(55%);
+  -webkit-transform: translateX(55%);
 }
 
 .reg-encloser button {
@@ -78,6 +90,21 @@
     font: 18px Avenir-Next;
     transition: 0.2s;
     padding: 0;
+}
+
+.hide{
+    display: none !important;
+}
+
+.display{
+    display: flex;
+    font: 22px Proxima-Nova;
+    text-align: left;
+    color: #FFFFFFD6;
+    opacity: 1;
+    width: 55%;
+    padding: 0;
+    margin-top: -270px;
 }
 
 .reg-encloser button:nth-child(1) {
@@ -107,8 +134,14 @@
     line-height: 60px;
     font-weight: 400;
     margin: 180px 0 30px 0;
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
 }
 
+.Y-translation{
+    transform:translateY(-250%);
+    -webkit-transform: translateY(-250%);
+}
 .schedule-time {
     margin: 25px 0 60px 0;
 }
@@ -472,6 +505,10 @@ i {
         margin: 10px auto;
         font-size: 3.4vw;
     }
+
+   
+      
+      
 
     .reg-encloser {
         display: flex;

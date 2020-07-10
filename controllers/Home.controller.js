@@ -20,6 +20,9 @@ Router.get("/events", (req, res, next) => {
     res.render("Events");
 });
 
+Router.get("/event-register",(req,res,next)=>{
+    res.render("Event");
+});
 Router.get("/about-us", (req, res, next) => {
     res.render("About");
 });

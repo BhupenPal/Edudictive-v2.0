@@ -6,11 +6,11 @@
 
 .event-head{
     text-align: left;
-    font: Bold 71px/108px Avenir Next LT Pro;
+    font: Bold 71px Avenir Next LT Pro;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
-    margin-top: 6%;
+    margin-top: 10%;
     padding-left: 11%;
     z-index: 2;
 }
@@ -222,14 +222,14 @@
 }
 
 .email-inp,.inst-inp{
-    width: 95% !important;
+    width: auto ;
 }
 
 .shorter-inp{
     width: 36%;
 }
 .longer-inp{
-    width: auto !important;
+    width: -webkit-fill-available ;
 }
 
 .contact-num{
@@ -237,7 +237,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 0px;
+    
 }
 
 .ph-input{
@@ -257,4 +257,151 @@
     padding: 10px;
     height: 70px;
     width: 95%;
+}
+
+@media screen and (max-width:912px){
+    .wrap-content{
+        margin: 0px;
+    }
+
+    .event-container{
+        padding-top: 40px !important;
+        
+    }
+
+    .event-head{
+        padding-top: 15%;
+        font: Bold 40px Avenir Next LT Pro;  
+    }
+
+    .event-info{
+        flex-direction: column;
+        padding-top: 5%;
+    }
+
+    .event-time{
+        font: 20px Avenir Next LT Pro;
+        padding-left: 0%;
+        padding-bottom: 5%;
+    }
+
+    .event-head,.event-info{
+        margin: 0px auto;
+        width: 80%;
+        padding-left: 0;
+    }
+
+    .event-date{
+        width: 100%;
+        font: 20px Avenir Next LT Pro;
+    }
+
+    .webinar{
+        flex-direction: column;
+        margin: 0px auto;
+        width: 100%;
+    }
+
+    .webinar-description{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .event-info-div{
+        width: 90%;
+        padding-left: 0%;
+        margin: 0px auto;
+    }
+
+    .info-heading{
+        text-align: center;
+        font: Bolder 40px Proxima Nova;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+    }
+
+    .about-description{
+        margin-top: 4%;
+        text-align: center;
+        font: 28px/32px Proxima Nova;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+        margin: auto;      
+        width: 100%;  
+    }
+    
+    .registration-form{
+        margin: 0%;
+    }
+
+    .shorter-inp{
+        width: 38%;
+    }
+
+    input{
+        padding-left: 1% !important;
+    }
+
+    .ph-input{
+        width:100%
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:912px){
+
+    .event-head{
+        text-align: left;
+        font: Bold 55px Avenir Next LT Pro;
+        margin-top: 0%;
+        margin: 0px auto;
+        width: 80% !important;
+        padding-left: 0;
+    }
+    
+
+    .event-time,.event-date{
+        font: 22px Avenir Next LT Pro;
+    }
+
+    .event-date{
+        width: 35% !important;
+    }
+}
+
+@media screen and (min-width:913px) and (max-width:1200px){
+    .event-head{
+        font: Bold 62px Avenir Next LT Pro;
+    }
+
+    .event-date{
+        width: 35%;
+    }
+
+    .about-description{
+        width: 100%;
+    }
+
+    .event-time,.event-date{
+        font: 24px Avenir Next LT Pro;
+    }
+
+    .shorter-inp{
+        width: -webkit-fill-available;
+    }
+
+    .speakers{
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:1200px) and (max-width:1516px){
+    .event-date{
+        width: 30%;
+    }
+
 }

@@ -1,1 +1,1 @@
-.container-fluid,.navbar{padding:0}.edudictive-header{height:125px;box-shadow:0px 10px 61px #00000017}.edudictive-header .edudictive-logo a{height:100%}.edudictive-header #Edudictive-Main{height:53px;width:58px}.edudictive-header #Edudictive-Font{margin-left:10px;height:36px;width:184px}
+.dashboard-nav{margin:3rem auto;width:max-content;display:flex;align-items:center}.dashboard-nav a{margin:0 1.8rem;height:40px;font:bold 24px Avenir-Next;text-decoration:none;color:#c0c0c0}.dashboard-nav .active-head{color:#408cff}

@@ -192,7 +192,7 @@ Router.post("/register", (req, res, next) => {
                   } else {
                     res.send(
                       "The request could not be completed due to the error: " +
-                        error
+                      error
                     );
                   }
                 });

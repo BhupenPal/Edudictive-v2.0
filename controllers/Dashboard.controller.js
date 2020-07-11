@@ -4,11 +4,15 @@ const userModel = require("../models/User.model");
 const bcrypt = require("bcryptjs");
 let errors = [];
 
-const { ensureAuthenticated } = require("../helper/service");
+const { ensureAuthenticated, ensureAdmin } = require("../helper/service");
 
 Router.get("/", ensureAuthenticated, (req, res, next) => {
-  res.render("Dashboard/Dashboard");
+  res.render("Dashboard/Profile");
 });
+
+Router.get("/add-course", ensureAdmin, (req, res, next) => {
+  res.render("Dashboard/Admin/AddCourse");
+})
 
 module.exports = Router
 

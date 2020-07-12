@@ -10,121 +10,124 @@
     <title>Edudictive | Event</title>
   </head>
   <body>
-    <%-include('./Components/Header.ejs') %>
-    <div class="event-container">
-        <div class="event-head">
-            How to be a product manager
+    <%-include('../Components/Header.ejs') %>
+    <div class="wrap-content">
+        <div class="event-container">
+            <div class="event-head">
+                How to be a product manager
+            </div>
+            <div class="event-info">
+                <div class="event-time">
+                    1 hour online live seminar|No charges
+                </div>
+                <div class="event-date">
+                    <span>Date: July 5th,2020</span>
+                    <span>Time: 5PM IST</span>
+                </div>
+            </div>
         </div>
-        <div class="event-info">
-            <div class="event-time">
-                1 hour online live seminar|No charges
+        <div class="gargi-association">
+            <div class="placement-cell">
+                Placement Cell
             </div>
-            <div class="event-date">
-                <span>Date: July 5th,2020</span>
-                <span>Time: 5PM IST</span>
-            </div>
+            <div class="association-with">
+                <p>In association with</p>
+                <img src="/assets/images/svgs/gargi.png">
+            </div>        
         </div>
-    </div>
-    <div class="gargi-association">
-        <div class="placement-cell">
-            Placement Cell
-        </div>
-        <div class="association-with">
-            <p>In association with</p>
-            <img src="/assets/images/svgs/gargi.png">
-        </div>        
-    </div>
-    <div class="webinar">
-        <div class="webinar-description">
-            <div class="event-info-div">
-                <div class="info-heading">
-                    About the webinar
+        <div class="webinar">
+            <div class="webinar-description">
+                <div class="event-info-div">
+                    <div class="info-heading">
+                        About the webinar
+                    </div>
+                    <div class="about-description">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolo
+                        magna aliquy erat, sed diam voluptua. At vero eos et accusam et justo duo lores et ea rebum. Stet clita kasd gubergren,
+                        no sea takimata sanctus est Lorem ipsum dolor sit amet. dolor sit amet, consetet sadip elitr, sed diam nonumy eirmod
+                        tempor invdunt ut labore et dolore magna oskdnl laklono kandpomaplm.
+                    </div>
                 </div>
-                <div class="about-description">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolo
-                    magna aliquy erat, sed diam voluptua. At vero eos et accusam et justo duo lores et ea rebum. Stet clita kasd gubergren,
-                    no sea takimata sanctus est Lorem ipsum dolor sit amet. dolor sit amet, consetet sadip elitr, sed diam nonumy eirmod
-                    tempor invdunt ut labore et dolore magna oskdnl laklono kandpomaplm.
-                </div>
-            </div>
-            <!-- who should attend it, same heading style -->
-            <div class="event-info-div">
-                <div class="info-heading spacing"> 
-                    Who should attend it
-                </div>
-                <div class="about-description">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                    magna aliquy erat.
-                </div>
-            </div>
-
-            <div class="event-info-div">
-                <div class="info-heading spacing">
-                    Speakers
+                <!-- who should attend it, same heading style -->
+                <div class="event-info-div">
+                    <div class="info-heading spacing"> 
+                        Who should attend it
+                    </div>
+                    <div class="about-description">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                        magna aliquy erat.
+                    </div>
                 </div>
     
-                <div class="speakers">
-                    <div class="speaker-member">
-                        <div class="speaker-image">
-                            <img src="" alt="Speaker-photo">
-                        </div>
-                        <div class="speaker-info">
-                            <h3>Andrew Starks</h3>
-                            <h4>Position</h4>
-                            <h4>Company</h4>
-                        </div>
+                <div class="event-info-div">
+                    <div class="info-heading spacing">
+                        Speakers
                     </div>
-                    <div class="speaker-member">
-                        <div class="speaker-image">
-                            <img src="" alt="Speaker-photo">
-                            
+        
+                    <div class="speakers">
+                        <div class="speaker-member">
+                            <div class="speaker-image">
+                                <img src="" alt="Speaker-photo">
+                            </div>
+                            <div class="speaker-info">
+                                <h3>Andrew Starks</h3>
+                                <h4>Position</h4>
+                                <h4>Company</h4>
+                            </div>
                         </div>
-                        <div class="speaker-info">
-                            <h3>Marie Simpsons</h3>
-                            <h4>Position</h4>
-                            <h4>Company</h4>
-                        </div>
-                    </div>               
+                        <div class="speaker-member">
+                            <div class="speaker-image">
+                                <img src="" alt="Speaker-photo">
+                                
+                            </div>
+                            <div class="speaker-info">
+                                <h3>Marie Simpsons</h3>
+                                <h4>Position</h4>
+                                <h4>Company</h4>
+                            </div>
+                        </div>               
+                        
+                    </div>
+                </div>
                     
+                <!-- speakers -->
+                
+                    
+                
+            </div>
+            <div class="registration-form">
+                <div class="form-heading">
+                    Register for this seminar
                 </div>
-            </div>
-                
-            <!-- speakers -->
-            
-                
-            
-        </div>
-        <div class="registration-form">
-            <div class="form-heading">
-                Register for this seminar
-            </div>
-            <div class="form-div">
-                <form id="eventInputs">
-                    <div class="Name">
-                        <input type="text" name ="firstname" class="event-inp" placeholder="First Name" required>
-                        <input type="text" name ="lastname" class="event-inp" placeholder="Last Name" required>
-                    </div>
-                    <input type="email" name="email" class="event-inp email-inp" placeholder="Email" required>
-                    <div class="userRole-contact">
-                        <select name="selectRole" class="event-inp shorter-inp" required>
-                           <option value="role">Select Role</option>
-                           <option value="student">Student</option>
-                           <option value="parent">Parent</option>
-                           <option value="institute">Institute</option>
-                        </select>
-                        <div class="contact-num event-inp longer-inp ">
-                           <div class="default-code">+91 -</div>
-                           <input type="number" name ="phoneNumber" class="ph-input" placeholder="Contact Number" required>
+                <div class="form-div">
+                    <form id="eventInputs">
+                        <div class="Name">
+                            <input type="text" name ="firstname" class="event-inp" placeholder="First Name" required>
+                            <input type="text" name ="lastname" class="event-inp" placeholder="Last Name" required>
                         </div>
-                     </div>
-                     <input type="text" name="Institution" class="event-inp inst-inp" placeholder="Institution Name" required> 
-                     <button type="submit" class="event-submit">Register</button>                   
-                </form>
+                        <input type="email" name="email" class="event-inp email-inp" placeholder="Email" required>
+                        <div class="userRole-contact">
+                            <select name="selectRole" class="event-inp shorter-inp" required>
+                               <option value="role">Select Role</option>
+                               <option value="student">Student</option>
+                               <option value="parent">Parent</option>
+                               <option value="institute">Institute</option>
+                            </select>
+                            <div class="contact-num event-inp longer-inp ">
+                               <div class="default-code">+91 -</div>
+                               <input type="number" name ="phoneNumber" class="ph-input" placeholder="Contact Number" required>
+                            </div>
+                         </div>
+                         <input type="text" name="Institution" class="event-inp inst-inp" placeholder="Institution Name" required> 
+                         <button type="submit" class="event-submit">Register</button>                   
+                    </form>
+                </div>
             </div>
         </div>
     </div>
     
-    <%-include('./Components/Footer.ejs') %>
+    
+    <%-include('../Components/Footer.ejs') %>
     <script src="/assets/scripts/index.js"></script>
   </body>
 </html>

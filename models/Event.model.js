@@ -22,6 +22,6 @@ const EventSchema = new Schema({
         type: String,
         required: true
     }
-})
+},{ timestamps: true })
 
 module.exports = mongoose.model("Events List", EventSchema);

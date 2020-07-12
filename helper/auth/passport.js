@@ -26,12 +26,6 @@ module.exports = function (passport) {
                                 message: "Email is not registered",
                             });
                         }
-                        //Activated User Check
-                        if (!user.isActive) {
-                            return done(null, false, {
-                                message: "Please activate your account first",
-                            });
-                        }
 
                         // Match password
                         bcrypt.compare(uPass, user.uPass, (err, isMatch) => {

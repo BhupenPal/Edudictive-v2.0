@@ -13,10 +13,6 @@ const courseSchema = new Schema({
         type: String,
         required: true
     },
-    NickName: {
-        type: String,
-        required: true
-    },
     Price: {
         type: Number,
         required: true
@@ -104,6 +100,6 @@ const courseSchema = new Schema({
         type: Boolean,
         default: false
     }
-})
+}, { timestamps: true })
 
 module.exports = mongoose.model("Course List", courseSchema);

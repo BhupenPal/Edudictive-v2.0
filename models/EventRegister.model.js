@@ -18,6 +18,6 @@ const EventRegSchema = new Schema({
         type: String,
         required: true
     }
-})
+}, { timestamps: true })
 
 module.exports = mongoose.model("Event Register", EventRegSchema);

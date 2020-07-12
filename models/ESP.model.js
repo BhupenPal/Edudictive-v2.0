@@ -37,8 +37,8 @@ const ESPSchema = new Schema({
     Ques3:{
         type: String,
         required: true
-    },
-})
+    }
+}, { timestamps: true })
 
 
 

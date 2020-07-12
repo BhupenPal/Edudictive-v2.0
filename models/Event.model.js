@@ -10,12 +10,16 @@ const EventSchema = new Schema({
         type:String,
         required:true,
     },
-    Phone:{
-        type: Number,
-        required: true
+    Email:{
+        type:String,
+        required:true
     },
     Role: {
         type: String,
+        required: true
+    },
+    Phone:{
+        type: Number,
         required: true
     },
     CollegeName:{

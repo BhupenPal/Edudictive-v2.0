@@ -367,3 +367,22 @@ function animatedsub(){
   })
  },500)
 }
+
+
+var eventRegisterSubmit=document.getElementsByClassName("event-submit");
+var EventForm=document.getElementById("eventInputs");
+eventRegisterSubmit[0].addEventListener('click',function(){
+  event.preventDefault();
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST','/event-register',true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.getResponseHeader("Content-Type", "application/json");
+  xhr.onload=function(){
+    console.log(this.responseText);
+    console.log(this.status);
+  }
+  // xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+  xhr.send(getFields(EventForm));
+
+})

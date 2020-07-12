@@ -4,10 +4,9 @@ const fs = require("fs");
 const cUploadManager = multer.diskStorage({
   destination: (req, file, cb) => {
     let courseID = req.body.courseID.toUpperCase();
-    if(!fs.existsSync(`assets/Uploads/${courseID}`)){
+    if (!fs.existsSync(`assets/Uploads/${courseID}`)) {
       fs.mkdirSync(`assets/Uploads/${courseID}`);
     }
-    
 
     if (file.fieldname === "cImage") {
       cb(null, `assets/Uploads/${courseID}`);

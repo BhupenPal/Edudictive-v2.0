@@ -20,7 +20,7 @@ Router.get("/events", (req, res, next) => {
     res.render("Home/Events");
 });
 
-Router.get("/event-register",(req,res,next)=>{
+Router.get("/event-register", (req, res, next) => {
     res.render("Home/Event");
 });
 Router.get("/about-us", (req, res, next) => {
@@ -34,7 +34,7 @@ Router.get("/contact-us", (req, res, next) => {
 Router.post("/contact-us", (req, res, next) => {
     new ContactModel(req.body).save((err) => {
         if (err) {
-            res.status(400).json({'Error': 'Cannot submit query'})
+            res.status(400).json({ 'Error': 'Cannot submit query' })
         }
         res.send("DONE");
     });
@@ -59,7 +59,7 @@ Router.post("/edudictive-student-partner/apply", (req, res, next) => {
     new ESPModel(req.body).save((err) => {
         if (err) {
             if (err) {
-                res.status(400).json({'Error': 'Cannot submit application'})
+                res.status(400).json({ 'Error': 'Cannot submit application' })
             }
         } else {
             res.render("ESPFormSuccess");

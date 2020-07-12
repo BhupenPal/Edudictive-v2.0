@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
-const Schema = mongoose.Schema;
-const EventSchema = new Schema({
+const CourseRegSchema = new mongoose.Schema({
     FirstName:{
         type: String,
         required: true,
@@ -24,4 +23,4 @@ const EventSchema = new Schema({
     }
 })
 
-module.exports = mongoose.model("Events List", EventSchema);
+module.exports = mongoose.model("Course Register", CourseRegSchema);

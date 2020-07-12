@@ -2,11 +2,13 @@ const AdminBro = require('admin-bro')
 const AdminBroExpress = require('admin-bro-expressjs')
 const AdminBroMongoose = require('admin-bro-mongoose')
 const mongoose = require('mongoose')
-require('../models/Contact.model')
 require('../models/Course.model')
-require('../models/HOMEOFFER')
-require('../models/User.model')
+require('../models/CourseRegister')
+require('../models/Event.model')
+require('../models/EventRegister.model')
 require('../models/ESP.model')
+require('../models/User.model')
+require('../models/Contact.model')
 
 AdminBro.registerAdapter(AdminBroMongoose);
 

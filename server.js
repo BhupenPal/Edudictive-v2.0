@@ -14,6 +14,9 @@ require("dotenv").config({
   path: './config/.env'
 });
 
+//Admin Bro
+app.use("/admin", require('./controllers/Admin.controller'));
+
 //Parsing Body
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

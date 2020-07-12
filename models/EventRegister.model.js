@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
-const EventSchema = new Schema({
+const EventRegSchema = new Schema({
     FirstName:{
         type: String,
         required: true,
@@ -17,11 +17,7 @@ const EventSchema = new Schema({
     Role: {
         type: String,
         required: true
-    },
-    CollegeName:{
-        type: String,
-        required: true
     }
 })
 
-module.exports = mongoose.model("Events List", EventSchema);
+module.exports = mongoose.model("Event Register", EventRegSchema);

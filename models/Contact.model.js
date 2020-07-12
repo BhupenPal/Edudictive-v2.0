@@ -13,14 +13,11 @@ const contactSchema = new Schema({
     Number:{
         type: Number,
         required: true
-
     },
     Role: {
         type: String,
         required: true
     }
 })
-
-
 
 module.exports = mongoose.model("Contact Us", contactSchema);

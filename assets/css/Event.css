@@ -6,10 +6,10 @@
 
 .event-head{
     text-align: left;
-    font: Bold 71px Avenir Next LT Pro;
-    letter-spacing: 0px;
+    font: Bold 71px Avenir-Next;
+    
     color: #FFFFFF;
-    opacity: 1;
+    
     margin-top: 10%;
     padding-left: 11%;
     z-index: 2;
@@ -21,12 +21,9 @@
 }
 
 .event-time{
-    
     text-align: left;
-    font: 28px Avenir Next LT Pro;
-    letter-spacing: 0px;
+    font:lighter 24px Avenir-Next;
     color: #FFFFFF;
-    opacity: 1;
     padding-left: 11%;
     width: 100%;
     z-index: 2;
@@ -37,11 +34,9 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    font: 28px Avenir Next LT Pro;
-    letter-spacing: 0px;
+    font:lighter 24px Avenir-Next;
     color: #FFFFFF;
-    width: 20%;
-    opacity: 1;
+    width: 20%;    
     position: relative;
     margin-right: 30px;
     padding-bottom: 3%;
@@ -60,20 +55,15 @@
 .association-with p{
     display: inline-flex;
     text-align: left;
-    font:26px/58px Avenir Next LT Pro;
-    letter-spacing: 0px;
-    color: #4F4F4F;
-    opacity: 1;
-    margin-right: 1%;
-    width: 33%;
+    font:26px Avenir-Next;    
+    color: #4F4F4F;    
+    margin-right: 1%;    
 }
 
 .placement-cell{
     text-align: left;
     font: Bolder 25px Bebas Kai;
-    letter-spacing: 0px;
     color: #566F57;
-    opacity: 1;
     margin: 10px auto;
 }
 
@@ -104,19 +94,15 @@
 }
 .info-heading{
     text-align: left;
-    font: Bolder 40px Proxima Nova;
-    letter-spacing: 0px;
+    font: Bolder 40px Proxima-Nova;
     color: #000000;
-    opacity: 1;
 }
 
 .about-description{
     margin-top: 4%;
     text-align: left;
-    font: 28px/32px Proxima Nova;
-    letter-spacing: 0px;
+    font:28px Proxima-Nova;
     color: #000000;
-    opacity: 1;
     width: 75%;
 }
 
@@ -152,19 +138,15 @@
 
 .speaker-info h3{
     text-align: center;
-    font: Bolder 32px Proxima Nova;
-    letter-spacing: 0px;
+    font: Bolder 32px Proxima-Nova;
     color: #4E4E4E;
-    opacity: 1;
     margin: 1vh;
 }
 
 .speaker-info h4{
     text-align: center;
-    font: 26px Proxima Nova;
-    letter-spacing: 0px;
+    font: 26px Proxima-Nova;
     color: #4E4E4E;
-    opacity: 1;
     margin:1vh
 }
 
@@ -182,10 +164,9 @@
 
 .form-heading{
     text-align: center;
-    font:Bolder 30px Avenir Next LT Pro;
-    letter-spacing: 0px;
+    font:Bolder 30px Avenir-Next;
     color: #4F4F4F;
-    opacity: 1;
+  
 }
 
 .Name{
@@ -225,9 +206,7 @@
     width: auto ;
 }
 
-.shorter-inp{
-    width: 36%;
-}
+
 .longer-inp{
     width: -webkit-fill-available ;
 }
@@ -271,7 +250,7 @@
 
     .event-head{
         padding-top: 15%;
-        font: Bold 40px Avenir Next LT Pro;  
+        font: Bold 40px Avenir-Next;  
     }
 
     .event-info{
@@ -280,7 +259,7 @@
     }
 
     .event-time{
-        font: 20px Avenir Next LT Pro;
+        font:lighter 20px Avenir-Next;
         padding-left: 0%;
         padding-bottom: 5%;
     }
@@ -293,7 +272,7 @@
 
     .event-date{
         width: 100%;
-        font: 20px Avenir Next LT Pro;
+        font:lighter 20px Avenir-Next;
     }
 
     .webinar{
@@ -316,19 +295,15 @@
 
     .info-heading{
         text-align: center;
-        font: Bolder 40px Proxima Nova;
-        letter-spacing: 0px;
+        font: Bolder 40px Proxima-Nova;
         color: #000000;
-        opacity: 1;
     }
 
     .about-description{
         margin-top: 4%;
         text-align: center;
-        font: 28px/32px Proxima Nova;
-        letter-spacing: 0px;
+        font: 28px/32px Proxima-Nova;
         color: #000000;
-        opacity: 1;
         margin: auto;      
         width: 100%;  
     }
@@ -354,7 +329,7 @@
 
     .event-head{
         text-align: left;
-        font: Bold 55px Avenir Next LT Pro;
+        font: Bold 55px Avenir-Next;
         margin-top: 0%;
         margin: 0px auto;
         width: 80% !important;
@@ -363,7 +338,7 @@
     
 
     .event-time,.event-date{
-        font: 22px Avenir Next LT Pro;
+        font:ligher 22px Avenir-Next;
     }
 
     .event-date{
@@ -373,7 +348,7 @@
 
 @media screen and (min-width:913px) and (max-width:1200px){
     .event-head{
-        font: Bold 62px Avenir Next LT Pro;
+        font: Bold 62px Avenir-Next;
     }
 
     .event-date{
@@ -385,7 +360,7 @@
     }
 
     .event-time,.event-date{
-        font: 24px Avenir Next LT Pro;
+        font:lighter 22px Avenir-Next;
     }
 
     .shorter-inp{
@@ -399,9 +374,13 @@
     }
 }
 
-@media screen and (min-width:1200px) and (max-width:1516px){
+@media screen and (min-width:1201px) and (max-width:1516px){
     .event-date{
-        width: 30%;
+        width: 30%;    
+    }
+
+    .event-time,.event-date{
+        font: lighter 24px Avenir-Next;
     }
 
 }

@@ -2,6 +2,11 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 const EventSchema = new Schema({
+    // Key:{
+    //     type:Number,
+    //     required:true,
+    //     unique:true
+    // },
     FirstName:{
         type: String,
         required: true,
@@ -10,12 +15,16 @@ const EventSchema = new Schema({
         type:String,
         required:true,
     },
-    Phone:{
-        type: Number,
-        required: true
+    Email:{
+        type:String,
+        required:true
     },
     Role: {
         type: String,
+        required: true
+    },
+    Phone:{
+        type: Number,
         required: true
     },
     CollegeName:{
@@ -23,7 +32,5 @@ const EventSchema = new Schema({
         required: true
     }
 })
-
-
 
 module.exports = mongoose.model("Event Register", EventSchema);

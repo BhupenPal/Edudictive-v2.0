@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "date": "May 1",
+        "name": "Front-end Web Development",
+        "mode": "Offline",
+        "rating": 4.5
+    },
+    {
+        "id": 2,
+        "date": "May 1",
+        "name": "Data Structures and Algorithms",
+        "mode": "Offline",
+        "rating": 4.5
+    },
+    {
+        "id": 3,
+        "date": "May 1",
+        "name": "Android Development",
+        "mode": "Offline",
+        "rating": 4.5
+    },
+    {
+        "id": 4,
+        "date": "May 1",
+        "name": "Web Development in React",
+        "mode": "Offline",
+        "rating": 4.5
+    },
+    {
+        "id": 5,
+        "date": "May 1",
+        "name": "Understanding Finance",
+        "mode": "Offline",
+        "rating": 4.5
+    },
+    {
+        "id": 6,
+        "date": "May 1",
+        "name": "Content Writing",
+        "mode": "Offline",
+        "rating": 4.5
+    },
+    {
+        "id": 7,
+        "date": "May 1",
+        "name": "Sales and Marketing",
+        "mode": "Offline",
+        "rating": 4.5
+    },
+    {
+        "id": 8,
+        "date": "May 1",
+        "name": "Digital Marketing",
+        "mode": "Offline",
+        "rating": 4.5
+    },
+    {
+        "id": 9,
+        "date": "May 1",
+        "name": "Personality Development",
+        "mode": "Offline",
+        "rating": 4.5
+    },
+    {
+        "id": 10,
+        "date": "May 1",
+        "name": "Communication Ethics",
+        "mode": "Offline",
+        "rating": 4.5
+    }
+]

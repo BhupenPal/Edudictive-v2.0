@@ -13,172 +13,190 @@
 
 <body>
   <%-include("../Components/Header.ejs") %>
-  <div class="content-wrap">
-    <!-- GET SKILLS -->
-    <div class="get-skills">
-      <div class="get-skills-content">
-        <div class="get-skills-header">
-          <div class="get-skills-heading">
-            Getting skilled has never been easier
-          </div>
-          <div class="get-skills-platform">
-            A one-stop educational platform for school and college students
-          </div>
-        </div>
-        <div class="skill-illustrate">
-          <img src="/assets/images/svgs/homepage-hero.svg" />
+  <div class="Home-wrap">
+    <div class="skill-section">
+      <div class="skill-section-content">
+        <h1 class="section-headline">Getting skilled has <br> never been easier</h1>
+        <p>A one-stop skill development educational <br> platform for school and college students.</p>
+        <div class="skill-section-btns">
+          <button>All programs</button>
+          <button>Why Edudictive</button>
         </div>
       </div>
-      <div class="skill-handle">
-        <button id="skill-register" onclick="ScrollHandler('.crs_content')">
-          Register for programs
-        </button>
-        <button id="skill-offers">Our Offerings</button>
+      <img src="/assets/images/svgs/homepage-hero.svg" alt="">
+    </div>
+    <!-- Program Section -->
+    <div class="program-section">
+      <h1 class="section-headline">Programs designed specially for you</h1>
+      <div class="course-wrapper">
+        <% for(let i=0; i<10; i++) { %>
+          <div class="course-card">
+            <div class="date-wishlist"><span>Starting May 1</span><span><img src="/assets/images/svgs/heart.svg" alt=""></span></div>
+            <div class="course-name-wrapper">
+              <span class="course-name">Front-end Web Development</span>
+              <span class="course-mode">Offline Training Program</span>
+            </div>
+            <div class="ratings">
+              <div class="rating-stars">
+                <img src="/assets/images/svgs/Filled-Star.svg" alt="">
+                <img src="/assets/images/svgs/Filled-Star.svg" alt="">
+                <img src="/assets/images/svgs/Filled-Star.svg" alt="">
+                <img src="/assets/images/svgs/Filled-Star.svg" alt="">
+                <img src="/assets/images/svgs/half filled star.svg" alt="">
+              </div>
+              <span>4.5 (90 Ratings)</span>
+            </div>
+            <div class="explore-course">
+              <button>Learn More</button>
+              <button>Register Now</button>
+            </div>
+          </div>
+        <% } %>
+        <div class="extra-space"></div>
+      </div>
+      <div class="program-section-btns">
+        <button><i class="fa fa-chevron-left"></i></button>
+        <button><i class="fa fa-chevron-right"></i></button>
+      </div>
+      <div class="position-points">
+        <% for(let i=0; i<10; i++) { %>
+          <div class="course-pointer"></div>
+        <% } %>
       </div>
     </div>
-    <!-- GET SKILLS -->
-    <!-- OUR PROGRAMS -->
-    <div class="our-programs">
-      <h2 class="op-heading">Our various programs got you covered</h2>
-      <h5 class="op-description">
-        Programs for school and college students are laid over a large domain that contain various technical and
-        non-technical sub-domains.
-      </h5>
-      <div class="op-options">
-        <div class="op-option-block">
-          <img src="/assets/images/svgs/school-prog.svg" />
+    <!-- Institute Section -->
+    <div class="institute-section">
+      <h1 class="section-headline">School to college students - everyone can learn !</h1>
+      <p class="section-subhead">Programs for school and college students are laid over a large 
+        domain that contain various technical and non-technical sub-domains.</p>
+      <div class="institute-wrapper">
+        <div class="institute-card">
+          <img src="/assets/images/svgs/school-prog.svg" alt="">
           <h2>For School Students</h2>
-          <p>
-            Spending an hour a day from the very early age would be better
-            than spending 8 to 10 hours a day at the peak of their careers.
-          </p>
-          <button onclick="LinkHandle('/programs/schools')">Know more</button>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+          <button class="institute-card-btn">Know more</button>
         </div>
-        <div class="op-option-block">
-          <img src="/assets/images/svgs/college-prog.svg" />
+        <div class="institute-card">
+          <img src="/assets/images/svgs/college-prog.svg" alt="">
           <h2>For College Students</h2>
-          <p>
-            Making the college students financially independent and providing
-            them with a worthy skillset is our only mission.
-          </p>
-          <button onclick="LinkHandle('/programs/colleges')">
-            Know more
-          </button>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+          <button class="institute-card-btn">Know more</button>
         </div>
       </div>
     </div>
-    <!-- OUR PROGRAMS -->
-    <!-- SUN BURN -->
-    <div class="sun-burn">
-      <h1>We provide what we promise !</h1>
-      <div class="sun-burn-detailed">
-        <div class="sun-burn-text">
-          <h2>
-            Each of our <span id="blue-span">training programs</span> focuses
-            on practical hands-on learning
-          </h2>
-          <p>
-            The course structure for each training program is curated as per
-            industry standards. All of our programs have an inclination
-            towards entrepreneuship. We have curated courses in various
-            technological, non-technological & financial domains, that will
-            enable you to start your own venture or make you ready to work in
-            industry/corporate. We also provides you a platform, to interact
-            with like minded people.
-          </p>
-          <div class="sun-burn-det-svg">
-            <div class="sun-svg">
-              <img src="/assets/images/svgs/lecture.svg" alt="" />
-              <div>
-                15+ Training Programs <br />
-                done till now
+    <!-- Edudictive-Section -->
+    <div class="Edudictive-section">
+      <h1 class="section-headline">Why Edudictive ?</h1>
+      <div class="edudictive-perks-wrapper">
+        <div class="edudictive-perk">
+          <img src="/assets/images/HOMEOFFER/hero_illustration1.svg" alt="" class="perk-image">
+          <h3>We teach practical content</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.</p>
+        </div>
+        <div class="edudictive-perk">
+          <img src="/assets/images/HOMEOFFER/hero_illustration2.svg" alt="" class="perk-image">
+          <h3>Projects to help you learn better</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.</p>
+        </div>
+        <div class="edudictive-perk">
+          <img src="/assets/images/HOMEOFFER/undraw_tabs.svg" alt="" class="perk-image">
+          <h3>Certified programs</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.</p>
+        </div>
+        <div class="edudictive-perk">
+          <img src="/assets/images/svgs/internship-home.svg" alt="" class="perk-image">
+          <h3>Internship Opportunities</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam.</p>
+        </div>
+      </div>
+      <div class="edudictive-promise">
+        <h1 class="section-headline">We provide what we promise !</h1>
+        <div class="sun-illustration-wrapper">
+          <div class="promise-content">
+            <h2>Each of our <span>training programs</span> focuses on practical hands-on learning</h2>
+            <p>Unlike many workshops, we provide complete training programs in various
+               domains along with dedicated hands-on sessions, projects and AMA 
+               sessions to clear the slightest of your doubts
+              and master your skill.</p>
+            <div class="speciality-wrapper">
+              <div class="speciality">
+                <img src="/assets/images/svgs/lecture.svg" alt="">
+                <span>3 workshops done till now</span>
               </div>
-            </div>
-            <div class="sun-svg">
-              <img src="/assets/images/svgs/raise-hand.svg" alt="" />
-              <div>
-                800+ students <br />
-                participated
+              <div class="speciality">
+                <img src="/assets/images/svgs/raise-hand.svg" alt="">
+                <span>150+ students participated</span>
               </div>
-            </div>
-            <div class="sun-svg">
-              <img src="/assets/images/svgs/faculty.svg" alt="" />
-              <div>
-                Top Notch Faculty <br />
-                for students
+              <div class="speciality">
+                <img src="/assets/images/svgs/faculty.svg" alt="">
+                <span>Top Notch faculty for teaching</span>
               </div>
             </div>
           </div>
-        </div>
-        <div class="success-flame">
-          <img src="/assets/images/flame.png" alt="" />
+          <img src="/assets/images/flame.png" alt="" class="sun-illustration">
         </div>
       </div>
     </div>
-    <!-- SUN BURN -->
-
-    <!-- COURSES -->
-    <%-include("../Components/Courses.ejs") %>
-    <!-- COURSES -->
-
-    <!-- INTERN OPPORTUNITY -->
-    <div class="intern-opt">
-      <h2>Amazing internship opportunities</h2>
-      <p>
-        Top performing students get the opportunity to get referrals into the
-        best companies in various domains.
-      </p>
-      <div class="intern-illustration">
-        <img src="/assets/images/svgs/internship-home.svg" />
-      </div>
-      <div class="company-logo">
-        <img src="/assets/images/svgs/Amazon.svg" id="AmazonLogo" alt="Amazon" />
-        <img src="/assets/images/svgs/Microsoft.svg" alt="Microsoft" />
-        <img src="/assets/images/svgs/Deloitte.svg" alt="Deloitte" />
-      </div>
-    </div>
-    <!-- INTERN OPPORTUNITY -->
-
-    <!-- BLOGS -->
-    <div class="blogs-brief">
-      <h1>Recent Blogs</h1>
-
-      <div class="blog-detail-container">
-        <div class="blog-structure">
-          <h2 class="blog-heading">
-            How to pitch your startup idea to an investor?
-          </h2>
-          <h3 class="blog-writer">
-            By Vaishnavi Puri | Published on 01 April 2020
-          </h3>
-          <h4 class="blog-time">5-Minute Read</h4>
-          <button class="blog-btn" onclick="LinkHandle('https:\/\/blogs.edudictive.in?p=37', 'blank')">
-            Open
-          </button>
-        </div>
-
-        <div class="sub-blog-structure">
-          <div class="sub-blog-secondary">
-            <h2 class="sub-blog-heading">GSOC Preparation</h2>
-            <h3 class="blog-writer">
-              By Vaishnavi Puri | Published on 10 March 2020
-            </h3>
-            <h4 class="blog-time">12-Minute Read</h4>
-            <button class="blog-btn" onclick="LinkHandle('https:\/\/blogs.edudictive.in?p=37', 'blank')">
-              Open
-            </button>
+    <!-- Reviews Section -->
+    <div class="reviews-section">
+      <h1 class="section-headline">Our reviews speak for themselves</h1>
+      <p class="section-subhead">We believe in delivering the best quality - plain and simple</p>
+      <div class="review-card-container">
+        <% for(let i=0; i<8; i++) { %>
+          <div class="review-card">
+            <div class="rating-row">
+              <img src="/assets/images/svgs/filled_star.svg" alt="">
+              <img src="/assets/images/svgs/filled_star.svg" alt="">
+              <img src="/assets/images/svgs/filled_star.svg" alt="">
+              <img src="/assets/images/svgs/filled_star.svg" alt="">
+              <img src="/assets/images/svgs/star.svg" alt="">
+            </div>
+            <h3>Very informative and well designed course !</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+              sed diam nonumy eirmod temporinvidunt ut labore et dolore
+               magna erat, sed diam voluptua. At vero eos et accusam 
+               etjusto duo ea rebum.</p>
+            <div class="review-by">
+              <h3>Sandeep Singh, DTU 2nd Year Student</h3>
+              <p>Attended Front-End Web Dev</p>
+            </div>
           </div>
-          <button class="read-more-blogs" onclick="LinkHandle('https:\/\/blogs.edudictive.in', 'blank')">
-            Read More Blogs
-          </button>
+        <% } %>
+      </div>
+      <div class="review-pointer">
+        <% for(let i=0; i<8; i++) { %>
+          <div class="review-points"></div>
+        <% } %>
+      </div>
+    </div>
+    <!-- Blog Section -->
+    <div class="blog-section">
+      <div class="blog-box">
+        <h1>Recent Blogs</h1>
+        <div class="blog-content">
+          <div class="main-feature-blog">
+            <h1>How to pitch your startup idea to an investor ?</h1>
+            <h4>By Vaishnavi Puri | Published on 01 April 2020</h4>
+            <span>5-Minute Read</span>
+            <button>Open</button>
+          </div>
+          <div class="additional-feature-blog">
+            <div class="sub-feature-blog">
+              <h1>GSOC Preparation</h1>
+              <h4>By Vaishnavi Puri | Published on 10 March, 2020</h4>
+              <span>12-Minute Read</span>
+              <button>Open</button>
+            </div>
+            <button>Read more blogs</button>
+          </div>
         </div>
       </div>
     </div>
-    <!-- BLOGS -->
   </div>
   <%-include("../Components/Footer.ejs") %>
   <script src="/assets/scripts/index.js"></script>
   <script src="/assets/scripts/Home.js"></script>
+  <script src="/assets/js/courses.js"></script>
 </body>
 
 </html>

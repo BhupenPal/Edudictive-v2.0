@@ -151,6 +151,39 @@ $color-line-light: rgba(255,255,255,0.15);
   @return mix(black, $color, $percentage);
 }
 
+@mixin randomGradient($number: null) {
+  @if $number == 1 {
+    background-image: linear-gradient(180deg, #6A11CB 0%, #2575FC 100%);
+  }
+  @if $number == 2 {
+    background-image: linear-gradient(180deg, #30CFD0 0%, #330867 100%);
+  }
+  @if $number == 3 {
+    background-image: linear-gradient(180deg, #453A94 0%, #F43B47 100%);
+  }
+  @if $number == 4 {
+    background-image: linear-gradient(180deg, #6A11CB 0%, #FA71CD 100%);
+  }
+  @if $number == 5 {
+    background-image: linear-gradient(180deg, #FF0844 0%, #FFB199 100%);
+  }
+  @if $number == 6 {
+    background-image: linear-gradient(180deg, #453A94 0%, #F43B47 100%);
+  }
+  @if $number == 7 {
+    background-image: linear-gradient(180deg, #00063D 0%, #004e92 100%);
+  }
+  @if $number == 8 {
+    background-image: linear-gradient(180deg, #30CFD0 0%, #330867 100%);
+  }
+  @if $number == 9 {
+    background-image: linear-gradient(180deg, #6A11CB 0%, #FA71CD 100%);
+  }
+  @if $number == 10 {
+    background-image: linear-gradient(180deg, #00063D 0%, #004e92 100%);
+  }
+}
+
 $header-height-inner: 45px;
 $header-height: 100px;
 $header-module-padding: ($header-height - $header-height-inner) / 2;

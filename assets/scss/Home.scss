@@ -18,6 +18,7 @@
             align-items: flex-start;
             h1{
                 font-size: 4rem;
+                width: unset !important;
 
                 @include media('<=xl') {
                     font-size: 3.2rem;
@@ -114,6 +115,12 @@
                         width: 260px;
                     }
 
+                    @include media('<=xs') {
+                        height: min-content;
+                        padding: 1rem;
+                        width: 100%;
+                    }
+
                 }
 
                 @include media('<=md'){
@@ -130,6 +137,7 @@
 
                 @include media('<=xs') {
                     margin: 100vw auto 3rem auto;
+                    width: 70%;
                 }
             }
 
@@ -207,6 +215,9 @@
         h1{
             width: max-content;
             margin: 0 auto;
+            @include media('<=xs') {
+                font-size: 1.8rem;
+            }
         }
 
         .course-wrapper{
@@ -225,7 +236,6 @@
                 border-radius: 2rem;
                 color: #ffffff;
                 box-shadow: 6px 6px 20px #00000029;
-                @include randomGradient(1);
 
                 .explore-course{
                     display: flex;
@@ -254,6 +264,13 @@
                             background-color: #000000;
                             color: #ffffff;
                         }
+                        @include media('<=xs') {
+                            padding: 0.5rem;
+                            font-size: 0.7rem;
+                        }
+                    }
+                    @include media('<=xs') {
+                        margin: 1rem 0 0 0;
                     }
                 }
 
@@ -267,10 +284,16 @@
                             font-weight: 100;
                             font-size: 1.2rem;
                             opacity: 0.8;
+                            @include media('<=xs') {
+                                font-size: 1rem;
+                            }
                         }
 
                         img{
                             width: 2rem;
+                            @include media('<=xs') {
+                                width: 1.5rem;
+                            }
                         }
                     }
                 }
@@ -280,12 +303,20 @@
                     flex-direction: column;
                     .course-name{
                         font-size: 2rem;
+                        min-height: 75px;
+                        @include media('<=xs') {
+                            font-size: 1.45rem;
+                            min-height: 3rem;
+                        }
                     }
                     .course-mode{
                         font-size: 1.3rem;
                         font-weight: 200;
                         opacity: 0.9;
                         margin: 0.6rem 0 1.5rem 0;
+                        @include media('<=xs') {
+                            font-size: 1rem;
+                        }
                     }
                 }
 
@@ -293,10 +324,35 @@
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
+                    
+                    .rating-stars{
+                        img{
+                            @include media('<=xs') {
+                                width: 1rem;
+                            }
+                        }
+                    }
 
                     span{
                         margin: 0 0 0 1rem;
                         color: #FFCD0E;
+                        @include media('<=xs') {
+                            width: max-content;
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+                @include media('<=xs') {
+                  height: 18rem;
+                  margin: 0 1rem;
+                  box-sizing: border-box;
+                  padding: 1rem 1.5rem;
+                  min-width: 16rem;
+                }
+
+                &:first-child{
+                    @include media('<=xs') {
+                        margin-left: 0;
                     }
                 }
             }
@@ -304,6 +360,19 @@
             .extra-space{
                 width: 2rem;
                 height: 20rem;
+                @include media('<=xs') {
+                  width: 1rem;  
+                }
+            }
+            @include media('<=xs') {
+                margin: 3rem auto 0 auto !important;
+                width: 100%;
+                box-sizing: border-box;
+                padding-left: 1rem;
+                overflow: auto;
+            }
+            &::-webkit-scrollbar{
+                display: none;
             }
         }
 
@@ -327,6 +396,10 @@
                     bottom: -5rem;
                     left: 2rem;
                     margin: auto;
+                    @include media('<=xs') {
+                        bottom: -8rem;
+                        display: none;
+                    }
                 }
 
                 &:last-child{
@@ -334,8 +407,15 @@
                     bottom: -5rem;
                     right: 2rem;
                     margin: auto;
+                    @include media('<=xs') {
+                        bottom: -8rem;
+                        display: none;
+                    }
                 }
             }
+        }
+        @include media('<=xs') {
+         margin: 0;               
         }
     }
 
@@ -345,6 +425,10 @@
         h1{
             width: max-content;
             margin: 0 auto;
+
+            @include media('<=xs') {
+                font-size: 8vw;
+            }
         }
 
         p{
@@ -352,6 +436,11 @@
             margin: 0 auto;
             text-align: center;
             font-weight: bold;
+
+            @include media('<=xs') {
+                font-size: 4vw;
+                margin-top: 1rem;
+            }
         }
 
         .institute-wrapper{
@@ -372,11 +461,22 @@
                 padding: 2rem 0;
                 margin: 3rem;
 
+                img{
+                    height: 15rem;
+                    width: 15rem;
+                }
+
                 h2{
                     color: #0088FF;
                     font-weight: 550;
                     font-family: $font-secondary;
-                    font-size: 2.5rem;
+                    font-size: 2.5rem !important;
+
+                    @include media('<=xs'){
+                     font-size: 1.8rem !important;
+                     text-align: center;
+                     width: 100%;
+                    }
                 }
 
                 p{
@@ -387,6 +487,11 @@
                     width: 70%;
                     opacity: 0.5;
                     font-weight: bolder;
+
+                    @include media('<=xs'){
+                        width: 90%;
+                        font-size: 1.3rem;
+                    }
                 }
 
                 .institute-card-btn{
@@ -397,6 +502,17 @@
                     font-size: 1.2rem;
                     font-weight: bold;
                     margin: 2rem 0 1rem 0;
+                    border-radius: 1rem;
+
+                    @include media('<=xs'){
+                        width: 70%;
+                        padding: 1rem;
+                    }
+                }
+
+                @include media('<=xs'){
+                    width: 95vw;
+                    margin: 1rem auto;
                     border-radius: 1rem;
                 }
             }
@@ -427,6 +543,11 @@
 
                 img{
                     width: 90%;
+
+                    @include media('<=xs') {
+                        width: 100% !important;
+                        height: 100% !important;
+                    }
                 }
 
                 h3{
@@ -434,6 +555,16 @@
                     font-weight: 550;
                     font-family: $font-secondary;
                     font-size: 1.8rem;
+                    text-align: center;
+
+                    @include media('<=sm') {
+                        text-align: center;
+                        font-size: 1.8rem;
+                    }
+                    @include media('<=md','>=sm') {
+                        text-align: center;
+                        font-size: 1.4rem;
+                    }
                 }
 
                 p{
@@ -455,6 +586,31 @@
                         width: 68%;
                     }
                 }
+                &:nth-child(2){
+                    h3{
+                        @include media('<=md') {
+                            margin-bottom: 0;
+                        }
+                        @include media('<=sm') {
+                            margin-bottom: unset;
+                        }
+                    }
+                }
+
+                @include media('<=xs') {
+                    width: 100%;
+                    margin: 1rem 0;
+                }
+                @include media('<=sm') {
+                    width: 80% !important;
+                }
+                @include media('<=md') {
+                    width: 40%;
+                }
+            }
+            @include media('<=md') {
+                margin: 2rem 0;
+                width: 100%;
             }
         }
 
@@ -463,7 +619,7 @@
             display: flex;
             width: 80%;
             margin: 2rem auto;
-            justify-content: space-between;
+            justify-content: center;
 
             .promise-content{
                 width: 45%;
@@ -475,18 +631,50 @@
                     span{
                         color: #0088FF;
                     }
+
+                    @include media('<=xs') {
+                        font-size: 1.6rem;
+                        text-align: justify;
+                    }
+                    @include media('<=sm') {
+                        font-size: 2rem;
+                        text-align: justify;
+                    }
+                    @include media('<=md','>=sm') {
+                        font-size: 1.4rem;
+                    }
+                    @include media('<=lg','>=md'){
+                        font-size: 2rem;
+                    }
                 }
 
                 p{
                     font-size: 1.7rem;
                     font-family: $font-primary;
+
+                    @include media('<=xs') {
+                        font-size: 1rem;
+                        text-align: justify;   
+                    }
+                    @include media('<=sm') {
+                        font-size: 1.3rem;
+                        text-align: justify;
+                    }
+                    @include media('<=md','>=sm') {
+                        font-size: 1rem;
+                    }
+                    @include media('<=ib','>=md'){
+                        font-size: 1.4rem;
+                    }
                 }
 
                 .speciality-wrapper{
                     display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
 
                     .speciality{
-                        width: 40%;
+                        width: 28%;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
@@ -494,14 +682,101 @@
                         font: 1.5rem $font-primary;
                         color: #355EF0;
                         font-weight: bolder;
+                        height: min-content;
 
                         span{
                             text-align: center;
                             display: flex;
-                            margin: 1.5rem 0;
+                            margin: 1.5rem 0 0 0;
+                            justify-content: center;
+
+                            @include media('<=xs') {
+                                font-size: 1.2rem !important;
+                                width: 60% !important;
+                            }
+                            @include media('<=sm') {
+                                font-size: 1.2rem;
+                            }
+                            @include media('<=lg','>=sm') {
+                                font-size: 1rem;
+                            }
+                            @include media('<=xl','>=lg'){
+                                font-size: 1.3rem;
+                            }
+                            @include media('<=xxl','>=xl'){
+                                font-size: 1.4rem;
+                            }
+                        }
+
+                        img{
+                            margin: 0;
+                            @include media('<=xs') {
+                                height: 8rem !important;
+                                width: 8rem !important;
+                            }
+                            @include media('<=md') {
+                                height: 5rem;
+                                width: 5rem;
+                            }
+                            @include media('>=md','<=ib'){
+                                height: 7rem;
+                                width: 7rem;
+                            }
+                            @include media('<=xl','>ib'){
+                                height: 6rem;
+                                width: 6rem;
+                            }
+                            @include media('<=xxl','>=xl'){
+                                height: 8rem;
+                                width: 8rem;
+                            }
+                        }
+
+                        @include media('<=xs') {
+                            width: 100% !important;
+                        }
+                        @include media('<=sm') {
+                            width: 27%;
+                        }
+                        @include media('<=xxl','>=sm') {
+                            width: 30%;
+                            margin: 0;
                         }
                     }
+                    @include media('<=xxl','>=sm') {
+                        width: 100%;
+                        justify-content: space-between;
+                    }
                 }
+
+                @include media('<=sm') {
+                    width: 95%;
+                    margin: 0 auto;
+                }
+                @include media('<=xxl','>=sm') {
+                 width: 60%;   
+                }
+            }
+
+            img{
+                width: 40%;
+                height: 40%;
+                margin: 0 0 0 5rem;
+
+                @include media('<=xs') {
+                    height: 100% !important;
+                    width: 100% !important;
+                    margin: 0;
+                }
+                @include media('<=sm') {
+                    height: 80%;
+                    width: 80%;
+                }
+            }
+
+            @include media('<=sm') {
+                flex-direction: column-reverse;
+                width: 95vw;
             }
         }
     }
@@ -511,10 +786,17 @@
         h1{
             width: max-content;
             margin: 0 auto;
+            @include media('<=xs') {
+             font-size: 8vw;           
+            }
         }
         p{
             width: max-content;
             margin: 0 auto;
+            @include media('<=sm') {
+             font-size: 1.4rem;
+             margin: 1rem auto;           
+            }
         }
         .review-card-container{
             width: 70%;
@@ -546,6 +828,10 @@
                     box-sizing: border-box;
                     margin: 1rem 0;
                     font-family: $font-secondary;
+                    @include media('<=sm') {
+                        width: 90%;
+                        box-sizing: border-box ;
+                    }
                 }
 
                 p{
@@ -554,6 +840,13 @@
                     margin:0;
                     box-sizing: border-box;
                     padding: 0 0 0 2rem;
+
+                    @include media('<=sm') {
+                     font-size: 1rem;
+                     width: 90%;
+                     text-align: justify;
+                     box-sizing: border-box ;
+                    }
                 }
 
                 &:first-child{
@@ -563,9 +856,33 @@
                 .review-by{
                     h3{
                         margin-bottom: 0rem;
+                        @include media('<=sm') {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    p{
+                        @include media('<=sm') {
+                            font-size: 0.9rem;
+                            margin: 1rem 0 2rem 0;
+                        }
                     }
                 }
+                @include media('<=sm') {
+                 min-width: 100%;
+                 padding: 0;
+                }
             }
+            @include media('<=sm') {
+             width: 100%;
+             padding: 1rem;
+             box-sizing: border-box;
+             margin: 1rem 0;   
+            }
+        }
+
+        @include media('<=sm') {
+         margin: 1rem auto;               
         }
     }
 
@@ -573,7 +890,8 @@
     .blog-section{
         margin: 10rem 0;
         .blog-box{
-            width: 50%;
+            width: 60%;
+            box-sizing: border-box;
             height: max-content;
             margin: 0 auto;
             box-shadow: 6px 6px 15px #00000029;
@@ -589,11 +907,21 @@
 
                 &:first-child{
                     margin: 0 0 2rem 0;
+                    @include media('<=sm') {
+                        margin: 2rem 0;
+                    }
+                }
+
+                @include media('<=xs'){
+                    font-size: 2rem;
+                    margin: 2rem 0 !important;
                 }
             }
 
             .blog-content{
                 display: flex;
+                width: 100%;
+                justify-content: space-between;
 
                 .main-feature-blog{
                     height: auto;
@@ -605,7 +933,6 @@
                     justify-content: center;
                     align-items: flex-start;
                     padding: 2rem;
-                    margin: 0 2rem 0 0;
                     box-shadow: 6px 6px 15px #00000029;
 
                     h1{
@@ -613,6 +940,14 @@
                         font-size: 2.5rem;
                         width: 100%;
                         margin: 2rem 0;
+
+                        @include media('<=xs'){
+                            font-size: 1.6rem;
+                            margin: 0 0 2rem 0 !important;
+                        }
+                        @include media('<=sm') {
+                            font-size: 2rem;
+                        }
                     }
 
                     span{
@@ -630,13 +965,24 @@
                         border-radius: 0.8rem;
                         background-color: $color-primary;
                     }
+
+                    @include media('<=sm'){
+                        width: 100%;
+                        box-sizing: border-box;
+                        border-radius: 2rem;
+                        margin: 0 0 1rem 0;
+                        padding: 1.5rem 1rem;
+                    }
+                    @include media('<=md','>=sm') {
+                        padding: 1.5rem 1rem 1.5rem 2rem;
+                    }
                 }
 
                 .additional-feature-blog{
-                    width: max-content;
+                    width: 45%;
                     .sub-feature-blog{
                         height: auto;
-                        width: 85%;
+                        width: 100%;
                         background-color: #ffffff;
                         border-radius: 3rem;
                         display: flex;
@@ -644,7 +990,7 @@
                         justify-content: center;
                         align-items: flex-start;
                         padding: 2rem;
-                        margin: 0 2rem 0 0;
+                        box-sizing: border-box;
                         box-shadow: 6px 6px 15px #00000029;
     
                         h1{
@@ -652,6 +998,10 @@
                             color: $color-primary;
                             font-size: 2.5rem;
                             width: 100%;
+
+                            @include media('<=xs'){
+                                font-size: 1.6rem;
+                            }
                         }
 
                         button{
@@ -664,6 +1014,14 @@
                             margin: 2rem 0 0 0;
                             border-radius: 0.8rem;
                             background-color: $color-primary;
+                        }
+           
+                        @include media('<=sm'){
+                            padding: 1.5rem;
+                            box-sizing: border-box !important;
+                            width: 100%;
+                            border-radius: 2rem;
+                            margin: 1rem 0 0 0;
                         }
                     }
 
@@ -681,10 +1039,56 @@
                         justify-content: center;
                         align-items: center;
                         font-size: 1.2rem;
+                        @include media('<=sm') {
+                            margin: 2rem 0 1rem 0;
+                        }
+                    }
+
+                    @include media('<=sm'){
+                        width: 100%;
                     }
 
                 }
+
+                @include media('<=xs'){
+                    flex-direction: column;
+                    align-items: center;
+                }
+                @include media('<=sm') {
+                    flex-direction: column;
+                    align-items: center;
+                }
             }
+
+            @include media('<=xs'){
+                padding: 1rem;
+                box-sizing: border-box !important;
+                width: 100%;
+                border-radius: unset;
+            }
+            @include media('<=sm') {
+               width: 90%; 
+               padding: 1.5rem;
+            }
+            @include media('<=lg','>=sm') {
+                width: 95%;
+                padding: 2rem;
+            }
+            @include media('<=ib','>=lg'){
+                width: 80%;
+                padding: 2rem;
+            }
+            @include media('<=xl','>ib'){
+                width: 75%;
+                padding: 2.5rem;
+            }
+            @include media('<=xxl','>xl'){
+                width: 70%;
+                padding: 2.5rem;
+            }
+        }
+        @include media('<=sm') {
+            margin: 2rem auto;               
         }
     }
 
@@ -705,6 +1109,29 @@
     margin: 1rem 0;
     font-weight: 600;
     line-height: 5.5rem;
+
+    @include media('<=xl') {
+        font-size: 3rem;
+    }
+
+    @include media('<=ib'){
+        font-size: 2.8rem;
+    }
+
+    @include media('<=lg'){
+        font-size: 2.4rem;
+    }
+
+    @include media('<=md'){
+        font-size: 2rem;
+    }
+
+    @include media('<=sm'){
+        font-size: 2rem;
+        width: 90vw !important;
+        line-height: unset;
+        text-align: center;
+    }
 }
 
 .section-subhead{
@@ -713,4 +1140,22 @@
     font-size: 1.6rem;
     font-weight: 900;
     margin: 0;
+
+    @include media('<=xl') {
+        font-size: 1.6rem;
+    }
+
+    @include media('<=ib'){
+        font-size: 1.2rem;
+    }
+
+    @include media('<=lg'){
+        font-size: 1.2rem;
+    }
+
+    @include media('<=md'){
+        font-size: 1.6rem;
+        width: 90vw !important;
+        text-align: center;
+    }
 }

@@ -29,11 +29,11 @@
     <div class="program-section">
       <h1 class="section-headline">Programs designed specially for you</h1>
       <div class="course-wrapper">
-        <% for(let i=0; i<10; i++) { %>
-          <div class="course-card">
+        <% for(let i=0; i<doc.length; i++) { %>
+          <div class="course-card" data-value=<%= i %>>
             <div class="date-wishlist"><span>Starting May 1</span><span><img src="/assets/images/svgs/heart.svg" alt=""></span></div>
             <div class="course-name-wrapper">
-              <span class="course-name">Front-end Web Development</span>
+              <span class="course-name"><%= doc[i].Title %></span>
               <span class="course-mode">Offline Training Program</span>
             </div>
             <div class="ratings">

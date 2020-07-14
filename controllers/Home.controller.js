@@ -3,9 +3,12 @@ const Router = express.Router();
 
 const ContactModel = require("../models/Contact.model");
 const ESPModel = require("../models/ESP.model");
+const CourseModel = require("../models/Course.model");
 
 Router.get("/", (req, res, next) => {
-    res.render("Home/Home");
+    CourseModel.find( (err, doc) => {
+        res.render("Home/Home", {doc});
+    })
 });
 
 Router.get("/programs/schools", (req, res, next) => {

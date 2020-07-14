@@ -4,6 +4,7 @@ const Router = express.Router();
 const ContactModel = require("../models/Contact.model");
 const ESPModel = require("../models/ESP.model");
 const CourseModel = require("../models/Course.model");
+const EventModel = require("../models/Event.model");
 
 Router.get("/", (req, res, next) => {
     CourseModel.find( (err, doc) => {
@@ -48,7 +49,6 @@ Router.post("/contact-us", (req, res, next) => {
 });
 
 Router.post("/event-register",(req,res,next)=>{
-    console.log(req.body);
     new EventModel(req.body).save((err)=>{
         if(err){            
             res.status(400).json({'Error':err})

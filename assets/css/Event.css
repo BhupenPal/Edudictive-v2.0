@@ -94,14 +94,14 @@
 }
 .info-heading{
     text-align: left;
-    font: Bolder 40px Proxima-Nova;
+    font: Bolder 40px Avenir-Next;
     color: #000000;
 }
 
 .about-description{
     margin-top: 4%;
     text-align: left;
-    font:28px Proxima-Nova;
+    font:lighter 28px Avenir-Next;
     color: #000000;
     width: 75%;
 }
@@ -138,14 +138,14 @@
 
 .speaker-info h3{
     text-align: center;
-    font: Bolder 32px Proxima-Nova;
+    font: Bolder 32px Avenir-Next;
     color: #4E4E4E;
     margin: 1vh;
 }
 
 .speaker-info h4{
     text-align: center;
-    font: 26px Proxima-Nova;
+    font: 26px Avenir-Next;
     color: #4E4E4E;
     margin:1vh
 }
@@ -196,7 +196,7 @@
     color: #000000 !important;
     padding: 0 15px;
     box-sizing: border-box;
-    font: 1.2rem Proxima-Nova;
+    font: 1.2rem Avenir-Next;
     margin: 1rem 1rem;
     border: 2px solid #707070;
     opacity: 0.5;
@@ -223,7 +223,7 @@
     height: 90%;
     border: none;
     box-sizing: border-box;
-    font: 1.2rem Proxima-Nova;
+    font: 1.2rem Avenir-Next;
 }
 
 .event-submit{
@@ -295,14 +295,14 @@
 
     .info-heading{
         text-align: center;
-        font: Bolder 40px Proxima-Nova;
+        font: Bolder 40px Avenir-Next;
         color: #000000;
     }
 
     .about-description{
         margin-top: 4%;
         text-align: center;
-        font: 28px/32px Proxima-Nova;
+        font: 28px/32px Avenir-Next;
         color: #000000;
         margin: auto;      
         width: 100%;  

@@ -6,7 +6,9 @@ const ESPModel = require("../models/ESP.model");
 const EventModel=require("../models/Event.model")
 
 Router.get("/", (req, res, next) => {
-    res.render("Home/Home");
+    CourseModel.find( (err, doc) => {
+        res.render("Home/Home", {doc});
+    })
 });
 
 Router.get("/programs/schools", (req, res, next) => {

@@ -10,10 +10,6 @@ Router.get("/", ensureAuthenticated, (req, res, next) => {
   res.render("Dashboard/Profile");
 });
 
-Router.get("/add-course", ensureAdmin, (req, res, next) => {
-  res.render("Dashboard/Admin/AddCourse");
-})
-
 module.exports = Router
 
 // module.exports = {

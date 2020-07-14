@@ -40,6 +40,9 @@ const options = {
         favicon: "../assets/img/icons/Logo.svg",
         softwareBrothers: false,
     },
+    dashboard: {
+        component: AdminBro.bundle('../components/Dashboard.tsx')
+    }
 }
 
 module.exports = options

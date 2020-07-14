@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const CourseRegSchema = new mongoose.Schema({
+    UserID: {
+        type: mongoose.Schema.ObjectId,
+        required: true
+    },
     FirstName:{
         type: String,
         required: true,
@@ -8,6 +12,9 @@ const CourseRegSchema = new mongoose.Schema({
     LastName:{
         type:String,
         required:true,
+    },
+    Email: {
+        type: String
     },
     Phone:{
         type: Number,
@@ -17,7 +24,7 @@ const CourseRegSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    CollegeName:{
+    InstituteName: {
         type: String,
         required: true
     }

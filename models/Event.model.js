@@ -1,28 +1,36 @@
 const mongoose = require('mongoose');
 
-const Schema = mongoose.Schema;
-const EventSchema = new Schema({
-    FirstName:{
-        type: String,
+const EventSchema = new mongoose.Schema({
+    Key: {
+        type: Number,
         required: true,
+        unique: true
     },
-    LastName:{
-        type:String,
-        required:true,
-    },
-    Email:{
-        type:String,
-        required:true
-    },
-    Role: {
+    EventName: {
         type: String,
         required: true
     },
-    Phone:{
+    StartTime: {
+        type: Date,
+        required: true
+    },
+    EndTime: {
+        type: Date,
+        required: true
+    },
+    Duration: {
         type: Number,
         required: true
     },
-    CollegeName:{
+    Fees: {
+        type: Number,
+        required: true
+    },
+    About: {
+        type: String,
+        required: true
+    },
+    WhoShouldAttend: {
         type: String,
         required: true
     }

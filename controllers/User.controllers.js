@@ -7,14 +7,19 @@ const transporter = require("../helper/mail/config");
 let ErrMsg = { news: [] };
 let SucMsg = { news: [] };
 
+//Pilot is sent to client with status
+let Pilot = { status: 'failed', news: [] };
+
 //Services
 const { GenerateRandom, PassCheck, HashSalt, ensureAuthenticated, forwardAuthenticated } = require("../helper/service");
 
+const { SendMail } = require("../helper/mail/config");
 //SERVICES
 const { courseUpload } = require("../helper/UploadManager");
 
 //Mails
 const { verificationMail } = require("../helper/mail/content");
+const Mail = require("nodemailer/lib/mailer");
 
 Router.get("/login", (req, res, next) => {
   res.render("Home/Login");
@@ -171,31 +176,18 @@ Router.post("/register", (req, res, next) => {
                   uPinCode,
                   uInsti,
                   uPass,
-                  SecretToken,
+                  SecretToken
                 });
 
                 //Hash Password
                 HashSalt(NewUser);
 
-                let mailOptions = {
-                  from: '"Edudictive" <contact@edudictive.in>', // sender address
-                  to: uEmail, // list of receivers
-                  subject: "Edudictive Account Verification Mail", // Subject line
-                  html: verificationMail(ufName, SecretToken), // html body
-                };
-
                 // send mail with defined transport object
-                transporter.sendMail(mailOptions, (error, info) => {
-                  if (!error) {
-                    SucMsg.news.push("Email Sent");
-                    res.send(SucMsg);
-                  } else {
-                    res.send(
-                      "The request could not be completed due to the error: " +
-                      error
-                    );
-                  }
-                });
+                let MailHTML = verificationMail
+                SendMail(uEmail, 'HooHoop Account Activation Email', MailHTML, Pilot.news)
+                if (Pilot.news > 0) {
+                    return res.json(Pilot)
+                }
               }
             });
           }

@@ -4,22 +4,17 @@ const FacebookStrategy = require("passport-facebook").Strategy;
 const LinkedInStrategy = require("passport-linkedin-oauth2").Strategy;
 const bcrypt = require("bcryptjs");
 
-let ErrMsg = { news: [] };
-let SucMsg = { news: [] };
-
 // Load User model
 const userModel = require("../../models/User.model");
 
 module.exports = function (passport) {
     passport.use(
         new LocalStrategy(
-            { usernameField: "uEmail", passwordField: "uPass" },
-            async (uEmail, uPass, done) => {
+            { usernameField: "Email", passwordField: "Password" },
+            async (Email, Password, done) => {
                 // Match user
                 await userModel
-                    .findOne({
-                        uEmail: uEmail,
-                    })
+                    .findOne({ Email })
                     .then((user) => {
                         if (!user) {
                             return done(null, false, {
@@ -28,7 +23,7 @@ module.exports = function (passport) {
                         }
 
                         // Match password
-                        bcrypt.compare(uPass, user.uPass, (err, isMatch) => {
+                        bcrypt.compare(Password, user.Password, (err, isMatch) => {
                             if (err) throw err;
                             if (isMatch) {
                                 return done(null, user);

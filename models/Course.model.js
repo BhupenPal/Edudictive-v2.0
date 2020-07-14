@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const courseSchema = new mognoose.Schema({
+const courseSchema = new mongoose.Schema({
     Key: {
         type: Number,
         required: true,
@@ -37,6 +37,11 @@ const courseSchema = new mognoose.Schema({
     },
     StartDate: {
         type: String,
+        required: true
+    },
+    TimeFrame: {
+        type: String,
+        enum: ['Week', 'Month', 'Year'],
         required: true
     },
     Duration: {

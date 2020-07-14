@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer")
 
 module.exports = {
-  SendMail: (ToEmail, MailSubject, News) => {
+  SendMail: (ToEmail, MailSubject, MailHTML, News) => {
       let transporter = nodemailer.createTransport({
           host: 'smtpout.secureserver.net',
           port: 465,
@@ -19,7 +19,7 @@ module.exports = {
           from: '"Edudictive" <contact@edudictive.in>',
           to: ToEmail,
           subject: MailSubject,
-          html: 'Hello'
+          html: MailHTML
       }, (err, info) => {
           if (err) {
               News.push("Email can't be sent.")

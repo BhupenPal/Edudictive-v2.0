@@ -3,11 +3,11 @@ const Router = express.Router();
 
 const ContactModel = require("../models/Contact.model");
 const ESPModel = require("../models/ESP.model");
-const EventModel=require("../models/Event.model")
+const CourseModel = require("../models/Course.model");
 
 Router.get("/", (req, res, next) => {
     CourseModel.find( (err, doc) => {
-        res.render("Home/Home", {doc});
+        res.render("Home/Home", { doc });
     })
 });
 

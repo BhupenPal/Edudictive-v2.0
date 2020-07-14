@@ -5,7 +5,7 @@ const connectDB = () => {
         useNewUrlParser: !0,
         useUnifiedTopology: !0,
         useCreateIndex: !0,
-        useFindAndModify: !0
+        useFindAndModify: !1
     })
 }
 

@@ -1,9 +1,6 @@
 const mongoose = require('mongoose');
 
-const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
-
-const courseSchema = new Schema({
+const courseSchema = new mognoose.Schema({
     Key: {
         type: Number,
         required: true,
@@ -80,7 +77,7 @@ const courseSchema = new Schema({
     },
     Reviews: [{
         UserID: {
-            type: ObjectId,
+            type: mongoose.Schema.ObjectId,
             required: true
         },
         Name: {

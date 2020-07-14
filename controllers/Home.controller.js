@@ -32,6 +32,10 @@ Router.get("/contact-us", (req, res, next) => {
     res.render("Home/Contact");
 });
 
+Router.get("/privacy-policy",(req,res,next)=>{
+    res.render("Home/Privacy-Policy")
+});
+
 Router.post("/contact-us", (req, res, next) => {
     new ContactModel(req.body).save((err) => {
         if (err) {

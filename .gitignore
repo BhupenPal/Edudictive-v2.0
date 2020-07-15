@@ -1,5 +1,7 @@
 # Admin Bro
 .adminro/
+assets/uploads/courses/*
+assets/uploads/events/*
 
 # Logs
 logs

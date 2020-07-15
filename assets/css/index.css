@@ -2300,7 +2300,7 @@ footer h4 {
   }
 
   .crs_card_wrap{
-    overflow-x: scroll;
+    overflow-x: hidden;
     width: 100%;
     box-sizing: border-box;
   }

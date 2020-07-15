@@ -1,5 +1,5 @@
 .espForm-container{
-  padding: 125px 0 5rem 0;
+  padding: 10rem 0 5rem 0;
   display: flex;
   flex-direction: column;
   width: 60%;
@@ -121,4 +121,91 @@ select::-ms-expand{display: none;}
   pointer-events: none;
   filter: invert(0.5);
   transition: 0.3s;
+}
+
+@media only screen and (max-width: 480px){
+  .espForm-container{
+    width: 100%;
+    margin: 0;
+    padding: 80px 0 0 0;
+  }
+
+  .espForm-Headings:first-child {
+    font-size: 1.8rem;
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  .espForm-Headings:nth-child(2){
+    font-size: 1.6rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .espForm-Headings:nth-child(3){
+    padding-left: 1rem;
+    box-sizing: border-box;
+  }
+
+  .form-part_primary input{
+    width: 90%;
+    margin: 1rem auto;
+    font-size: 1rem;
+  }
+
+  .input-flexer{
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .input-flexer .styled-arrow{
+    height: 50%;
+    margin: 1rem auto;
+    width: 100%;
+  }
+
+  .input-flexer select{
+    padding: 1rem 1.5rem;
+    width: 100%;
+  }
+
+  .styled-arrow{
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  select{
+    font-size: 1rem !important;
+  }
+
+  .question-head{
+    width: 90%;
+    margin: 2rem auto;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .question-1{
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    padding-left: 1.5rem;
+  }
+
+  .form-part_secondary textarea{
+    width: 90%;
+    margin: 0 auto;
+    height: 8rem;
+  }
+
+  .form-submit{
+    display: flex;
+  }
+
+  .form-submit button{
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
 }

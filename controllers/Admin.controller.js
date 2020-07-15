@@ -6,7 +6,7 @@ const adminBro = new AdminBro(options);
 
 const ADMIN = {
   email: process.env.ADMIN_EMAIL || "admin@edudictive",
-  password: process.env.ADMIN_PASSWORD || "testpassword86",
+  password: process.env.ADMIN_PASSWORD || "testpassword86"
 };
 
 // module.exports = AdminBroExpress.buildAuthenticatedRouter(

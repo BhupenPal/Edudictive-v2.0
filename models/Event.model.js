@@ -6,6 +6,10 @@ const EventSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
+    Enrolled: {
+        type: Number,
+        default: 0
+    },
     EventName: {
         type: String,
         required: true
@@ -33,7 +37,12 @@ const EventSchema = new mongoose.Schema({
     WhoShouldAttend: {
         type: String,
         required: true
-    }
+    },
+    Speakers: [{
+        name: String,
+        linkedin: String,
+        position: String
+    }]
 },{ timestamps: true })
 
 module.exports = mongoose.model("Events List", EventSchema);

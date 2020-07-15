@@ -226,6 +226,9 @@
             width: 90%;
             margin: 3rem auto;
             padding: 1rem 0;
+            scroll-behavior: smooth;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
 
             .course-card{
                 padding: 1.5rem;
@@ -291,8 +294,36 @@
 
                         img{
                             width: 2rem;
+                            transition: 0.2s;
+                            cursor: pointer;
                             @include media('<=xs') {
                                 width: 1.5rem;
+                            }
+
+                            &:hover{
+                                transform: scale(1.1);
+                            }
+
+                            &:active{
+                                transform: scale(1.2);
+                            }
+                        }
+
+                        lottie-player{
+                            cursor: pointer;
+                            width: 2rem;
+                            height: 2rem;
+                            transition: 0.2s;
+                            @include media('<=xs') {
+                                width: 1.5rem;
+                            }
+
+                            &:hover{
+                                transform: scale(1.4);
+                            }
+
+                            &:active{
+                                transform: scale(1.2);
                             }
                         }
                     }

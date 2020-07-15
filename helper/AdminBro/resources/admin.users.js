@@ -10,7 +10,7 @@ const options = {
     },
     properties: {
         OriginalPassword: {
-            type: 'password',
+            type: 'password'
         },
         Password: {
             isVisible: false

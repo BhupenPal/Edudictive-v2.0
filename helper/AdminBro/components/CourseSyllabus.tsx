@@ -1,7 +1,7 @@
 import React from 'react'
 import { Label, Box, DropZone, BasePropertyProps, DropZoneProps } from 'admin-bro'
 
-const Banner: React.FC<BasePropertyProps> = (props) => {
+const Syllabus: React.FC<BasePropertyProps> = (props) => {
     const { property, onChange } = props
 
     const handleDropZone: DropZoneProps['onChange'] = (file) => {
@@ -15,4 +15,4 @@ const Banner: React.FC<BasePropertyProps> = (props) => {
     )
 }
 
-export default Banner
+export default Syllabus

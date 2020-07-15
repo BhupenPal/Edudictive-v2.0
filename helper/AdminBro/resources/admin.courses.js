@@ -16,6 +16,11 @@ const options = {
             components: {
                 edit: AdminBro.bundle('../components/CourseBanner.tsx')
             }
+        },
+        CourseSyllabus: {
+            components: {
+                edit: AdminBro.bundle('../components/CourseSyllabus.tsx')
+            }
         }
     },
     actions: {

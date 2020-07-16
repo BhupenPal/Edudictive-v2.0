@@ -7,7 +7,6 @@ require('./config/database')()
 //View Engine & Static File Routing
 app.set("view engine", "ejs");
 app.use("/assets", express.static("assets"));
-app.use("/bootstrap", express.static(__dirname + '/node_modules/bootstrap/dist'));
 
 //Environment Variables
 require("dotenv").config({

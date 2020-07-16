@@ -19,7 +19,7 @@ const courseSchema = new mongoose.Schema({
     },
     Category: {
         type: String,
-        enum: ['Technical', 'Finance'],
+        enum: ['Web Development', 'App Development', 'Game Development', 'Graphic Designing', 'AR/VR', 'Programming Core', 'Data Science', 'Graphics', 'Finance'],
         required: true
     },
     Mode: {
@@ -41,7 +41,7 @@ const courseSchema = new mongoose.Schema({
     },
     TimeFrame: {
         type: String,
-        enum: ['Week', 'Month', 'Year'],
+        enum: ['Days', 'Weeks', 'Months', 'Years'],
         required: true
     },
     Duration: {
@@ -78,12 +78,11 @@ const courseSchema = new mongoose.Schema({
     SuitedFor: {
         type: String,
         required: true,
-        enum: ['School', 'College', 'School and College']
+        enum: ['Schools', 'Colleges', 'Schools and Colleges']
     },
     Reviews: [{
         UserID: {
-            type: mongoose.Schema.ObjectId,
-            required: true
+            type: mongoose.Schema.ObjectId
         },
         Name: {
             type: String,

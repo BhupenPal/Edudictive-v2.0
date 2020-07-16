@@ -33,7 +33,7 @@ function slider(x) {
     }
   }
   if(execution_point.includes("right")){
-    if(currentcard.getAttribute("data-value")<9){
+    if(currentcard.getAttribute("data-value")<courses.length-1){
       let computedstyle = getComputedStyle(currentcard)
       let curmargin = parseInt(computedstyle.marginLeft) + parseInt(computedstyle.marginRight)
       currentcard = currentcard.nextElementSibling

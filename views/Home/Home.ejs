@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="/assets/css/index.css" />
   <link rel="stylesheet" href="/assets/css/Home.css" />
   <link rel="stylesheet" href="/assets/css/all.min.css" />
+  <link rel="stylesheet" href="/assets/css/newheader.css">
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
   <title>Edudictive | Home</title>
 </head>
 
 <body>
-  <%-include("../Components/Header.ejs") %>
+  <%-include("../Components/newHeader.ejs") %>
   <div class="Home-wrap">
     <div class="skill-section">
       <div class="skill-section-content">
@@ -31,7 +32,7 @@
       <div class="course-wrapper">
         <% for(let i = 0; i < doc.length; i++) { %>
           <div id="CourseCard<%= i %>" class="course-card" data-value="<%= i %>" >
-            <div class="date-wishlist"><span>Starting <%= doc.StartDate %></span><span><img onclick="heartanimate(this)" src="/assets/images/svgs/heart.svg" alt=""></span></div>
+            <div class="date-wishlist"><span>Starting <%= doc[i].StartDate %></span><span><img onclick="heartanimate(this)" src="/assets/images/svgs/heart.svg" alt=""></span></div>
             <div class="course-name-wrapper">
               <span class="course-name"><%= doc[i].Title %></span>
               <span class="course-mode"><%= doc.Mode %> Training Program</span>
@@ -198,6 +199,7 @@
   <script src="/assets/scripts/Home.js"></script>
   <script src="/assets/scripts/lottie.js"></script>
   <script src="/assets/js/courses.js"></script>
+  <script src="/assets/scripts/newheader.js"></script>
 </body>
 
 </html>

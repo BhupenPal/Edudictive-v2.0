@@ -45,14 +45,47 @@ function slider(x) {
   }
 }
 
+let courses_wishlist=[];
+local_storage=localStorage.getItem("myobj")
+if(localStorage.length>0){
+  local_courses=JSON.parse(local_storage)
+  for(var i=0;i<local_courses.length;i++){
+    courses_wishlist.push(local_courses[i])
+  }
+}
+
 function heartanimate(x){
   let parentEle = x.parentNode;
-  if(!parentEle.hasAttribute('data-state')){
+  let parentElement=x.parentElement.parentElement.parentElement
+  var course_name=parentElement.getElementsByClassName('course-name-wrapper')[0].getElementsByClassName('course-name')[0];
+  let obj={
+    name:course_name.innerText
+  }
+  if(!parentEle.hasAttribute('data-state')&&(!courses_wishlist.includes(obj.name))){
     parentEle.setAttribute('data-state','clicked')
     parentEle.innerHTML = `<lottie-player onclick="heartanimate(this)" src="/assets/Json/Like.json" background="transparent"  speed="1" loop autoplay></lottie-player>`
+    wishlist_add(obj)
   }
   else{
     parentEle.removeAttribute('data-state')
     parentEle.innerHTML = `<img onclick="heartanimate(this)" src="/assets/images/svgs/heart.svg" alt="">`
+    remove_wishlist_item(obj)
   }
+}
+
+function wishlist_add(obj){
+  courses_wishlist.push(obj.name)
+  localStorage.setItem("myobj",JSON.stringify(courses_wishlist))
+}
+
+function remove_wishlist_item(obj){                
+  localStorage.removeItem('myobj')
+  for(var i=0;i<courses_wishlist.length;i++)
+  {
+      if (courses_wishlist[i]==obj.name){
+          index_of_removable_course=i
+      }
+  }
+  courses_wishlist.splice(index_of_removable_course,1)
+  localStorage.setItem("myobj",JSON.stringify(courses_wishlist))
 }

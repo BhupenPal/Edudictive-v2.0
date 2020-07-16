@@ -654,6 +654,19 @@ footer h4 {
   width: 14%;
 }
 
+.rules-regulations {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Avenir-Next';
+}
+
+.rules-regulations a {
+  color: black;
+  margin: 0 10px;
+}
+
 /* FOOTER - 1920px END */
 
 /*COURSES -1920PX START */

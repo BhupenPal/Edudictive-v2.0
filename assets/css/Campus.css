@@ -72,14 +72,12 @@
     color: #000000;
 }
 
-.camp-about-illus {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font: 22px/26px Proxima-Nova;
+.camp-about-illus{
     width: 50%;
-    color: #000000;
-
+    margin-left: 5%;
+}
+.camp-about-illus img{
+    width: 80%;
 }
 
 .camp-responsibilities {
@@ -317,10 +315,14 @@
         line-height: 2.2vw;
     }
 
-    .camp-about-illus {
-        font-size: 1.8vw;
-        line-height: 2.1vw;
+    .camp-about-illus{
+        width: 50%;
     }
+
+    .camp-about-illus img{
+        width: 100%;
+        height: 100%;
+    };
 
     .camp-responsibilities h1 {
         font-size: 3vw !important;
@@ -384,9 +386,9 @@
         line-height: 2.1vw;
     }
 
-    .camp-about-illus {
-        font-size: 1.7vw;
-        line-height: 2.1vw;
+    .camp-about-illus img{
+        width: 100%;
+        height: 100%;
     }
 
     .camp-responsibilities h1 {
@@ -429,6 +431,10 @@
     .camp-written p {
         font-size: 1.7vw;
         line-height: 2vw;
+    }
+
+    .camp-about-illus img{
+        margin-top: 0;
     }
 
     .camp-written button {
@@ -489,6 +495,10 @@
         line-height: 2vw;
     }
 
+
+    .camp-about-illus img{
+        margin: 0;
+    }
     .camp-written button {
         height: 10vh;
         width: 45vh;

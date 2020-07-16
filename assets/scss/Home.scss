@@ -282,6 +282,7 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    height: 40px;
                     span{
                         &:first-child{
                             font-weight: 100;
@@ -326,6 +327,9 @@
                                 transform: scale(1.2);
                             }
                         }
+                    }
+                    @include media('<=sm'){
+                        height: 20px;
                     }
                 }
 

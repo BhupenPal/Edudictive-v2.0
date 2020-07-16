@@ -187,91 +187,91 @@ let y = document.querySelector(".cntrl_sett");
 
 // Psuedo Selector Styling
 
-function acccontrol() {
-  let accountImg = document.getElementById("cntrl_img").children[0];
-  var svgel = document.querySelector("#cntrl_img");
+// function acccontrol() {
+//   let accountImg = document.getElementById("cntrl_img").children[0];
+//   var svgel = document.querySelector("#cntrl_img");
 
-  if (x.classList.contains("active_accopt") == false) {
-    y.style.visibility = "visible";
-    x.pseudoStyle("after", "visibility", "visible", "account").pseudoStyle(
-      "after",
-      "opacity",
-      "1",
-      "account"
-    );
-    y.style.opacity = "1";
-    x.classList.add("active_accopt");
-    svgel.style.filter =
-      "invert(.4) brightness(1) sepia(1) saturate(5) hue-rotate(175deg)";
-  } else {
-    y.style.visibility = "hidden";
-    x.pseudoStyle("after", "visibility", "hidden", "account").pseudoStyle(
-      "after",
-      "opacity",
-      "0",
-      "account"
-    );
-    y.style.opacity = "0";
-    x.classList.remove("active_accopt");
-    svgel.removeAttribute("style");
-  }
-}
+//   if (x.classList.contains("active_accopt") == false) {
+//     y.style.visibility = "visible";
+//     x.pseudoStyle("after", "visibility", "visible", "account").pseudoStyle(
+//       "after",
+//       "opacity",
+//       "1",
+//       "account"
+//     );
+//     y.style.opacity = "1";
+//     x.classList.add("active_accopt");
+//     svgel.style.filter =
+//       "invert(.4) brightness(1) sepia(1) saturate(5) hue-rotate(175deg)";
+//   } else {
+//     y.style.visibility = "hidden";
+//     x.pseudoStyle("after", "visibility", "hidden", "account").pseudoStyle(
+//       "after",
+//       "opacity",
+//       "0",
+//       "account"
+//     );
+//     y.style.opacity = "0";
+//     x.classList.remove("active_accopt");
+//     svgel.removeAttribute("style");
+//   }
+// }
 
-document.addEventListener("mouseup", function (e) {
-  let accountImg = document.getElementById("cntrl_img").children[0];
-  var container = document.querySelector("#cntrl_img");
-  let x = document.querySelector(".user-cntr_pane");
-  let y = document.querySelector(".cntrl_sett");
-  if (!container.contains(e.target)) {
-    if (!y.contains(e.target)) {
-      y.style.visibility = "hidden";
-      x.pseudoStyle("after", "visibility", "hidden", "account").pseudoStyle(
-        "after",
-        "opacity",
-        "0",
-        "account"
-      );
-      y.style.opacity = "0";
-      x.classList.remove("active_accopt");
-      container.removeAttribute("style");
-    }
-  }
-});
+// document.addEventListener("mouseup", function (e) {
+//   let accountImg = document.getElementById("cntrl_img").children[0];
+//   var container = document.querySelector("#cntrl_img");
+//   let x = document.querySelector(".user-cntr_pane");
+//   let y = document.querySelector(".cntrl_sett");
+//   if (!container.contains(e.target)) {
+//     if (!y.contains(e.target)) {
+//       y.style.visibility = "hidden";
+//       x.pseudoStyle("after", "visibility", "hidden", "account").pseudoStyle(
+//         "after",
+//         "opacity",
+//         "0",
+//         "account"
+//       );
+//       y.style.opacity = "0";
+//       x.classList.remove("active_accopt");
+//       container.removeAttribute("style");
+//     }
+//   }
+// });
 
 let program_menu = document.querySelector(".prog_menu");
 let prog_opt = document.querySelector(".prog-menu");
 
-function programs() {
-  if (program_menu.classList.contains("active_prog") == false) {
-    prog_opt.style.visibility = "visible";
-    program_menu
-      .pseudoStyle("after", "visibility", "visible", "programs")
-      .pseudoStyle("after", "opacity", "1", "programs");
-    prog_opt.style.opacity = "1";
-    program_menu.classList.add("active_prog");
-  } else {
-    prog_opt.style.visibility = "hidden";
-    prog_opt.style.opacity = "0";
-    program_menu
-      .pseudoStyle("after", "visibility", "hidden", "programs")
-      .pseudoStyle("after", "opacity", "0", "programs");
-    program_menu.classList.remove("active_prog");
-  }
-}
+// function programs() {
+//   if (program_menu.classList.contains("active_prog") == false) {
+//     prog_opt.style.visibility = "visible";
+//     program_menu
+//       .pseudoStyle("after", "visibility", "visible", "programs")
+//       .pseudoStyle("after", "opacity", "1", "programs");
+//     prog_opt.style.opacity = "1";
+//     program_menu.classList.add("active_prog");
+//   } else {
+//     prog_opt.style.visibility = "hidden";
+//     prog_opt.style.opacity = "0";
+//     program_menu
+//       .pseudoStyle("after", "visibility", "hidden", "programs")
+//       .pseudoStyle("after", "opacity", "0", "programs");
+//     program_menu.classList.remove("active_prog");
+//   }
+// }
 
-document.addEventListener("mouseup", function (e) {
-  var container = document.querySelector(".prog_menu");
-  if (!container.contains(e.target)) {
-    if (!prog_opt.contains(e.target)) {
-      prog_opt.style.visibility = "hidden";
-      program_menu
-        .pseudoStyle("after", "visibility", "hidden", "programs")
-        .pseudoStyle("after", "opacity", "0", "programs");
-      prog_opt.style.opacity = "0";
-      program_menu.classList.remove("active_prog");
-    }
-  }
-});
+// document.addEventListener("mouseup", function (e) {
+//   var container = document.querySelector(".prog_menu");
+//   if (!container.contains(e.target)) {
+//     if (!prog_opt.contains(e.target)) {
+//       prog_opt.style.visibility = "hidden";
+//       program_menu
+//         .pseudoStyle("after", "visibility", "hidden", "programs")
+//         .pseudoStyle("after", "opacity", "0", "programs");
+//       prog_opt.style.opacity = "0";
+//       program_menu.classList.remove("active_prog");
+//     }
+//   }
+// });
 
 /* AJAX HANDLER */
 function getFields(FormElement) {
@@ -371,18 +371,18 @@ function animatedsub(){
 
 var eventRegisterSubmit=document.getElementsByClassName("event-submit");
 var EventForm=document.getElementById("eventInputs");
-eventRegisterSubmit[0].addEventListener('click',function(){
-  event.preventDefault();
+// eventRegisterSubmit[0].addEventListener('click',function(){
+//   event.preventDefault();
 
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST','/event-register',true);
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.getResponseHeader("Content-Type", "application/json");
-  xhr.onload=function(){
-    console.log(this.responseText);
-    console.log(this.status);
-  }
-  // xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-  xhr.send(getFields(EventForm));
+//   var xhr = new XMLHttpRequest();
+//   xhr.open('POST','/event-register',true);
+//   xhr.setRequestHeader("Content-Type", "application/json");
+//   xhr.getResponseHeader("Content-Type", "application/json");
+//   xhr.onload=function(){
+//     console.log(this.responseText);
+//     console.log(this.status);
+//   }
+//   // xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+//   xhr.send(getFields(EventForm));
 
-})
+// })

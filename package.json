@@ -22,7 +22,6 @@
     "admin-bro-expressjs": "^2.1.1",
     "admin-bro-mongoose": "^0.5.2",
     "bcryptjs": "^2.4.3",
-    "bootstrap": "^4.5.0",
     "connect-flash": "^0.1.1",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.2",

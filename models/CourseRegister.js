@@ -27,6 +27,14 @@ const CourseRegSchema = new mongoose.Schema({
     InstituteName: {
         type: String,
         required: true
+    },
+    CourseKey: {
+        type: Number,
+        required: true
+    },
+    CourseName: {
+        type: String,
+        required: true
     }
 }, { timestamps: true })
 

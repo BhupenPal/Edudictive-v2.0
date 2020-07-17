@@ -54,7 +54,7 @@
 
 .camp-headline {
     text-align: center;
-    font: Bold 72px/93px Avenir-Next;
+    font: Bold 72px Avenir-Next;
     color: #004E92;
 }
 
@@ -88,6 +88,58 @@
 .camp-responsibilities h1 {
     font-size: 48px !important;
     margin-top: 5vh;
+}
+
+.camp-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    align-items: baseline;
+}
+
+.camp-btn{
+    background: transparent linear-gradient(101deg, #00063D 0%, #004E92 100%) 0% 0% no-repeat padding-box;
+    width: 600px;
+    border-radius: 73px;
+    height: 130px;
+    font: 40px Avenir-Next;
+    color: #ffffff;
+}
+
+
+.submit-btn{
+    margin: 100px auto;
+    width: 45%;
+    font: 34px/55px Proxima Nova;
+    text-align: center;
+    color: #004E92 ;
+}
+
+.apply-step{
+    margin: 2rem 5rem;
+}
+
+.step{
+    font:lighter 40px Proxima Nova !important;
+}
+
+.apply-step p{
+    text-align: center;
+    font: Bolder 40px Proxima Nova;
+    color: #004E92;
+    margin:0rem auto;
+}
+
+.apply-illus{
+    display: flex;
+    height: 23.5vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.smaller-img{
+    width:120% !important;
 }
 
 .text-center {
@@ -195,9 +247,49 @@
         line-height: 1;
     }
 
-    .camp-responsibilities {
-        width: 80%;
+    .camp-wrapper{
+        flex-direction: column;
+        width: 50%;
     }
+
+    .apply-step{
+        margin:0rem auto;
+        padding-bottom: 5rem;
+    }
+
+    .step{
+        font:lighter 22px Proxima Nova !important;
+        margin: 1rem auto;
+    }
+    .apply-step p{
+        font: Bold 20px Proxima Nova ;
+        margin: 0rem auto;
+    }
+
+    .apply-illus{
+        height: 20.5vh;
+    }
+
+    .apply-illus img{
+        width:70%;
+    }
+
+    .smaller-img{
+        width: 80% !important;
+    }
+
+    .submit-btn{
+        margin: 0px auto;
+        width: 90%;
+        font: 20px Proxima Nova;
+    }
+
+    .camp-btn{
+        width:80%;
+        height: 70px;
+        font: 25px Avenir-Next;
+    }
+    
 }
 
 @media only screen and (max-width: 768px) and (min-width: 481px) {
@@ -273,6 +365,52 @@
     .camp-responsibilities {
         width: 80%;
     }
+
+    .camp-wrapper{
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .camp-responsibilities {
+        width: 80%;
+    }
+
+    .submit-btn{
+        margin: 0px auto;
+        width:75%;
+        font:28px Proxima Nova;
+    }
+    .camp-btn{
+        width: 75%;
+        height: 60px;
+        font-size: 26px;
+    }
+
+    .apply-step{
+        margin:0rem auto;
+        padding-bottom: 5rem;
+    }
+
+    .step{
+        font:lighter 30px Proxima Nova !important;
+        margin: 1rem auto;
+    }
+    .apply-step p{
+        font: Bold 26px Proxima Nova ;
+        margin: 0rem auto;
+    }
+
+    .apply-illus{
+        height: 23.5vh;
+    }
+
+    .apply-illus img{
+        width:60%;
+    }
+
+    .smaller-img{
+        width: 80% !important;
+    }
 }
 
 @media only screen and (max-width: 912px) and (min-width: 769px) {
@@ -335,6 +473,41 @@
 
     .camp-responsibilities {
         width: 63.5%;
+    }
+
+    .camp-wrapper{
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .camp-btn{
+        height: 100px;
+        font: 35px Avenir-Next;
+        width: 60%;
+
+    }
+
+    .apply-illus img{
+        width:60% ;
+    }
+
+    .smaller-img{
+        width: 70% !important;
+    }
+
+    .apply-step{
+        margin: 0 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .submit-btn{
+        margin: 100px auto;
+        width: 90%;
+    }
+
+    .apply-step p{
+        font: Bolder 32px Proxima Nova;
+        margin: 0rem auto;
     }
 }
 
@@ -403,6 +576,39 @@
     .camp-responsibilities {
         width: 63.5%;
     }
+
+    .camp-wrapper{
+        flex-direction: column;
+        width: 40%;
+    }
+
+    .apply-step{
+        margin: 0 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .apply-step p{
+        margin: 0rem auto;
+        font: Bolder 36px Proxima Nova;
+    }
+
+    .apply-illus img{
+        width:60% ;
+    }
+
+    .smaller-img{
+        width: 80% !important;
+    }
+
+    .submit-btn{
+        width: 60%;
+        margin: 0px auto;
+    }
+
+    .camp-btn{
+        height: 100px;
+        font: 32px Avenir-Next;
+    }
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1201px) {
@@ -465,6 +671,31 @@
     .camp-responsibilities {
         width: 63.5%;
     }
+
+    .camp-wrapper{
+        width: 80%;
+    }
+    .apply-step{
+        margin: 2rem auto;
+    }
+
+    .apply-illus img{
+        width: 50%;
+    }
+
+    .apply-step p{
+        font: Bolder 30px Proxima Nova;
+    }
+
+    .smaller-img{
+        width: 70% !important;
+    }
+
+    .camp-btn{
+        height: 100px;
+    }
+
+    
 }
 
 @media only screen and (max-width: 1600px) and (min-width: 1441px) {
@@ -526,6 +757,34 @@
     .camp-responsibilities {
         width: 63.5%;
     }
+
+    .camp-wrapper{
+        width: 80%;
+    }
+    .apply-step{
+        margin: 2rem auto;
+    }
+
+    .apply-illus img{
+        width: 60%;
+    }
+
+    .apply-step p{
+        font: Bolder 34px Proxima Nova;
+    }
+
+    .smaller-img{
+        width: 75% !important;
+    }
+
+    .submit-btn{
+        width:55%;
+    }
+
+    .camp-btn{
+        height: 100px;
+        font: 30px Avenir-Next;
+    }
 }
 
 @media only screen and (max-width: 1920px) and (min-width: 1601px) {
@@ -551,6 +810,35 @@
 
     .camp-responsibilities {
         width: 63.5%;
+    }
+
+    .camp-wrapper{
+        width: 80%;
+    }
+    .apply-step{
+        margin: 2rem auto;
+    }
+
+    .apply-illus img{
+        width: 60%;
+    }
+
+    .apply-step p{
+        font: Bolder 40px Proxima Nova;
+    }
+
+    .smaller-img{
+        width: 75% !important;
+    }
+
+    .submit-btn{
+        width:55%;
+        font:40px Proxima Nova;
+    }
+
+    .camp-btn{
+        height: 130px;
+        font: 40px Avenir-Next;
     }
 
 }

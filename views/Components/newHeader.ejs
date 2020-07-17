@@ -31,9 +31,56 @@
                 <div class="searchIcon"><img src="/assets/images/svgs/search.svg" alt=""></div>
             </div>
             <div class="userHandler">
-                <button>Log in</button>
+                <div class="namedHandler">Log in</div>
                 <div class="slash"></div>
-                <button>Sign up</button>
+                <div class="namedHandler">Sign up</div>
+                <div class="controlSettings" data-state="unclicked">
+                    <div class="controlLinks">
+                       <div class="controlHead">
+                          <% if(!user){ %>
+                             Hey user !
+                          <% } else { %>
+                             Hi <%= user.ufName %>
+                          <% } %>
+                       </div>
+                       <div class="controlLinkContainer">
+                          <ul>
+                             <li><a href="/user/dashboard">My Profile</a></li>
+                             <li><a href="/user/">My Courses</a></li>
+                             <li><a href="/user/">Prefrences</a></li>
+                             <li><a href="/">Community</a></li>
+                             <li><a href="/">Help Center</a></li>
+                             <li><a href="/faq">FAQ</a></li>
+                          </ul>
+                       </div>
+                    </div>
+                    <div class="controlButtons">
+                       <div class="shControlText">
+                           <div class="triWrap"><div class="uppertriangle"></div></div>
+                          <div class="emptyContainer">
+                             <% if(!user){ %>
+                                unknown
+                             <% } else { %>
+                                verified
+                             <% } %>
+                          </div>
+                          <% if(!user){ %>
+                             <span>Sign in to continue</span>
+                          <% } else { %>
+                             <span>Hope you are doing good</span>
+                          <% } %>
+                       </div>
+                       <div class="controlButtonsContainer">
+                          <% if(!user){ %>
+                             <button class="logInBtn" onclick="LinkHandle('/user/login')">Sign in</button>
+                             <button class="signUpBtn" onclick="LinkHandle('/user/register')">Create new account</button>
+                          <% } else { %>
+                             <button class="logInBtn" onclick="LinkHandle('/user/dashboard')">Profile</button>
+                             <button class="signUpBtn" onclick="LinkHandle('/user/logout')">Logout</button>
+                          <% } %>
+                       </div>
+                    </div>
+                 </div>
             </div>
         </div>
     </div>

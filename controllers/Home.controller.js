@@ -21,6 +21,7 @@ Router.get("/programs/colleges", (req, res, next) => {
 });
 
 Router.get("/events", (req, res, next) => {
+    console.log('works')
     res.render("Home/Events");
 });
 

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/assets/css/Home.css" />
   <link rel="stylesheet" href="/assets/css/all.min.css" />
   <link rel="stylesheet" href="/assets/css/newheader.css">
-  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/assets/img/icons/Logo.svg" />
   <title>Edudictive | Home</title>
 </head>
 
@@ -37,7 +37,7 @@
                 onclick="heartanimate(this)" src="/assets/images/svgs/heart.svg" alt=""></span></div>
           <div class="course-name-wrapper">
             <span class="course-name"><%= doc[i].Title %></span>
-            <span class="course-mode"><%= doc.Mode %> Training Program</span>
+            <span class="course-mode"><%= doc[i].Mode %> Training Program</span>
           </div>
           <div class="ratings">
             <div class="rating-stars">
@@ -47,10 +47,10 @@
               <img src="/assets/images/svgs/Filled-Star.svg" alt="">
               <img src="/assets/images/svgs/half filled star.svg" alt="">
             </div>
-            <span>4.5 (90 Ratings)</span>
+            <span><%= doc[i].Rating %> (<%= doc[i].Reviews.length %> Ratings)</span>
           </div>
           <div class="explore-course">
-            <button>Learn More</button>
+            <button onclick="LinkHandle('/course/<%= doc[i].Key %>/<%= doc[i].Title %>')">Learn More</button>
             <button>Register Now</button>
           </div>
         </div>

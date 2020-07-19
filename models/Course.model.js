@@ -41,7 +41,7 @@ const courseSchema = new mongoose.Schema({
     },
     TimeFrame: {
         type: String,
-        enum: ['Days', 'Weeks', 'Months', 'Years'],
+        enum: ['Day', 'Week', 'Month', 'Year'],
         required: true
     },
     Duration: {
@@ -56,18 +56,21 @@ const courseSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    EarlyBird: {
+        type: Boolean
+    },
     WhatUGet: [String],
     Batch: {
         WeekendDate: String,
         WeekdayDate: String
     },
     Structure: [{
-        NumOfWeek: Number,
+        NumOfTimeFrame: Number,
         Topic: String,
         Explain: String,
         ToDo: [String]
     }],
-    EnrolledStudents: {
+    Enrolled: {
         type: Number,
         default: 0
     },

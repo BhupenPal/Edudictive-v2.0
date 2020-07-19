@@ -23,11 +23,11 @@ const EventSchema = new mongoose.Schema({
         required: true
     },
     Duration: {
-        type: Number,
+        type: String,
         required: true
     },
     Fees: {
-        type: Number,
+        type: String,
         required: true
     },
     About: {

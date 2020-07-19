@@ -20,9 +20,10 @@ Router.get("/programs/colleges", (req, res, next) => {
     res.render("Home/Colleges");
 });
 
-Router.get("/events", (req, res, next) => {
-    console.log('works')
-    res.render("Home/Events");
+Router.get("/events", async (req, res, next) => {
+    const sessions = await EventModel.find({ EventType: 'Session' })
+    const webinars = await EventModel.find({ EventType: 'Webinar' })
+    res.render("Home/Events", { webinars, sessions });
 });
 
 Router.get("/event-register", (req, res, next) => {

@@ -122,6 +122,7 @@
     border-radius: 30px;
     box-shadow: 6px 6px 30px #00000029;
     width: 33%;
+    height: min-content;
     padding: 3vw;
     box-sizing: border-box;
     right: 10%;

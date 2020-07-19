@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/assets/css/Home.css" />
   <link rel="stylesheet" href="/assets/css/all.min.css" />
   <link rel="stylesheet" href="/assets/css/newheader.css">
-  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/assets/img/icons/Logo.svg" />
   <title>Edudictive | Home</title>
 </head>
 
@@ -27,31 +27,33 @@
       <img src="/assets/images/svgs/homepage-hero.svg" alt="">
     </div>
     <!-- Program Section -->
+    <% if (doc.length >= 1) { %>
     <div class="program-section">
       <h1 class="section-headline">Programs designed specially for you</h1>
       <div class="course-wrapper">
         <% for(let i = 0; i < doc.length; i++) { %>
-          <div id="CourseCard<%= i %>" class="course-card" data-value="<%= i %>" >
-            <div class="date-wishlist"><span>Starting <%= doc[i].StartDate %></span><span><img onclick="heartanimate(this)" src="/assets/images/svgs/heart.svg" alt=""></span></div>
-            <div class="course-name-wrapper">
-              <span class="course-name"><%= doc[i].Title %></span>
-              <span class="course-mode"><%= doc.Mode %> Training Program</span>
-            </div>
-            <div class="ratings">
-              <div class="rating-stars">
-                <img src="/assets/images/svgs/Filled-Star.svg" alt="">
-                <img src="/assets/images/svgs/Filled-Star.svg" alt="">
-                <img src="/assets/images/svgs/Filled-Star.svg" alt="">
-                <img src="/assets/images/svgs/Filled-Star.svg" alt="">
-                <img src="/assets/images/svgs/half filled star.svg" alt="">
-              </div>
-              <span>4.5 (90 Ratings)</span>
-            </div>
-            <div class="explore-course">
-              <button>Learn More</button>
-              <button>Register Now</button>
-            </div>
+        <div id="CourseCard<%= i %>" class="course-card" data-value="<%= i %>">
+          <div class="date-wishlist"><span>Starting <%= doc[i].StartDate %></span><span><img
+                onclick="heartanimate(this)" src="/assets/images/svgs/heart.svg" alt=""></span></div>
+          <div class="course-name-wrapper">
+            <span class="course-name"><%= doc[i].Title %></span>
+            <span class="course-mode"><%= doc[i].Mode %> Training Program</span>
           </div>
+          <div class="ratings">
+            <div class="rating-stars">
+              <img src="/assets/images/svgs/Filled-Star.svg" alt="">
+              <img src="/assets/images/svgs/Filled-Star.svg" alt="">
+              <img src="/assets/images/svgs/Filled-Star.svg" alt="">
+              <img src="/assets/images/svgs/Filled-Star.svg" alt="">
+              <img src="/assets/images/svgs/half filled star.svg" alt="">
+            </div>
+            <span><%= doc[i].Rating %> (<%= doc[i].Reviews.length %> Ratings)</span>
+          </div>
+          <div class="explore-course">
+            <button onclick="LinkHandle('/course/<%= doc[i].Key %>/<%= doc[i].Title %>')">Learn More</button>
+            <button>Register Now</button>
+          </div>
+        </div>
         <% } %>
         <div class="extra-space" data-value="10"></div>
       </div>
@@ -61,26 +63,29 @@
       </div>
       <div class="position-points">
         <% for(let i=0; i<10; i++) { %>
-          <div class="course-pointer"></div>
+        <div class="course-pointer"></div>
         <% } %>
       </div>
     </div>
+    <% } %>
     <!-- Institute Section -->
     <div class="institute-section">
       <h1 class="section-headline">School to college students - everyone can learn !</h1>
-      <p class="section-subhead">Programs for school and college students are laid over a large 
+      <p class="section-subhead">Programs for school and college students are laid over a large
         domain that contain various technical and non-technical sub-domains.</p>
       <div class="institute-wrapper">
         <div class="institute-card">
           <img src="/assets/images/svgs/school-prog.svg" alt="">
           <h2>For School Students</h2>
-          <p>Spending an hour a day from the very early age would be better than spending 8 to 10 hours a day at the peak of their careers.</p>
+          <p>Spending an hour a day from the very early age would be better than spending 8 to 10 hours a day at the
+            peak of their careers.</p>
           <button class="institute-card-btn">Know more</button>
         </div>
         <div class="institute-card">
           <img src="/assets/images/svgs/college-prog.svg" alt="">
           <h2>For College Students</h2>
-          <p>Making the college students financially independent and providing them with a worthy skillset is our only mission.</p>
+          <p>Making the college students financially independent and providing them with a worthy skillset is our only
+            mission.</p>
           <button class="institute-card-btn">Know more</button>
         </div>
       </div>
@@ -92,22 +97,26 @@
         <div class="edudictive-perk">
           <img src="/assets/images/HOMEOFFER/hero_illustration1.svg" alt="" class="perk-image">
           <h3>We teach practical content</h3>
-          <p>Providing the ample amount of knowledge is great but attaining the practical and applicable knowledge is what we provide.</p>
+          <p>Providing the ample amount of knowledge is great but attaining the practical and applicable knowledge is
+            what we provide.</p>
         </div>
         <div class="edudictive-perk">
           <img src="/assets/images/HOMEOFFER/hero_illustration2.svg" alt="" class="perk-image">
           <h3>Projects to help you learn better</h3>
-          <p>The more you practice the more accurate the results will be. We provide plenty of practice projects to clear the concepts and make the learning more clearer for our students.</p>
+          <p>The more you practice the more accurate the results will be. We provide plenty of practice projects to
+            clear the concepts and make the learning more clearer for our students.</p>
         </div>
         <div class="edudictive-perk">
           <img src="/assets/images/HOMEOFFER/undraw_tabs.svg" alt="" class="perk-image">
           <h3>Certified programs</h3>
-          <p>Getting your hands groomed on the top in-demand skills and the learning with our certified programs will eventually make the students ready for the industrial world.</p>
+          <p>Getting your hands groomed on the top in-demand skills and the learning with our certified programs will
+            eventually make the students ready for the industrial world.</p>
         </div>
         <div class="edudictive-perk">
           <img src="/assets/images/svgs/internship-home.svg" alt="" class="perk-image">
           <h3>Internship Opportunities</h3>
-          <p>We are not going to leave your hand until we are satisfied with our service for you. We do not believe in making false promises, we will provide you with immense number of opportunities.</p>
+          <p>We are not going to leave your hand until we are satisfied with our service for you. We do not believe in
+            making false promises, we will provide you with immense number of opportunities.</p>
         </div>
       </div>
       <div class="edudictive-promise">
@@ -116,8 +125,8 @@
           <div class="promise-content">
             <h2>Each of our <span>training programs</span> focuses on practical hands-on learning</h2>
             <p>Unlike many workshops, we provide complete training programs in various
-               domains along with dedicated hands-on sessions, projects and AMA 
-               sessions to clear the slightest of your doubts
+              domains along with dedicated hands-on sessions, projects and AMA
+              sessions to clear the slightest of your doubts
               and master your skill.</p>
             <div class="speciality-wrapper">
               <div class="speciality">
@@ -144,29 +153,29 @@
       <p class="section-subhead">We believe in delivering the best quality - plain and simple</p>
       <div class="review-card-container">
         <% for(let i=0; i<8; i++) { %>
-          <div class="review-card">
-            <div class="rating-row">
-              <img src="/assets/images/svgs/filled_star.svg" alt="">
-              <img src="/assets/images/svgs/filled_star.svg" alt="">
-              <img src="/assets/images/svgs/filled_star.svg" alt="">
-              <img src="/assets/images/svgs/filled_star.svg" alt="">
-              <img src="/assets/images/svgs/star.svg" alt="">
-            </div>
-            <h3>Very informative and well designed course !</h3>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-              sed diam nonumy eirmod temporinvidunt ut labore et dolore
-               magna erat, sed diam voluptua. At vero eos et accusam 
-               etjusto duo ea rebum.</p>
-            <div class="review-by">
-              <h3>Sandeep Singh, DTU 2nd Year Student</h3>
-              <p>Attended Front-End Web Dev</p>
-            </div>
+        <div class="review-card">
+          <div class="rating-row">
+            <img src="/assets/images/svgs/filled_star.svg" alt="">
+            <img src="/assets/images/svgs/filled_star.svg" alt="">
+            <img src="/assets/images/svgs/filled_star.svg" alt="">
+            <img src="/assets/images/svgs/filled_star.svg" alt="">
+            <img src="/assets/images/svgs/star.svg" alt="">
           </div>
+          <h3>Very informative and well designed course !</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+            sed diam nonumy eirmod temporinvidunt ut labore et dolore
+            magna erat, sed diam voluptua. At vero eos et accusam
+            etjusto duo ea rebum.</p>
+          <div class="review-by">
+            <h3>Sandeep Singh, DTU 2nd Year Student</h3>
+            <p>Attended Front-End Web Dev</p>
+          </div>
+        </div>
         <% } %>
       </div>
       <div class="review-pointer">
         <% for(let i=0; i<8; i++) { %>
-          <div class="review-points"></div>
+        <div class="review-points"></div>
         <% } %>
       </div>
     </div>

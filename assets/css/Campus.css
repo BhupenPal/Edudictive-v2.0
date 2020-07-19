@@ -111,7 +111,7 @@
 .submit-btn{
     margin: 100px auto;
     width: 45%;
-    font: 34px/55px Proxima Nova;
+    font: 34px/55px "Proxima-Nova";
     text-align: center;
     color: #004E92 ;
 }
@@ -121,21 +121,26 @@
 }
 
 .step{
-    font:lighter 40px Proxima Nova !important;
+    font:lighter 40px "Proxima-Nova" !important;
 }
 
 .apply-step p{
     text-align: center;
-    font: Bolder 40px Proxima Nova;
+    font: Bolder 1.5rem "Proxima-Nova";
     color: #004E92;
     margin:0rem auto;
 }
 
 .apply-illus{
     display: flex;
-    height: 23.5vh;
     align-items: center;
     justify-content: center;
+    margin: 2rem 0;
+}
+
+.apply-illus img{
+    height: 10rem;
+    width: 10rem;
 }
 
 .smaller-img{
@@ -258,11 +263,11 @@
     }
 
     .step{
-        font:lighter 22px Proxima Nova !important;
+        font:lighter 22px "Proxima-Nova" !important;
         margin: 1rem auto;
     }
     .apply-step p{
-        font: Bold 20px Proxima Nova ;
+        font: Bold 20px "Proxima-Nova" ;
         margin: 0rem auto;
     }
 
@@ -281,7 +286,7 @@
     .submit-btn{
         margin: 0px auto;
         width: 90%;
-        font: 20px Proxima Nova;
+        font: 20px "Proxima-Nova";
     }
 
     .camp-btn{
@@ -378,7 +383,7 @@
     .submit-btn{
         margin: 0px auto;
         width:75%;
-        font:28px Proxima Nova;
+        font:28px "Proxima-Nova";
     }
     .camp-btn{
         width: 75%;
@@ -392,11 +397,11 @@
     }
 
     .step{
-        font:lighter 30px Proxima Nova !important;
+        font:lighter 30px "Proxima-Nova" !important;
         margin: 1rem auto;
     }
     .apply-step p{
-        font: Bold 26px Proxima Nova ;
+        font: Bold 26px "Proxima-Nova" ;
         margin: 0rem auto;
     }
 
@@ -506,7 +511,7 @@
     }
 
     .apply-step p{
-        font: Bolder 32px Proxima Nova;
+        font: Bolder 32px "Proxima-Nova";
         margin: 0rem auto;
     }
 }
@@ -589,7 +594,7 @@
 
     .apply-step p{
         margin: 0rem auto;
-        font: Bolder 36px Proxima Nova;
+        font: Bolder 36px "Proxima-Nova";
     }
 
     .apply-illus img{
@@ -684,7 +689,7 @@
     }
 
     .apply-step p{
-        font: Bolder 30px Proxima Nova;
+        font: Bolder 30px "Proxima-Nova";
     }
 
     .smaller-img{
@@ -770,7 +775,7 @@
     }
 
     .apply-step p{
-        font: Bolder 34px Proxima Nova;
+        font: Bolder 34px "Proxima-Nova";
     }
 
     .smaller-img{
@@ -824,7 +829,7 @@
     }
 
     .apply-step p{
-        font: Bolder 40px Proxima Nova;
+        font: Bolder 1.4rem "Proxima-Nova";
     }
 
     .smaller-img{
@@ -833,7 +838,7 @@
 
     .submit-btn{
         width:55%;
-        font:40px Proxima Nova;
+        font:40px "Proxima-Nova";
     }
 
     .camp-btn{

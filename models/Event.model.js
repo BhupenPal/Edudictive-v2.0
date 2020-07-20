@@ -10,6 +10,9 @@ const EventSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
+    EventURL: {
+        type: String
+    },
     EventName: {
         type: String,
         required: true

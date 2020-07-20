@@ -18,6 +18,10 @@ const EventSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
+    EventType: {
+        type: String,
+        enum: ['Webinar', 'Session']
+    },
     EndTime: {
         type: Date,
         required: true

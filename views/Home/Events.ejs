@@ -15,6 +15,7 @@
 
     <%-include('../Components/Header.ejs') %>
     <div class="event-container">
+        
         <div class="sessions-heads">
             <div class="heads active-head">
                 <span>Webinars</span>
@@ -149,131 +150,19 @@
 
         <!-- sessions started -->
         <div class="sessions">
-            <div class="session-container">
-                <div class="session-details">
-                    <h3 class="session-det-head">VR session at DTU</h3>
-                    <p class="session-det-para">Lorem ipsum dolor sit amet, ctetur sadipscing elitr, sed diam nonumy eirmod
-                        tempor invidunt ut labore
-                        et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                        ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                        et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div class="session-img">
-                    <div class="session-arrows">
-                        <span class="fa-stack fa-2x">
-                            <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
-                            <i class="fas fa-lg fa-angle-left fa-stack-1x"></i>
-                        </span>
-                        <span class="fa-stack fa-2x">
-                            <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
-                            <i class="fas fa-lg fa-angle-right fa-stack-1x"></i>
-                        </span>
+
+            <% for(var i = 0; i < sessions.length; i++) { %>
+                <div class="session-container <% if ( i % 2 !== 0 ) { %>container-2<% } %>">
+                    <div class="session-details">
+                        <h3 class="session-det-head"><%= sessions[i].EventName %></h3>
+                        <p class="session-det-para">
+                            <%= sessions[i].About %>
+                        </p>
                     </div>
-                    <div class="session-btns">
-                        <div class="round-btn active"></div>
-                        <div class="round-btn"></div>
-                        <div class="round-btn"></div>
-                        <div class="round-btn"></div>
-                        <div class="round-btn"></div>
+                    <div class="session-img">
                     </div>
                 </div>
-            </div>
-    
-            <div class="session-container container-2">
-                <div class="session-img img-2">
-                    <div class="session-arrows arrow-2">
-                        <span class="fa-stack fa-2x">
-                            <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
-                            <i class="fas fa-lg fa-angle-left fa-stack-1x"></i>
-                        </span>
-                        <span class="fa-stack fa-2x">
-                            <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
-                            <i class="fas fa-lg fa-angle-right fa-stack-1x"></i>
-                        </span>
-                    </div>
-                    <div class="session-btns btn-2">
-                        <div class="round-btn active"></div>
-                        <div class="round-btn"></div>
-                        <div class="round-btn"></div>
-                        <div class="round-btn"></div>
-                        <div class="round-btn"></div>
-                    </div>
-                </div>
-                <div class="session-details">
-                    <h3 class="session-det-head">Marketing session at Gargi</h3>
-                    <p class="session-det-para">Lorem ipsum dolor sit amet, ctetur sadipscing elitr, sed diam nonumy eirmod
-                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                        et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-                        dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                        tempor invidunt ut labore et dolore magna
-                        dolor sit amet.</p>
-                </div>
-            </div>
-    
-            <div class="session-container">
-                <div class="session-details">
-                    <h3 class="session-det-head">VR session at DTU</h3>
-                    <p class="session-det-para">Lorem ipsum dolor sit amet, ctetur sadipscing elitr, sed diam nonumy eirmod
-                        tempor invidunt ut labore
-                        et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                        ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                        et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div class="session-img">
-                    <div class="session-arrows">
-                        <span class="fa-stack fa-2x">
-                            <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
-                            <i class="fas fa-lg fa-angle-left fa-stack-1x"></i>
-                        </span>
-                        <span class="fa-stack fa-2x">
-                            <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
-                            <i class="fas fa-lg fa-angle-right fa-stack-1x"></i>
-                        </span>
-                    </div>
-                    <div class="session-btns">
-                        <div class="round-btn active"></div>
-                        <div class="round-btn"></div>
-                        <div class="round-btn"></div>
-                        <div class="round-btn"></div>
-                        <div class="round-btn"></div>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="session-container container-2">
-                <div class="session-img img-2">
-                    <div class="session-arrows arrow-2">
-                        <span class="fa-stack fa-2x">
-                            <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
-                            <i class="fas fa-lg fa-angle-left fa-stack-1x"></i>
-                        </span>
-                        <span class="fa-stack fa-2x">
-                            <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
-                            <i class="fas fa-lg fa-angle-right fa-stack-1x"></i>
-                        </span>
-                    </div>
-                    <div class="session-btns btn-2">
-                        <div class="round-btn active"></div>
-                        <div class="round-btn"></div>
-                        <div class="round-btn"></div>
-                        <div class="round-btn"></div>
-                        <div class="round-btn"></div>
-                    </div>
-                </div>
-                <div class="session-details">
-                    <h3 class="session-det-head">Marketing session at Gargi</h3>
-                    <p class="session-det-para">Lorem ipsum dolor sit amet, ctetur sadipscing elitr, sed diam nonumy eirmod
-                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                        et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-                        dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                        tempor invidunt ut labore et dolore magna 
-                        dolor sit amet.</p>
-                </div>
-            </div>  
+            <% } %>
         </div>
 
         <!-- sessions ended -->

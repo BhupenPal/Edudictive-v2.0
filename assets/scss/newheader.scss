@@ -73,6 +73,55 @@
                         }
                     }
                 }
+
+                .moreOptions{
+                    position: relative;
+                }
+
+                .moreOptionDropDown{
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    top: 50px;
+                    left: -5rem;
+                    width: 200px;
+                    background-color: #ffffff;
+                    box-shadow: 6px 6px 15px #00000029;
+                    border-radius: 0.5rem;
+
+                    .uptrip{
+                        filter: drop-shadow(6px 0px 15px #00000029);
+                    }
+
+                    .uptri{
+                        position: absolute;
+                        content: '';
+                        height: 25px;
+                        width: 40px;
+                        background-color: #ffffff;
+                        top: -25px;
+                        left: 40%;
+                        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                    }
+
+                    .moption{
+                        padding: 1rem;
+                        box-sizing: border-box;
+                        transition: 0.2s;
+
+                        &:hover{
+                            background-color: #e9e9e9;
+                        }
+
+                        &:nth-child(2){
+                            border-radius: 0.5rem 0.5rem 0 0;
+                        }
+
+                        &:nth-child(5){
+                            border-radius: 0 0 0.5rem 0.5rem;
+                        }
+                    }
+                }
             }
         }
         .clientControl{

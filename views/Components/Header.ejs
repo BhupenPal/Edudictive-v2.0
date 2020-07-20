@@ -1,112 +1,112 @@
-<header id="Head">
-   <div class="sub-head">
-      <div class="logo-container">
-         <a href="/">
-           <img src="/assets/images/icons/Logo.png" class="LogoOnly" alt="Edudictive Logo">
-           <img src="/assets/images/icons/Logo Font only.png" class="LogoFont" alt="Edudictive Logo">
-        </a>
-      </div>
-      <nav class="header-menu">
-         <ul>
-            <li><a href="/" class="nav">HOME</a></li>
-            <li class="prog_menu" onclick="programs()">
-               <span class="nav">PROGRAMS</span>
-               <div class="prog-menu">
-                  <div onclick="LinkHandle('/programs/schools')">School Programs</div>
-                  <div onclick="LinkHandle('/programs/colleges')">College Programs</div>
-               </div>
-            </li>
-            <li><a href="/events" class="nav">EVENTS</a></li>
-            <li><a href="http://blogs.edudictive.in/" target="__blank" class="nav">BLOGS</a></li>
-            <li><a href="/about-us" class="nav">ABOUT US</a></li>
-            <li><a href="/contact-us" class="nav">CONTACT US</a></li>
-         </ul>
-      </nav>
-      <div class="user-handle">
-         <form action="GET" id="Head-search" autocomplete="off">
-            <i class="fas fa-search fa-lg" id="search-mag"></i>
-            <input type="search" placeholder="Search programs" id="search-bar" name="q"></input>
-         </form>
-      </div>
-      <!-- user control nav bar -->
-      <div class="user-cntr_pane">
-         <div id="cntrl_img" onclick="acccontrol()"><img src="/assets/images/svgs/account.svg"></div>
-         <div class="cntrl_sett">
-            <div class="cntrl_links">
-               <div class="cntrl_lhead">
-                  <% if(!user){ %>
-                     Hey user !
-                  <% } else { %>
-                     Hi <%= user.ufName %>
-                  <% } %>
-               </div>
-               <div class="cntrl_lcontain">
-                  <ul>
-                     <li><a href="/user/dashboard">My Profile</a></li>
-                     <li><a href="/user/">My Courses</a></li>
-                     <li><a href="/user/">Prefrences</a></li>
-                     <li><a href="/">Community</a></li>
-                     <li><a href="/">Help Center</a></li>
-                     <li><a href="/faq">FAQ</a></li>
-                  </ul>
-               </div>
+<header class="mainHeader">
+    <div class="subHeader">
+        <div class="HeaderLinks">
+            <div class="logoContainer">
+                <img src="/assets/img/icons/Logo.svg" alt="">
+                <img src="/assets/img/icons/Logo Font Only.svg" alt="">
             </div>
-            <div class="cntrl_buttons">
-               <div class="sh_cntrl_txt">
-                  <div class="empty_container">
-                     <% if(!user){ %>
-                        unknown
-                     <% } else { %>
-                        verified
-                     <% } %>
-                  </div>
-                  <% if(!user){ %>
-                     <span>Sign in to continue</span>
-                  <% } else { %>
-                     <span>Hope you are doing good</span>
-                  <% } %>
-               </div>
-               <div class="cntrl_btncontain">
-                  <% if(!user){ %>
-                     <button class="log-in" onclick="LinkHandle('/user/login')">Sign in</button>
-                     <button class="sign-up" onclick="LinkHandle('/user/register')">Create new account</button>
-                  <% } else { %>
-                     <button class="log-in" onclick="LinkHandle('/user/dashboard')">Profile</button>
-                     <button class="sign-up" onclick="LinkHandle('/user/logout')">Logout</button>
-                  <% } %>
-               </div>
+    
+            <div class="menuContainer">
+                <ul>
+                    <a href="/"><li>Home</li></a>
+                    <a href="/courses"><li>Courses</li></a>
+                    <a href="/events"><li>Events</li></a>
+                    <a href="/edudictive-student-partner"><li>Student Partners</li></a>
+                    <a href="/about-us"><li>About</li></a>
+                    <span class="moreOptions"><li>
+                        <span data-state="unclicked">More</span>
+                        <div class="moreOptionDropDown">
+                            <div class="uptrip"><div class="uptri"></div></div>
+                            <a href="https://blogs.edudictive.in" target="__blank"><div class="moption">Blogs</div></a>
+                            <a href="/"><div class="moption">Community</div></a>
+                            <div class="moption">Request a Session</div>
+                            <div class="moption">FAQ</div>
+                        </div>
+                    </li></span>
+                </ul>
             </div>
-         </div>
-      </div>
-      <!-- user control nav bar -->
-      <div class="hamburger" onclick="hamoperation(this)">
-         <div class="bar1"></div>
-         <div class="bar2"></div>
-         <div class="bar3"></div>
-      </div>
-      <div class="ham-menu">
-         <div class="search-box">
-            <i class="fal fa-search fa-lg"></i>
-            <input type="text" placeholder="Search programs"></input>
-         </div>
-         <div class="ham-links">
-            <div class="list-items">
-               <ul>
-                  <li><a href="/">Home</a></li>
-                  <li><a>Programs</a></li>
-                  <li><a href="/events">Events</a></li>
-                  <li><a href="http://blogs.edudictive.in/">Blogs</a></li>
-                  <li><a href="/about-us">About</a></li>
-                  <li><a href="/contact-us">Contact Us</a></li>
-               </ul>
+        </div>
+
+        <div class="clientControl">
+            <div class="searchContainer">
+                <div class="searchBox propertyBoxInitial">
+                    <input type="text" placeholder="Search for programs">
+                    <img class="crossimage" src="/assets/images/Cross.png" alt="">
+                </div>
+                <div class="searchIcon"><img src="/assets/images/svgs/search.svg" alt=""></div>
             </div>
-            <div class="user-img">
-               <div class="img-div" onclick="LinkHandle('/user/login')">
-                  <img src="/assets/images/svgs/account.svg" alt="">
-                  <!-- <span><% if(user){ %> <%= user.ufName %> <% } else { %> My Account <% } %> </span> -->
-               </div>
+            <div class="userHandler">
+                <div class="namedHandler">Log in</div>
+                <div class="slash"></div>
+                <div class="namedHandler">Sign up</div>
+                <div class="controlSettings" data-state="unclicked">
+                    <div class="controlLinks">
+                       <div class="controlHead">
+                          <% if(!user){ %>
+                             Hey user !
+                          <% } else { %>
+                             Hi <%= user.ufName %>
+                          <% } %>
+                       </div>
+                       <div class="controlLinkContainer">
+                          <ul>
+                             <li><a href="/user/dashboard">My Profile</a></li>
+                             <li><a href="/user/">My Courses</a></li>
+                             <li><a href="/user/">Prefrences</a></li>
+                             <li><a href="/">Community</a></li>
+                             <li><a href="/">Help Center</a></li>
+                             <li><a href="/faq">FAQ</a></li>
+                          </ul>
+                       </div>
+                    </div>
+                    <div class="controlButtons">
+                       <div class="shControlText">
+                           <div class="triWrap"><div class="uppertriangle"></div></div>
+                          <div class="emptyContainer">
+                             <% if(!user){ %>
+                                unknown
+                             <% } else { %>
+                                verified
+                             <% } %>
+                          </div>
+                          <% if(!user){ %>
+                             <span>Sign in to continue</span>
+                          <% } else { %>
+                             <span>Hope you are doing good</span>
+                          <% } %>
+                       </div>
+                       <div class="controlButtonsContainer">
+                          <% if(!user){ %>
+                             <button class="logInBtn" onclick="LinkHandle('/user/login')">Sign in</button>
+                             <button class="signUpBtn" onclick="LinkHandle('/user/register')">Create new account</button>
+                          <% } else { %>
+                             <button class="logInBtn" onclick="LinkHandle('/user/dashboard')">Profile</button>
+                             <button class="signUpBtn" onclick="LinkHandle('/user/logout')">Logout</button>
+                          <% } %>
+                       </div>
+                    </div>
+                 </div>
             </div>
-         </div>
-      </div>
-   </div>
+        </div>
+    </div>
+
+    <div class="mobileSubHeader">
+        <div class="logoContainer">
+            <img src="/assets/img/icons/Logo.svg" alt="">
+            <img src="/assets/img/icons/Logo Font Only.svg" alt="">
+        </div>
+
+        <div class="hamBurgerIcon">
+            <div class="hamLine"></div>
+            <div class="hamLine"></div>
+            <div class="hamLine"></div>
+        </div>
+
+        <div class="mobileMenu">
+            <div class="linkContainer"></div>
+            <div class="userLogoContainer">
+                <img src="/assets/images/svgs/account.svg" alt="">
+            </div>
+        </div>
+    </div>
 </header>

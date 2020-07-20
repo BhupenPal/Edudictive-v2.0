@@ -313,19 +313,19 @@
 
                         lottie-player{
                             cursor: pointer;
-                            width: 2rem;
-                            height: 2rem;
+                            width: 2.5rem;
+                            height: 2.5rem;
                             transition: 0.2s;
                             @include media('<=xs') {
                                 width: 1.5rem;
                             }
 
                             &:hover{
-                                transform: scale(1.4);
+                                transform: scale(1.1);
                             }
 
                             &:active{
-                                transform: scale(1.2);
+                                transform: scale(1.1);
                             }
                         }
                     }
@@ -360,9 +360,12 @@
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
+                    width: max-content;
                     
                     .rating-stars{
                         img{
+                            height: 1.8rem;
+                            width: 1.8rem;
                             @include media('<=xs') {
                                 width: 1rem;
                             }

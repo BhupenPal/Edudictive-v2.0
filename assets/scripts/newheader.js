@@ -43,8 +43,8 @@ userHandler.addEventListener('click',function(){
 })
 
 moreOptions.addEventListener('click',function(){
-    let event_ini = userDropDown.getAttribute('data-state')
-    if(!moreOptions.contains(event.target)){
+    let event_ini = moreOptions.getAttribute('data-state')
+    if(!moreOptionDropDown.contains(event.target)){
         if(event_ini === 'clicked'){
             moreOptions.setAttribute('data-state','unclicked')
             moreOptionDropDown.removeAttribute('style')

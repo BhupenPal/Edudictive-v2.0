@@ -360,9 +360,12 @@
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
+                    width: max-content;
                     
                     .rating-stars{
                         img{
+                            height: 1.8rem;
+                            width: 1.8rem;
                             @include media('<=xs') {
                                 width: 1rem;
                             }

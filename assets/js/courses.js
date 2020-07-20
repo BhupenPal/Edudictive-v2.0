@@ -78,7 +78,7 @@ function wishlist_add(obj){
   localStorage.setItem("myobj",JSON.stringify(courses_wishlist))
 }
 
-function remove_wishlist_item(obj){                
+function remove_wishlist_item(obj){           
   localStorage.removeItem('myobj')
   for(var i=0;i<courses_wishlist.length;i++)
   {
@@ -88,4 +88,38 @@ function remove_wishlist_item(obj){
   }
   courses_wishlist.splice(index_of_removable_course,1)
   localStorage.setItem("myobj",JSON.stringify(courses_wishlist))
+}
+// Temporary solution
+localStorage.clear();
+courses_wishlist = [];
+
+// Rating system
+let courseRating = [];
+
+courses.forEach(item => {
+  let ratingnum = item.querySelector('.rating-stars').getAttribute('data-rating')
+  let ratingEle = item.querySelector('.rating-stars')
+  ratingEle.innerHTML = ratingsys(ratingnum);
+})
+
+function ratingsys(courseRatingNum){
+  let filleds = parseInt(courseRatingNum)
+  let hdetermine = courseRatingNum - filleds;
+  let halfFilleds;
+  if(hdetermine>=0.5){
+    halfFilleds = 1
+  }else{
+    halfFilleds = 0
+  }
+
+  let output = ``
+
+  for(let i=0; i<filleds; i++){
+    output = output + `<img src="/assets/images/svgs/Filled-Star.svg" alt="">`
+  }
+  for(let j=0; j<halfFilleds; j++){
+    output = output + `<img src="/assets/images/svgs/half filled star.svg" alt="">`
+  }
+  
+  return output
 }

@@ -40,14 +40,14 @@
             <span class="course-mode"><%= doc[i].Mode %> Training Program</span>
           </div>
           <div class="ratings">
-            <div class="rating-stars">
+            <div class="rating-stars" data-rating="<%= doc[i].Rating %>">
               <img src="/assets/images/svgs/Filled-Star.svg" alt="">
               <img src="/assets/images/svgs/Filled-Star.svg" alt="">
               <img src="/assets/images/svgs/Filled-Star.svg" alt="">
               <img src="/assets/images/svgs/Filled-Star.svg" alt="">
               <img src="/assets/images/svgs/half filled star.svg" alt="">
             </div>
-            <span><%= doc[i].Rating %> (<%= doc[i].Reviews.length %> Ratings)</span>
+            <span><%= doc[i].Rating %> (<%= doc[i].Reviews.length %> Reviews)</span>
           </div>
           <div class="explore-course">
             <button onclick="LinkHandle('/course/<%= doc[i].Key %>/<%= doc[i].Title %>')">Learn More</button>

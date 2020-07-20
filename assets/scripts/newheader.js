@@ -3,6 +3,8 @@ let searchBox = document.querySelector(".searchBox")
 let crossIcon = document.querySelector(".crossimage")
 let userDropDown = document.querySelector(".controlSettings")
 let userHandler = document.querySelector(".userHandler")
+let moreOptionDropDown = document.querySelector(".moreOptionDropDown")
+let moreOptions = document.querySelector(".moreOptions span")
 
 searchIcon.onclick = function(){
     let _ = this
@@ -26,14 +28,42 @@ crossIcon.onclick = function(){
 
 userHandler.addEventListener('click',function(){
     let event_ini = userDropDown.getAttribute('data-state')
-    if(event_ini === "clicked"){
-        userDropDown.setAttribute('data-state','unclicked')
-        userDropDown.removeAttribute('style')
-        return
+    if(!userDropDown.contains(event.target)){
+        if(event_ini === "clicked"){
+            userDropDown.setAttribute('data-state','unclicked')
+            userDropDown.removeAttribute('style')
+            return
+        }
     }
     if(event_ini === "unclicked"){
         userDropDown.setAttribute('data-state','clicked')
         userDropDown.style.cssText = "visibility: visible; opacity: 1"
         return
+    }
+})
+
+moreOptions.addEventListener('click',function(){
+    let event_ini = userDropDown.getAttribute('data-state')
+    if(!moreOptions.contains(event.target)){
+        if(event_ini === 'clicked'){
+            moreOptions.setAttribute('data-state','unclicked')
+            moreOptionDropDown.removeAttribute('style')
+            return
+        }
+    }
+    if(event_ini === 'unclicked'){
+        moreOptions.setAttribute('data-state','clicked')
+        moreOptionDropDown.style.cssText = 'visibility: visible; opacity: 1'
+    }
+})
+
+document.body.addEventListener('click',function(e){
+    if(!userHandler.contains(e.target)){
+        userDropDown.setAttribute('data-state','unclicked')
+        userDropDown.removeAttribute('style')
+    }
+    if(!moreOptions.contains(e.target)){
+        moreOptions.setAttribute('data-state','unclicked')
+        moreOptionDropDown.removeAttribute('style')
     }
 })

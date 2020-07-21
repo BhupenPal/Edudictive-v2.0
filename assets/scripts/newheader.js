@@ -5,6 +5,9 @@ let userDropDown = document.querySelector(".controlSettings")
 let userHandler = document.querySelector(".userHandler")
 let moreOptionDropDown = document.querySelector(".moreOptionDropDown")
 let moreOptions = document.querySelector(".moreOptions span")
+let hamBurgerIcon = document.querySelector(".hamBurgerIcon")
+let hamLine = document.querySelectorAll(".hamBurgerIcon .hamLine")
+let mobileMenu = document.querySelector(".mobileMenu")
 
 searchIcon.onclick = function(){
     let _ = this
@@ -66,4 +69,24 @@ document.body.addEventListener('click',function(e){
         moreOptions.setAttribute('data-state','unclicked')
         moreOptionDropDown.removeAttribute('style')
     }
+})
+
+// hamaction
+
+hamBurgerIcon.addEventListener('click',function(){
+    if(!hamBurgerIcon.hasAttribute('data-click')){
+        hamBurgerIcon.setAttribute('data-click','clicked')
+        hamLine[0].style.cssText = "transform: rotate(135deg); top: 0; width: 100%"
+        hamLine[1].style.cssText = "transform: scale(0); top: 0; width: 100%"
+        hamLine[2].style.cssText = "transform: rotate(-135deg); top: 0; width: 100%"
+        mobileMenu.style.cssText = "visibility: visible; opacity: 1; user-select: all"
+        return
+    } else {
+        hamBurgerIcon.removeAttribute('data-click')
+        for(let i=0; i<hamLine.length; i++){
+            hamLine[i].removeAttribute('style')
+        }
+        mobileMenu.removeAttribute('style')
+    }
+
 })

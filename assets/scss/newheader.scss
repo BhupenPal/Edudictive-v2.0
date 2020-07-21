@@ -305,10 +305,175 @@
                 }
             }
         }
+        @include media('<=sm'){
+            display: none;
+        }
     }
 
     .mobileSubHeader{
         display: none;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+        position: relative;
+
+        .logoContainer{
+            display: flex;
+            align-items: center;
+            img{
+                &:first-child{
+                    height: 2rem;
+                    width: 2rem;
+                }
+                &:last-child{
+                    height: 1.5rem;
+                }
+            }
+            
+            img+img{
+                margin: 0 0.6rem;
+            }
+        }
+
+        .hamBurgerIcon{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            height: 40px;
+            width: 40px;
+            .hamLine{
+                position: absolute;
+                height: 5px;
+                bottom: 0;
+                margin: auto;
+                border-radius: 5rem;
+                background-color: black;
+                transition: 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+                &:nth-child(1){
+                    top: -1rem;
+                    width: 100%;
+                }
+                &:nth-child(2){
+                    top: 0.3rem;
+                    width: 80%;
+                }
+                &:nth-child(3){
+                    top: 1.6rem;
+                    width: 60%;
+                }
+            }
+        }
+
+        .mobileMenu{
+            visibility: hidden;
+            opacity: 0;
+            user-select: none;
+            transition: 0.5s;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            justify-content: center;
+            top: 80px;
+            width: 100%;
+            left: 0;
+            background-color: white;
+            -webkit-box-shadow: 0 8px 6px -6px #00000029;
+            -moz-box-shadow: 0 8px 6px -6px #00000029;
+            box-shadow: 0 8px 6px -6px #00000029;
+
+            .mobileSearchContainer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem 0 0 0;
+
+                .mobile-search-input{
+                    display: flex;
+                    position: relative;
+                    justify-content: center;
+
+                    input{
+                        height: 50px;
+                        font: bold 1.2rem $font-primary;
+                        border-radius: 0.8rem;
+                        border: 1px solid #cccccc;
+                        width: 90vw;
+                        padding: 0 1rem 0 3rem;
+                        box-sizing: border-box;
+                    }
+
+                    img{
+                        position: absolute;
+                        left: 0.8rem;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        height: 1.4rem;
+                        width: 1.4rem;
+                    }
+                }
+            }
+
+            .mobileSubMenu{
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;
+            }
+
+            .linkContainer{
+                width: max-content;
+                box-sizing: border-box;
+                padding-left: 1rem;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    li{
+                        margin: 0.5rem;
+                        font-family: $font-primary;
+                        font-weight: bold;
+
+                        a, span{
+                            color: #535353;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            .userLogoContainer{
+                width: 50%;
+                display: flex;
+                box-sizing: border-box;
+                padding-top: 1rem;
+                justify-content: center;
+
+                .AccBorderDiv{
+                    width: max-content;
+                    padding: 2rem;
+                    box-shadow: 6px 6px 15px 5px #00000029;
+                    border-radius: 2rem;
+
+                    img{
+                        height: 4rem;
+                        width: 4rem;
+                        filter: invert(0.4);
+                    }
+                }
+            }
+        }
+
+        @include media('<=sm'){
+            display: flex;
+        }
+    }
+
+    @include media('<=sm'){
+        height: 80px;
     }
 }
 

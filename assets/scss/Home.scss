@@ -842,15 +842,19 @@
             padding: 2rem 1rem;
             margin: 4rem auto;
             overflow: hidden;
+            transition: 0.4s;
             display: flex;
 
             .review-card{
                 min-width: 45%;
                 height: max-content;
+                visibility: hidden;
+                opacity: 0;
                 margin: 0 2rem;
                 box-shadow: 6px 6px 15px #00000029;
                 border-radius: 3rem;
                 padding: 1rem;
+                transition: 0.4s;
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
@@ -918,6 +922,25 @@
              box-sizing: border-box;
              margin: 1rem 0;   
             }
+        }
+
+        .review-pointer{
+            display: flex;
+            justify-content: center;
+
+            .active-review-point{
+                width: 1.5rem;
+                background-color: #7a0edf;
+            }
+        }
+        .review-points{
+            height: 0.5rem;
+            width: 0.8rem;
+            margin: 0 0.1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: 0.4s;
+            background-color: #ccc;
         }
 
         @include media('<=sm') {
@@ -1197,4 +1220,8 @@
         width: 90vw !important;
         text-align: center;
     }
+}
+
+.vanish{
+    display: none !important;
 }

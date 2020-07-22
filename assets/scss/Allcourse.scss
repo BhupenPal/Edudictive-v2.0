@@ -23,28 +23,28 @@
 
         .wave.wave1{
             animation: animate 30s linear infinite;
-            z-index: 1000;
+            z-index: 5;
             opacity: 1;
             animation-delay: 0s;
             bottom: 0;
         }
         .wave.wave2{
             animation: animate2 15s linear infinite;
-            z-index: 999;
+            z-index: 4;
             opacity: 0.5;
             animation-delay: -5s;
             bottom: 10px;
         }
         .wave.wave3{
             animation: animate 15s linear infinite;
-            z-index: 998;
+            z-index: 3;
             opacity: 0.2;
             animation-delay: -2s;
             bottom: 15px;
         }
         .wave.wave4{
             animation: animate2 15s linear infinite;
-            z-index: 997;
+            z-index: 2;
             opacity: 0.7;
             animation-delay: -5s;
             bottom: 20px;
@@ -59,7 +59,7 @@
             margin: auto;
             height: min-content;
             color: #fff;
-            z-index: 1001;
+            z-index: 1;
             font-size: 3rem;
             font-family: $font-secondary;
         }

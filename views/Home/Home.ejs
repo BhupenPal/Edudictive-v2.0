@@ -20,8 +20,8 @@
         <h1 class="section-headline">Getting skilled has <br> never been easier</h1>
         <p>A one-stop skill development educational <br> platform for school and college students.</p>
         <div class="skill-section-btns">
-          <button onclick="LinkHandle('/courses')">All programs</button>
-          <button onclick="LinkHandle('/about-us')">Why Edudictive?</button>
+          <button onclick="LinkHandle('/search-courses')">All programs</button>
+          <button onclick="JumpTo('#why-edu')">Why Edudictive?</button>
         </div>
       </div>
       <img src="/assets/img/svgs/Homepage Hero.svg" alt="">
@@ -87,7 +87,7 @@
     </div>
     <!-- Edudictive-Section -->
     <div class="Edudictive-section">
-      <h1 class="section-headline">Why Edudictive ?</h1>
+      <h1 class="section-headline" id="why-edu">Why Edudictive ?</h1>
       <div class="edudictive-perks-wrapper">
         <div class="edudictive-perk">
           <img src="/assets/img/svgs/Practical Content.svg" alt="" class="perk-image">
@@ -202,11 +202,8 @@
     </div>
   </div>
   <%-include("../Components/Footer.ejs") %>
-  <script src="/assets/scripts/index.js"></script>
-  <script src="/assets/scripts/Home.js"></script>
-  <script src="/assets/scripts/lottie.js"></script>
-  <script src="/assets/js/courses.js"></script>
-  <script src="/assets/scripts/newheader.js"></script>
+  <script src="/assets/js/index.js"></script>
+  <script src="/assets/js/dependencies/lottie.js"></script>
 </body>
 
 </html>

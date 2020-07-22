@@ -156,7 +156,7 @@
                 <div class="program-struct-sub">
 
                     <% doc.Structure.map( (item, i) => { %>
-                    <button onclick="myFunction(this)" class="struct-dropbtn">
+                    <button onclick="StructureToggle(this)" class="struct-dropbtn">
                         <%= doc.TimeFrame %> <%= i + 1 %> - <%= item.Topic %>
                         <i class="fas fa-chevron-down"></i>
                     </button>
@@ -226,7 +226,7 @@
     </div>
 
     <%-include('../Components/Footer.ejs') %>
-    <script src="/assets/scripts/webDev.js"></script>
+    <script src="/assets/js/index.js"></script>
 
 </body>
 

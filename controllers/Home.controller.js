@@ -67,7 +67,7 @@ Router.post("/event-register", (req, res, next) => {
 Router.get("/course/:Key/:Name", (req, res, next) => {
     const { Key } = req.params;
     CourseModel.findOne({ Key }, (err, doc) => {
-        res.render("Home/Course", { doc });
+        res.render("Home/CoursePage", { doc });
     });
 });
 

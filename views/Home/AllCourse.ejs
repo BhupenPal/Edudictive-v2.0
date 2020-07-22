@@ -26,38 +26,29 @@
 
     <div class="CourseCardWrapper">
       <% for(let i = 0; i < doc.length; i++) { %>
-        <div id="CourseCard<%= i %>" class="course-card" data-value="<%= i %>">
-          <div class="date-wishlist"><span>Starting <%= doc[i].StartDate %></span><span><img
-                onclick="heartanimate(this)" src="/assets/images/svgs/heart.svg" alt=""></span></div>
-          <div class="course-name-wrapper">
-            <span class="course-name"><%= doc[i].Title %></span>
-            <span class="course-mode"><%= doc[i].Mode %> Training Program</span>
-          </div>
-          <div class="ratings">
-            <div class="rating-stars" data-rating="<%= doc[i].Rating %>">
-            </div>
-            <span><%= doc[i].Rating %> (<%= doc[i].Reviews.length %> Reviews)</span>
-          </div>
-          <div class="explore-course">
-            <button onclick="LinkHandle('/course/<%= doc[i].Key %>/<%= doc[i].Title %>')">Learn More</button>
-            <button onclick="LinkHandle('/course/<%= doc[i].Key %>/<%= doc[i].Title %>')">Register Now</button>
-          </div>
+      <div id="CourseCard<%= i %>" class="course-card" data-value="<%= i %>">
+        <div class="date-wishlist"><span>Starting <%= doc[i].StartDate %></span><span><img onclick="heartanimate(this)"
+              src="/assets/images/svgs/heart.svg" alt=""></span></div>
+        <div class="course-name-wrapper">
+          <span class="course-name"><%= doc[i].Title %></span>
+          <span class="course-mode"><%= doc[i].Mode %> Training Program</span>
         </div>
-        <% } %>
+        <div class="ratings">
+          <div class="rating-stars" data-rating="<%= doc[i].Rating %>">
+          </div>
+          <span><%= doc[i].Rating %> (<%= doc[i].Reviews.length %> Reviews)</span>
+        </div>
+        <div class="explore-course">
+          <button onclick="LinkHandle('/course/<%= doc[i].Key %>/<%= doc[i].Title %>')">Learn More</button>
+          <button onclick="LinkHandle('/course/<%= doc[i].Key %>/<%= doc[i].Title %>')">Register Now</button>
+        </div>
+      </div>
+      <% } %>
     </div>
   </div>
   <%-include("../Components/Footer.ejs") %>
-  <script src="/assets/scripts/index.js"></script>
-  <script>
-    const ScrollHandler = (ElemID) => {
-    let elem = document.querySelector(ElemID);
-    console.log(elem);
-    elem.scrollIntoView();
-  };
-  </script>
-  <script src="/assets/scripts/lottie.js"></script>
-  <script src="/assets/js/courses.js"></script>
-  <script src="/assets/scripts/newheader.js"></script>
+  <script src="/assets/js/index.js"></script>
+  <script src="/assets/js/dependecies/lottie.js"></script>
 </body>
 
 </html>

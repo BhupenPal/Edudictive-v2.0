@@ -1,68 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/all.min.css" />
-    <link rel="stylesheet" href="/assets/css/espForm.css" />
-    <link rel="stylesheet" href="/assets/css/index.css" />
-    <link rel="stylesheet" href="/assets/css/newheader.css">
-    <title>Edudictive | Student Partner Application</title>
-  </head>
-  <body>
-    <%-include('../Components/Header.ejs') %>
-    <div class="espForm-container">
-      <span class="espForm-Headings">Edudictive Student Partner</span>
-      <span class="espForm-Headings">Application Form</span>
-      <span class="espForm-Headings">Enter your personal details</span>
-      <div class="form-sub-container">
-        <form class="espform" method="POST">
-          <div class="form-part_primary">
-            <input type="text" placeholder="Full Name" name="fName" required />
-            <input type="text" placeholder="College Name" name="cName" required />
-            <div class="input-flexer">
-              <input type="hidden" name="country" id="countryId" value="IN"/>
-                <div class="styled-arrow">
-                  <select name="pState" class="states order-alpha" id="stateId" required data-state="closed">
-                    <option value="">Select State</option>
-                  </select>
-                  <img src="/assets/images/svgs/arrow-down.svg" class="down-chev-arrow">
-                </div>
-                <div class="styled-arrow">
-                  <select name="pCity" class="cities order-alpha" id="cityId" data-state="closed">
-                    <option value="">Select City</option>
-                  </select>
-                  <img src="/assets/images/svgs/arrow-down.svg" class="down-chev-arrow">
-                </div>
-              </div>
-              <input type="email" placeholder="Email Address" name="pEmail" required />
-                <input type="number" placeholder="Contact Number" name="ppNum" required />
-                <div class="styled-arrow">
-                  <select name="pAvailability" class="availability" data-state="closed">
-                    <option value="">Availability</option>
-                    <option value="3">3 Months</option>
-                  <option value="6">6 months</option>
-                </select>  
-                <img src="/assets/images/svgs/arrow-down.svg" class="down-chev-arrow">
-                </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/all.min.css" />
+  <link rel="stylesheet" href="/assets/css/espForm.css" />
+  <link rel="stylesheet" href="/assets/css/index.css" />
+  <link rel="stylesheet" href="/assets/css/newheader.css">
+  <title>Edudictive | Student Partner Application</title>
+</head>
+
+<body>
+  <%-include('../Components/Header.ejs') %>
+  <div class="espForm-container">
+    <span class="espForm-Headings">Edudictive Student Partner</span>
+    <span class="espForm-Headings">Application Form</span>
+    <span class="espForm-Headings">Enter your personal details</span>
+    <div class="form-sub-container">
+      <form class="espform" method="POST">
+        <div class="form-part_primary">
+          <input type="text" placeholder="Full Name" name="FullName" required />
+          <input type="text" placeholder="College Name" name="College Name" required />
+            <div class="styled-arrow">
+              <select name="State" class="availability" id="stateId" required data-state="closed">
+                <option value="" selected disabled>Select State</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                <option value="Daman and Diu">Daman and Diu</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Puducherry">Puducherry</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+              </select>
+              <img src="/assets/images/svgs/arrow-down.svg" class="down-chev-arrow">
           </div>
-          <div class="form-part_secondary">
-              <h5 class="question-head">Answer the following questions</h5>
-              <h5 class ="question-1">What makes you fit to be an Edudictive Student Partner</h5>
-              <textarea name="Q1" placeholder="Enter your answer in not more than 700 words" rows="4" cols="50"></textarea>
-              <h5 class ="question-1">How would you host an event organized by Edudictive at your institution</h5>
-              <textarea name="Q2" placeholder="Enter your answer in not more than 1000 words" rows="4" cols="50"></textarea>
-              <h5 class ="question-1">Brief your relevant past experiences(if any)</h5>
-              <textarea name="Q3" placeholder="Enter your answer here" rows="4" cols="50"></textarea>
+          <input type="email" placeholder="Email Address" name="Email" required />
+          <input type="number" placeholder="Contact Number" name="Phone" required />
+          <div class="styled-arrow">
+            <select name="Availability" class="availability" data-state="closed">
+              <option value="">Availability</option>
+              <option value="3">3 Months</option>
+              <option value="6">6 months</option>
+            </select>
+            <img src="/assets/images/svgs/arrow-down.svg" class="down-chev-arrow">
           </div>
-          <div class="form-submit">
-            <button class="sub-btn" type="submit"> Submit </button>
-          </div>
-        </form>
-      </div>
+        </div>
+        <div class="form-part_secondary">
+          <h5 class="question-head">Answer the following questions</h5>
+          <h5 class="question-1">What makes you fit to be an Edudictive Student Partner</h5>
+          <textarea name="Ques1" placeholder="Enter your answer in not more than 700 words" rows="4" cols="50"></textarea>
+          <h5 class="question-1">How would you host an event organized by Edudictive at your institution</h5>
+          <textarea name="Ques2" placeholder="Enter your answer in not more than 1000 words" rows="4" cols="50"></textarea>
+          <h5 class="question-1">Brief your relevant past experiences(if any)</h5>
+          <textarea name="Ques3" placeholder="Enter your answer here" rows="4" cols="50"></textarea>
+        </div>
+        <div class="form-submit">
+          <button class="sub-btn" type="submit"> Submit </button>
+        </div>
+      </form>
     </div>
-    <%-include('../Components/Footer.ejs') %>
-    <script src="/assets/scripts/index.js"></script>
-    <script src="/assets/scripts/esForm..js"></script>
-  </body>
+  </div>
+  <%-include('../Components/Footer.ejs') %>
+  <script src="/assets/js/index.js"></script>
+</body>
+
 </html>

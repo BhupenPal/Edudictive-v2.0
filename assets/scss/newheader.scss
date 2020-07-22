@@ -32,14 +32,23 @@
                 img{
                     &:first-child{
                         height: 3rem;
+                        @include media('>sm','<=lg'){
+                            height: 2rem;
+                        }
                     }
                     &:last-child{
                         height: 1.8rem;
+                        @include media('>sm','<=lg'){
+                         height: 1.2rem;   
+                        }
                     }
                 }
         
                 img+img{
                     margin: 0.8rem;
+                    @include media('>sm','<=lg'){
+                     margin: 0.4rem;       
+                    }
                 }
             }
             .menuContainer{
@@ -56,6 +65,13 @@
                             font-family: $font-primary;
                             font-weight: bolder;
                             font-size: 1.1rem;
+
+                            @include media('>sm','<=xl'){
+                                font-size: 1rem;
+                            }
+                        }
+                        @include media('>sm','<=xl'){
+                            margin: 0 0.6rem;   
                         }
                     }
                     span{
@@ -70,6 +86,12 @@
                             span{
                                 margin: 0;
                             }
+                            @include media('>sm','<=xxl'){
+                                font-size: 1rem;
+                            }
+                        }
+                        @include media('>sm','<=xxl'){
+                            margin: 0 0.6rem;   
                         }
                     }
                 }
@@ -119,6 +141,9 @@
                             background-color: #e9e9e9;
                         }
                     }
+                }
+                @include media('>sm','<=xxl'){
+                 width: max-content;           
                 }
             }
         }
@@ -174,12 +199,17 @@
                 justify-content: center;
                 position: relative;
                 cursor: pointer;
+                user-select: none;
 
                 .namedHandler{
                     padding: 0;
                     font-family: $font-primary;
                     font-weight: bold;
                     font-size: 1.2rem;
+
+                    @include media('>lg','<ib'){
+                        font-size: 1rem;
+                    }
                 }
 
                 .slash{
@@ -303,10 +333,27 @@
                         margin-top: 10px;
                     }
                 }
+                @include media('<xl'){
+                    cursor: default !important;
+                }
+            }
+            @include media('>sm','<=lg'){
+             display: none;               
+            }
+            @include media('>lg','<=xl'){
+                margin-right: 2rem;
             }
         }
         @include media('<=sm'){
             display: none;
+        }
+        @include media('>sm','<=lg'){
+            width: 100%;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+        @include media('>lg','<=xxl'){
+            width: 95%;
         }
     }
 
@@ -537,7 +584,7 @@
         }
     }
 
-    @include media('<=sm'){
+    @include media('<=lg'){
         height: 80px;
     }
 }
@@ -577,6 +624,9 @@
         animation: paddingAnimation 0.8s forwards;
         width: 280px !important;
         transition: 0.5s;
+        @include media('>lg','<ib'){
+            width: 13rem !important;
+        }
     }
 }
 

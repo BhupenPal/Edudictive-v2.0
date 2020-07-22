@@ -8,16 +8,53 @@
   <link rel="stylesheet" href="/assets/css/Home.css" />
   <link rel="stylesheet" href="/assets/css/all.min.css" />
   <link rel="stylesheet" href="/assets/css/newheader.css">
+  <link rel="stylesheet" href="/assets/css/Allcourse.css">
   <link rel="icon" href="/assets/img/icons/Logo.svg" />
   <title>Edudictive | Search courses</title>
 </head>
 
 <body>
   <%-include("../Components/Header.ejs") %>
+  <div class="allCourseWrapper">
+    <section>
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+      <div class="wave wave4"></div>
+      <h1 class="PageHeadline">Training Programs @ Edudictive</h1>
+    </section>
 
+    <div class="CourseCardWrapper">
+      <% for(let i = 0; i < doc.length; i++) { %>
+        <div id="CourseCard<%= i %>" class="course-card" data-value="<%= i %>">
+          <div class="date-wishlist"><span>Starting <%= doc[i].StartDate %></span><span><img
+                onclick="heartanimate(this)" src="/assets/images/svgs/heart.svg" alt=""></span></div>
+          <div class="course-name-wrapper">
+            <span class="course-name"><%= doc[i].Title %></span>
+            <span class="course-mode"><%= doc[i].Mode %> Training Program</span>
+          </div>
+          <div class="ratings">
+            <div class="rating-stars" data-rating="<%= doc[i].Rating %>">
+            </div>
+            <span><%= doc[i].Rating %> (<%= doc[i].Reviews.length %> Reviews)</span>
+          </div>
+          <div class="explore-course">
+            <button onclick="LinkHandle('/course/<%= doc[i].Key %>/<%= doc[i].Title %>')">Learn More</button>
+            <button onclick="LinkHandle('/course/<%= doc[i].Key %>/<%= doc[i].Title %>')">Register Now</button>
+          </div>
+        </div>
+        <% } %>
+    </div>
+  </div>
   <%-include("../Components/Footer.ejs") %>
   <script src="/assets/scripts/index.js"></script>
-  <script src="/assets/scripts/Home.js"></script>
+  <script>
+    const ScrollHandler = (ElemID) => {
+    let elem = document.querySelector(ElemID);
+    console.log(elem);
+    elem.scrollIntoView();
+  };
+  </script>
   <script src="/assets/scripts/lottie.js"></script>
   <script src="/assets/js/courses.js"></script>
   <script src="/assets/scripts/newheader.js"></script>

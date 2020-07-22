@@ -68,7 +68,7 @@ function another(){
                 s_control[nextsl].classList.add('active-slide')
         }
 
-// interval = setInterval(another, 5000)
+interval = setInterval(another, 5000)
 
 
 //learn more and register button

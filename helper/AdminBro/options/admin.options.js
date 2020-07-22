@@ -3,6 +3,7 @@ const AdminBro = require('admin-bro')
 //Course Options
 const CourseOptions = require("../resources/admin.courses");
 const CourseRegOptions = require("../resources/admin.courseReg");
+const ReviewOptions = require("../resources/admin.Reviews");
 
 //Events Options
 const EventOptions = require("../resources/admin.events");
@@ -27,6 +28,7 @@ const options = {
     resources: [
         CourseOptions,
         CourseRegOptions,
+        ReviewOptions,
         EventOptions,
         EventRegOptions,
         ESPRegOptions,

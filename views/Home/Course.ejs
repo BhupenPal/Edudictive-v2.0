@@ -157,7 +157,7 @@
 
                     <% doc.Structure.map( (item, i) => { %>
                     <button onclick="myFunction(this)" class="struct-dropbtn">
-                        <%= doc.TimeFrame %> <%= i + 1 %> - <%= item.Topic %> 
+                        <%= doc.TimeFrame %> <%= i + 1 %> - <%= item.Topic %>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="struct-content">
@@ -186,38 +186,38 @@
 
         <!-- third division starts -->
 
-    <!-- Reviews Section -->
-    <% if (doc.Reviews.length > 3) { %>
+        <!-- Reviews Section -->
+        <% if (doc.Reviews.length > 3) { %>
         <div class="reviews-section">
-          <h1 class="section-headline" style="text-align: left;">Our reviews speak for themselves</h1>
-          <div class="review-card-container">
-            <% for(let i = 0; i < doc.Reviews.length; i++) { %>
-            <div class="review-card">
-              <div class="rating-row">
-                <img src="/assets/images/svgs/filled_star.svg" alt="">
-                <img src="/assets/images/svgs/filled_star.svg" alt="">
-                <img src="/assets/images/svgs/filled_star.svg" alt="">
-                <img src="/assets/images/svgs/filled_star.svg" alt="">
-                <img src="/assets/images/svgs/star.svg" alt="">
-              </div>
-              <h3><%= rev[i].Title %></h3>
-              <!-- Very informative and well designed course ! -->
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                sed diam nonumy eirmod temporinvidunt ut labore et dolore
-                magna erat, sed diam voluptua. At vero eos et accusams
-                etjusto duo ea rebum.</p>
-              <div class="review-by">
-                <h3>Sandeep Singh, DTU 2nd Year Student</h3>
-                <p>Attended <%= rev[i].Title %></p>
-              </div>
+            <h1 class="section-headline" style="text-align: left;">Our reviews speak for themselves</h1>
+            <div class="review-card-container">
+                <% for(let i = 0; i < doc.Reviews.length; i++) { %>
+                <div class="review-card">
+                    <div class="rating-row">
+                        <img src="/assets/images/svgs/filled_star.svg" alt="">
+                        <img src="/assets/images/svgs/filled_star.svg" alt="">
+                        <img src="/assets/images/svgs/filled_star.svg" alt="">
+                        <img src="/assets/images/svgs/filled_star.svg" alt="">
+                        <img src="/assets/images/svgs/star.svg" alt="">
+                    </div>
+                    <h3><%= doc[i].Title %></h3>
+                    <!-- Very informative and well designed course ! -->
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                        sed diam nonumy eirmod temporinvidunt ut labore et dolore
+                        magna erat, sed diam voluptua. At vero eos et accusams
+                        etjusto duo ea rebum.</p>
+                    <div class="review-by">
+                        <h3>Sandeep Singh, DTU 2nd Year Student</h3>
+                        <p>Attended <%= doc[i].Title %></p>
+                    </div>
+                </div>
+                <% } %>
             </div>
-            <% } %>
-          </div>
-          <div class="review-pointer">
-            <% for(let i=0; i<(rev.length)/2; i++) { %>
-            <div class="review-points"></div>
-            <% } %>
-          </div>
+            <div class="review-pointer">
+                <% for(let i=0; i<(doc.Reviews.length)/2; i++) { %>
+                <div class="review-points"></div>
+                <% } %>
+            </div>
         </div>
         <% } %>
         <br /><br /><br /><br />

@@ -1,7 +1,7 @@
 .camp-page-container {
     width: 100%;
     height: 90vh;
-    background: url(../images/svgs/campagebg.svg);
+    background: url(../img/svgs/camp-bg.svg);
     box-shadow: 6px 6px 25px #00000029;
     background-size: cover;
     padding-top: 125px;

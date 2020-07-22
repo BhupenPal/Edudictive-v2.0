@@ -2,7 +2,7 @@
 
 function myFunction(ele) {
   ele.nextElementSibling.classList.toggle("show")
-  document.querySelector("#change-icon").classList.toggle("fa-rotate-180");
+  ele.children[0].classList.toggle("fa-rotate-180");
 }
 
 // ---------------------slider------------------------

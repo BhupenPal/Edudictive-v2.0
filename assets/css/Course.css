@@ -195,6 +195,7 @@
 
 #buy-btn {
     background-color: #00DC67;
+    margin-bottom: 15px;
     color: white;
 }
 
@@ -281,6 +282,10 @@
     font: Bold 32px Proxima-Nova;
     color: #222222;
     opacity: 0.75;
+}
+
+.struct-dropbtn:active {
+    transform: scale(0.98);
 }
 
 .struct-content {

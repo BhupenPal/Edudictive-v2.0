@@ -143,11 +143,12 @@
       </div>
     </div>
     <!-- Reviews Section -->
+    <% if (rev.length > 3) { %>
     <div class="reviews-section">
       <h1 class="section-headline">Our reviews speak for themselves</h1>
       <p class="section-subhead">We believe in delivering the best quality - plain and simple</p>
       <div class="review-card-container">
-        <% for(let i=0; i<doc.length; i++) { %>
+        <% for(let i = 0; i < rev.length; i++) { %>
         <div class="review-card">
           <div class="rating-row">
             <img src="/assets/images/svgs/filled_star.svg" alt="">
@@ -156,7 +157,7 @@
             <img src="/assets/images/svgs/filled_star.svg" alt="">
             <img src="/assets/images/svgs/star.svg" alt="">
           </div>
-          <h3><%= doc[i].Title %></h3>
+          <h3><%= rev[i].Title %></h3>
           <!-- Very informative and well designed course ! -->
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
             sed diam nonumy eirmod temporinvidunt ut labore et dolore
@@ -164,17 +165,18 @@
             etjusto duo ea rebum.</p>
           <div class="review-by">
             <h3>Sandeep Singh, DTU 2nd Year Student</h3>
-            <p>Attended <%= doc[i].Title %></p>
+            <p>Attended <%= rev[i].Title %></p>
           </div>
         </div>
         <% } %>
       </div>
       <div class="review-pointer">
-        <% for(let i=0; i<(doc.length)/2; i++) { %>
+        <% for(let i=0; i<(rev.length)/2; i++) { %>
         <div class="review-points"></div>
         <% } %>
       </div>
     </div>
+    <% } %>
     <!-- Blog Section -->
     <div class="blog-section">
       <div class="blog-box">

@@ -4,12 +4,13 @@ const Router = express.Router();
 const ContactModel = require("../models/Contact.model");
 const ESPModel = require("../models/ESP.model");
 const CourseModel = require("../models/Course.model");
+const ReviewModel = require("../models/Review.model");
 const EventModel = require("../models/Event.model");
 
-Router.get("/", (req, res, next) => {
-    CourseModel.find( (err, doc) => {
-        res.render("Home/Home", { doc });
-    })
+Router.get("/", async (req, res, next) => {
+    const doc = await CourseModel.find({}).limit(10).exec()
+    const rev = await ReviewModel.find({}).limit(10).exec()
+    res.render("Home/Home", { doc, rev })
 });
 
 Router.get("/programs/schools", (req, res, next) => {
@@ -37,7 +38,7 @@ Router.get("/contact-us", (req, res, next) => {
     res.render("Home/Contact");
 });
 
-Router.get("/privacy-policy",(req,res,next)=>{
+Router.get("/privacy-policy", (req, res, next) => {
     res.render("Home/Privacy-Policy")
 });
 
@@ -50,10 +51,10 @@ Router.post("/contact-us", (req, res, next) => {
     });
 });
 
-Router.post("/event-register",(req,res,next)=>{
-    new EventModel(req.body).save((err)=>{
-        if(err){            
-            res.status(400).json({'Error':err})
+Router.post("/event-register", (req, res, next) => {
+    new EventModel(req.body).save((err) => {
+        if (err) {
+            res.status(400).json({ 'Error': err })
         }
         res.send('works!')
     })
@@ -65,6 +66,12 @@ Router.get("/course/:Key/:Name", (req, res, next) => {
         res.render("Home/Course", { doc });
     });
 });
+
+Router.get("/search-courses", (req, res, next) => {
+    CourseModel.find({}, (err, doc) => {
+        res.render('Home/AllCourse', { doc })
+    })
+})
 
 Router.get("/edudictive-student-partner", (req, res, next) => {
     res.render("Home/StudentPartner");

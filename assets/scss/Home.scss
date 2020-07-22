@@ -285,6 +285,9 @@
                     align-items: center;
                     height: 40px;
                     span{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         &:first-child{
                             font-weight: 100;
                             font-size: 1.2rem;
@@ -295,7 +298,8 @@
                         }
 
                         img{
-                            width: 2rem;
+                            width: 2.2rem;
+                            height: 2.2rem;
                             transition: 0.2s;
                             cursor: pointer;
                             @include media('<=xs') {
@@ -307,14 +311,14 @@
                             }
 
                             &:active{
-                                transform: scale(1.2);
+                                transform: scale(1.1);
                             }
                         }
 
                         lottie-player{
                             cursor: pointer;
-                            width: 2.5rem;
-                            height: 2.5rem;
+                            width: 2.2rem;
+                            height: 2.2rem;
                             transition: 0.2s;
                             @include media('<=xs') {
                                 width: 1.5rem;

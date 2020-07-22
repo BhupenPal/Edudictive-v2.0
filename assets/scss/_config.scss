@@ -200,6 +200,7 @@ $screen-lg: 'only screen and (max-width: 1199px)';
 $screen-md: 'only screen and (max-width: 991px)';
 $screen-sm: 'only screen and (max-width: 767px)';
 $screen-xs: 'only screen and (max-width: 575px)';
+$screen-sp: 'only screen and (max-width: 400px)';
 
 $breakpoints: (
   xxl: 1812px,
@@ -208,7 +209,8 @@ $breakpoints: (
   lg: 1199px,
   md: 991px,
   sm: 767px,
-  xs: 575px
+  xs: 575px,
+  sp: 400px
 );
 
 // Arrays

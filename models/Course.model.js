@@ -85,13 +85,18 @@ const courseSchema = new mongoose.Schema({
     },
     Reviews: [{
         UserID: {
-            type: mongoose.Schema.ObjectId
+            type: mongoose.Schema.ObjectId,
+            required: true
         },
         Name: {
             type: String,
             required: true
         },
         College: {
+            type: String,
+            required: true
+        },
+        Titile: {
             type: String,
             required: true
         },

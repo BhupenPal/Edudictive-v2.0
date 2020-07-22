@@ -1,291 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/index.css" />
-    <link rel="stylesheet" href="/assets/css/Schools.css" />
-    <link rel="stylesheet" href="/assets/css/all.min.css" />
-    <title>Edudictive | Schools</title>
-    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/index.css" />
+  <link rel="stylesheet" href="/assets/css/Schools.css" />
+  <link rel="stylesheet" href="/assets/css/all.min.css" />
+  <title>Edudictive | Schools</title>
+  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
   <%-include('../Components/Header.ejs') %>
-    <!-- first division -->
-    <div class="school-container">
-      <div class="edu-for-sch-written">
-        <div class="headline_wrap">
-          <div class="headline_div">
-            <div class="edudictive-for">
-              <img src="/assets/images/svgs/logo_written.svg" />
-              <h2>for</h2>
-            </div>
-            <h1 class="tyofinsti">Schools</h1>
+  <!-- first division -->
+  <div class="school-container">
+    <div class="edu-for-sch-written">
+      <div class="headline_wrap">
+        <div class="headline_div">
+          <div class="edudictive-for">
+            <img src="/assets/img/icons/Logo Font Only.svg" />
+            <h2>for</h2>
           </div>
-          <img class="illust-school" src="/assets/images/svgs/school-hero.svg">
+          <h1 class="tyofinsti">Schools</h1>
         </div>
-        <div class="para-contain">
-          <p class="para">
-            School students can benefit from our specially curated courses that are designed specifically as per their requirements. 
-            More than 1500 Students have already benefitted from our programme and we believe  A skilled student would not only groom himself 
-            rather he would help the school groom itself as well.
-          </p>
-          <div class="edu-for-sch-buttons">
-            <button class="view-programs">View Programs</button>
-            <button class="school-plans">School Plans</button>
-          </div>
-        </div>
+        <img class="illust-school" src="/assets/img/svgs/school-hero.svg">
       </div>
-
-      <!-- second division -->
-
-      <div class="heading-data">
-        <h1 class="headline">
-          What do school students get
-        </h1>
-        <p class="head-text">
-          Students can attain the experience in the skill based learning which is highly required in various industrial domains.
+      <div class="para-contain">
+        <p class="para">
+          School students can benefit from our specially curated courses that are designed specifically as per their
+          requirements.
+          More than 1500 Students have already benefitted from our programme and we believe A skilled student would not
+          only groom himself
+          rather he would help the school groom itself as well.
         </p>
-      </div>
-
-      <div class="illus-container">
-        <div class="illus">
-          <div class="illus-required">
-            <img src="/assets/images/svgs/education-school.svg">
-          </div>
-          <div class="illus-data">
-            <p class="illus-tag">
-              A training program, not a workshop !
-            </p>
-            <p class="illus-content">
-              Unlike many workshops, we provide complete training programs along
-              with dedicated hands-on sessions, AMA sessions to clear the
-              slightest of your doubts and help you master the skill.
-            </p>
-          </div>
-        </div>
-
-        <div class="illus">
-          <div class="illus-required">
-            <img src="/assets/images/svgs/browsing-school.svg">
-          </div>
-          <div class="illus-data">
-            <p class="illus-tag">
-              Various projects to choose from
-            </p>
-            <p class="illus-content">
-              The students can choose from various independent projects for
-              showcasing their skills in respective domains.
-            </p>
-          </div>
+        <div class="edu-for-sch-buttons">
+          <button class="view-programs">View Programs</button>
+          <button class="school-plans">School Plans</button>
         </div>
       </div>
-
-      <div class="illus-container">
-        <div class="illus">
-          <div class="illus-required">
-            <img src="/assets/images/svgs/Certificate-school.svg">
-          </div>
-          <div class="illus-data">
-            <p class="illus-tag">
-              Certificate on Completion
-            </p>
-            <p class="illus-content">
-              Students get certificates of completion which they can present
-              to potential clients and employers.
-            </p>
-          </div>
-        </div>
-        <div class="illus">
-          <div class="illus-required">
-            <img src="/assets/images/svgs/entrepreneur-school.svg">
-          </div>
-          <div class="illus-data">
-            <p class="illus-tag">
-              Get creative & entrepreneurial mindset
-            </p>
-            <p class="illus-content">
-              Your ideas define your creativity. But we provide you help with
-              entrepreneurial methods for showcasing and pitching ideas,
-              eventually making a successful business.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- COURSES DIVISION -->
-      <div class="sub-div-a">
-        <h1>Training Programs for Students</h1>
-        <p>
-          Don’t just groom notebooks, groom yourself. <br>
-          Start developing skills, It will be a help itself. 
-        </p>
-      </div>
-      <%-include("../Components/Courses.ejs") %> 
-
-      <!-- third divivsion -->
-
-      <div class="sub-div-a">
-        <h1>Exclusive long-term plans for schools</h1>
-        <p>
-          The perks involved in our long term plan are....
-        </p>
-      </div>
-
-      <div class="sub-div-b">
-        <div class="div1">
-          <img src="/assets/images/svgs/005-browsing.svg" alt="" />
-          <h4>Easy Online Access</h4>
-          <p>
-            You can easily reach out to our website or email at any hour of the day. We are there for you. 
-          </p>
-        </div>
-
-        <div class="div1">
-          <img src="/assets/images/svgs/003-lightbulb.svg" alt="" />
-          <h4>Interesting projects in each domain</h4>
-          <p>
-            Nobody likes a boring atmosphere, we promise you won’t get bored for even a second in our premises. You’ll learn something new everyday. 
-          </p>
-        </div>
-      </div>
-
-      <div class="sub-div-b">
-        <div class="div1">
-          <img src="/assets/images/svgs/004-speech-bubble.svg" alt="" />
-          <h4>AMA and Discussion Sessions</h4>
-          <p>
-            Our Interactive sessions are the ones that makes us unique. Your opinion and thoughts play a very vital role in framing your personality. 
-          </p>
-        </div>
-
-        <div class="div1">
-          <img src="/assets/images/svgs/001-timetable.svg" alt="" />
-          <h4>Flexible Deadlines</h4>
-          <p>
-            Although, we don’t promote negligence in submission, but the deadlines are completely based on everyone’s comfort zone.
-          </p>
-        </div>
-      </div>
-
-      <!-- fourth division -->
-
-      <div class="all-camps-det">
-        <div class="camp camp-summer">
-          <img src="/assets/images/svgs/001-sunny.svg" alt="" />
-          <h2>Summer Camp</h2>
-          <p class="inr">INR 4999</p>
-          <p class="onward">onwards</p>
-          <p class="begin-date">Begins May 2020</p>
-          <div class="cam-det">
-            <ul>
-              <li>
-                <img src="/assets/images/svgs/tick.svg" alt="" /> Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod.
-              </li>
-              <li>
-                <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod.
-              </li>
-              <li>
-                <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod.
-              </li>
-              <li id="cross">
-                <img src="/assets/images/svgs/cancel.svg" alt="" />Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod.
-              </li>
-              <li id="cross">
-                <img src="/assets/images/svgs/cancel.svg" alt="" />Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod.
-              </li>
-            </ul>
-            <button class="subscribe">Subscribe Now</button>
-          </div>
-        </div>
-        <div class="camp camp-winter">
-          <img src="/assets/images/svgs/winter.svg" alt="" />
-          <h2>Winter Camp</h2>
-          <p class="inr">INR 4999</p>
-          <p class="onward">onwards</p>
-          <p class="begin-date">Begins December 2020</p>
-          <div class="cam-det">
-            <ul>
-              <li>
-                <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod.
-              </li>
-              <li>
-                <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod.
-              </li>
-              <li>
-                <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod.
-              </li>
-              <li id="cross">
-                <img src="/assets/images/svgs/cancel.svg" alt="" />Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod.
-              </li>
-              <li id="cross">
-                <img src="/assets/images/svgs/cancel.svg" alt="" />Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod.
-              </li>
-            </ul>
-            <button class="subscribe">Subscribe Now</button>
-          </div>
-        </div>
-        <div class="camp camp-skillowl">
-          <img src="/assets/images/svgs/Skillowl.svg" alt="" />
-          <h2>SkillOwl Labs</h2>
-          <p class="inr">INR 6999</p>
-          <p class="onward">onwards</p>
-          <p class="begin-date">All-year program</p>
-          <div class="cam-det">
-            <ul>
-              <li>
-                <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod.
-              </li>
-              <li>
-                <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod.
-              </li>
-              <li>
-                <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod.
-              </li>
-              <li>
-                <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod.
-              </li>
-              <li>
-                <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod.
-              </li>
-            </ul>
-            <button class="subscribe">Subscribe Now</button>
-          </div>
-        </div>
-      </div>
-      <%-include('../Components/ContactForm.ejs') %>
     </div>
-    <%-include('../Components/Footer.ejs') %>
-    <script src="/assets/scripts/index.js"></script>
-  </body>
+
+    <!-- second division -->
+
+    <div class="heading-data">
+      <h1 class="headline">
+        What do school students get
+      </h1>
+      <p class="head-text">
+        Students can attain the experience in the skill based learning which is highly required in various industrial
+        domains.
+      </p>
+    </div>
+
+    <div class="illus-container">
+      <div class="illus">
+        <div class="illus-required">
+          <img src="/assets/img/svgs/school-teaching.svg">
+        </div>
+        <div class="illus-data">
+          <p class="illus-tag">
+            A training program, not a workshop !
+          </p>
+          <p class="illus-content">
+            Unlike many workshops, we provide complete training programs along
+            with dedicated hands-on sessions, AMA sessions to clear the
+            slightest of your doubts and help you master the skill.
+          </p>
+        </div>
+      </div>
+
+      <div class="illus">
+        <div class="illus-required">
+          <img src="/assets/img/svgs/school-browsing.svg">
+        </div>
+        <div class="illus-data">
+          <p class="illus-tag">
+            Various projects to choose from
+          </p>
+          <p class="illus-content">
+            The students can choose from various independent projects for
+            showcasing their skills in respective domains.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="illus-container">
+      <div class="illus">
+        <div class="illus-required">
+          <img src="/assets/img/svgs/school-certificate.svg">
+        </div>
+        <div class="illus-data">
+          <p class="illus-tag">
+            Certificate on Completion
+          </p>
+          <p class="illus-content">
+            Students get certificates of completion which they can present
+            to potential clients and employers.
+          </p>
+        </div>
+      </div>
+      <div class="illus">
+        <div class="illus-required">
+          <img src="/assets/img/svgs/school-entrepreneur.svg">
+        </div>
+        <div class="illus-data">
+          <p class="illus-tag">
+            Get creative & entrepreneurial mindset
+          </p>
+          <p class="illus-content">
+            Your ideas define your creativity. But we provide you help with
+            entrepreneurial methods for showcasing and pitching ideas,
+            eventually making a successful business.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <% if (doc.length >= 1) { %>
+    <div class="sub-div-a">
+      <h1>Training Programs for Students</h1>
+      <p>
+        Don’t just groom notebooks, groom yourself. <br>
+        Start developing skills, It will be a help itself.
+      </p>
+    </div>
+    <div class="program-section">
+      <div class="course-wrapper">
+        <% for(let i = 0; i < doc.length; i++) { %>
+        <div id="CourseCard<%= i %>" class="course-card" data-value="<%= i %>">
+          <div class="date-wishlist"><span>Starting <%= doc[i].StartDate %></span><span><img
+                onclick="heartanimate(this)" src="/assets/images/svgs/heart.svg" alt=""></span></div>
+          <div class="course-name-wrapper">
+            <span class="course-name"><%= doc[i].Title %></span>
+            <span class="course-mode"><%= doc[i].Mode %> Training Program</span>
+          </div>
+          <div class="ratings">
+            <div class="rating-stars" data-rating="<%= doc[i].Rating %>">
+            </div>
+            <span><%= doc[i].Rating %> (<%= doc[i].Reviews.length %> Reviews)</span>
+          </div>
+          <div class="explore-course">
+            <button onclick="LinkHandle('/course/<%= doc[i].Key %>/<%= doc[i].Title %>')">Learn More</button>
+            <button onclick="LinkHandle('/course/<%= doc[i].Key %>/<%= doc[i].Title %>')">Register Now</button>
+          </div>
+        </div>
+        <% } %>
+        <div class="extra-space" data-value="10"></div>
+      </div>
+      <div class="program-section-btns">
+        <button onclick="slider(this)"><i class="fa fa-chevron-left"></i></button>
+        <button onclick="slider(this)"><i class="fa fa-chevron-right"></i></button>
+      </div>
+      <div class="position-points">
+        <% for(let i=0; i<10; i++) { %>
+        <div class="course-pointer"></div>
+        <% } %>
+      </div>
+    </div>
+    <% } %>
+
+    <!-- third divivsion -->
+
+    <div class="sub-div-a">
+      <h1>Exclusive long-term plans for schools</h1>
+      <p>
+        The perks involved in our long term plan are....
+      </p>
+    </div>
+
+    <div class="sub-div-b">
+      <div class="div1">
+        <img src="/assets/img/svgs/about-browsing guy.svg" alt="" />
+        <h4>Easy Online Access</h4>
+        <p>
+          You can easily reach out to our website or email at any hour of the day. We are there for you.
+        </p>
+      </div>
+
+      <div class="div1">
+        <img src="/assets/img/svgs/about-bulb.svg" alt="" />
+        <h4>Interesting projects in each domain</h4>
+        <p>
+          Nobody likes a boring atmosphere, we promise you won’t get bored for even a second in our premises. You’ll
+          learn something new everyday.
+        </p>
+      </div>
+    </div>
+
+    <div class="sub-div-b">
+      <div class="div1">
+        <img src="/assets/img/svgs/about-ama.svg" alt="" />
+        <h4>AMA and Discussion Sessions</h4>
+        <p>
+          Our Interactive sessions are the ones that makes us unique. Your opinion and thoughts play a very vital role
+          in framing your personality.
+        </p>
+      </div>
+
+      <div class="div1">
+        <img src="/assets/img/svgs/about-timetable.svg" alt="" />
+        <h4>Flexible Deadlines</h4>
+        <p>
+          Although, we don’t promote negligence in submission, but the deadlines are completely based on everyone’s
+          comfort zone.
+        </p>
+      </div>
+    </div>
+
+    <!-- fourth division -->
+
+    <!-- <div class="all-camps-det">
+      <div class="camp camp-summer">
+        <img src="/assets/img/svgs/sun.svg" alt="" />
+        <h2>Summer Camp</h2>
+        <p class="inr">INR 4999</p>
+        <p class="onward">onwards</p>
+        <p class="begin-date">Begins May 2020</p>
+        <div class="cam-det">
+          <ul>
+            <li>
+              <img src="/assets/images/svgs/tick.svg" alt="" /> Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod.
+            </li>
+            <li>
+              <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod.
+            </li>
+            <li>
+              <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod.
+            </li>
+            <li id="cross">
+              <img src="/assets/images/svgs/cancel.svg" alt="" />Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod.
+            </li>
+            <li id="cross">
+              <img src="/assets/images/svgs/cancel.svg" alt="" />Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod.
+            </li>
+          </ul>
+          <button class="subscribe">Subscribe Now</button>
+        </div>
+      </div>
+      <div class="camp camp-winter">
+        <img src="/assets/img/svgs/snow-flake.svg" alt="" />
+        <h2>Winter Camp</h2>
+        <p class="inr">INR 4999</p>
+        <p class="onward">onwards</p>
+        <p class="begin-date">Begins December 2020</p>
+        <div class="cam-det">
+          <ul>
+            <li>
+              <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod.
+            </li>
+            <li>
+              <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod.
+            </li>
+            <li>
+              <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod.
+            </li>
+            <li id="cross">
+              <img src="/assets/images/svgs/cancel.svg" alt="" />Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod.
+            </li>
+            <li id="cross">
+              <img src="/assets/images/svgs/cancel.svg" alt="" />Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod.
+            </li>
+          </ul>
+          <button class="subscribe">Subscribe Now</button>
+        </div>
+      </div>
+      <div class="camp camp-skillowl">
+        <img src="/assets/img/svgs/skillowl.svg" alt="" />
+        <h2>SkillOwl Labs</h2>
+        <p class="inr">INR 6999</p>
+        <p class="onward">onwards</p>
+        <p class="begin-date">All-year program</p>
+        <div class="cam-det">
+          <ul>
+            <li>
+              <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod.
+            </li>
+            <li>
+              <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod.
+            </li>
+            <li>
+              <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod.
+            </li>
+            <li>
+              <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod.
+            </li>
+            <li>
+              <img src="/assets/images/svgs/tick.svg" alt="" />Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod.
+            </li>
+          </ul>
+          <button class="subscribe">Subscribe Now</button>
+        </div>
+      </div>
+    </div> -->
+    
+    <%-include('../Components/ContactForm.ejs') %>
+  </div>
+  <%-include('../Components/Footer.ejs') %>
+  <script src="/assets/scripts/index.js"></script>
+  <script src="/assets/js/courses.js"></script>
+</body>
+
 </html>

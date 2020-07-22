@@ -14,11 +14,15 @@ Router.get("/", async (req, res, next) => {
 });
 
 Router.get("/programs/schools", (req, res, next) => {
-    res.render("Home/Schools");
+    CourseModel.find({ SuitedFor: { $ne: "Colleges" } }, (err, doc) => {
+        res.render("Home/Schools", { doc });
+    })
 });
 
 Router.get("/programs/colleges", (req, res, next) => {
-    res.render("Home/Colleges");
+    CourseModel.find({ SuitedFor: { $ne: "Schools" } }, (err, doc) => {
+        res.render("Home/Colleges", { doc });
+    })
 });
 
 Router.get("/events", async (req, res, next) => {

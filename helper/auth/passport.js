@@ -45,7 +45,7 @@ module.exports = function (passport) {
                 passReqToCallback: true,
             },
             (request, accessToken, refreshToken, profile, done) => {
-                userModel.findOne({ uEmail: profile.email }, async function (err, user) {
+                userModel.findOne({ Email: profile.email }, async function (err, user) {
                     if (user) {
                         if (typeof user.google.id !== 'undefined') {
                             await userModel.updateOne({ _id: user._id }, { $set: { "google.id": profile.id } })
@@ -55,9 +55,9 @@ module.exports = function (passport) {
 
                     if (!user) {
                         let NewUser = new userModel({
-                            uEmail: profile.email,
-                            ufName: profile.given_name,
-                            ulName: profile.family_Name,
+                            Email: profile.email,
+                            FirstName: profile.given_name,
+                            LastName: profile.family_Name,
                             "google.id": profile.id,
                             isActive: true,
                         });
@@ -91,7 +91,7 @@ module.exports = function (passport) {
                 ],
             },
             (accessToken, refreshToken, profile, done) => {
-                userModel.findOne({ uEmail: profile.emails[0].value }, async function (err, user) {
+                userModel.findOne({ Email: profile.emails[0].value }, async function (err, user) {
                     if (user) {
                         if (typeof user.facebook.id !== 'undefined') {
                             await userModel.updateOne({ _id: user._id }, { $set: { "facebook.id": profile.id } })
@@ -101,9 +101,9 @@ module.exports = function (passport) {
 
                     if (!user) {
                         let NewUser = new userModel({
-                            uEmail: profile.emails[0].value,
-                            ufName: profile.name.givenName,
-                            ulName: profile.name.familyName,
+                            Email: profile.emails[0].value,
+                            FirstName: profile.name.givenName,
+                            LastName: profile.name.familyName,
                             "facebook.id": profile.id,
                             isActive: true,
                         });
@@ -130,7 +130,7 @@ module.exports = function (passport) {
                 profileFields: ["id", "firstName", "lastName", "handle"],
             },
             (accessToken, refreshToken, profile, done) => {
-                userModel.findOne({ uEmail: profile.emails[0].value }, async function (err, user) {
+                userModel.findOne({ Email: profile.emails[0].value }, async function (err, user) {
                     if (user) {
                         if (typeof user.google.id !== 'undefined') {
                             await userModel.updateOne({ _id: user._id }, { $set: { "linkedin.id": profile.id } })
@@ -140,9 +140,9 @@ module.exports = function (passport) {
 
                     if (!user) {
                         let NewUser = new userModel({
-                            uEmail: profile.emails[0].value,
-                            ufName: profile.name.givenName,
-                            ulName: profile.name.familyName,
+                            Email: profile.emails[0].value,
+                            FirstName: profile.name.givenName,
+                            LastName: profile.name.familyName,
                             "linkedin.id": profile.id,
                             isActive: true,
                         });

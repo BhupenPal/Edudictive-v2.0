@@ -2,10 +2,6 @@ const express = require("express");
 const Router = express.Router();
 const passport = require("passport");
 const UserModel = require("../models/User.model");
-const CourseModel = require("../models/Course.model");
-const transporter = require("../helper/mail/config");
-let ErrMsg = { news: [] };
-let SucMsg = { news: [] };
 
 //Pilot is sent to client with status
 let Pilot = { status: 'failed', news: [] };
@@ -14,12 +10,9 @@ let Pilot = { status: 'failed', news: [] };
 const { GenerateRandom, PassCheck, HashSalt, ensureAuthenticated, forwardAuthenticated } = require("../helper/service");
 
 const { SendMail } = require("../helper/mail/config");
-//SERVICES
-const { courseUpload } = require("../helper/UploadManager");
 
 //Mails
-const { verificationMail } = require("../helper/mail/content");
-const Mail = require("nodemailer/lib/mailer");
+const { verificationMail, resetMail } = require("../helper/mail/content");
 
 Router.get("/login", (req, res, next) => {
   res.render("Home/Login");
@@ -105,77 +98,76 @@ Router.get("/register", (req, res, next) => {
 });
 
 Router.post("/register", (req, res, next) => {
-  ErrMsg.news = [];
-  SucMsg.news = [];
+  Pilot.news = []
   if (req.xhr) {
     try {
       const {
-        uEmail,
-        ufName,
-        ulName,
-        uPass,
-        upNum,
-        uRole,
-        uAddr,
-        uState,
-        uPinCode,
-        uInsti,
-        ucPass,
+        Email,
+        FirstName,
+        LastName,
+        Password,
+        Phone,
+        Role,
+        Address,
+        State,
+        PinCode,
+        Institute,
+        cPassword,
         agreement,
       } = req.body;
 
       if (!agreement || agreement === "on") {
-        ErrMsg.news.push("You must agree with T&C's");
-        return res.send(ErrMsg);
+        Pilot.news.push("You must agree with T&C's");
+        return res.send(Pilot);
       }
 
       //Check required fields
       if (
-        !ufName ||
-        !ulName ||
-        !uEmail ||
-        !upNum ||
-        !uAddr ||
-        !uRole ||
-        !uState ||
-        !uPinCode ||
-        !uPass ||
-        !ucPass
+        !FirstName ||
+        !LastName ||
+        !Email ||
+        !Phone ||
+        !Address ||
+        !Role ||
+        !State ||
+        !PinCode ||
+        !Password ||
+        !cPassword
       ) {
-        ErrMsg.news.push("Please fill in all fields");
+        Pilot.news.push("Please fill in all fields");
       }
 
-      if (ErrMsg.news.length == 0) {
-        PassCheck(uPass, ucPass, ErrMsg);
+      if (Pilot.news.length == 0) {
+        PassCheck(Password, cPassword, Pilot);
       }
 
-      if (ErrMsg.news.length > 0) {
-        return res.send(ErrMsg);
+      if (Pilot.news.length > 0) {
+        return res.send(Pilot);
       } else {
-        UserModel.findOne({ uEmail: uEmail }).then((user) => {
+        UserModel.findOne({ Email }).then((user) => {
           if (user) {
-            ErrMsg.news.push("Email already exists");
-            res.send(ErrMsg);
+            Pilot.news.push("Email already exists");
+            res.send(Pilot);
             res.end();
           } else {
-            UserModel.findOne({ upNum: upNum }).then((user) => {
+            UserModel.findOne({ Phone }).then((user) => {
               if (user) {
-                ErrMsg.news.push("Phone number already exists");
-                res.send(ErrMsg);
+                Pilot.news.push("Phone number already exists");
+                res.send(Pilot);
                 res.end();
               } else {
                 const SecretToken = GenerateRandom(32);
                 const NewUser = new UserModel({
-                  ufName,
-                  ulName,
-                  uEmail,
-                  upNum,
-                  uAddr,
-                  uRole,
-                  uState,
-                  uPinCode,
-                  uInsti,
-                  uPass,
+                  FirstName,
+                  LastName,
+                  Email,
+                  Phone,
+                  Address,
+                  Role,
+                  State,
+                  PinCode,
+                  Institute,
+                  Password,
                   SecretToken
                 });
 
@@ -183,11 +175,14 @@ Router.post("/register", (req, res, next) => {
                 HashSalt(NewUser);
 
                 // send mail with defined transport object
-                let MailHTML = verificationMail
-                SendMail(uEmail, 'HooHoop Account Activation Email', MailHTML, Pilot.news)
+                let MailHTML = verificationMail(FirstName, SecretToken)
+                SendMail(Email, 'HooHoop Account Activation Email', MailHTML, Pilot.news)
                 if (Pilot.news > 0) {
-                    return res.json(Pilot)
+                  return res.json(Pilot)
                 }
+
+                Pilot.status = 'success'
+                res.json(Pilot)
               }
             });
           }
@@ -206,19 +201,21 @@ Router.get("/reset", (req, res, next) => {
 });
 
 Router.post("/reset", async (req, res, next) => {
-  const { uEmail } = req.body;
+  Pilot.news = []
+
+  const { Email } = req.body;
 
   let user = null;
 
-  if (isNaN(uEmail)) {
-    user = await UserModel.findOne({ uEmail });
+  if (isNaN(Email)) {
+    user = await UserModel.findOne({ Email });
   } else {
-    user = await UserModel.findOne({ upNum: uEmail });
+    user = await UserModel.findOne({ Phone: Email });
   }
 
   if (!user) {
-    ErrMsg.news.push("User not found!");
-    return res.send(ErrMsg);
+    Pilot.news.push("User not found!");
+    return res.send(Pilot);
   }
 
   let KeyToken = GenerateRandom(16);
@@ -226,17 +223,14 @@ Router.post("/reset", async (req, res, next) => {
   user.ResetToken = KeyToken;
   user.save();
 
-  let mailOptions = {
-    from: '"Edudictive" <contact@edudictive.in>', // sender address
-    to: uEmail, // list of receivers
-    subject: "Edudictive Password Reset", // Subject line
-    html: resetMail(user.ufName, KeyToken), // html body
-  };
+  let MailHTML = resetMail
+  SendMail(Email, 'Edudictive Password Reset Email', MailHTML, Pilot.news)
+  if (Pilot.news > 0) {
+    return res.json(Pilot)
+  }
 
-  transporter.sendMail(mailOptions);
-
-  SucMsg.news.push("Rest Mail Send");
-  return res.send(SucMsg);
+  Pilot.news.push("Rest Mail Send");
+  return res.send(Pilot);
 });
 
 Router.get("/verify", async (req, res, next) => {
@@ -254,36 +248,6 @@ Router.get("/logout", (req, res, next) => {
   req.logout();
   req.session.destroy();
   res.redirect("/");
-});
-
-/* FOR ADMINS ONLY */
-//ADD COURSES
-Router.get("/add-course", (req, res, next) => {
-  res.render("Home/AddCourse");
-});
-
-Router.post("/add-course", courseUpload, (req, res, next) => {
-  //const { name, price, description, cimage } = req.body;
-  new CourseModel({
-    courseTitle: req.body.courseID,
-    price: req.body.price,
-    duration: req.body.duration,
-    about: req.body.about,
-    startDate: req.body.startDate,
-    mode: req.body.mode,
-    contents: req.body.contents,
-    key: req.body.key,
-    whoShouldOpt: req.body.whoShouldOpt,
-    cImage: req.body.cImage,
-    cStructure: req.body.cStructure,
-  });
-  newCourse.save((err) => {
-    if (err) {
-      res.send("error");
-    } else {
-      res.send("done");
-    }
-  });
 });
 
 module.exports = Router;

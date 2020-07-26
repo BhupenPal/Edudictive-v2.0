@@ -83,28 +83,10 @@ const courseSchema = new mongoose.Schema({
         required: true,
         enum: ['Schools', 'Colleges', 'Schools and Colleges']
     },
-    Reviews: [{
-        UserID: {
-            type: mongoose.Schema.ObjectId,
-            required: true
-        },
-        Name: {
-            type: String,
-            required: true
-        },
-        College: {
-            type: String,
-            required: true
-        },
-        Titile: {
-            type: String,
-            required: true
-        },
-        Msg: {
-            type: String,
-            required: true
-        }
-    }],
+    TotalReview: {
+        type: Number,
+        default: 0
+    },
     Banner: {
         type: Boolean,
         default: false

@@ -30,7 +30,7 @@
                         <img src="/assets/images/svgs/Filled-Star.svg" />
                         <img src="/assets/images/svgs/Filled-Star.svg" />
                         <img id="half-star" src="/assets/images/svgs/half filled star.svg" />
-                        &ensp;<%= doc.Rating %> (<%= doc.Reviews.length %> ratings)
+                        &ensp;<%= doc.Rating %> (<%= doc.TotalReviews %> ratings)
                         &emsp;<span class="white-text"><%= doc.Enrolled %> Enrolled Students</span>
                     </div>
                     <div class="content-about">
@@ -187,11 +187,11 @@
         <!-- third division starts -->
 
         <!-- Reviews Section -->
-        <% if (doc.Reviews.length > 3) { %>
+        <% if (Reviews > 3) { %>
         <div class="reviews-section">
             <h1 class="section-headline" style="text-align: left;">Our reviews speak for themselves</h1>
             <div class="review-card-container">
-                <% for(let i = 0; i < doc.Reviews.length; i++) { %>
+                <% for(let i = 0; i < Reviews; i++) { %>
                 <div class="review-card">
                     <div class="rating-row">
                         <img src="/assets/images/svgs/filled_star.svg" alt="">
@@ -200,21 +200,18 @@
                         <img src="/assets/images/svgs/filled_star.svg" alt="">
                         <img src="/assets/images/svgs/star.svg" alt="">
                     </div>
-                    <h3><%= doc[i].Title %></h3>
+                    <h3><%= Reviews[i].Title %></h3>
                     <!-- Very informative and well designed course ! -->
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                        sed diam nonumy eirmod temporinvidunt ut labore et dolore
-                        magna erat, sed diam voluptua. At vero eos et accusams
-                        etjusto duo ea rebum.</p>
+                    <p><%= Reviews[i].msg %></p>
                     <div class="review-by">
-                        <h3>Sandeep Singh, DTU 2nd Year Student</h3>
-                        <p>Attended <%= doc[i].Title %></p>
+                        <h3><%= Reviews[i].Name %>, <%= Reviews[i].College %></h3>
+                        <p>Attended <%= Reviews[i].Title %></p>
                     </div>
                 </div>
                 <% } %>
             </div>
             <div class="review-pointer">
-                <% for(let i=0; i<(doc.Reviews.length)/2; i++) { %>
+                <% for(let i=0; i<(doc.Reviews)/2; i++) { %>
                 <div class="review-points"></div>
                 <% } %>
             </div>

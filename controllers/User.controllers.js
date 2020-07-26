@@ -7,7 +7,7 @@ const UserModel = require("../models/User.model");
 let Pilot = { status: 'failed', news: [] };
 
 //Services
-const { GenerateRandom, PassCheck, HashSalt, ensureAuthenticated, forwardAuthenticated } = require("../helper/service");
+const { GenerateRandom, PassCheck, HashSalt } = require("../helper/service");
 
 const { SendMail } = require("../helper/mail/config");
 

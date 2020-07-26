@@ -1,10 +1,10 @@
 <header class="mainHeader">
     <div class="subHeader">
         <div class="HeaderLinks">
-            <div class="logoContainer">
+            <a href="/" class="logoContainer">
                 <img src="/assets/img/icons/Logo.svg" alt="">
                 <img src="/assets/img/icons/Logo Font Only.svg" alt="">
-            </div>
+            </a>
     
             <div class="menuContainer">
                 <ul>
@@ -45,7 +45,7 @@
                           <% if(!user){ %>
                              Hey user !
                           <% } else { %>
-                             Hi <%= user.ufName %>
+                             Hi <%= user.FirstName %>
                           <% } %>
                        </div>
                        <div class="controlLinkContainer">
@@ -91,10 +91,10 @@
     </div>
 
     <div class="mobileSubHeader">
-        <div class="logoContainer">
+        <a href="/" class="logoContainer">
             <img src="/assets/img/icons/Logo.svg" alt="">
             <img src="/assets/img/icons/Logo Font Only.svg" alt="">
-        </div>
+        </a>
 
         <div class="hamBurgerIcon">
             <div class="hamLine"></div>
@@ -125,8 +125,8 @@
                         <img src="/assets/images/svgs/account.svg" alt="">
                     </div>
                     <div class="tabbtns">
-                        <button>Sign In</button>
-                        <button>Register</button>
+                        <button onclick="LinkHandle('/user/login')">Sign In</button>
+                        <button onclick="LinkHandle('/user/register')">Register</button>
                     </div>
                 </div>
             </div>

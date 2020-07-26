@@ -62,7 +62,7 @@ Router.post("/event-register", (req, res, next) => {
         if (err) {
             res.status(400).json({ 'Error': err })
         }
-        res.send('works!')
+        res.send('Registered')
     })
 })
 

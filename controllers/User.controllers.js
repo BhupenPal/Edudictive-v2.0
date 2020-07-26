@@ -54,7 +54,7 @@ Router.post("/login", (req, res, next) => {
   }
 });
 
-Router.post(
+Router.get(
   "/login/google",
   passport.authenticate("google", {
     scope: ["profile", "email"],
@@ -85,6 +85,7 @@ Router.get(
 );
 
 Router.get("/login/linkedin", passport.authenticate("linkedin"));
+
 Router.get(
   "/login/linkedin/confirm",
   passport.authenticate("linkedin", {

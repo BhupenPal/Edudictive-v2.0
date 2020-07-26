@@ -9,15 +9,6 @@ const {
 const options = {
     parent: { name: "Courses" },
     properties: {
-        WhoShouldOpt: {
-            type: 'richtext'
-        },
-        WhatULearn: {
-            type: 'richtext'
-        },
-        About: {
-            type: 'richtext'
-        },
         Banner: {   
             isVisible: false
         },

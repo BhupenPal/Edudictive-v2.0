@@ -194,6 +194,7 @@ $header-mobile-height: 60px;
 // -----------------------------------------
 
 $screen-xxl: 'only screen and (max-width: 1812px)';
+$screen-exl: 'only screen and (max-width: 1735px)';
 $screen-xl: 'only screen and (max-width: 1500px)';
 $screen-ib: 'only screen and (max-width:1370px)';
 $screen-lg: 'only screen and (max-width: 1199px)';
@@ -204,6 +205,7 @@ $screen-sp: 'only screen and (max-width: 400px)';
 
 $breakpoints: (
   xxl: 1812px,
+  exl: 1735px,
   xl: 1500px,
   ib: 1370px,
   lg: 1199px,

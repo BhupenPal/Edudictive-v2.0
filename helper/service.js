@@ -94,5 +94,9 @@ module.exports = {
     } else {
       ErrMsg.news.push("EMAIL NOT VALID")
     }
+  },
+
+  escapeRegex: (text) => {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
   }
 };

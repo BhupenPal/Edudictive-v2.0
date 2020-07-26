@@ -7,6 +7,8 @@ const CourseModel = require("../models/Course.model");
 const ReviewModel = require("../models/Review.model");
 const EventModel = require("../models/Event.model");
 
+const { escapeRegex } = require('../helper/service')
+
 Router.get("/", async (req, res, next) => {
     const doc = await CourseModel.find({}).limit(10).exec()
     const rev = await ReviewModel.find({}).limit(10).exec()
@@ -72,9 +74,21 @@ Router.get("/course/:Key/:Name", (req, res, next) => {
 });
 
 Router.get("/search-courses", (req, res, next) => {
-    CourseModel.find({}, (err, doc) => {
-        res.render('Home/AllCourse', { doc })
-    })
+
+    if (req.query.enquiry) {
+        const regex = new RegExp(escapeRegex(req.query.enquiry), "gi");
+        filterParam = {
+            $or: [{ Title: regex }, { Category: regex }],
+        };
+        CourseModel.find(filterParam, (err, doc) => {
+            res.render('Home/AllCourse', { doc })
+        })
+    } else {
+        CourseModel.find({}, (err, doc) => {
+            res.render('Home/AllCourse', { doc })
+        })
+    }
+
 })
 
 Router.get("/edudictive-student-partner", (req, res, next) => {
@@ -92,7 +106,7 @@ Router.post("/edudictive-student-partner/apply", (req, res, next) => {
                 res.status(400).json({ 'Error': 'Cannot submit application' })
             }
         } else {
-            res.render("ESPFormSuccess");
+            res.render("Home/ESPFormSuccess");
         }
     });
 });

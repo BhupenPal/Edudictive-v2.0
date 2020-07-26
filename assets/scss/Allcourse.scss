@@ -22,28 +22,28 @@
         }
 
         .wave.wave1{
-            animation: animate 30s linear infinite;
+            animation: animate 20s linear infinite;
             z-index: 5;
             opacity: 1;
             animation-delay: 0s;
             bottom: 0;
         }
         .wave.wave2{
-            animation: animate2 15s linear infinite;
+            animation: animate2 10s linear infinite;
             z-index: 4;
             opacity: 0.5;
             animation-delay: -5s;
             bottom: 10px;
         }
         .wave.wave3{
-            animation: animate 15s linear infinite;
+            animation: animate 10s linear infinite;
             z-index: 3;
             opacity: 0.2;
             animation-delay: -2s;
             bottom: 15px;
         }
         .wave.wave4{
-            animation: animate2 15s linear infinite;
+            animation: animate2 5s linear infinite;
             z-index: 2;
             opacity: 0.7;
             animation-delay: -5s;
@@ -62,16 +62,23 @@
             z-index: 1;
             font-size: 3rem;
             font-family: $font-secondary;
+
+            @include media('<=sm') {
+                font-size: 2.2rem;
+            }
+            @include media('<=xs'){
+                font-size: 6vw;
+            }
         }
     }
 
     .CourseCardWrapper{
-        width: max-content;
+        width: min-content;
         margin: 0 auto;
         display: grid;
         padding: 2rem 0;
-        box-sizing: border-box;
         grid-template-columns: auto auto auto auto;
+        box-sizing: border-box;
         .course-card{
             padding: 1.5rem;
             height: 21rem;
@@ -229,17 +236,12 @@
                 }
             }
             @include media('<=xs') {
-              height: 18rem;
-              margin: 0 1rem;
+              height: 17rem;
+              margin: 1rem;
               box-sizing: border-box;
               padding: 1rem 1.5rem;
-              min-width: 16rem;
-            }
-
-            &:first-child{
-                @include media('<=xs') {
-                    margin-left: 0;
-                }
+              min-width: 17rem;
+              max-width: 17rem;
             }
 
             &:hover{
@@ -247,6 +249,18 @@
                 transform: scale(1.1);
             }
         }
+        @include media('<=exl'){
+            grid-template-columns: auto auto auto;
+        }
+        @include media('<=ib') {
+            grid-template-columns: auto auto;
+        }
+        @include media('<=md') {
+            grid-template-columns: auto;
+        }
+    }
+    @include media('<=lg'){
+        padding-top: 80px;
     }
 }
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/index.css" />
@@ -9,32 +10,24 @@
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/assets/css/Event.css" />
     <title>Edudictive | Event</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <%-include('../Components/Header.ejs') %>
     <div class="wrap-content">
         <div class="event-container">
             <div class="event-head">
-                How to be a product manager
+                <%= doc.EventName %>
             </div>
             <div class="event-info">
                 <div class="event-time">
-                    1 hour online live seminar|No charges
+                    <%= doc.Duration %> online live seminar | <% if (doc.Fees == 0) { %>No Charges<% } else { %>
+                    <%= doc.Fees %> <% } %>
                 </div>
                 <div class="event-date">
-                    <span>Date: July 5th,2020</span>
-                    <span>Time: 5PM IST</span>
+                    <span>Date & Time: <br> <%= doc.StartTime %></span>
                 </div>
             </div>
-        </div>
-        <div class="gargi-association">
-            <div class="placement-cell">
-                Placement Cell
-            </div>
-            <div class="association-with">
-                <p>In association with</p>
-                <img src="/assets/images/svgs/gargi.png">
-            </div>        
         </div>
         <div class="webinar">
             <div class="webinar-description">
@@ -43,20 +36,16 @@
                         About the webinar
                     </div>
                     <div class="about-description">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolo
-                        magna aliquy erat, sed diam voluptua. At vero eos et accusam et justo duo lores et ea rebum. Stet clita kasd gubergren,
-                        no sea takimata sanctus est Lorem ipsum dolor sit amet. dolor sit amet, consetet sadip elitr, sed diam nonumy eirmod
-                        tempor invdunt ut labore et dolore magna oskdnl laklono kandpomaplm.
+                        <%= doc.About %>
                     </div>
                 </div>
                 <!-- who should attend it, same heading style -->
                 <div class="event-info-div">
-                    <div class="info-heading spacing"> 
+                    <div class="info-heading spacing">
                         Who should attend it
                     </div>
                     <div class="about-description">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                        magna aliquy erat.
+                        <%= doc.WhoShouldAttend %>
                     </div>
                 </div>
 
@@ -64,33 +53,20 @@
                     <div class="info-heading spacing">
                         Speakers
                     </div>
-        
+
                     <div class="speakers">
+                        <% for(var i = 0; i < doc.Speakers.length; i++){ %>
                         <div class="speaker-member">
-                            <div class="speaker-image">
-                                <img src="" alt="Speaker-photo">
-                            </div>
                             <div class="speaker-info">
-                                <h3>Andrew Starks</h3>
-                                <h4>Position</h4>
-                                <h4>Company</h4>
+                                <a href="<%= doc.Speakers[i].linkedin %>" target="__blank"><h3><%= doc.Speakers[i].name %></h3></a>
+                                <h4><%= doc.Speakers[i].position %></h4>
+                                <h4><%= doc.Speakers[i].company %></h4>
                             </div>
                         </div>
-                        <div class="speaker-member">
-                            <div class="speaker-image">
-                                <img src="" alt="Speaker-photo">
-                                
-                            </div>
-                            <div class="speaker-info">
-                                <h3>Marie Simpsons</h3>
-                                <h4>Position</h4>
-                                <h4>Company</h4>
-                            </div>
-                        </div>               
-                        
+                        <% } %>
                     </div>
                 </div>
-                    
+
             </div>
             <div class="registration-form">
                 <div class="form-heading">
@@ -99,31 +75,34 @@
                 <div class="form-div">
                     <form id="eventInputs">
                         <div class="Name">
-                            <input type="text" name ="FirstName" class="event-inp" placeholder="First Name" required>
-                            <input type="text" name ="LastName" class="event-inp" placeholder="Last Name" required>
+                            <input type="text" name="FirstName" class="event-inp" placeholder="First Name" required>
+                            <input type="text" name="LastName" class="event-inp" placeholder="Last Name" required>
                         </div>
                         <input type="email" name="Email" class="event-inp email-inp" placeholder="Email" required>
                         <div class="userRole-contact">
                             <select name="Role" class="event-inp shorter-inp" required>
-                               <option value="role">Select Role</option>
-                               <option value="student">Student</option>
-                               <option value="parent">Parent</option>
-                               <option value="institute">Institute</option>
+                                <option value="role">Select Role</option>
+                                <option value="student">Student</option>
+                                <option value="parent">Parent</option>
+                                <option value="institute">Institute</option>
                             </select>
                             <div class="contact-num event-inp longer-inp ">
-                               <div class="default-code">+91 -</div>
-                               <input type="number" name ="Phone" class="ph-input" placeholder="Contact Number" required>
+                                <div class="default-code">+91 -</div>
+                                <input type="number" name="Phone" class="ph-input" placeholder="Contact Number"
+                                    required>
                             </div>
                         </div>
-                         <input type="text" name="CollegeName" class="event-inp inst-inp" placeholder="Institution Name" required> 
-                         <button type="submit" class="event-submit">Register</button>                   
+                        <input type="text" name="CollegeName" class="event-inp inst-inp" placeholder="Institution Name"
+                            required>
+                        <button type="submit" class="event-submit">Register</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <%-include('../Components/Footer.ejs') %>
     <script src="/assets/js/index.js"></script>
-  </body>
+</body>
+
 </html>

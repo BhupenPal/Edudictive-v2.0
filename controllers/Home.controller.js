@@ -30,11 +30,16 @@ Router.get("/programs/colleges", (req, res, next) => {
 Router.get("/events", async (req, res, next) => {
     const sessions = await EventModel.find({ EventType: 'Session' })
     const webinars = await EventModel.find({ EventType: 'Webinar' })
-    res.render("Home/Events", { webinars, sessions });
+    const LiveWeb = await EventModel.find({ $and: [{ EventType: 'Webinar' }, { Live: true }] })
+    const Archive = await EventModel.find({ $and: [{ EventType: 'Webinar' }, { Archive: true }] })
+    res.render("Home/Events", { webinars, LiveWeb, Archive, sessions });
 });
 
-Router.get("/event-register", (req, res, next) => {
-    res.render("Home/Event");
+Router.get("/event/:Key/:Name", (req, res, next) => {
+    const { Key } = req.params
+    EventModel.findOne({ Key }, (err, doc) => {
+        res.render("Home/EventPage", { doc });
+    })
 });
 Router.get("/about-us", (req, res, next) => {
     res.render("Home/About");
@@ -70,7 +75,7 @@ Router.get("/course/:Key/:Name", (req, res, next) => {
     const { Key } = req.params;
     CourseModel.findOne({ Key }, (err, doc) => {
         if (!doc) {
-            res.json({ 'Error': 'Not Found'})
+            res.json({ 'Error': 'Not Found' })
         }
         ReviewModel.find({ CourseKey: Key }, (err, Reviews) => {
             res.render("Home/CoursePage", { doc, Reviews });

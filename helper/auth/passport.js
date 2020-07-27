@@ -41,7 +41,7 @@ module.exports = function (passport) {
             {
                 clientID: process.env.GCLIENTID,
                 clientSecret: process.env.GCLIENTSECRET,
-                callbackURL: "https://www.edudictive.in/user/auth/google/confirm",
+                callbackURL: "/user/auth/google/confirm",
                 passReqToCallback: true,
             },
             (request, accessToken, refreshToken, profile, done) => {
@@ -80,7 +80,7 @@ module.exports = function (passport) {
             {
                 clientID: process.env.FAPPID,
                 clientSecret: process.env.FCLIENTSECRET,
-                callbackURL: "https://www.edudictive.in/user/login/fb/confirm",
+                callbackURL: "/user/login/fb/confirm",
                 profileFields: [
                     "id",
                     "displayName",

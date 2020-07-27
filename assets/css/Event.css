@@ -1,7 +1,8 @@
 .event-container{
     padding-top:200px;
     background-color: black;
-    
+    padding-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .event-head{
@@ -36,41 +37,9 @@
     text-align: left;
     font:lighter 24px Avenir-Next;
     color: #FFFFFF;
-    width: 20%;    
+    width: 30%;    
     position: relative;
-    margin-right: 30px;
-    padding-bottom: 3%;
-}
-
-.gargi-association {
-    display: flex;
-    flex-direction: column;
-}
-
-.association-with{
-    font-size: 20px;
-    margin: 10px auto;
-}
-
-.association-with p{
-    display: inline-flex;
-    text-align: left;
-    font:26px Avenir-Next;    
-    color: #4F4F4F;    
-    margin-right: 1%;    
-}
-
-.placement-cell{
-    text-align: left;
-    font: Bolder 25px Bebas Kai;
-    color: #566F57;
-    margin: 10px auto;
-}
-
-.gargi-association img{
-    margin: 0px auto;
-    width: 40%;
-    height: 100%;
+    margin-right: 100px;
 }
 
 .webinar{

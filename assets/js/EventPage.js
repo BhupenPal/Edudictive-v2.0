@@ -1,24 +1,27 @@
 let heads = document.querySelectorAll(".heads");
-let sessions = document.querySelector(".sessions");
-let webinars = document.querySelector(".webinars");
 
-heads[0].onclick = function () {
-    this.classList.replace("inactive-head", "active-head");
-    heads[1].classList.replace("active-head", "inactive-head");
-    this.querySelector(".underline").classList.add("active_under");
-    heads[1].querySelector(".underline").classList.remove("active_under");
-    sessions.style.cssText = "display: none";
-    webinars.style.cssText = "display: block";
-};
+if (heads >= 2) {
+    let sessions = document.querySelector(".sessions");
+    let webinars = document.querySelector(".webinars");
 
-heads[1].onclick = function () {
-    this.classList.replace("inactive-head", "active-head");
-    heads[0].classList.replace("active-head", "inactive-head");
-    this.querySelector(".underline").classList.add("active_under");
-    heads[0].querySelector(".underline").classList.remove("active_under");
-    sessions.style.cssText = "display: block";
-    webinars.style.cssText = "display: none";
-};
+    heads[0].onclick = function () {
+        this.classList.replace("inactive-head", "active-head");
+        heads[1].classList.replace("active-head", "inactive-head");
+        this.querySelector(".underline").classList.add("active_under");
+        heads[1].querySelector(".underline").classList.remove("active_under");
+        sessions.style.cssText = "display: none";
+        webinars.style.cssText = "display: block";
+    };
+
+    heads[1].onclick = function () {
+        this.classList.replace("inactive-head", "active-head");
+        heads[0].classList.replace("active-head", "inactive-head");
+        this.querySelector(".underline").classList.add("active_under");
+        heads[0].querySelector(".underline").classList.remove("active_under");
+        sessions.style.cssText = "display: block";
+        webinars.style.cssText = "display: none";
+    };
+}
 
 // For slider
 let slide = document.querySelectorAll(".wslide");

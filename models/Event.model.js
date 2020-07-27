@@ -13,21 +13,27 @@ const EventSchema = new mongoose.Schema({
     EventURL: {
         type: String
     },
+    Live: {
+        type: Boolean
+    },
+    Archive: {
+        type: Boolean
+    },
     EventName: {
         type: String,
         required: true
     },
     StartTime: {
-        type: Date,
+        type: String,
+        required: true
+    },
+    EndTime: {
+        type: String,
         required: true
     },
     EventType: {
         type: String,
         enum: ['Webinar', 'Session']
-    },
-    EndTime: {
-        type: Date,
-        required: true
     },
     Duration: {
         type: String,
@@ -48,7 +54,8 @@ const EventSchema = new mongoose.Schema({
     Speakers: [{
         name: String,
         linkedin: String,
-        position: String
+        position: String,
+        company: String
     }]
 },{ timestamps: true })
 

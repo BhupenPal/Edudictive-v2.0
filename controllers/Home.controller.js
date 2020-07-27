@@ -9,6 +9,14 @@ const EventModel = require("../models/Event.model");
 
 const { escapeRegex } = require('../helper/service')
 
+// Temporary Links
+Router.get("/upskillingforum", (req, res, next) => {
+    EventModel.findOne({ Key: 201 }, (err, doc) => {
+        res.render("Home/EventPage", { doc });
+    })
+});
+// Temporary Links
+
 Router.get("/", async (req, res, next) => {
     const doc = await CourseModel.find({}).limit(10).exec()
     const rev = await ReviewModel.find({}).limit(10).exec()
@@ -41,6 +49,7 @@ Router.get("/event/:Key/:Name", (req, res, next) => {
         res.render("Home/EventPage", { doc });
     })
 });
+
 Router.get("/about-us", (req, res, next) => {
     res.render("Home/About");
 });
@@ -88,7 +97,7 @@ Router.get("/search-courses", (req, res, next) => {
     if (req.query.enquiry) {
         const regex = new RegExp(escapeRegex(req.query.enquiry), "gi");
         filterParam = {
-            $or: [{ Title: regex }, { Category: regex }, { SuitedFor: regex}],
+            $or: [{ Title: regex }, { Category: regex }, { SuitedFor: regex }],
         };
         CourseModel.find(filterParam, (err, doc) => {
             res.render('Home/AllCourse', { doc })

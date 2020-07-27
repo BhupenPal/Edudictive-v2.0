@@ -62,7 +62,7 @@ Router.post("/contact-us", (req, res, next) => {
     });
 });
 
-Router.post("/event-register", (req, res, next) => {
+Router.post("/event-register/:Key", (req, res, next) => {
     new EventModel(req.body).save((err) => {
         if (err) {
             res.status(400).json({ 'Error': err })
@@ -88,7 +88,7 @@ Router.get("/search-courses", (req, res, next) => {
     if (req.query.enquiry) {
         const regex = new RegExp(escapeRegex(req.query.enquiry), "gi");
         filterParam = {
-            $or: [{ Title: regex }, { Category: regex }],
+            $or: [{ Title: regex }, { Category: regex }, { SuitedFor: regex}],
         };
         CourseModel.find(filterParam, (err, doc) => {
             res.render('Home/AllCourse', { doc })

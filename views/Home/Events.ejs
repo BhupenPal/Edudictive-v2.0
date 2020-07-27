@@ -33,7 +33,7 @@
 
         <div class="webinars">
             <!-- Slider started -->
-            <% if (webinars.length >=3 ) { %>
+            <% if (webinars.length > 0) { %>
             <div class="web-slider">
                 <% for(var i = 0; i < webinars.length; i++) { %>
                 <div class="wslide <% if (i == 0) { %>active-wslide<% } %>">
@@ -51,7 +51,9 @@
                     <div class="reg-encloser">
                         <button onclick="LinkHandle('/event/<%= webinars[i].Key %>/<%= webinars[i].EventName %>')"
                             class="learn-more-btn">Learn More</button>
-                        <button onclick="LinkHandle('/event/<%= webinars[i].Key %>/<%= webinars[i].EventName %>')">Register Now</button>
+                        <button
+                            onclick="LinkHandle('/event/<%= webinars[i].Key %>/<%= webinars[i].EventName %>')">Register
+                            Now</button>
                     </div>
                     <div class="imgblender"></div>
                 </div>
@@ -59,9 +61,9 @@
             </div>
 
             <div class="slider-controller">
-                <div class="active-slide" data-identity="0"></div>
-                <div class="inactive-slide" data-identity='1'></div>
-                <div class="inactive-slide" data-identity="2"></div>
+                <% for(var i = 0; i < webinars.length; i++){ %>
+                <div class="<% if (i !== 0){ %>in<% } %>active-slide" data-identity="<%= i %>"></div>
+                <% } %>
             </div>
 
             <!-- Slider end -->

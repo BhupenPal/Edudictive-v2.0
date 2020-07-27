@@ -1,6 +1,6 @@
 let heads = document.querySelectorAll(".heads");
 
-if (heads >= 2) {
+if (heads.length >= 2) {
     let sessions = document.querySelector(".sessions");
     let webinars = document.querySelector(".webinars");
 
@@ -61,7 +61,7 @@ function another() {
             break;
         }
     }
-    if (currsl < 2) {
+    if (currsl < slide.length - 1) {
         nextsl = currsl + 1;
     } else {
         nextsl = 0;

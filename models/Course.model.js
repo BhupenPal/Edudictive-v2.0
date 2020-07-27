@@ -31,10 +31,7 @@ const courseSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    WhatULearn: {
-        type: String,
-        required: true
-    },
+    WhatULearn: [String],
     StartDate: {
         type: String,
         required: true

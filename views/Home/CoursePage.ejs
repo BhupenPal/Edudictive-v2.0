@@ -43,9 +43,13 @@
                             </div>
                             <div class="write-up">
                                 <h3>What you will learn</h3>
-                                <p>
-                                    <%= doc.WhatULearn %>
-                                </p>
+                                <div style="color: white;">
+                                    <% doc.WhatULearn.map(item => { %>
+                                    <span><i class="far fa-check-circle"></i>
+                                        <p><%= item %></p>
+                                    </span>
+                                    <% }) %>
+                                </div>
                             </div>
                             <br />
                             <!-- Add the id of program structure HERE -->

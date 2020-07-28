@@ -150,6 +150,7 @@ function urlCheck(ToCheck) {
 
 function animatedsub() {
     let contactForm = document.querySelector(".form-container")
+    contactForm.style.cssText = "  height: 20rem; width: 30rem;"
     let formC = contactForm.children[0]
     formC.style.display = "none"
     let submissiondiv = document.querySelector(".submission-div")

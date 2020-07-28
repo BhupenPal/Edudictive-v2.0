@@ -86,6 +86,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 2rem;
+    width: 100%;
 }
 
 .speaker-member{
@@ -95,14 +96,14 @@
 }
 
 .speaker-ini{
-    height: 8rem;
-    width: 8rem;
-    border-radius: 6rem;
-    margin: auto 2rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 5rem;
+    margin: auto 2rem auto 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 5rem;
+    font-size: 3rem;
     font-family: Proxima-Nova;
     font-weight: bold;
     color: white;
@@ -124,15 +125,15 @@
 }
 
 .speaker-info h3{
-    font: Bolder 2rem Avenir-Next;
+    font: Bolder 1.6rem Avenir-Next;
     color: #4E4E4E;
     margin: 1vh;
 }
 
 .speaker-info h4{
-    font: 1.2rem Avenir-Next;
+    font: 1rem Avenir-Next;
     color: #4E4E4E;
-    margin:1vh
+    margin: 1vh
 }
 
 /* Registration Form */
@@ -354,8 +355,6 @@
     }
 
     .speakers{
-        flex-wrap: nowrap;
-        justify-content: space-around;
         width: 100%;
     }
 }

@@ -6,6 +6,7 @@ const ESPModel = require("../models/ESP.model");
 const CourseModel = require("../models/Course.model");
 const ReviewModel = require("../models/Review.model");
 const EventModel = require("../models/Event.model");
+const EventResgiter = require("../models/EventRegister.model")
 
 const { escapeRegex } = require('../helper/service')
 
@@ -72,11 +73,18 @@ Router.post("/contact-us", (req, res, next) => {
 });
 
 Router.post("/event-register/:Key", (req, res, next) => {
-    new EventModel(req.body).save((err) => {
-        if (err) {
-            res.status(400).json({ 'Error': err })
-        }
-        res.send('Registered')
+    const { Key } = req.params;
+    console.log(Key)
+    EventModel.find({ Key }, (err, doc) => {
+        const EventName = doc.EventName
+        new EventResgiter(...req.body, Key, EventName)
+            .save(err => {
+                if(err) {
+                    res.status(400).json({ 'Error': 'Cannot submit application' })
+                }
+                res.send("DONE");
+            })
+
     })
 })
 

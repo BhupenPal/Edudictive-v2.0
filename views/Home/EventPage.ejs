@@ -60,7 +60,9 @@
                         <div class="speaker-member">
                             <div class="speaker-ini"><%= doc.Speakers[i].name[0] %></div>
                             <div class="speaker-info">
-                                <a href="<%= doc.Speakers[i].linkedin %>" target="__blank"><h3><%= doc.Speakers[i].name %></h3></a>
+                                <a href="<%= doc.Speakers[i].linkedin %>" target="__blank">
+                                    <h3><%= doc.Speakers[i].name %></h3>
+                                </a>
                                 <h4><%= doc.Speakers[i].position %></h4>
                                 <h4><%= doc.Speakers[i].company %></h4>
                             </div>
@@ -90,12 +92,16 @@
                             </select>
                             <div class="contact-num event-inp longer-inp ">
                                 <div class="default-code">+91 -</div>
-                                <input type="number" name="Phone" class="ph-input" placeholder="Contact Number" required>
+                                <input type="number" name="Phone" class="ph-input" placeholder="Contact Number"
+                                    required>
                             </div>
                         </div>
                         <input type="text" name="CollegeName" class="event-inp inst-inp" placeholder="Institution Name"
                             required>
-                        <button type="submit" class="event-submit">Register</button>
+                        <button type="submit" class="event-submit">
+                            <div class="loader"></div>
+                            Register
+                        </button>
                     </form>
                 </div>
             </div>
@@ -105,12 +111,14 @@
     <%-include('../Components/Footer.ejs') %>
     <script src="/assets/js/index.js"></script>
     <script>
-        let colorArray = ["#2580F5","#A34717","#0BC8F0","#EB03F6","#C72AFD","#E98FD4","#915541","#151178","#BFA70C","#A30008","#0578B0"]
+        const EventKey = '<%= doc.Key %>'
+        let colorArray = ["#2580F5", "#A34717", "#0BC8F0", "#EB03F6", "#C72AFD", "#E98FD4", "#915541", "#151178", "#BFA70C", "#A30008", "#0578B0"]
         let speakerCircle = document.querySelectorAll(".speaker-ini")
-        for(let i=0; i<speakerCircle.length;i++){
+        for (let i = 0; i < speakerCircle.length; i++) {
             speakerCircle[i].style.backgroundColor = colorArray[Math.floor(Math.random() * 11)]
         }
     </script>
+    <script src="/assets/js/EventPage.js"></script>
 </body>
 
 </html>

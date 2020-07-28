@@ -17,6 +17,14 @@ const EventRegSchema = new Schema({
     Role: {
         type: String,
         required: true
+    },
+    Key: {
+        type: Number,
+        required: true
+    },
+    EventName: {
+        type: String,
+        required: true
     }
 }, { timestamps: true })
 

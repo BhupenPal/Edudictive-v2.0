@@ -213,6 +213,9 @@
 }
 
 .event-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #00DC67;
     color: white;
     font: 20px Product-Sans;

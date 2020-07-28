@@ -71,3 +71,26 @@ function another() {
 }
 
 interval = setInterval(another, 5000);
+
+const FormElement = document.getElementById("eventInputs");
+preventer(FormElement, Ajax);
+function Ajax() {
+    document.getElementsByClassName('loader')[0].style.display = 'block'
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", `/event-register/${EventKey}`, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.getResponseHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    xhr.onload = function () {
+        if (this.status === 200) {
+            if (this.response == "Done") {
+                document.getElementsByClassName('loader')[0].style.display = 'none'
+                animatedsub();
+                console.log('Done')
+            }
+        } else {
+            console.log("ERROR: AJAX COULD NOT CONNECT");
+        }
+    };
+    xhr.send(getFields(FormElement));
+}

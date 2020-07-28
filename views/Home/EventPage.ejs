@@ -115,7 +115,7 @@
         let colorArray = ["#2580F5", "#A34717", "#0BC8F0", "#EB03F6", "#C72AFD", "#E98FD4", "#915541", "#151178", "#BFA70C", "#A30008", "#0578B0"]
         let speakerCircle = document.querySelectorAll(".speaker-ini")
         for (let i = 0; i < speakerCircle.length; i++) {
-            speakerCircle[i].style.backgroundColor = colorArray[Math.floor(Math.random() * 11)]
+            speakerCircle[i].style.backgroundColor = colorArray[Math.floor(Math.random() * colorArray.length)]
         }
     </script>
     <script src="/assets/js/EventPage.js"></script>

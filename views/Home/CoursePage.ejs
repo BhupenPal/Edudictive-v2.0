@@ -41,7 +41,7 @@
                                     <%= doc.About %>
                                 </p>
                             </div>
-                            <div class="write-up">
+                            <div class="write-up-learn">
                                 <h3>What you will learn</h3>
                                 <div style="color: white;">
                                     <% doc.WhatULearn.map(item => { %>
@@ -70,12 +70,14 @@
                                     <%= doc.Duration %>
                                 </p>
                             </div>
+                            <% if (doc.Mode !== 'Online (Live)') { %>
                             <div class="detail-write-up">
                                 <h3>Location</h3>
                                 <p>
                                     <%= doc.Location %>
                                 </p>
                             </div>
+                            <% } %>
                         </div>
                     </div>
                 </div>

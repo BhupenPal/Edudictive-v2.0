@@ -58,6 +58,7 @@
                     <div class="speakers">
                         <% for(var i = 0; i < doc.Speakers.length; i++){ %>
                         <div class="speaker-member">
+                            <div class="speaker-ini"><%= doc.Speakers[i].name[0] %></div>
                             <div class="speaker-info">
                                 <a href="<%= doc.Speakers[i].linkedin %>" target="__blank"><h3><%= doc.Speakers[i].name %></h3></a>
                                 <h4><%= doc.Speakers[i].position %></h4>
@@ -103,6 +104,13 @@
 
     <%-include('../Components/Footer.ejs') %>
     <script src="/assets/js/index.js"></script>
+    <script>
+        let colorArray = ["#2580F5","#A34717","#0BC8F0","#EB03F6","#C72AFD","#E98FD4","#915541","#151178","#BFA70C","#A30008","#0578B0"]
+        let speakerCircle = document.querySelectorAll(".speaker-ini")
+        for(let i=0; i<speakerCircle.length;i++){
+            speakerCircle[i].style.backgroundColor = colorArray[Math.floor(Math.random() * 11)]
+        }
+    </script>
 </body>
 
 </html>

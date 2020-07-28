@@ -1,178 +1,87 @@
-.form-container{
-    padding-top: 10rem;
-    margin-left: 30rem;
-    margin-bottom: 10rem;
+.form-container {
+  margin: 0 auto !important;
+  height: min-content !important;;
+  width: 80% !important;
+  padding: 125px 0;
+  width: 100%;
 }
-.form-heading{
-    color:#6a11cb;
-    font:bold 4rem Avenir-Next;
-    
+
+.form-heading {
+  color: #6a11cb;
+  font: bold 4rem Avenir-Next;
 }
-.form-subheading{
-    color:#6a11cb;
-    font:bold 2rem Avenir-Next;
-    margin-top: -2rem;
+
+.form-subheading {
+  color: #6a11cb;
+  font: bold 2rem Avenir-Next;
 }
 
 .box {
-    display: flex;
-    flex-direction: column;
-    left:8rem;
-    height: 35rem;
-    width: 53%;
-    margin: 0  1rem auto;
-    border-radius: 5rem;
-    position: relative;
-    font-family: Avenir-Next;
-    font-weight: 200;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 4px;
- 
-    box-sizing: border-box;
-    box-shadow: 6px 6px 20px #00000029;
-    background: white;
-}
-.success{
-    margin: 0rem 5rem 5rem 5rem;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5rem;
+  font-family: Avenir-Next;
+  box-shadow: 6px 6px 20px #00000029;
+  background-color: white;
 }
 
-.msg{
-    font: 1.4rem Avenir-Next;
-    opacity: 0.7;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-.finish-btn{
-margin: auto;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 71px;
-width:100%;
-background: #00dc67;
-text-align: center;
-box-shadow: 6px 6px 20px #00000029;
-border-radius: 15px;
-font: Bold 21px Product-Sans;
-color: #ffffff;
+.msg {
+  font: 1.4rem Avenir-Next;
+  opacity: 0.7;
+  text-align: center;
+  margin-bottom: 5rem;
 }
 
 .tick-icon {
-    margin: 5rem auto 4rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
-    width: 200px;
-    border-radius: 100px;
-    color: #ffffff;
-    font-size: 100px;
-    font-weight: bolder;
-    text-shadow: #00ca5e;
-    background-color: #00dc67;
+  margin: 5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 100px;
+  background-color: #00dc67;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 481px) {
+
+  .form-heading {
+    font-size: 3rem;
   }
-@media screen and (max-width: 1024px ) and (min-width: 768px) {
-  .form-container{
-  padding-top: 6rem;
-  margin-left: 6rem;
+
+  .box {
+    width: 85%;
+  }
+
 }
-    .box {
-    display: flex;
-    flex-direction: column;
-    left:2rem;
-    height: 35rem;
-    width: 80%;
-    margin: 0  1rem auto;
-    border-radius: 5rem;
-    position: relative;
-    font-family: Avenir-Next;
-    font-weight: 200;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 4px;
- 
-    box-sizing: border-box;
-    box-shadow: 6px 6px 20px #00000029;
-    background: white;
-}
-}
-@media only screen and (max-width: 768px) and (min-width:481px) {
-     .form-container{
-  padding-top: 6rem;
-  margin-left: 6rem;
-}
-    .box {
-    display: flex;
-    flex-direction: column;
-    left:-3rem;
-    height: 35rem;
-    width: 95%;
-    margin: 0  1rem auto;
-    border-radius: 5rem;
-    position: relative;
-    font-family: Avenir-Next;
-    font-weight: 200;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 4px;
- 
-    box-sizing: border-box;
-    box-shadow: 6px 6px 20px #00000029;
-    background: white;
-}
-}
+
 @media screen and (max-width: 480px) {
-     .form-container{
-  padding-top: 6rem;
-  margin-left: 1rem;
-}
-    .form-heading{
-  color:#6a11cb;
-  font:bold 2.3rem Avenir-Next;
-  
-}
-.form-subheading{
-  color:#6a11cb;
-  font:bold 1.5rem Avenir-Next;
-  margin-top: -1rem;
-}
-       .box {
-    display: flex;
-    flex-direction: column;
-    left:-1rem;
-    height: 38rem;
-    width: 96%;
-    margin: 0  1rem auto;
-    border-radius: 5rem;
-    position: relative;
-    font-family: Avenir-Next;
-    padding-left: 5px;
-    padding-right: 7px;
- 
-    box-sizing: border-box;
-    box-shadow: 6px 6px 20px #00000029;
-    background: white;
-}
-    .tick-icon {
-    margin: 2rem auto 3rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
-    width: 200px;
-    border-radius: 100px;
-    color: #ffffff;
-    font-size: 100px;
-    font-weight: bolder;
-    text-shadow: #00ca5e;
-    background-color: #00dc67;
+
+  .form-container {
+    width: 90% !important;
   }
- 
-    .msg{
-        width: 100%;;
-    font: 1.4rem Avenir-Next;
-    text-align: center;
-    margin-bottom: 3rem;
-}
+
+  .form-heading {
+    font-size: 2rem;
+  }
+
+  .form-subheading {
+    font-size: 1.5rem;
+  }
+
+  .box {
+    border-radius: 50px;
+    width: 98%;
+  }
+
+  .tick-icon {
+    margin: 2.5rem auto;
+    height: 100px;
+    width: 100px;
+    font-size: 50px;
+  }
 }

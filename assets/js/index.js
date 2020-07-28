@@ -147,6 +147,15 @@ function urlCheck(ToCheck) {
 }
 /* AJAX HANDLER */
 
+
+function animatedsub() {
+    let contactForm = document.querySelector(".form-container")
+    let formC = contactForm.children[0]
+    formC.style.display = "none"
+    let submissiondiv = document.querySelector(".submission-div")
+    submissiondiv.style.transform = "scale(1)"
+}
+
 /* Contact Form Ajax */
 if (urlCheck(["programs", "events", "about-us", "contact-us"])) {
     const FormElement = document.getElementById("contactForm");
@@ -171,6 +180,7 @@ if (urlCheck(["programs", "events", "about-us", "contact-us"])) {
         xhr.send(getFields(FormElement));
     }
 }
+
 /* Contact Form Ajax */
 
 /* Courses Slider */

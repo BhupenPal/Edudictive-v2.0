@@ -905,6 +905,38 @@ footer h4 {
 .form-container {
   margin: 0 5rem;
   height: 100%;
+  min-height: 20rem;
+  min-width: 30rem;
+  position: relative;
+}
+
+.submission-div{
+  height: 20rem;
+  width: 30rem;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 6px 6px 15px #00000029;
+  border-radius: 2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin:  auto;
+  background-color: white;
+  transform: scale(0);
+  transition: 0.4s;
+}
+
+.submission-div img{
+  height: 5rem;
+}
+
+.submission-div span{
+  margin: 2rem 0 0 0;
+  font: bold 2rem Proxima-Nova;
 }
 
 .form-container form {

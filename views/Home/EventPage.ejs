@@ -103,6 +103,10 @@
                             Register
                         </button>
                     </form>
+                    <div class="submission-div">
+                        <img src="/assets/images/svgs/Green_check.svg" alt="">
+                        <span>Registration Successful</span>
+                     </div>
                 </div>
             </div>
         </div>
@@ -112,7 +116,15 @@
     <script src="/assets/js/index.js"></script>
     <script>
         const EventKey = '<%= doc.Key %>'
-        let colorArray = ["#2580F5", "#A34717", "#0BC8F0", "#EB03F6", "#C72AFD", "#E98FD4", "#915541", "#151178", "#BFA70C", "#A30008", "#0578B0"]
+        function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+        }
+
         let speakerCircle = document.querySelectorAll(".speaker-ini")
         for (let i = 0; i < speakerCircle.length; i++) {
             speakerCircle[i].style.backgroundColor = colorArray[Math.floor(Math.random() * colorArray.length)]

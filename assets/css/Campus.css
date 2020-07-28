@@ -191,7 +191,6 @@
 
     .camp-page-container {
         height: 65vh;
-        margin-top: 12vh;
     }
 
     .camp-container {
@@ -515,10 +514,6 @@
 }
 
 @media only screen and (max-width: 1200px) and (min-width: 913px) {
-
-    .camp-page-container {
-        margin-top: 12vh;
-    }
 
     .camp-page-container h2 {
         font-size: 5.5vw;

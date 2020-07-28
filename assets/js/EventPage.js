@@ -72,6 +72,15 @@ function another() {
 
 interval = setInterval(another, 5000);
 
+function animatedsubsec() {
+    let contactForm = document.querySelector(".form-div")
+    contactForm.style.cssText = "  height: 20rem; width: 30rem;"
+    let formC = contactForm.children[0]
+    formC.style.display = "none"
+    let submissiondiv = document.querySelector(".submission-div")
+    submissiondiv.style.transform = "scale(1)"
+}
+
 const FormElement = document.getElementById("eventInputs");
 preventer(FormElement, Ajax);
 function Ajax() {
@@ -84,7 +93,7 @@ function Ajax() {
     xhr.onload = function () {
         if (this.status === 200) {
             document.getElementsByClassName('loader')[0].style.display = 'none'
-            animatedsub();
+            animatedsubsec();
         } else {
             console.log("ERROR: AJAX COULD NOT CONNECT");
         }

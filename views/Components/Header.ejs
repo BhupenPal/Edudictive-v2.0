@@ -104,10 +104,10 @@
 
         <div class="mobileMenu">
             <div class="mobileSearchContainer">
-                <div class="mobile-search-input">
-                    <input type="text" placeholder="Search Programs">
+                <form action="search-courses" class="mobile-search-input">
+                    <input type="text" placeholder="Search Programs" name="enquiry">
                     <img src="/assets/images/svgs/search.svg" alt="">
-                </div>
+                </form>
             </div>
             <div class="mobileSubMenu">
                 <div class="linkContainer">
@@ -121,7 +121,7 @@
                     </ul>
                 </div>
                 <div class="userLogoContainer">
-                    <div class="AccBorderDiv">
+                    <div class="AccBorderDiv" onclick="LinkHandle('/user/login')">
                         <img src="/assets/images/svgs/account.svg" alt="">
                     </div>
                     <div class="tabbtns">

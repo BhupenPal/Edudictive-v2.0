@@ -935,6 +935,10 @@ footer h4 {
 .submission-div span{
   margin: 2rem 0 0 0;
   font: bold 2rem Proxima-Nova;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-container form {
@@ -1291,13 +1295,14 @@ footer h4 {
   }
 
   .form-container {
-    width: 90%;
+    width: 90% !important;
     margin: 1rem auto;
   }
 
   .submission-div{
     height: 20rem;
-    width: 90%;
+    width: 90vw;
+    margin: auto;
   }
 
   .img-container img {

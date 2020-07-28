@@ -1,0 +1,92 @@
+@import './config';
+@import './include-media';
+
+.main_con_container{
+    @include media('<=xs'){
+        padding-top: 80px;
+    }
+}
+
+.main{
+    @include media('<=xs'){
+        height: max-content;
+    }
+
+    .main-content{
+        @include media('<=xs'){
+            flex-direction: column;
+            width: 100%;
+            margin: 0;
+
+            *{
+                line-height: unset;
+            }
+        }
+        .content{
+            @include media('<=xs'){
+                width: 100%;
+                height: max-content;
+            }
+            .content-head{
+                @include media('<=xs'){
+                    h1{
+                        font-size: 3rem;
+                    }
+
+                    h4{
+                        margin: 0;
+                    }
+
+                    h2{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            .content-about{
+                @include media('<=xs'){
+                    flex-direction: column;
+                    margin: 1rem 0;
+                    width: 100%;
+
+                    *{
+                        width: 100%;
+                    }
+                }
+
+                .write-up p{
+                    padding: 0;
+                }
+
+                .write-up-learn div{
+                    span i{
+                        width: max-content;
+                        margin: 0 1rem;
+                    }
+                }
+            }
+        }
+        .register{
+            @include media('<=xs'){
+                width: 100%;
+            }
+        }
+    }
+}
+
+.main-program{
+    margin-left: 0;
+    width: 100%;
+}
+
+.lang-imgs{
+    @include media('<=xs'){
+        width: 100%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        img{
+            margin: 1rem;
+        }
+    }
+}

@@ -177,7 +177,7 @@
 
 
 .longer-inp{
-    width: -webkit-fill-available ;
+    width: 100% ;
 }
 
 .contact-num{
@@ -193,6 +193,7 @@
     border: none;
     box-sizing: border-box;
     font: 1.2rem Avenir-Next;
+    margin: 0 0 0 2rem;
 }
 
 .event-submit{

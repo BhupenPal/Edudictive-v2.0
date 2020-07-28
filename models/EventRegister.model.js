@@ -25,6 +25,9 @@ const EventRegSchema = new Schema({
     EventName: {
         type: String,
         required: true
+    },
+    CollegeName: {
+        type: String
     }
 }, { timestamps: true })
 

@@ -83,11 +83,8 @@ function Ajax() {
     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
     xhr.onload = function () {
         if (this.status === 200) {
-            if (this.response == "Done") {
-                document.getElementsByClassName('loader')[0].style.display = 'none'
-                animatedsub();
-                console.log('Done')
-            }
+            document.getElementsByClassName('loader')[0].style.display = 'none'
+            animatedsub();
         } else {
             console.log("ERROR: AJAX COULD NOT CONNECT");
         }

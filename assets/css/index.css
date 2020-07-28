@@ -962,6 +962,9 @@ footer h4 {
 }
 
 .query-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #00dc67;
   width: 98%;
   color: white;

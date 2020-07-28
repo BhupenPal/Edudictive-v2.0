@@ -161,6 +161,7 @@ if (urlCheck(["programs", "events", "about-us", "contact-us"])) {
     const FormElement = document.getElementById("contactForm");
     preventer(FormElement, Ajax);
     function Ajax() {
+        document.getElementsByClassName('loader')[0].style.display = 'block'
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "/contact-us", true);
         xhr.setRequestHeader("Content-Type", "application/json");
@@ -168,7 +169,7 @@ if (urlCheck(["programs", "events", "about-us", "contact-us"])) {
         xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
         xhr.onload = function () {
             if (this.status === 200) {
-                console.log(this.response);
+                document.getElementsByClassName('loader')[0].style.display = 'none'
                 animatedsub();
                 if (this.response == "Done") {
                     console.log('Done')

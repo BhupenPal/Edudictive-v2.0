@@ -97,11 +97,9 @@
                     <div class="speakers">
                         <% for(var i = 0; i < doc.Speakers.length; i++){ %>
                         <div class="speaker-member">
-                            <div class="speaker-ini"><%= doc.Speakers[i].name[0] %></div>
+                            <div class="speaker-ini" onclick="LinkHandle('<%= doc.Speakers[i].linkedin %>','blank')"><span><%= doc.Speakers[i].name[0] %></span></div>
                             <div class="speaker-info">
-                                <a href="<%= doc.Speakers[i].linkedin %>" target="__blank">
-                                    <h3><%= doc.Speakers[i].name %></h3>
-                                </a>
+                                <h3><%= doc.Speakers[i].name %></h3>
                                 <h4><%= doc.Speakers[i].position %></h4>
                                 <h4><%= doc.Speakers[i].company %></h4>
                             </div>
@@ -131,6 +129,7 @@
             speakerCircle[i].style.backgroundColor = getRandomColor()
         }
     </script>
+    <script src="/assets/js/dependecies/lottie.js"></script>
     <script src="/assets/js/EventPage.js"></script>
 </body>
 

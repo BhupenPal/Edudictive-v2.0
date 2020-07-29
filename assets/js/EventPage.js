@@ -70,7 +70,7 @@ function another() {
     s_control[nextsl].classList.add("active-slide");
 }
 
-interval = setInterval(another, 5000);
+// interval = setInterval(another, 5000);
 
 function animatedsubsec() {
     let contactForm = document.querySelector(".form-div")
@@ -100,4 +100,21 @@ function Ajax() {
         }
     };
     xhr.send(getFields(FormElement));
+}
+
+let speakerImg = document.querySelectorAll(".speaker-ini")
+
+for (var i = 0; i < speakerImg.length; i++) {
+    (function (i) {
+        speakerImg[i].addEventListener('mouseenter', function () {
+            let anid = document.createElement('div')
+            anid.classList.add("anid")
+            anid.innerHTML = `<lottie-player src="/assets/Json/Linkedin.json" background="transparent"  speed="1"  style="width: 200px; height: 200px;" loop autoplay></lottie-player>`
+            this.appendChild(anid)
+        });
+        speakerImg[i].addEventListener("mouseleave", function () {
+            let parent = this
+            parent.removeChild(parent.children[1])
+        });
+    })(i);
 }

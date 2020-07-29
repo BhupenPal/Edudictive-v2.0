@@ -105,11 +105,44 @@
     align-items: center;
     font-size: 3rem;
     font-family: Proxima-Nova;
+    position: relative;
     font-weight: bold;
     color: white;
     text-shadow: 2px 2px #707070;
+    cursor: pointer;
+    overflow: hidden;
     box-shadow: 6px 6px 15px #00000049;
 }
+
+.anid{
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 0%;
+    width: 0%;
+    background-color: #006097e0;
+    z-index: 20;
+    border-radius: 100%;
+    animation: link-anim 0.5s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @keyframes link-anim{
+    0%{
+      height: 0%;
+      width: 0%;
+    }
+    100%{
+      width: 100%;
+      height: 100%;
+    }
+  }
 
 .speaker-image{
     border-radius: 50vh;

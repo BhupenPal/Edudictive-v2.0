@@ -93,6 +93,7 @@ function Ajax() {
     xhr.onload = function () {
         if (this.status === 200) {
             document.getElementsByClassName('loader')[0].style.display = 'none'
+            document.getElementById('hide-after').style.display = 'none'
             animatedsubsec();
         } else {
             console.log("ERROR: AJAX COULD NOT CONNECT");

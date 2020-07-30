@@ -28,12 +28,12 @@
             <div class="main-filter">
                 <img src="/assets/img/pngs/For Kids.png" alt="">
                 <div class="sub-filter">
-                    <div>All Grades</div>
-                    <div>For Grade 6-8</div>
-                    <div>For Grade 9-12</div>
+                    <div onclick="GradeSelector(this)">All Grades</div>
+                    <div onclick="GradeSelector(this)">For Grade 6-8</div>
+                    <div onclick="GradeSelector(this)">For Grade 9-12</div>
                 </div>
             </div>
-            <div class="main-filter">
+            <div class="main-filter" onclick="GradeSelector(this)">
                 <img src="/assets/img/pngs/For Colleges.png" alt="">
             </div>
         </div>
@@ -62,6 +62,7 @@
     <%-include("../Components/Footer.ejs") %>
     <script src="/assets/js/index.js"></script>
     <script src="/assets/js/dependecies/lottie.js"></script>
+    <script src="/assets/js/AllCourse.js"></script>
 </body>
 
 </html>

@@ -4,27 +4,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="Keywords"
+    content="Online coding classes, entrepreneurship and coding for kids, better career choice, online financial literacy ,Edudictive " />
+  <meta property="Description"
+    content="Indian's best live Coding classes and other career orientated classes for kids as well as college students at lowest prices, best in India," />
+  <meta property="og:title" content="Edudictive - Home Page" />
+  <meta property="og:url" content="https://edudictive.in/" />
+  <meta property="og:image" content="/assets/img/icons/WhiteBG Logo.png">
+  <meta property="og:type" content="website" />
   <link rel="stylesheet" href="/assets/css/index.css" />
   <link rel="stylesheet" href="/assets/css/Home.css" />
   <link rel="stylesheet" href="/assets/css/all.min.css" />
   <link rel="stylesheet" href="/assets/css/newheader.css">
   <link rel="icon" href="/assets/img/icons/Logo.svg" />
+  <link rel="stylesheet" href="/assets/css/dependencies/slick.css">
   <title>Edudictive | Home</title>
 </head>
 
 <body>
   <%-include("../Components/Header.ejs") %>
   <div class="Home-wrap">
-    <div class="skill-section">
-      <div class="skill-section-content">
-        <h1 class="section-headline">Getting skilled has <br> never been easier</h1>
-        <p>A one-stop skill development educational <br> platform for school and college students.</p>
-        <div class="skill-section-btns">
-          <button onclick="LinkHandle('/search-courses')">All programs</button>
-          <button onclick="JumpTo('#why-edu')">Why Edudictive?</button>
+    <div class="Skill-Slider">
+      <div class="skill-section">
+        <div class="skill-section-content">
+          <h1 class="section-headline">Getting skilled has <br> never been easier</h1>
+          <p>A one-stop skill development educational <br> platform for school and college students.</p>
+          <div class="skill-section-btns">
+            <button onclick="LinkHandle('/search-courses')">Book a free class</button>
+            <button onclick="JumpTo('#why-edu')">Why Edudictive?</button>
+          </div>
         </div>
+        <img src="/assets/img/svgs/Homepage Hero.svg" alt="">
       </div>
-      <img src="/assets/img/svgs/Homepage Hero.svg" alt="">
+      <div class="skill-section">
+        <div class="skill-section-content">
+          <h1 class="section-headline red-text">The all new way of <br>learning for your kid</h1>
+          <p>A one-stop skill development educational <br> platform for school and college students.</p>
+          <div class="skill-section-btns">
+            <button class="red-bg" onclick="LinkHandle('/search-courses')">Book a free class</button>
+            <button onclick="JumpTo('#why-edu')">All Programs</button>
+          </div>
+        </div>
+        <img src="/assets/img/svgs/Homepage Hero.svg" alt="">
+      </div>
     </div>
     <!-- Program Section -->
     <% if (doc.length >= 1) { %>
@@ -79,7 +101,8 @@
         <div class="institute-card">
           <img src="/assets/img/svgs/Student College.svg" alt="">
           <h2>For College Students</h2>
-          <p>Making the college students financially independent and industrial ready by providing them with worthy skills and entrepreneurial grooming.</p>
+          <p>Making the college students financially independent and industrial ready by providing them with worthy
+            skills and entrepreneurial grooming.</p>
           <button class="institute-card-btn" onclick="LinkHandle('/programs/colleges')">Know more</button>
         </div>
       </div>
@@ -202,7 +225,19 @@
   </div>
   <%-include("../Components/Footer.ejs") %>
   <script src="/assets/js/index.js"></script>
+  <script src="/assets/js/dependecies/jQuery.js"></script>
   <script src="/assets/js/dependecies/lottie.js"></script>
+  <script src="/assets/js/dependecies/slick.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.Skill-Slider').slick({
+        infinite: false,
+        arrows: false,
+        autoplay: true,
+        autoplay: 3000
+      });
+    });
+  </script>
 </body>
 
 </html>

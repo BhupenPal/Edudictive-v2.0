@@ -1,6 +1,45 @@
 @import './config';
 @import './include-media';
 
+.School-College-Filter {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+
+    .main-filter {
+        cursor: pointer;
+        margin-top: 10px;
+        padding: 20px 0;
+        width: 45%;
+        border: 5px solid #418AFA;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 6px 6px 25px #00000029;
+
+        .sub-filter {
+            margin-top: 20px;
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+
+            div {
+                padding: 3px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid rgba(128, 128, 128, 0.76);
+                border-radius: 8px;
+                height: 30px;
+                width: 20%
+            }
+        }
+    }
+}
+
 .allCourseWrapper{
     padding-top: 125px;
 

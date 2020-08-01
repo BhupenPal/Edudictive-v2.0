@@ -16,6 +16,12 @@ Router.get("/upskillingforum", (req, res, next) => {
         res.render("Home/EventPage", { doc });
     })
 });
+
+Router.get("/hello", (req, res, next) => {
+    EventModel.findOne({ Key: 201 }, (err, doc) => {
+        res.render("Home/Hello", { doc });
+    })
+});
 // Temporary Links
 
 Router.get("/", async (req, res, next) => {

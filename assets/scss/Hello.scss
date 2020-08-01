@@ -10,8 +10,12 @@
 .event-content {
     margin-top: 50px;
     display: flex;
-    font-family: 'Proxima-Nova';
+    font-family: $font-primary;
     justify-content: center;
+
+    @include media('<=lg'){
+        flex-direction: column;
+    }
 }
 
 .event-details {
@@ -24,11 +28,48 @@
         h2 {
             font-size: 40px;
             font-weight: bold;
+            
+            @include media('<=sm'){
+                font-size: 1.9rem;
+                text-align: center;
+            }
+            @include media('<=lg'){
+                font-size: 3rem;
+            }
         }
 
         p {
             font-size: 24px;
+            @include media('<=md'){
+                font-size: 1.2rem;
+            }
         }
+    }
+
+    form input,select{
+        font-size: 1.4rem;
+        font-family: $font-primary;
+        padding: 0 1rem;
+
+        @include media('<=sm'){
+            max-width: unset !important;
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+    }
+
+    form{
+        select{
+            appearance: none;
+            -moz-appearance: none;
+            &::-ms-expand{
+                display: none;
+            }
+        }
+    }
+
+    @include media('<=lg'){
+        width: 100%;
     }
 }
 
@@ -40,7 +81,7 @@
         width: 80%;
 
         h2 {
-            font: 26px 'Avenir-Next';
+            font: 26px $font-secondary;
             text-align: center;
             color: #4F4F4F;
         }
@@ -51,8 +92,22 @@
             div {
                 width: 100%;
                 margin: 30px 0;
+                
+                @include media('<=sm'){
+                    flex-direction: column;
+                    margin: 0;
+                }
+            }
+
+            @include media('<=lg','>=md'){
+                width: 80%;
+                margin: 0 auto;
             }
         }
+    }
+    
+    @include media('<=lg'){
+        width: 100%;
     }
 }
 
@@ -82,10 +137,14 @@
     align-items: center;
     background-color: #00DC67;
     color: white;
-    font: 20px 'Product-Sans';
+    font: 20px $font-tertiary;
     border-radius: 15px;
     box-shadow: 6px 6px 20px #00000029;
-    width: 100%
+    width: 100%;
+    
+    @include media('<=sm'){
+        margin-top: 1rem;
+    }
 }
 
 .speakers-list {
@@ -93,7 +152,16 @@
     margin: 0 auto;
 
     h2 {
-        font: Bold 40px/62px 'Proxima-Nova';
+        font: Bold 40px/62px $font-primary;
+        
+        @include media('<=sm'){
+            margin-left: 2rem;
+        }
+    }
+    
+    @include media('<=sm'){
+        width: 100%;
+        margin: 0;
     }
 }
 
@@ -115,11 +183,13 @@
     }
 
     h2 {
-        font: Bold 28px/17px 'Proxima-Nova';
+        font: Bold 28px/17px $font-primary;
     }
 
     h3 {
-        font: 28px/17px 'Proxima-Nova';
+        font: 28px/17px $font-primary;
     }
-
+     @include media('<=sm'){
+         margin: 0 auto;
+     }
 }

@@ -15,7 +15,7 @@ function getDocHeight() {
         var pctScrolled = Math.floor(scrollTop/trackLength * 100) // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
         let courseBox = document.querySelector(".courseBox")
         if(pctScrolled >= 62){
-            courseBox.style.cssText = `position: absolute; transform: translateY(${62+77}%)`
+            courseBox.style.cssText = `position: absolute; top: 116.5%`
         } else {
             courseBox.removeAttribute("style")
         }

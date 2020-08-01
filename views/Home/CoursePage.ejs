@@ -41,7 +41,7 @@
                             <p><%= doc.About %></p>
                         </div>
                         <div class="whatYouLearn">
-                            <h1 class="sectionHeading">What you wil learn</h1>
+                            <h1 class="sectionHeading">What you will learn</h1>
                             <div>
                                 <% doc.WhatULearn.map(item => { %>
                                     <span><i class="far fa-check-circle"></i>
@@ -66,18 +66,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="completePSAnchor">
+                <div class="completePSAnchor" onclick="JumpTo('#downloadCourse')">
                     Read Complete Program Structure
                 </div>
             </div>
         </div>
-        <div class="subScreen">
+        <div class="subScreen" id="downloadCourse">
             <div class="whoShouldOpt">
                 <h1 class="sectionHeading">Who should opt this program</h1>
                 <p><%= doc.WhoShouldOpt %></p>
             </div>
             <div class="whatYouGet">
-                <h1 class="sectionHeading">What you wil learn</h1>
+                <h1 class="sectionHeading">What you will learn</h1>
                 <div>
                     <% doc.WhatUGet.map(item => { %>
                         <span><i class="far fa-check-circle"></i>

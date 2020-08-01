@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Dev</title>
+    <title><%= doc.Category %> Courses</title>
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/all.min.css" />
-    <link rel="stylesheet" href="/assets/css/Course.css" />
+    <!-- <link rel="stylesheet" href="/assets/css/Course.css" /> -->
     <link rel="stylesheet" href="/assets/css/CoursePage.css">
     <link rel="stylesheet" href="/assets/css/newheader.css">
     <link rel="icon" href="/assets/img/icons/Logo.svg" />
@@ -15,224 +15,136 @@
 
 <body>
     <%-include('../Components/Header.ejs') %>
-    <div class="main_con_container">
-        <div class="main">
-            <!-- first division starts -->
-            <div class="main-content">
-                <div class="content">
-                    <div class="content-head">
-                        <h4><%= doc.Category %><h4>
-                                <h1><%= doc.Title %></h1>
-                                <h2><%= doc.Mode %> Training Program</h2>
-                    </div>
-                    <div class="ratings">
-                        <img src="/assets/images/svgs/Filled-Star.svg" />
-                        <img src="/assets/images/svgs/Filled-Star.svg" />
-                        <img src="/assets/images/svgs/Filled-Star.svg" />
-                        <img src="/assets/images/svgs/Filled-Star.svg" />
-                        <img id="half-star" src="/assets/images/svgs/half filled star.svg" />
-                        &ensp;<%= doc.Rating %> (<%= doc.TotalReview %> ratings)
-                        <br>
-                        &emsp;<span class="white-text"><%= doc.Enrolled %> Enrolled Students</span>
-                    </div>
-                    <div class="content-about">
-                        <div class="about-text">
-                            <div class="write-up">
-                                <h3>About this program</h3>
-                                <p>
-                                    <%= doc.About %>
-                                </p>
-                            </div>
-                            <div class="write-up-learn">
-                                <h3>What you will learn</h3>
-                                <div style="color: white;">
-                                    <% doc.WhatULearn.map(item => { %>
-                                    <span><i class="far fa-check-circle"></i>
-                                        <p><%= item %></p>
-                                    </span>
-                                    <% }) %>
-                                </div>
-                            </div>
-                            <br />
-                            <!-- Add the id of program structure HERE -->
-                            <a href="#program-structure">Read complete program structure &ensp;
-                                <i class="fas fa-angle-down"></i>
-                            </a>
+    <div class="courseContaier">
+        <div class="mainScreen">
+            <div class="contentBox">
+                <div class="courseBasicDetails">
+                    <h5><%= doc.Category %></h5>
+                    <h1><%= doc.Title %></h1>
+                    <h2><%= doc.Mode %> Training Program</h2>
+                    <div class="ratingAndEnrolled">
+                        <div class="ratingStars">
+                            <img src="/assets/images/svgs/Filled-Star.svg" alt="">
+                            <img src="/assets/images/svgs/Filled-Star.svg" alt="">
+                            <img src="/assets/images/svgs/Filled-Star.svg" alt="">
+                            <img src="/assets/images/svgs/Filled-Star.svg" alt="">
+                            <img src="/assets/images/svgs/half filled star.svg" alt="">
                         </div>
-                        <div class="about-details">
-                            <div class="detail-write-up">
-                                <h3>Starts on</h3>
-                                <p>
-                                    <%= doc.StartDate %>
-                                </p>
+                        <span class="ratingPoints"><%= doc.Rating %> (<%= doc.TotalReview %> Ratings)</span>
+                        <span class="enrolledStudents"><%= doc.Enrolled %> Enrolled Students</span>
+                    </div>
+                </div>
+                <div class="courseAdditionalDetails">
+                    <div class="programStructure">
+                        <div class="aboutProgram">
+                            <h1 class="sectionHeading">About this program</h1>
+                            <p><%= doc.About %></p>
+                        </div>
+                        <div class="whatYouLearn">
+                            <h1 class="sectionHeading">What you wil learn</h1>
+                            <div>
+                                <% doc.WhatULearn.map(item => { %>
+                                    <span><i class="far fa-check-circle"></i>
+                                    <p><%= item %></p>
+                                    </span>
+                                <% }) %>
                             </div>
-                            <div class="detail-write-up">
-                                <h3>Program Length</h3>
-                                <p>
-                                    <%= doc.Duration %>
-                                </p>
-                            </div>
-                            <% if (doc.Mode !== 'Online (Live)') { %>
-                            <div class="detail-write-up">
-                                <h3>Location</h3>
-                                <p>
-                                    <%= doc.Location %>
-                                </p>
-                            </div>
-                            <% } %>
+                        </div>
+                    </div>
+                    <div class="programCenterAndDate">
+                        <div>
+                            <h3>Starts On</h3>
+                            <span><%= doc.StartDate %></span>
+                        </div>
+                        <div>
+                            <h3>Program Length</h3>
+                            <span><%= doc.Duration %></span>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <span><%= doc.Location %></span>
                         </div>
                     </div>
                 </div>
-
-                <div class="register">
-                    <% if (doc.Banner) { %>
-                    <div class="lang-imgs">
-                        <img src="/assets/images/svgs/html-logo.svg" />
-                        <img src="/assets/images/svgs/css-logo.svg" />
-                        <img src="/assets/images/svgs/js-logo.svg" />
-                    </div>
-                    <% } %>
-                    <div class="reg-details">
-                        <h2>Register Now</h2>
-                        <h1> <img src="/assets/images/svgs/indian-rupee-symbol.svg" />
-                            <% const Price = doc.Price - (doc.Price * doc.Discount)/100 %>
-                            <%= Price %></h1>
-                        <h2 id="discount">
-                            <span style="text-decoration: line-through">₹ <%= doc.Price %></span>
-                            <span><%= doc.Discount %>%</span>
-                        </h2>
-                        <% if (doc.EarlyBird) { %>
-                        <div id="discount-tag">
-                            Early Bird Discount Applied
-                        </div>
-                        <% } %>
-                    </div>
-                    <div class="reg-btns">
-                        <button id="buy-btn" class="btn">
-                            <i class="fal fa-bags-shopping"></i>&ensp;Buy Now
-                        </button>
-                        <button id="cart-btn" class="btn">
-                            <i class="fal fa-cart-plus"></i>&ensp;Add to wishlist
-                        </button>
-                    </div>
+                <div class="completePSAnchor">
+                    Read Complete Program Structure
                 </div>
             </div>
         </div>
-        <br /><br />
-        <!-- first division ends -->
-
-        <!-- second division starts -->
-        <div class="main-program">
-            <div class="program-heading">
-                <h1>WHO SHOULD OPT FOR THIS PROGRAM</h1>
+        <div class="subScreen">
+            <div class="whoShouldOpt">
+                <h1 class="sectionHeading">Who should opt this program</h1>
                 <p><%= doc.WhoShouldOpt %></p>
             </div>
-
-            <div class="program-heading">
-                <h1>WHAT YOU GET</h1>
-
-                <div class="program-content-main">
-                    <div>
-                        <% doc.WhatUGet.map(item => { %>
+            <div class="whatYouGet">
+                <h1 class="sectionHeading">What you wil learn</h1>
+                <div>
+                    <% doc.WhatUGet.map(item => { %>
                         <span><i class="far fa-check-circle"></i>
-                            <p><%= item %></p>
+                        <p><%= item %></p>
                         </span>
-                        <% }) %>
-                    </div>
-
-                    <!-- <div>
-                        <span><i class="far fa-check-circle"></i>
-                            <p>Certificate of Completion</p>
-                        </span>
-                        <span><i class="far fa-check-circle"></i>
-                            <p>Doubt clearing and AMA sessions</p>
-                        </span>
-                        <span> <i class="far fa-check-circle"></i>
-                            <p>Industry-level projects to work on</p>
-                        </span>
-                        <span><i class="far fa-check-circle"></i>
-                            <p>Internship/referral opportunities based on performance</p>
-                        </span>
-                    </div> -->
-                </div>
-                <br />
-                <h1 id="program-structure">PROGRAM STRUCTURE</h1><br />
-            </div>
-
-            <div class="program-struct" id="program-structure">
-
-                <div class="program-struct-sub">
-
-                    <% doc.Structure.map( (item, i) => { %>
-                    <button onclick="StructureToggle(this)" class="struct-dropbtn">
-                        <%= doc.TimeFrame %> <%= i + 1 %> - <%= item.Topic %>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="struct-content">
-                        <h4><%= item.Explain %></h4>
-                        <% item.ToDo.map(task => { %>
-                        <span><i class="far fa-check-circle"></i>
-                            <p><%= task %></p>
-                        </span>
-                        <% }) %>
-                        <hr /><br />
-                    </div>
                     <% }) %>
-
-                    <p class="cloud-down">
-                        <a href="/assets/uploads/courses/<%= doc.Key %>/course-structure.pdf" download>
-                            <img src="/assets/images/downcloud.png" alt="">&emsp;<span>Download full course structure
-                        </a>
-                    </p>
-
                 </div>
             </div>
-            <br /><br /><br />
-
+            <div class="downloadProgram">
+                <h1 class="sectionHeading">Program Structure</h1>
+                <div class="programStructureItems">
+                    <% doc.Structure.map( (item, i) => { %>
+                        <button onclick="StructureToggle(this)" class="struct-dropbtn">
+                            <%= doc.TimeFrame %> <%= i + 1 %> - <%= item.Topic %>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="struct-content">
+                            <h4><%= item.Explain %></h4>
+                            <% item.ToDo.map(task => { %>
+                            <span><i class="far fa-check-circle"></i>
+                                <p><%= task %></p>
+                            </span>
+                            <% }) %>
+                            <hr /><br />
+                        </div>
+                        <% }) %>
+                </div>
+                <div class="downloadProgramStructure">
+                    <a href="/assets/uploads/courses/<%= doc.Key %>/course-structure.pdf" download>
+                        <img src="/assets/images/downcloud.png" alt=""><span>Download</span>
+                    </a>
+                </div>
+            </div>
         </div>
-        <!-- second division ends -->
-
-        <!-- third division starts -->
-
-        <!-- Reviews Section -->
-        <% if (Reviews > 3) { %>
-        <div class="reviews-section">
-            <h1 class="section-headline" style="text-align: left;">Our reviews speak for themselves</h1>
-            <div class="review-card-container">
-                <% for(let i = 0; i < Reviews; i++) { %>
-                <div class="review-card">
-                    <div class="rating-row">
-                        <img src="/assets/images/svgs/filled_star.svg" alt="">
-                        <img src="/assets/images/svgs/filled_star.svg" alt="">
-                        <img src="/assets/images/svgs/filled_star.svg" alt="">
-                        <img src="/assets/images/svgs/filled_star.svg" alt="">
-                        <img src="/assets/images/svgs/star.svg" alt="">
-                    </div>
-                    <h3><%= Reviews[i].Title %></h3>
-                    <!-- Very informative and well designed course ! -->
-                    <p><%= Reviews[i].msg %></p>
-                    <div class="review-by">
-                        <h3><%= Reviews[i].Name %>, <%= Reviews[i].College %></h3>
-                        <p>Attended <%= Reviews[i].Title %></p>
-                    </div>
+        <div class="courseBox">
+            <% if (doc.Banner) { %>
+                <div class="lang-imgs">
+                    <img src="/assets/images/svgs/html-logo.svg" />
+                    <img src="/assets/images/svgs/css-logo.svg" />
+                    <img src="/assets/images/svgs/js-logo.svg" />
                 </div>
                 <% } %>
+            <div class="registerInfo">
+                <h2>Register Now</h2>
+                <h1>
+                    <img src="/assets/images/svgs/indian-rupee-symbol.svg" />
+                    <% const Price = doc.Price - (doc.Price * doc.Discount)/100 %>
+                    <%= Price %></h1>
+                </h1>
+                <h3>
+                    <span class="striked">₹ <%= doc.Price %></span>
+                    <span><%= doc.Discount %>%</span>
+                </h3>
             </div>
-            <div class="review-pointer">
-                <% for(let i=0; i<(doc.Reviews)/2; i++) { %>
-                <div class="review-points"></div>
-                <% } %>
+            <div class="registerButtons">
+                <button>
+                    <i class="fal fa-bags-shopping"></i>&ensp;Buy Now
+                </button>
+                <button>
+                    <i class="fal fa-cart-plus"></i>&ensp;Add to wishlist
+                </button>
             </div>
         </div>
-        <% } %>
-        <br /><br /><br /><br />
-
-        <!-- third divsion ends -->
     </div>
-
     <%-include('../Components/Footer.ejs') %>
     <script src="/assets/js/index.js"></script>
-
+    <script src="/assets/js/CoursePage.js"></script>
 </body>
 
 </html>

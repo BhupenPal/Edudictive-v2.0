@@ -103,13 +103,14 @@ function Ajax() {
 }
 
 let speakerImg = document.querySelectorAll(".speaker-ini")
+console.log(speakerImg)
 
 for (var i = 0; i < speakerImg.length; i++) {
     (function (i) {
         speakerImg[i].addEventListener('mouseenter', function () {
             let anid = document.createElement('div')
             anid.classList.add("anid")
-            anid.innerHTML = `<lottie-player src="/assets/Json/Linkedin.json" background="transparent"  speed="1"  style="width: 200px; height: 200px;" loop autoplay></lottie-player>`
+            anid.innerHTML = `<lottie-player src="/assets/Json/Linkedin.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop autoplay></lottie-player>`
             this.appendChild(anid)
         });
         speakerImg[i].addEventListener("mouseleave", function () {

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/newheader.css">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/assets/css/Hello.css" />
+    <title>Edudictive | Event</title>
+    <link rel="icon" href="/assets/img/icons/Logo.svg" />
+</head>
+
+<body>
+    <%-include('../Components/Header.ejs') %>
+    <div class="wrap-content">
+        <div class="event-banner">
+
+        </div>
+        <div class="event-content">
+            <div class="event-details">
+                <div>
+                    <h2>About the webinar</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id iste corporis, repudiandae quisquam dicta est tenetur hic laudantium molestiae error doloribus distinctio sunt quasi sapiente libero mollitia eveniet ipsum quidem?
+                    Tempore, sequi eum nesciunt, ut labore id adipisci nobis a ipsa itaque, earum harum distinctio quaerat? Veritatis, iure officiis, nisi quia vitae porro aut natus totam in aliquid sed quos!
+                </div>
+                <div>
+                    <h2>Who should attend?</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id iste corporis, repudiandae quisquam dicta est tenetur hic laudantium molestiae error doloribus distinctio sunt quasi sapiente libero mollitia eveniet ipsum quidem?</p>
+                </div>
+            </div>
+            <div class="event-form">
+                <div class="event-details">
+                    <h2>Register for this seminar</h2>
+                    <form>
+                        <div class="input-divide">
+                            <input type="text" class="form-control" name="FirstName" placeholder="First Name">
+                            <input type="text" class="form-control" name="LastName" placeholder="Last Name">
+                        </div>
+                        <div>
+                            <input type="text" class="form-control" name="Email" placeholder="Email">                            
+                        </div>
+                        <div class="input-divide">
+                            <input type="text" class="form-control" name="Phone" placeholder="Contact Number">
+                            <select name="" id="" class="form-control">
+                                <option disabled selected>Select Role</option>
+                                <option value="student">Student</option>
+                                <option value="parent">Parent</option>
+                                <option value="institute">Institute</option>
+                            </select>
+                        </div>
+                        <div class="input-divide">
+                            <input type="text" class="form-control" name="College" placeholder="Institution Name">
+                            <select name="" id="" class="form-control">
+                                <option disabled selected>Select domain</option>
+                                <option value="">Enterprenuership</option>
+                                <option value="">Technology and Coding</option>
+                                <option value="">Design and Creation</option>
+                                <option value="">Sales and Marketing</option>
+                                <option value="">Marketing and Growth Hacking</option>
+                                <option value="">Finance and Investments</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button class="reg-button">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="speakers-list">
+            <h2>Speakers</h2>
+            <div class="speaker-members">
+                <div class="personality">
+                    <img src="https://cdn.shopify.com/s/files/1/0045/5104/9304/t/27/assets/AC_ECOM_SITE_2020_REFRESH_1_INDEX_M2_THUMBS-V2-1.jpg?v=8913815134086573859" alt="">
+                    <h2>Andrew Stark</h2>
+                    <h3>Position</h3>
+                    <h3>Company</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%-include('../Components/Footer.ejs') %>
+    <script src="/assets/js/index.js"></script>
+    <script>
+        const EventKey = '<%= doc.Key %>'
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        let speakerCircle = document.querySelectorAll(".speaker-ini")
+        for (let i = 0; i < speakerCircle.length; i++) {
+            speakerCircle[i].style.backgroundColor = getRandomColor()
+        }
+    </script>
+    <script src="/assets/js/dependecies/lottie.js"></script>
+    <script src="/assets/js/EventPage.js"></script>
+</body>
+
+</html>

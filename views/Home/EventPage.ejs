@@ -32,41 +32,51 @@
             </div>
             <div class="event-form">
                 <div class="event-details">
-                    <h2>Register for this seminar</h2>
-                    <form id="eventInputs">
-                        <div class="input-divide">
-                            <input type="text" class="form-control" name="FirstName" placeholder="First Name" required>
-                            <input type="text" class="form-control" name="LastName" placeholder="Last Name" required>
+                    <h2 id="hide-after">Register for this seminar</h2>
+                    <div class="form-div">
+                        <form id="eventInputs">
+                            <div class="input-divide">
+                                <input type="text" class="form-control" name="FirstName" placeholder="First Name"
+                                    required>
+                                <input type="text" class="form-control" name="LastName" placeholder="Last Name"
+                                    required>
+                            </div>
+                            <div>
+                                <input type="text" class="form-control" name="Email" placeholder="Email" required>
+                            </div>
+                            <div class="input-divide">
+                                <input type="text" class="form-control" name="Phone" placeholder="Contact Number"
+                                    required>
+                                <select name="Role" id="" class="form-control" required>
+                                    <option disabled selected>Select Role</option>
+                                    <option value="Student">Student</option>
+                                    <option value="Parent">Parent</option>
+                                    <option value="Institute">Institute</option>
+                                </select>
+                            </div>
+                            <div class="input-divide">
+                                <input type="text" class="form-control" name="CollegeName"
+                                    placeholder="Institution Name" required>
+                                <select name="InterestedDomain" id="" class="form-control" required>
+                                    <option disabled selected>Select domain</option>
+                                    <option value="">Enterprenuership</option>
+                                    <option value="">Technology and Coding</option>
+                                    <option value="">Design and Creation</option>
+                                    <option value="">Sales and Marketing</option>
+                                    <option value="">Marketing and Growth Hacking</option>
+                                    <option value="">Finance and Investments</option>
+                                </select>
+                            </div>
+                            <div>
+                                <div class="loader"></div>
+                                <button class="reg-button">Register</button>
+                            </div>
+                        </form>
+                        <div class="submission-div">
+                            <img src="/assets/images/svgs/Green_check.svg" alt="">
+                            <span>Registration Successful</span>
                         </div>
-                        <div>
-                            <input type="text" class="form-control" name="Email" placeholder="Email" required>
-                        </div>
-                        <div class="input-divide">
-                            <input type="text" class="form-control" name="Phone" placeholder="Contact Number" required>
-                            <select name="Role" id="" class="form-control" required>
-                                <option disabled selected>Select Role</option>
-                                <option value="Student">Student</option>
-                                <option value="Parent">Parent</option>
-                                <option value="Institute">Institute</option>
-                            </select>
-                        </div>
-                        <div class="input-divide">
-                            <input type="text" class="form-control" name="CollegeName" placeholder="Institution Name"
-                                required>
-                            <select name="InterestedDomain" id="" class="form-control" required>
-                                <option disabled selected>Select domain</option>
-                                <option value="">Enterprenuership</option>
-                                <option value="">Technology and Coding</option>
-                                <option value="">Design and Creation</option>
-                                <option value="">Sales and Marketing</option>
-                                <option value="">Marketing and Growth Hacking</option>
-                                <option value="">Finance and Investments</option>
-                            </select>
-                        </div>
-                        <div>
-                            <button class="reg-button">Register</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

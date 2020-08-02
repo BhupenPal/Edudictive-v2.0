@@ -103,7 +103,6 @@ function Ajax() {
 }
 
 let speakerImg = document.querySelectorAll(".speaker-ini")
-console.log(speakerImg)
 
 for (var i = 0; i < speakerImg.length; i++) {
     (function (i) {

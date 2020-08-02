@@ -2,15 +2,21 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 const EventRegSchema = new Schema({
-    FirstName:{
+    FirstName: {
         type: String,
         required: true,
     },
-    LastName:{
-        type:String,
-        required:true,
+    LastName: {
+        type: String,
+        required: true,
     },
-    Phone:{
+    InterestedDomain: {
+        type: String
+    },
+    Email: {
+        type: String
+    },
+    Phone: {
         type: Number,
         required: true
     },

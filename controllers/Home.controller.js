@@ -144,4 +144,8 @@ Router.post("/edudictive-student-partner/apply", (req, res, next) => {
     });
 });
 
+Router.get('/book-free-trial', (req, res) => {
+    res.render('Home/Trial-School')
+})
+
 module.exports = Router;

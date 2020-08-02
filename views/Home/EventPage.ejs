@@ -16,120 +16,84 @@
 <body>
     <%-include('../Components/Header.ejs') %>
     <div class="wrap-content">
-        <div class="event-container">
-            <div class="event-head">
-                <%= doc.EventName %>
-            </div>
-            <div class="event-info">
-                <div class="event-time">
-                    <%= doc.Duration %> online live session | <% if (doc.Fees == 0) { %>No Charges<% } else { %>
-                    <%= doc.Fees %> <% } %>
+        <div class="event-banner" style="background-image: url('/assets/uploads/events/<%= doc.Key %>/banner.png');">
+
+        </div>
+        <div class="event-content">
+            <div class="event-details">
+                <div>
+                    <h2>About the webinar</h2>
+                    <p><%= doc.About %></p>
                 </div>
-                <div class="event-date">
-                    <span>Date & Time: <br> <%= doc.StartTime %></span>
+                <div>
+                    <h2>Who should attend?</h2>
+                    <p> <%= doc.WhoShouldAttend %></p>
+                </div>
+            </div>
+            <div class="event-form">
+                <div class="event-details">
+                    <h2>Register for this seminar</h2>
+                    <form id="eventInputs">
+                        <div class="input-divide">
+                            <input type="text" class="form-control" name="FirstName" placeholder="First Name" required>
+                            <input type="text" class="form-control" name="LastName" placeholder="Last Name" required>
+                        </div>
+                        <div>
+                            <input type="text" class="form-control" name="Email" placeholder="Email" required>
+                        </div>
+                        <div class="input-divide">
+                            <input type="text" class="form-control" name="Phone" placeholder="Contact Number" required>
+                            <select name="Role" id="" class="form-control" required>
+                                <option disabled selected>Select Role</option>
+                                <option value="Student">Student</option>
+                                <option value="Parent">Parent</option>
+                                <option value="Institute">Institute</option>
+                            </select>
+                        </div>
+                        <div class="input-divide">
+                            <input type="text" class="form-control" name="CollegeName" placeholder="Institution Name"
+                                required>
+                            <select name="InterestedDomain" id="" class="form-control" required>
+                                <option disabled selected>Select domain</option>
+                                <option value="">Enterprenuership</option>
+                                <option value="">Technology and Coding</option>
+                                <option value="">Design and Creation</option>
+                                <option value="">Sales and Marketing</option>
+                                <option value="">Marketing and Growth Hacking</option>
+                                <option value="">Finance and Investments</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button class="reg-button">Register</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <div>
-            <div class="webinar">
-                <div class="webinar-description">
-                    <div class="event-info-div">
-                        <div class="info-heading">
-                            About the Forum
-                        </div>
-                        <div class="about-description">
-                            <%= doc.About %>
-                        </div>
+        <div class="speakers-list">
+            <h2>Speakers</h2>
+            <div class="speaker-members">
+                <% for(var i = 0; i < doc.Speakers.length; i++){ %>
+                <div class="personality">
+                    <div class="speaker-ini" onclick="LinkHandle('<%= doc.Speakers[i].linkedin %>','blank')">
+                        <img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/linkedin-512.png"
+                            alt="">
                     </div>
-                    <!-- who should attend it, same heading style -->
-                    <div class="event-info-div">
-                        <div class="info-heading spacing">
-                            Who should attend it
-                        </div>
-                        <div class="about-description">
-                            <%= doc.WhoShouldAttend %>
-                        </div>
-                    </div>
+                    <h2><%= doc.Speakers[i].name %></h2>
+                    <h3><%= doc.Speakers[i].position %></h3>
+                    <h3><%= doc.Speakers[i].company %></h3>
                 </div>
-                <div class="registration-form">
-                    <div class="form-heading" id="hide-after">
-                        Register for this seminar
-                    </div>
-                    <div class="form-div">
-                        <form id="eventInputs">
-                            <div class="Name">
-                                <input type="text" name="FirstName" class="event-inp" placeholder="First Name" required>
-                                <input type="text" name="LastName" class="event-inp" placeholder="Last Name" required>
-                            </div>
-                            <input type="email" name="Email" class="event-inp email-inp" placeholder="Email" required>
-                            <div class="userRole-contact">
-                                <select name="Role" class="event-inp shorter-inp" required>
-                                    <option value="role">Select Role</option>
-                                    <option value="student">Student</option>
-                                    <option value="parent">Parent</option>
-                                    <option value="institute">Institute</option>
-                                </select>
-                                <div class="contact-num event-inp longer-inp ">
-                                    <div class="default-code">+91 -</div>
-                                    <input type="number" name="Phone" class="ph-input" placeholder="Contact Number"
-                                        required>
-                                </div>
-                            </div>
-                            <input type="text" name="CollegeName" class="event-inp inst-inp"
-                                placeholder="Institution Name" required>
-                            <button type="submit" class="event-submit">
-                                <div class="loader"></div>
-                                Register
-                            </button>
-                        </form>
-                        <div class="submission-div">
-                            <img src="/assets/images/svgs/Green_check.svg" alt="">
-                            <span>Registration Successful</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="">
-                    <div class="info-heading spacing" style="text-align: center;">
-                        Speakers
-                    </div>
-                    <div class="speakers">
-                        <% for(var i = 0; i < doc.Speakers.length; i++){ %>
-                        <div class="speaker-member">
-                            <div class="speaker-ini" onclick="LinkHandle('<%= doc.Speakers[i].linkedin %>','blank')"><span><%= doc.Speakers[i].name[0] %></span></div>
-                            <div class="speaker-info">
-                                <h3><%= doc.Speakers[i].name %></h3>
-                                <h4><%= doc.Speakers[i].position %></h4>
-                                <h4><%= doc.Speakers[i].company %></h4>
-                            </div>
-                        </div>
-                        <% } %>
-                    </div>
-                </div>
+                <% } %>
             </div>
         </div>
     </div>
 
     <%-include('../Components/Footer.ejs') %>
     <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/dependecies/lottie.js"></script>
     <script>
         const EventKey = '<%= doc.Key %>'
-        function getRandomColor() {
-            var letters = '0123456789ABCDEF';
-            var color = '#';
-            for (var i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-
-        let speakerCircle = document.querySelectorAll(".speaker-ini")
-        for (let i = 0; i < speakerCircle.length; i++) {
-            speakerCircle[i].style.backgroundColor = getRandomColor()
-        }
     </script>
-    <script src="/assets/js/dependecies/lottie.js"></script>
     <script src="/assets/js/EventPage.js"></script>
 </body>
 

@@ -16,12 +16,6 @@ Router.get("/upskillingforum", (req, res, next) => {
         res.render("Home/EventPage", { doc });
     })
 });
-
-Router.get("/hello", (req, res, next) => {
-    EventModel.findOne({ Key: 201 }, (err, doc) => {
-        res.render("Home/Hello", { doc });
-    })
-});
 // Temporary Links
 
 Router.get("/", async (req, res, next) => {
@@ -144,8 +138,12 @@ Router.post("/edudictive-student-partner/apply", (req, res, next) => {
     });
 });
 
-Router.get('/book-free-trial', (req, res) => {
+Router.get('/book-free-trial/school', (req, res) => {
     res.render('Home/Trial-School')
+})
+
+Router.get('/book-free-trial/college', (req, res) => {
+    res.render('Home/Trial-College')
 })
 
 module.exports = Router;

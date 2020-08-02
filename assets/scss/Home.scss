@@ -1249,3 +1249,120 @@
 .vanish{
     display: none !important;
 }
+
+// Modal CSS
+.modalContainer{
+    position: fixed;
+    background-color: #00000030;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+
+    .modalBox{
+        height: 60%;
+        width: 50%;
+        background-color: #ffffff;
+        border-radius: 1.5rem;
+        margin: auto;
+        box-shadow: 6px 6px 15px #00000029;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0);
+        transition: 0.4s;
+
+        h1{
+            font: 400 1.8rem $font-primary;
+            color: #4f4f4f;
+        }
+
+        .modalOptionContainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .modalOption{
+                margin: 1rem 1rem 2rem 1rem;
+                height: 16rem;
+                width: 24rem;
+                box-shadow: 6px 6px 20px #00000040;
+                border-radius: 0.6rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: 0.2s;
+                padding-top: 1rem;
+
+                img{
+                    width: 10rem;
+                }
+
+                .modalCategoryWrap{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    span{
+                        &:nth-child(2){
+                            font-family: "Sansation";
+                            font-size: 1.6rem;
+                            color: #0088FF;
+                            margin: 0 0 0 0.6rem;
+                            font-weight: bold;
+                        }
+                    }
+                    .edudictiveFor{
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                    }
+                    .modelCategory{
+                        font: Bold 4rem $font-secondary;
+                    }
+                }
+
+                h2{
+                    text-align: center;
+                    color: #00000099;
+                    font: bolder 1.1rem $font-quartenary;
+                    width: 72%;
+                    height: 3rem;
+                }
+
+                &:first-child{
+                    .modelCategory{
+                        color: #6A11CB;
+                    }
+                }
+
+                &:last-child{
+                    .modelCategory{
+                        color: #004E92;
+                    }
+                }
+                &:hover{
+                    background-color: #f6f9fc;
+                }
+            }
+        }
+
+        button{
+            color: white;
+            background-color: #04D30C;
+            box-shadow: 6px 6px 15px #00000029;
+            border-radius: 1rem;
+            font: bold 1.4rem $font-primary;
+            padding: 1rem 5rem;
+            margin-top: 1rem;
+        }
+    }
+}
+// Modal CSS

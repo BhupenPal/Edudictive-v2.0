@@ -30,7 +30,7 @@
           <h1 class="section-headline">Getting skilled has <br> never been easier</h1>
           <p>A one-stop skill development educational <br> platform for school and college students.</p>
           <div class="skill-section-btns">
-            <button onclick="LinkHandle('/search-courses')">Book a free class</button>
+            <button onclick="changearia('show')">Book a free class</button>
             <button onclick="JumpTo('#why-edu')">Why Edudictive?</button>
           </div>
         </div>
@@ -41,7 +41,7 @@
           <h1 class="section-headline red-text">The all new way of <br>learning for your kid</h1>
           <p>A one-stop skill development educational <br> platform for school and college students.</p>
           <div class="skill-section-btns">
-            <button class="red-bg" onclick="LinkHandle('/search-courses')">Book a free class</button>
+            <button class="red-bg" onclick="changearia('show')">Book a free class</button>
             <button onclick="LinkHandle('/search-courses')">All Programs</button>
           </div>
         </div>
@@ -223,6 +223,38 @@
       </div>
     </div>
   </div>
+  <!-- Modal HTML -->
+  <div class="modalContainer" aria-label="hidden">
+    <div class="modalBox">
+      <h1>Select your preferred option</h1>
+      <div class="modalOptionContainer">
+        <div class="modalOption">
+          <div class="modalCategoryWrap">
+            <div class="edudictiveFor">
+              <img src="/assets/images/svgs/logo_written.svg" alt="">
+              <span>for</span>
+            </div>
+            <br>
+            <span class="modelCategory">Kids</span>
+          </div>
+          <h2>For school-going students of Grade 6 to 12</h2>
+        </div>
+        <div class="modalOption">
+          <div class="modalCategoryWrap">
+            <div class="edudictiveFor">
+              <img src="/assets/images/svgs/logo_written.svg" alt="">
+              <span>for</span>
+            </div>
+            <br>
+            <span class="modelCategory">College</span>
+          </div>
+          <h2>For all the college-going students.</h2>
+        </div>
+      </div>
+      <button onclick="changearia('hide')">Continue</button>
+    </div>
+  </div>
+  <!-- Modal HTML -->
   <%-include("../Components/Footer.ejs") %>
   <script src="/assets/js/index.js"></script>
   <script src="/assets/js/dependecies/jQuery.js"></script>
@@ -237,6 +269,40 @@
         autoplay: 3000
       });
     });
+  </script>
+  <script>
+    let modalContainer = document.querySelector(".modalContainer")
+    let modalBox = document.querySelector(".modalBox")
+
+    function Modal(){
+      if(modalContainer.getAttribute("aria-label")=="hidden"){
+        modalContainer.setAttribute("style","display: flex");
+        setTimeout(function(){
+          modalContainer.setAttribute("style","display: flex; visibility: visible; opacity: 1");
+          modalBox.setAttribute("style","transform: scale(1)");
+        },400);
+        return;
+      } else {
+        modalBox.removeAttribute("style");
+        modalContainer.setAttribute("style","display: flex; visibility: hidden; opacity: 0");
+        setTimeout( function(){
+          modalContainer.removeAttribute("style");
+        },400);
+        return;
+      }
+    }
+
+    function changearia(x){
+      if(x=="hide"){
+        modalContainer.setAttribute("aria-label","visible")
+        Modal()
+        return
+      } else {
+        modalContainer.setAttribute("aria-label","hidden")
+        Modal()
+        return
+      }
+    }
   </script>
 </body>
 

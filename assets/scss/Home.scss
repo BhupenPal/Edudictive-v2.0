@@ -1265,7 +1265,7 @@
     transition: 0.4s;
 
     .modalBox{
-        height: 60%;
+        height: 65%;
         width: 50%;
         background-color: #ffffff;
         border-radius: 1.5rem;
@@ -1279,8 +1279,9 @@
         transition: 0.4s;
 
         h1{
-            font: 400 1.8rem $font-primary;
-            color: #4f4f4f;
+            font: bolder 1.8rem $font-primary;
+            color: #4F4F4F;
+            letter-spacing: 0;
         }
 
         .modalOptionContainer{
@@ -1356,7 +1357,7 @@
 
         button{
             color: white;
-            background-color: #04D30C;
+            background-color: #00DC67;
             box-shadow: 6px 6px 15px #00000029;
             border-radius: 1rem;
             font: bold 1.4rem $font-primary;

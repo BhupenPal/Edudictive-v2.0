@@ -228,7 +228,7 @@
     <div class="modalBox">
       <h1>Select your preferred option</h1>
       <div class="modalOptionContainer">
-        <div class="modalOption">
+        <div class="modalOption" onclick="LinkHandle('/book-free-trial/school')">
           <div class="modalCategoryWrap">
             <div class="edudictiveFor">
               <img src="/assets/images/svgs/logo_written.svg" alt="">
@@ -239,7 +239,7 @@
           </div>
           <h2>For school-going students of Grade 6 to 12</h2>
         </div>
-        <div class="modalOption">
+        <div class="modalOption" onclick="LinkHandle('/book-free-trial/college')">
           <div class="modalCategoryWrap">
             <div class="edudictiveFor">
               <img src="/assets/images/svgs/logo_written.svg" alt="">
@@ -281,6 +281,7 @@
           modalContainer.setAttribute("style","display: flex; visibility: visible; opacity: 1");
           modalBox.setAttribute("style","transform: scale(1)");
         },400);
+        document.getElementsByTagName("html")[0].setAttribute("style","overflow: hidden")
         return;
       } else {
         modalBox.removeAttribute("style");
@@ -288,6 +289,7 @@
         setTimeout( function(){
           modalContainer.removeAttribute("style");
         },400);
+        document.getElementsByTagName("html")[0].removeAttribute("style")
         return;
       }
     }

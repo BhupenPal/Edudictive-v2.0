@@ -26,7 +26,8 @@ const collegeTrialSchema = new mongoose.Schema({
         required: true
     },
     LaptopPC: {
-        type: Boolean
+        type: String,
+        required: true
     }
 }, { timestamps: true })
 

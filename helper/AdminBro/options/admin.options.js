@@ -15,8 +15,12 @@ const ESPRegOptions = require("../resources/admin.ESPReg");
 //Users Options
 const UsersOptions = require("../resources/admin.users");
 
+//Demo Classes
+const SchoolDemos = require("../resources/admin.SchoolTrials");
+const CollegeDemos = require("../resources/admin.CollegeTrial");
+
 //Contact Options
-const ContactOptions = require("../resources/admin.contact")
+const ContactOptions = require("../resources/admin.contact");
 
 
 const AdminBroMongoose = require("admin-bro-mongoose");
@@ -33,7 +37,9 @@ const options = {
         EventRegOptions,
         ESPRegOptions,
         UsersOptions,
-        ContactOptions,
+        SchoolDemos,
+        CollegeDemos,
+        ContactOptions
     ],
     rootPath: "/admin",
     branding: {

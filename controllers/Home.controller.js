@@ -6,7 +6,9 @@ const ESPModel = require("../models/ESP.model");
 const CourseModel = require("../models/Course.model");
 const ReviewModel = require("../models/Review.model");
 const EventModel = require("../models/Event.model");
-const EventRegister = require("../models/EventRegister.model")
+const EventRegister = require("../models/EventRegister.model");
+const SchoolTrialModel = require('../models/SchoolTrial.model');
+const CollegeTrialModel = require('../models/CollegeTrial.model');
 
 const { escapeRegex } = require('../helper/service')
 
@@ -138,12 +140,37 @@ Router.post("/edudictive-student-partner/apply", (req, res, next) => {
     });
 });
 
-Router.get('/book-free-trial/school', (req, res) => {
+Router.get('/book-free-trial/school', (req, res, next) => {
     res.render('Home/Trial-School')
 })
 
-Router.get('/book-free-trial/college', (req, res) => {
+Router.post('/book-free-trial/school', (req, res, next) => {
+    new SchoolTrialModel(req.body).save((err) => {
+        if (err) {
+            if (err) {
+                console.log(err)
+                res.status(400).json({ 'Error': 'Cannot submit application' })
+            }
+        } else {
+            res.render("Home/TrialSuccess");
+        }
+    });
+})
+
+Router.get('/book-free-trial/college', (req, res, next) => {
     res.render('Home/Trial-College')
+})
+
+Router.post('/book-free-trial/college', (req, res, next) => {
+    new CollegeTrialModel(req.body).save((err) => {
+        if (err) {
+            if (err) {
+                res.status(400).json({ 'Error': 'Cannot submit application' })
+            }
+        } else {
+            res.render("Home/TrialSuccess");
+        }
+    });
 })
 
 module.exports = Router;

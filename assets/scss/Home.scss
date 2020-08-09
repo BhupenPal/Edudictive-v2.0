@@ -1282,6 +1282,12 @@
             font: bolder 1.8rem $font-primary;
             color: #4F4F4F;
             letter-spacing: 0;
+            @include media('<=sm'){
+                margin-bottom: 0;
+            }
+            @include media('<=xs'){
+                font-size: 5vw;
+            }
         }
 
         .modalOptionContainer{
@@ -1305,6 +1311,9 @@
 
                 img{
                     width: 10rem;
+                    @include media('<=xs'){
+                        width: 6rem;
+                    }
                 }
 
                 .modalCategoryWrap{
@@ -1318,6 +1327,9 @@
                             color: #0088FF;
                             margin: 0 0 0 0.6rem;
                             font-weight: bold;
+                            @include media('<=xs'){
+                                font-size: 4vw;
+                            }
                         }
                     }
                     .edudictiveFor{
@@ -1327,6 +1339,9 @@
                     }
                     .modelCategory{
                         font: Bold 4rem $font-secondary;
+                        @include media('<=xs'){
+                            font-size: 8vw;
+                        }
                     }
                 }
 
@@ -1336,6 +1351,10 @@
                     font: bolder 1.1rem $font-quartenary;
                     width: 72%;
                     height: 3rem;
+                    @include media('<=xs'){
+                        font-size: 13px;
+                        width: 100%;
+                    }
                 }
 
                 &:first-child{
@@ -1352,6 +1371,29 @@
                 &:hover{
                     background-color: #f6f9fc;
                 }
+                @include media('<=xxl','>=sm'){
+                    height: 80%;
+                    width: 200%;
+                    margin: 0 1.5rem;
+                }
+                @include media('<=sm'){
+                    margin: 0.5rem 0;
+                }
+                @include media('<=xs'){
+                    width: 55vw;
+                    padding: 1rem;
+                    height: 35vw;
+                    margin: 0.5rem;
+                }
+            }
+            @include media('<=xxl'){
+                width: 90%;
+                height: 60%;
+            }
+            @include media('<=sm'){
+                flex-direction: column;
+                height: auto;
+                margin: 2rem auto;
             }
         }
 
@@ -1363,6 +1405,32 @@
             font: bold 1.4rem $font-primary;
             padding: 1rem 5rem;
             margin-top: 1rem;
+            @include media('<=sp'){
+                padding: 0;
+                height: 3rem;
+                width: 80%;
+                font-size: 1rem;
+                border-radius: 0.5rem;
+                margin-top: 0;
+            }
+        }
+        @include media('<=xxl'){
+            width: 60rem;
+            height: 40rem;
+        }
+        @include media('<=lg'){
+            width: 85vw;
+            height: 40rem;
+        }
+        @include media('<=md','>=sm'){
+            width: 80rem;
+            height: 40rem;
+            transform: scale(0.7) !important;
+        }
+        @include media('<=sm'){
+            width: 80vw;
+            height: auto;
+            padding: 1rem 0 2rem 0;
         }
     }
 }

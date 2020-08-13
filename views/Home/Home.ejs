@@ -274,37 +274,47 @@
     let modalContainer = document.querySelector(".modalContainer")
     let modalBox = document.querySelector(".modalBox")
 
-    function Modal(){
-      if(modalContainer.getAttribute("aria-label")=="hidden"){
-        modalContainer.setAttribute("style","display: flex");
-        setTimeout(function(){
-          modalContainer.setAttribute("style","display: flex; visibility: visible; opacity: 1");
-          modalBox.setAttribute("style","transform: scale(1)");
-        },400);
-        document.getElementsByTagName("html")[0].setAttribute("style","overflow: hidden")
+    function Modal() {
+      if (modalContainer.getAttribute("aria-label") == "hidden") {
+        modalContainer.setAttribute("style", "display: flex");
+        setTimeout(function () {
+          modalContainer.setAttribute("style", "display: flex; visibility: visible; opacity: 1");
+          modalBox.setAttribute("style", "transform: scale(1)");
+        }, 400);
+        document.getElementsByTagName("html")[0].setAttribute("style", "overflow: hidden")
         return;
       } else {
         modalBox.removeAttribute("style");
-        modalContainer.setAttribute("style","display: flex; visibility: hidden; opacity: 0");
-        setTimeout( function(){
+        modalContainer.setAttribute("style", "display: flex; visibility: hidden; opacity: 0");
+        setTimeout(function () {
           modalContainer.removeAttribute("style");
-        },400);
+        }, 400);
         document.getElementsByTagName("html")[0].removeAttribute("style")
         return;
       }
     }
 
-    function changearia(x){
-      if(x=="hide"){
-        modalContainer.setAttribute("aria-label","visible")
+    function changearia(x) {
+      if (x == "hide") {
+        modalContainer.setAttribute("aria-label", "visible")
         Modal()
         return
       } else {
-        modalContainer.setAttribute("aria-label","hidden")
+        modalContainer.setAttribute("aria-label", "hidden")
         Modal()
         return
       }
     }
+
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/5f34cb164c7806354da5fdb5/default';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
   </script>
 </body>
 

@@ -29,40 +29,47 @@
       <img src="/assets/img/svgs/college-hero.svg" alt="" />
     </div>
     <div class="trial-form">
-      <form action="">
-      <h1 style="color: #004E92;">Book a free class</h1>
-      <input type="text" name="" placeholder="Parent's Name">
-      <input type="text" name="" placeholder="Parent's Email ID">
-      <input type="number" name="" placeholder="Parent's/Student's Contact Number">
-      <input type="text" name="" placeholder="Student's Name">
-      <input type="text" name="" placeholder="School Name">
-      <select name="" id="">
-        <option>Student's Grade</option>
-        <option value="6-8">6 - 8</option>
-      </select>
-      <div class="radio-div">
-        <h4>Do you have access to laptop/PC ?</h4>
-        <div class="radio-flex">
-          <label class="container">Yes
-            <input type="radio" checked="checked" name="radio">
-            <span class="checkmark"></span>
-          </label>
-          <label class="container">No
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-          </label>
+      <form action="/book-free-trial/college">
+        <h1 style="color: #004E92;">Book a free class</h1>
+        <input type="text" name="Name" placeholder="Full Name">
+        <input type="text" name="Email" placeholder="Email ID">
+        <input type="number" name="Phone" placeholder="Contact Number">
+        <input type="text" name="CollegeName" placeholder="College Name">
+        <select name="CollegeYear">
+          <option>Current Year</option>
+          <option value="1">1st</option>
+          <option value="2">2nd</option>
+          <option value="3">3rd</option>
+          <option value="4">4th</option>
+          <option value="4+">4+</option>
+        </select>
+        <select name="DomainInterested" id="" class="form-control" required>
+          <option disabled selected>Select domain</option>
+          <option value="">Enterprenuership</option>
+          <option value="">Technology and Coding</option>
+          <option value="">Design and Creation</option>
+          <option value="">Sales and Marketing</option>
+          <option value="">Marketing and Growth Hacking</option>
+          <option value="">Finance and Investments</option>
+        </select>
+        <div class="radio-div">
+          <h4>Do you have access to laptop/PC ?</h4>
+          <div class="radio-flex">
+            <label class="container">Yes
+              <input type="radio" checked="checked" name="LaptopPC" value="Yes">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">No
+              <input type="radio" name="LaptopPC" value="No">
+              <span class="checkmark"></span>
+            </label>
+          </div>
         </div>
-      </div>
-      <label class="container">I agree to give my details to be further contacted by Edudictive regarding the course
-        booking and other consulatations through email or phone.
-        <input type="radio" name="radio">
-        <span class="checkmark"></span>
-      </label>
-      <button type="submit" class="reg-button">
-        <div class="loader"></div>  
-        Book a class
-      </button>
-    </form>
+        <button type="submit" class="reg-button">
+          <div class="loader"></div>
+          Book a class
+        </button>
+      </form>
     </div>
   </div>
   <%-include("../Components/Footer.ejs") %>

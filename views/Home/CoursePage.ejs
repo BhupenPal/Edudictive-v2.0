@@ -133,7 +133,7 @@
                 </h3>
             </div>
             <div class="registerButtons">
-                <button>
+                <button onclick="BuyClicked()">
                     <i class="fal fa-bags-shopping"></i>&ensp;Buy Now
                 </button>
                 <button>
@@ -144,7 +144,11 @@
     </div>
     <%-include('../Components/Footer.ejs') %>
     <script src="/assets/js/index.js"></script>
-    <script src="/assets/js/CoursePage.js"></script>
+    <script src="https://checkout.stripe.com/checkout.js" defer></script>4
+    <script>
+        const StripePublicKey = '<%= stripe_key %>'
+    </script>
+    <script src="/assets/js/CoursePage.js" defer></script>
 </body>
 
 </html>

@@ -92,12 +92,13 @@ Router.post("/event-register/:Key", (req, res, next) => {
 
 Router.get("/course/:Key/:Name", (req, res, next) => {
     const { Key } = req.params;
+    const stripe_key = process.env.STRIPE_PUBLIC_KEY;
     CourseModel.findOne({ Key }, (err, doc) => {
         if (!doc) {
             res.json({ 'Error': 'Not Found' })
         }
         ReviewModel.find({ CourseKey: Key }, (err, Reviews) => {
-            res.render("Home/CoursePage", { doc, Reviews });
+            res.render("Home/CoursePage", { doc, Reviews, stripe_key });
         })
     });
 });

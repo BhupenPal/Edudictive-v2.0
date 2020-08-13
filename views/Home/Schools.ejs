@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/index.css" />
-    <link rel="stylesheet" href="/assets/css/Schools.css" />
-    <link rel="stylesheet" href="/assets/css/newheader.css">
-    <link rel="stylesheet" href="/assets/css/all.min.css" />
-    <title>Edudictive | Schools</title>
-    <link rel="icon" href="/assets/img/icons/Logo.svg" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/index.css" />
+  <link rel="stylesheet" href="/assets/css/Schools.css" />
+  <link rel="stylesheet" href="/assets/css/newheader.css">
+  <link rel="stylesheet" href="/assets/css/all.min.css" />
+  <title>Edudictive | Schools</title>
+  <link rel="icon" href="/assets/img/icons/Logo.svg" />
+</head>
+
+<body>
   <%-include('../Components/Header.ejs') %>
   <!-- first division -->
   <div class="school-container">
@@ -27,7 +29,8 @@
       </div>
       <div class="para-contain">
         <p class="para">
-          We have upskilled more than 2500 school students in different domains. The courses are specifically curated as per the needs of school students.
+          We have upskilled more than 2500 school students in different domains. The courses are specifically curated as
+          per the needs of school students.
         </p>
         <div class="edu-for-sch-buttons">
           <button class="view-programs" onclick="LinkHandle('/search-courses?enquiry=schools')">View Programs</button>
@@ -58,7 +61,8 @@
             Improves logical thinking
           </p>
           <p class="illus-content">
-            Enhanced logical thinking in kids teach them that knowledge is fluid and builds upon itself. Logical thinking is also an important foundational skill of math.
+            Enhanced logical thinking in kids teach them that knowledge is fluid and builds upon itself. Logical
+            thinking is also an important foundational skill of math.
           </p>
         </div>
       </div>
@@ -72,7 +76,8 @@
             Sharpens problem solving
           </p>
           <p class="illus-content">
-            Increases focus and concentration: Identifying factors that steal the focus of children and develop skills to improve their concentration potentially is what we work upon. 
+            Increases focus and concentration: Identifying factors that steal the focus of children and develop skills
+            to improve their concentration potentially is what we work upon.
           </p>
         </div>
       </div>
@@ -88,7 +93,8 @@
             Enhances their ability to build
           </p>
           <p class="illus-content">
-            It might be a little difficult to develop a certain skill if the child doesn’t have the ability to build that skill, so the ability of building something is what we enhance. 
+            It might be a little difficult to develop a certain skill if the child doesn’t have the ability to build
+            that skill, so the ability of building something is what we enhance.
           </p>
         </div>
       </div>
@@ -101,7 +107,8 @@
             Fosters imagination and creativity
           </p>
           <p class="illus-content">
-            Imagining scenarios, trying new ways of doing things, and experimenting new ideas are skills that the children will need when they join the workforce of the future.
+            Imagining scenarios, trying new ways of doing things, and experimenting new ideas are skills that the
+            children will need when they join the workforce of the future.
           </p>
         </div>
       </div>
@@ -313,11 +320,22 @@
         </div>
       </div>
     </div> -->
-    
+
     <%-include('../Components/ContactForm.ejs') %>
   </div>
   <%-include('../Components/Footer.ejs') %>
   <script src="/assets/js/index.js"></script>
+  <script>
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/5f34cb164c7806354da5fdb5/default';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
 </body>
 
 </html>

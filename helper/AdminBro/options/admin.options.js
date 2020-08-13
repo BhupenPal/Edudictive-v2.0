@@ -22,7 +22,6 @@ const CollegeDemos = require("../resources/admin.CollegeTrial");
 //Contact Options
 const ContactOptions = require("../resources/admin.contact");
 
-
 const AdminBroMongoose = require("admin-bro-mongoose");
 const mongoose = require("mongoose");
 AdminBro.registerAdapter(AdminBroMongoose);

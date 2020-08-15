@@ -532,18 +532,6 @@
     }
 }
 
-@keyframes imghovcolchange {
-    0%{
-        filter: brightness(1);
-    }
-    25%{
-        filter: brightness(0);
-    }
-    100%{
-        filter: invert(82%) sepia(46%) saturate(1423%) hue-rotate(348deg) brightness(102%) contrast(101%);
-    }
-}
-
 .mob-ProgramDetails{
     display: none;
 

@@ -41,6 +41,11 @@
   src: url("../fonts/Sansation_Light_Italic.ttf");
 }
 
+@font-face{
+  font-family: "Proxima-Nova-Thin";
+  src: url("../fonts/ProximaNovaThin.otf");
+  font-weight: lighter;
+}
 html,
 body {
   margin: 0;

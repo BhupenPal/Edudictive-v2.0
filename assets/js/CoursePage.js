@@ -29,13 +29,30 @@ const stripeHandler = StripeCheckout.configure({
     key: StripePublicKey,
     locale: 'auto',
     token: function(token) {
-
+        fetch('/purchase-course', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                stripeTokenId: token.id,
+                AMU,
+                CourseKey
+            })
+        })
+        .then(function (res) {
+            return res.json()
+        })
+        .then(function (data) { 
+            console.log(data)
+         })
     }
 })
 
 function BuyClicked() {
     stripeHandler.open({
-        amount: 500,
+        amount: AMU,
         currency: 'inr'
     })
 }

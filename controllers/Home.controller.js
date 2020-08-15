@@ -10,6 +10,8 @@ const EventRegister = require("../models/EventRegister.model");
 const SchoolTrialModel = require('../models/SchoolTrial.model');
 const CollegeTrialModel = require('../models/CollegeTrial.model');
 
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+
 const { escapeRegex } = require('../helper/service')
 
 // Temporary Links
@@ -101,6 +103,29 @@ Router.get("/course/:Key/:Name", (req, res, next) => {
             res.render("Home/CoursePage", { doc, Reviews, stripe_key });
         })
     });
+});
+
+Router.post("/purchase-course", (req, res, next) => {
+    CourseModel.findOne({ Key: req.body.CourseKey }, (err, doc) => {
+        if(!doc) {
+            res.status(400).josn({ message: 'Course Not Found' })
+        } else {
+            if (req.body.AMU != (doc.Price - (doc.Price * doc.Discount)/100)*100) {
+                res.status(400).send({ message: 'Price Modified' })
+            } else {
+                stripe.charges.create({
+                    amount: req.body.AMU,
+                    source: req.body.stripeTokenId,
+                    currency: 'inr'
+                }).then(() => {
+                    res.status(200).json({ message: 'Successfully purchased items' })
+                    //Add course herre fore profile
+                }).catch((err) => {
+                    res.status(500).josn({ message: 'Failed' })
+                })
+            }
+        }
+    })
 });
 
 Router.get("/search-courses", (req, res, next) => {

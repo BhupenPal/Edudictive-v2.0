@@ -147,6 +147,8 @@
     <script src="https://checkout.stripe.com/checkout.js" defer></script>4
     <script>
         const StripePublicKey = '<%= stripe_key %>'
+        const AMU = parseInt('<%= Price  %>')*100
+        const CourseKey = '<%= doc.Key %>'
     </script>
     <script src="/assets/js/CoursePage.js" defer></script>
 </body>

@@ -39,6 +39,9 @@
                     @include media('<=xs'){
                         font-size: 2.5rem;
                     }
+                    @include media('<=sp'){
+                        font-size: 2.2rem;
+                    }
                 }
 
                 h2{
@@ -49,6 +52,9 @@
                         font-size: 1.4rem;
                         font-family: $font-secondary;
                         font-weight: 200;
+                    }
+                    @include media('<=sp'){
+                        font-size: 1.3rem;
                     }
                 }
 
@@ -83,6 +89,10 @@
                         @include media('<=xs'){
                             font-family: $font-quinary;
                         }
+                        @include media('<=sp'){
+                            margin: 0.5rem 0 0 0rem;
+                            width: 10rem;
+                        }
                     }
 
                     .ratingPoints{
@@ -97,6 +107,10 @@
                     }
                     @include media('<=xs'){
                         align-items: flex-start;
+                    }
+                    @include media('<=sp'){
+                        flex-wrap: wrap;
+                        width: 90vw;
                     }
                 }
             }
@@ -251,6 +265,19 @@
                         }
                     }
                 }
+                @include media('<=sp'){
+                    button{
+                        font-size: 0.85rem;
+                        &:last-child{
+                            padding: 1rem 1rem;
+                            width: max-content;
+                        }
+                        &:first-child{
+                            width: max-content;
+                            padding: 1rem 2rem;
+                        }
+                    }
+                }
             }
             @include media('<=xs'){
                 width: 90%;
@@ -259,6 +286,9 @@
         @include media('<=xs'){
             min-height: 750px;
             height: calc(100vh - 80px);
+        }
+        @include media('<=sp'){
+            height: max-content;
         }
     }
 
@@ -276,6 +306,7 @@
             text-transform: uppercase;
             @include media('<=xs'){
                 font-size: 1.2rem;
+                text-transform: capitalize;;
             }
         }
 
@@ -297,11 +328,17 @@
                         height: max-content;
                         font-size: 1.3rem;
                         color: #0065FF;
+                        @include media('<=xs'){
+                            font-size: 1rem;
+                        }
                     }
                     p{
                         margin: 0 1rem;
                         font-size: 1.4rem;
                         font-weight: 300;
+                        @include media('<=xs'){
+                            font-size: 1rem;
+                        }
                     }
                 }
             }
@@ -363,6 +400,9 @@
         }
         @include media('<=xs'){
             width: 90%;
+            h1,h2,h3,h4,h5,h6 {
+                color: #4f4f4f;
+            }
         }
     }
 
@@ -501,5 +541,40 @@
     }
     100%{
         filter: invert(82%) sepia(46%) saturate(1423%) hue-rotate(348deg) brightness(102%) contrast(101%);
+    }
+}
+
+.mob-ProgramDetails{
+    display: none;
+
+    .programCenterAndDate{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        div{
+            width: max-content;
+            h3{
+                font: bold 1.2rem $font-secondary;
+                color: #4f4f4f;
+                width: max-content;
+            }
+            span{
+                font: 1rem $font-primary;
+                color: #707070;
+                width: max-content;
+            }
+        }
+    }
+    @include media('<=xs'){
+        display: flex;
+    }
+}
+
+.whoShouldOpt{
+    p{
+        @include media('<=xs'){
+            font-size: 1rem !important;
+        }
     }
 }

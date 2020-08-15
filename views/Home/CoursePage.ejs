@@ -19,6 +19,11 @@
         <div class="mainScreen">
             <div class="contentBox">
                 <div class="courseBasicDetails">
+                    <div class="lang-imgs mobile-banner">
+                        <img src="/assets/images/svgs/html-logo.svg" />
+                        <img src="/assets/images/svgs/css-logo.svg" />
+                        <img src="/assets/images/svgs/js-logo.svg" />
+                    </div>
                     <h5><%= doc.Category %></h5>
                     <h1><%= doc.Title %></h1>
                     <h2><%= doc.Mode %> Training Program</h2>
@@ -32,6 +37,16 @@
                         </div>
                         <span class="ratingPoints"><%= doc.Rating %> (<%= doc.TotalReview %> Ratings)</span>
                         <span class="enrolledStudents"><%= doc.Enrolled %> Enrolled Students</span>
+                    </div>
+                </div>
+                <div class="mobileShare">
+                    <div>
+                        <img src="/assets/images/svgs/heart.svg" alt="">
+                        <span>Add to wishlist</span>
+                    </div>
+                    <div>
+                        <img src="/assets/images/svgs/share.svg" alt="">
+                        <span>Share</span>
                     </div>
                 </div>
                 <div class="courseAdditionalDetails">
@@ -68,6 +83,10 @@
                 </div>
                 <div class="completePSAnchor" onclick="JumpTo('#downloadCourse')">
                     Read Complete Program Structure
+                </div>
+                <div class="mobileRegButtons">
+                    <button>Get demo session</button>
+                    <button>Buy Now</button>
                 </div>
             </div>
         </div>

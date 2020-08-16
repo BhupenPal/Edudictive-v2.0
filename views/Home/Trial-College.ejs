@@ -29,7 +29,7 @@
       <img src="/assets/img/svgs/college-hero.svg" alt="" />
     </div>
     <div class="trial-form">
-      <form action="/book-free-trial/college">
+      <form method="POST" action="/book-free-trial/college">
         <h1 style="color: #004E92;">Book a free class</h1>
         <input type="text" name="Name" placeholder="Full Name">
         <input type="text" name="Email" placeholder="Email ID">
@@ -43,14 +43,14 @@
           <option value="4">4th</option>
           <option value="4+">4+</option>
         </select>
-        <select name="DomainInterested" id="" class="form-control" required>
+        <select name="DomainInterested" class="form-control" required>
           <option disabled selected>Select domain</option>
-          <option value="">Enterprenuership</option>
-          <option value="">Technology and Coding</option>
-          <option value="">Design and Creation</option>
-          <option value="">Sales and Marketing</option>
-          <option value="">Marketing and Growth Hacking</option>
-          <option value="">Finance and Investments</option>
+          <option value="Enterprenuership">Enterprenuership</option>
+          <option value="Technology and Coding">Technology and Coding</option>
+          <option value="Design and Creation">Design and Creation</option>
+          <option value="Sales and Marketing">Sales and Marketing</option>
+          <option value="Marketing and Growth Hacking">Marketing and Growth Hacking</option>
+          <option value="Finance and Investments">Finance and Investments</option>
         </select>
         <div class="radio-div">
           <h4>Do you have access to laptop/PC ?</h4>

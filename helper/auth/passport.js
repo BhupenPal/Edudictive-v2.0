@@ -41,7 +41,7 @@ module.exports = function (passport) {
             {
                 clientID: process.env.GCLIENTID,
                 clientSecret: process.env.GCLIENTSECRET,
-                callbackURL: "/user/auth/google/confirm",
+                callbackURL: "https://www.edudictive.in/user/auth/google/confirm",
                 passReqToCallback: true,
             },
             (request, accessToken, refreshToken, profile, done) => {

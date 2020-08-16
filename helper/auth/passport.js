@@ -80,7 +80,7 @@ module.exports = function (passport) {
             {
                 clientID: process.env.FAPPID,
                 clientSecret: process.env.FCLIENTSECRET,
-                callbackURL: "/user/login/fb/confirm",
+                callbackURL: "https://www.edudictive.in/user/login/facebook/confirm",
                 profileFields: [
                     "id",
                     "displayName",

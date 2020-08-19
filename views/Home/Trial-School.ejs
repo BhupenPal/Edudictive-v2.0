@@ -31,18 +31,18 @@
     <div class="trial-form">
       <form method="POST" action="/book-free-trial/school">
       <h1>Book a free class</h1>
-      <input type="text" name="ParentsName" placeholder="Parent's Name">
-      <input type="text" name="ParentsEmail" placeholder="Parent's Email ID">
-      <input type="number" name="ParentsPhone" placeholder="Parent's/Student's Contact Number">
-      <input type="text" name="StudentName" placeholder="Student's Name">
-      <select name="Grade">
+      <input type="text" name="ParentsName" placeholder="Parent's Name" required>
+      <input type="text" name="ParentsEmail" placeholder="Parent's Email ID" required>
+      <input type="number" name="ParentsPhone" placeholder="Parent's/Student's Contact Number" required>
+      <input type="text" name="StudentName" placeholder="Student's Name" required>
+      <select name="Grade" required>
         <option>Student's Grade</option>
         <option value="6-8">6 - 8</option>
         <option value="9-10">9 - 10</option>
         <option value="11-12">11 - 12</option>
       </select>
-      <input type="text" name="SchoolName" placeholder="School Name">
-      <select name="State">
+      <input type="text" name="SchoolName" placeholder="School Name" required>
+      <select name="State" required>
         <option value="" selected disabled>Select State</option>
         <option value="Andhra Pradesh">Andhra Pradesh</option>
         <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>

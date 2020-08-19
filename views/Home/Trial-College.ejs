@@ -31,11 +31,11 @@
     <div class="trial-form">
       <form method="POST" action="/book-free-trial/college">
         <h1 style="color: #004E92;">Book a free class</h1>
-        <input type="text" name="Name" placeholder="Full Name">
-        <input type="text" name="Email" placeholder="Email ID">
-        <input type="number" name="Phone" placeholder="Contact Number">
-        <input type="text" name="CollegeName" placeholder="College Name">
-        <select name="CollegeYear">
+        <input type="text" name="Name" placeholder="Full Name" required>
+        <input type="text" name="Email" placeholder="Email ID" required>
+        <input type="number" name="Phone" placeholder="Contact Number" required>
+        <input type="text" name="CollegeName" placeholder="College Name" required>
+        <select name="CollegeYear" required>
           <option>Current Year</option>
           <option value="1">1st</option>
           <option value="2">2nd</option>

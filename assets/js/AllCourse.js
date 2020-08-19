@@ -65,4 +65,8 @@ function courseAdd(data) {
     })
 
     document.getElementsByClassName('CourseCardWrapper')[0].innerHTML = template
+    courses = document.querySelectorAll(".course-card");
+    courses.forEach(item => {
+        item.setAttribute("style", `background-image: ${gradientArray[item.getAttribute("data-value")]}`)
+    })
 }

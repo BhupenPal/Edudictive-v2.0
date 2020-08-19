@@ -17,6 +17,10 @@ const courseSchema = new mongoose.Schema({
     Discount: {
         type: Number
     },
+    class: {
+        type: String,
+        enum: ['6-8', '9-12', 'college']
+    },
     Category: {
         type: String,
         enum: ['Web Development', 'App Development', 'Game Development', 'Graphic Designing', 'AR/VR', 'Programming Core', 'Data Science', 'Graphics', 'Finance'],

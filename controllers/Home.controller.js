@@ -107,10 +107,10 @@ Router.get("/course/:Key/:Name", (req, res, next) => {
 
 Router.post("/purchase-course", (req, res, next) => {
     CourseModel.findOne({ Key: req.body.CourseKey }, (err, doc) => {
-        if(!doc) {
+        if (!doc) {
             res.status(400).josn({ message: 'Course Not Found' })
         } else {
-            if (req.body.AMU != (doc.Price - (doc.Price * doc.Discount)/100)*100) {
+            if (req.body.AMU != (doc.Price - (doc.Price * doc.Discount) / 100) * 100) {
                 res.status(400).send({ message: 'Price Modified' })
             } else {
                 stripe.charges.create({
@@ -144,6 +144,19 @@ Router.get("/search-courses", (req, res, next) => {
         })
     }
 
+})
+
+Router.get('/api/course-filter', async (req, res, next) => {
+    let filterParam = req.query;
+
+    const regex = new RegExp(escapeRegex(req.query.enquiry), "gi");
+    filterParam = { class: regex }
+
+    const record = await CourseModel
+        .find(filterParam)
+        .sort({ $natural: -1 });
+
+    return res.json(record)
 })
 
 Router.get("/edudictive-student-partner", (req, res, next) => {

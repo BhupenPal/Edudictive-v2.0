@@ -147,16 +147,19 @@ Router.get("/search-courses", (req, res, next) => {
 })
 
 Router.get('/api/course-filter', async (req, res, next) => {
-    let filterParam = req.query;
+    const filterParam = { class: req.query.enquiry }
 
-    const regex = new RegExp(escapeRegex(req.query.enquiry), "gi");
-    filterParam = { class: regex }
-
-    const record = await CourseModel
+    if(filterParam.class == '') {
+        const record = await CourseModel
+        .find({class: { $ne: "college" }})
+        .sort({ $natural: -1 });
+        return res.json(record)
+    } else {
+        const record = await CourseModel
         .find(filterParam)
         .sort({ $natural: -1 });
-
-    return res.json(record)
+        return res.json(record)
+    }
 })
 
 Router.get("/edudictive-student-partner", (req, res, next) => {

@@ -26,14 +26,14 @@
 
         <div class="School-College-Filter">
             <div class="main-filter">
-                <img src="/assets/img/pngs/For Kids.png" alt="">
+                <img src="/assets/img/pngs/For Kids.png" alt="Edudictive for kids logo">
                 <div class="sub-filter">
-                    <div onclick="GradeSelector(this)">All Grades</div>
-                    <div onclick="GradeSelector(this)">For Grade 6-8</div>
-                    <div onclick="GradeSelector(this)">For Grade 9-12</div>
+                    <div onclick="GradeSelector(this, '')">All Grades</div>
+                    <div onclick="GradeSelector(this, '6-8')">For Grade 6-8</div>
+                    <div onclick="GradeSelector(this, '9-12')">For Grade 9-12</div>
                 </div>
             </div>
-            <div class="main-filter" onclick="GradeSelector(this)">
+            <div class="main-filter" onclick="GradeSelector(this, 'college')">
                 <img src="/assets/img/pngs/For Colleges.png" alt="">
             </div>
         </div>

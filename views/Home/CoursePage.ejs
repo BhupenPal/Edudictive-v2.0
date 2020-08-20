@@ -86,7 +86,11 @@
                 </div>
                 <div class="mobileRegButtons">
                     <button>Get demo session</button>
-                    <button onclick="BuyClicked()">Buy Now</button>
+                    <% if(!user){ %>
+                        <button onclick="LinkHandle('/user/login')">Buy Now</button>
+                    <% } else {  %>
+                        <button onclick="BuyClicked()">Buy Now</button>
+                    <% } %>
                 </div>
             </div>
         </div>
@@ -168,9 +172,16 @@
                 </h3>
             </div>
             <div class="registerButtons">
-                <button onclick="BuyClicked()">
-                    <i class="fal fa-bags-shopping"></i>&ensp;Buy Now
-                </button>
+                <% if(!user){ %>
+                    <button  onclick="LinkHandle('/user/login')">
+                        <i class="fal fa-bags-shopping"></i>&ensp;Buy Now
+                    </button>
+                <% } else {  %>
+                    <button onclick="BuyClicked()">
+                        <i class="fal fa-bags-shopping"></i>&ensp;Buy Now
+                    </button>
+                <% } %>
+
                 <button>
                     <i class="fal fa-cart-plus"></i>&ensp;Add to wishlist
                 </button>

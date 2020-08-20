@@ -1,6 +1,6 @@
 let ClassEnq = "";
 
-const GradeSelector = (selected) => {
+const GradeSelector = (selected, request) => {
     const GradeDivs = document.querySelector('.sub-filter').children
     
     if (selected.innerHTML.includes('Grade')) {
@@ -16,9 +16,9 @@ const GradeSelector = (selected) => {
         GradeDivs[2].style.border = '1px solid #707070'
         document.getElementsByClassName('main-filter')[0].classList.remove("completePSAnchor")
         document.getElementsByClassName('main-filter')[1].classList.add("completePSAnchor")
-        ClassEnq='college'
     }
 
+    ClassEnq = request
     Ajax()
 }
 

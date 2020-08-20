@@ -12,7 +12,7 @@ if (urlCheck(['register'])) {
       if (this.status === 200) {
         document.getElementsByClassName('loader')[0].style.display = 'none'
         let data = JSON.parse(this.response);
-        if (data.news[0] == "Email Sent") {
+        if (data.status == 'success') {
           let timerInterval;
           Swal.fire({
             position: 'top-end',

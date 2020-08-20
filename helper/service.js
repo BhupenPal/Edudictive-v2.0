@@ -77,13 +77,15 @@ module.exports = {
     return;
   },
 
-  HashSalt: (NewUser) => {
-    bcrypt.genSalt(12, (err, salt) =>
-      bcrypt.hash(NewUser.uPass, salt, (err, hash) => {
-        NewUser.uPass = hash;
-        NewUser.save();
-      })
-    )
+  HashSalt: async (Passcode) => {
+    return await new Promise((resolve, reject) => {
+      bcrypt.genSalt(12, (err, salt) =>
+        bcrypt.hash(Passcode, salt, (err, hash) => {
+          if (err) reject(err)
+          resolve(hash)
+        })
+      )
+    })
   },
 
   EmailCheck: (userEmail, ErrMsg) => {

@@ -102,7 +102,7 @@ Router.post("/register", (req, res, next) => {
   Pilot.news = []
   if (req.xhr) {
     try {
-      const {
+      let {
         Email,
         FirstName,
         LastName,
@@ -151,13 +151,16 @@ Router.post("/register", (req, res, next) => {
             res.send(Pilot);
             res.end();
           } else {
-            UserModel.findOne({ Phone }).then((user) => {
+            UserModel.findOne({ Phone }).then(async user => {
               if (user) {
                 Pilot.news.push("Phone number already exists");
                 res.send(Pilot);
                 res.end();
               } else {
                 const SecretToken = GenerateRandom(32);
+                console.log(Password)
+                Password = await HashSalt(Password)
+
                 const NewUser = new UserModel({
                   FirstName,
                   LastName,
@@ -172,8 +175,7 @@ Router.post("/register", (req, res, next) => {
                   SecretToken
                 });
 
-                //Hash Password
-                HashSalt(NewUser);
+                console.log(Password)
 
                 // send mail with defined transport object
                 let MailHTML = verificationMail(FirstName, SecretToken)

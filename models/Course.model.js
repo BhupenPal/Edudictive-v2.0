@@ -6,6 +6,11 @@ const courseSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
+    CourseType: {
+        type: String,
+        enum: ['Course', 'Workshop'],
+        required: true
+    },
     Title: {
         type: String,
         required: true

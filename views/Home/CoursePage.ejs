@@ -19,12 +19,12 @@
         <div class="mainScreen">
             <div class="contentBox">
                 <div class="courseBasicDetails">
+                    <h5><%= doc.Category %></h5>
                     <div class="lang-imgs mobile-banner">
                         <img src="/assets/images/svgs/html-logo.svg" />
                         <img src="/assets/images/svgs/css-logo.svg" />
                         <img src="/assets/images/svgs/js-logo.svg" />
                     </div>
-                    <h5><%= doc.Category %></h5>
                     <h1><%= doc.Title %></h1>
                     <h2><%= doc.Mode %> Training Program</h2>
                     <div class="ratingAndEnrolled">
@@ -83,6 +83,15 @@
                 </div>
                 <div class="completePSAnchor" onclick="JumpTo('#downloadCourse')">
                     Read Complete Program Structure
+                </div>
+                <div class="selectCourse">
+                    <select name="selectCourse" id="selectCourse">
+                        <option value="option1">Option1</option>
+                        <option value="option2" selected>Option2</option>
+                        <option value="option3">Option3</option>
+                        <option value="option4">Option4</option>
+                        <option value="option5">Option5</option>
+                    </select>
                 </div>
                 <div class="mobileRegButtons">
                     <button>Get demo session</button>

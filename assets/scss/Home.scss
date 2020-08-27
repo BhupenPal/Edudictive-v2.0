@@ -12,6 +12,17 @@
 .Home-wrap{
     padding: 125px 0 0 0;
 
+    .Skill-Slider{
+        @include media('>sm','<=md'){
+            width: 95%;
+            margin: 0 auto;
+        }
+        @include media('>md','<=lg'){
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
     .skill-section{
         width: 80%;
         margin: 2rem auto;
@@ -176,6 +187,7 @@
 
             @include media('<=lg') {
                 width: 46%;
+                height: 46%;
                 transform: unset;
             }
 
@@ -467,6 +479,12 @@
         }
         @include media('<=xs') {
          margin: 0;               
+        }
+        @include media('<=lg'){
+            margin: 0;
+        }
+        @include media('<=xl'){
+            margin: 2rem auto;
         }
     }
 

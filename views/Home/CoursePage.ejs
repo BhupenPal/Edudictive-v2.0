@@ -180,6 +180,15 @@
                     <span><%= doc.Discount %>%</span>
                 </h3>
             </div>
+            <div class="selectCourse">
+                <select name="selectCourse" id="selectCourse">
+                    <option value="option1">Option1</option>
+                    <option value="option2" selected>Option2</option>
+                    <option value="option3">Option3</option>
+                    <option value="option4">Option4</option>
+                    <option value="option5">Option5</option>
+                </select>
+            </div>
             <div class="registerButtons">
                 <% if(!user){ %>
                     <button  onclick="LinkHandle('/user/login')">

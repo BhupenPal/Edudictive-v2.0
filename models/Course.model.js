@@ -66,10 +66,7 @@ const courseSchema = new mongoose.Schema({
         type: Boolean
     },
     WhatUGet: [String],
-    Batch: {
-        WeekendDate: String,
-        WeekdayDate: String
-    },
+    Batch: [String],
     Structure: [{
         NumOfTimeFrame: Number,
         Topic: String,

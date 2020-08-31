@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="Keywords"
+    content="Online coding classes, entrepreneurship and coding for kids, better career choice, online financial literacy ,Edudictive " />
+  <meta property="Description"
+    content="Indian's best live Coding classes and other career orientated classes for kids as well as college students at lowest prices, best in India," />
+  <meta property="og:title" content="Edudictive - Home Page" />
+  <meta property="og:url" content="https://edudictive.in/" />
+  <meta property="og:image" content="/assets/img/icons/WhiteBG Logo.png" />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="/assets/css/index.css" />
+  <link rel="stylesheet" href="/assets/css/Book Trial.css" />
+  <link rel="stylesheet" href="/assets/css/all.min.css" />
+  <link rel="stylesheet" href="/assets/css/newheader.css" />
+  <link rel="icon" href="/assets/img/icons/Logo.svg" />
+  <title>Edudictive | Home</title>
+</head>
+
+<body>
+  <%-include("../Components/Header.ejs") %>
+  <div class="trial-container">
+    <div class="trial-image">
+      <img src="/assets/img/pngs/For Colleges.png" alt="" />
+      <img src="/assets/img/svgs/college-hero.svg" alt="" />
+    </div>
+    <div class="trial-form">
+      <form method="POST" action="/book-free-trial/college">
+        <h1 style="color: #004E92;">Start your career with edudictive</h1>
+        <input type="text" name="Name" placeholder="Full Name" required>
+        <input type="text" name="Email" placeholder="Email ID" required>
+        <input type="number" name="Phone" placeholder="Contact Number" required>
+        <input type="text" name="LinkedIn" placeholder="LinkedIn Profile" required>
+        <input type="text" name="Resume" placeholder="Resume Link" required>
+        <input type="text" name="Reference" placeholder="Reference" required>
+        <select name="Field" required>
+          <option value="">Select Field of Interest</option>
+          <option value="Web Development">Web Development</option>
+          <option value="App Development">App Development</option>
+          <option value="Game Development">Game Development</option>
+          <option value="Graphic Designing">Graphic Designing</option>
+          <option value="AR/VR">AR/VR</option>
+          <option value="Programming Core">Programming Core</option>
+          <option value="Data Science">Data Science</option>
+          <option value="Finance">Finance</option>
+        </select>
+        <button type="submit" class="reg-button">
+          <div class="loader"></div>
+          Book a class
+        </button>
+      </form>
+    </div>
+  </div>
+  <%-include("../Components/Footer.ejs") %>
+  <script src="/assets/js/index.js"></script>
+</body>
+
+</html>

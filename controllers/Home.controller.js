@@ -14,28 +14,20 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const { escapeRegex } = require('../helper/service')
 
-// Temporary Links
-Router.get("/upskillingforum", (req, res, next) => {
-    EventModel.findOne({ Key: 201 }, (err, doc) => {
-        res.render("Home/EventPage", { doc });
-    })
-});
-// Temporary Links
-
 Router.get("/", async (req, res, next) => {
-    const doc = await CourseModel.find({}).limit(10).exec()
+    const doc = await CourseModel.find({ CourseType: 'Course' }).limit(10).exec()
     const rev = await ReviewModel.find({}).limit(10).exec()
     res.render("Home/Home", { doc, rev })
 });
 
 Router.get("/programs/schools", (req, res, next) => {
-    CourseModel.find({ SuitedFor: { $ne: "Colleges" } }, (err, doc) => {
+    CourseModel.find({ SuitedFor: { $ne: "Colleges" }, CourseType: 'Course' }, (err, doc) => {
         res.render("Home/Schools", { doc });
     })
 });
 
 Router.get("/programs/colleges", (req, res, next) => {
-    CourseModel.find({ SuitedFor: { $ne: "Schools" } }, (err, doc) => {
+    CourseModel.find({ SuitedFor: { $ne: "Schools" }, CourseType: 'Course' }, (err, doc) => {
         res.render("Home/Colleges", { doc });
     })
 });
@@ -54,6 +46,10 @@ Router.get("/event/:Key/:Name", (req, res, next) => {
         res.render("Home/EventPage", { doc });
     })
 });
+
+Router.get('/careers', (req, res, next) => {
+    res.render('Home/Career Form')
+})
 
 Router.get("/about-us", (req, res, next) => {
     res.render("Home/About");
@@ -95,7 +91,7 @@ Router.post("/event-register/:Key", (req, res, next) => {
 Router.get("/course/:Key/:Name", (req, res, next) => {
     const { Key } = req.params;
     const stripe_key = process.env.STRIPE_PUBLIC_KEY;
-    CourseModel.findOne({ Key }, (err, doc) => {
+    CourseModel.findOne({ Key, CourseType: 'Course' }, (err, doc) => {
         if (!doc) {
             res.json({ 'Error': 'Not Found' })
         }
@@ -106,7 +102,7 @@ Router.get("/course/:Key/:Name", (req, res, next) => {
 });
 
 Router.post("/purchase-course", (req, res, next) => {
-    CourseModel.findOne({ Key: req.body.CourseKey }, (err, doc) => {
+    CourseModel.findOne({ Key: req.body.CourseKey, CourseType: 'Course' }, (err, doc) => {
         if (!doc) {
             res.status(400).josn({ message: 'Course Not Found' })
         } else {
@@ -134,12 +130,32 @@ Router.get("/search-courses", (req, res, next) => {
         const regex = new RegExp(escapeRegex(req.query.enquiry), "gi");
         filterParam = {
             $or: [{ Title: regex }, { Category: regex }, { SuitedFor: regex }],
+            CourseType: 'Course'
         };
         CourseModel.find(filterParam, (err, doc) => {
             res.render('Home/AllCourse', { doc })
         })
     } else {
-        CourseModel.find({}, (err, doc) => {
+        CourseModel.find({ CourseType: 'Course' }, (err, doc) => {
+            res.render('Home/AllCourse', { doc })
+        })
+    }
+
+})
+
+Router.get("/workshops", (req, res, next) => {
+
+    if (req.query.enquiry) {
+        const regex = new RegExp(escapeRegex(req.query.enquiry), "gi");
+        filterParam = {
+            $or: [{ Title: regex }, { Category: regex }, { SuitedFor: regex }],
+            CourseType: 'Workshop'
+        };
+        CourseModel.find(filterParam, (err, doc) => {
+            res.render('Home/AllCourse', { doc })
+        })
+    } else {
+        CourseModel.find({ CourseType: 'Workshop' }, (err, doc) => {
             res.render('Home/AllCourse', { doc })
         })
     }

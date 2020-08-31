@@ -59,9 +59,9 @@
                             <h1 class="sectionHeading">What you will learn</h1>
                             <div>
                                 <% doc.WhatULearn.map(item => { %>
-                                    <span><i class="far fa-check-circle"></i>
+                                <span><i class="far fa-check-circle"></i>
                                     <p><%= item %></p>
-                                    </span>
+                                </span>
                                 <% }) %>
                             </div>
                         </div>
@@ -86,19 +86,18 @@
                 </div>
                 <div class="selectCourse">
                     <select name="selectCourse" id="selectCourse">
-                        <option value="option1">Option1</option>
-                        <option value="option2" selected>Option2</option>
-                        <option value="option3">Option3</option>
-                        <option value="option4">Option4</option>
-                        <option value="option5">Option5</option>
+                    <option value="" selected disabled>Select Batch</option>
+                        <% doc.Batch.map(item => { %>
+                        <option value="<%= item %>"><%= item %></option>
+                        <% }) %>
                     </select>
                 </div>
                 <div class="mobileRegButtons">
                     <button>Get demo session</button>
                     <% if(!user){ %>
-                        <button onclick="LinkHandle('/user/login')">Buy Now</button>
+                    <button onclick="LinkHandle('/user/login')">Buy Now</button>
                     <% } else {  %>
-                        <button onclick="BuyClicked()">Buy Now</button>
+                    <button onclick="BuyClicked()">Buy Now</button>
                     <% } %>
                 </div>
             </div>
@@ -112,9 +111,9 @@
                 <h1 class="sectionHeading">What you will learn</h1>
                 <div>
                     <% doc.WhatUGet.map(item => { %>
-                        <span><i class="far fa-check-circle"></i>
+                    <span><i class="far fa-check-circle"></i>
                         <p><%= item %></p>
-                        </span>
+                    </span>
                     <% }) %>
                 </div>
             </div>
@@ -138,20 +137,20 @@
                 <h1 class="sectionHeading">Program Structure</h1>
                 <div class="programStructureItems">
                     <% doc.Structure.map( (item, i) => { %>
-                        <button onclick="StructureToggle(this)" class="struct-dropbtn">
-                            <%= doc.TimeFrame %> <%= i + 1 %> - <%= item.Topic %>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="struct-content">
-                            <h4><%= item.Explain %></h4>
-                            <% item.ToDo.map(task => { %>
-                            <span><i class="far fa-check-circle"></i>
-                                <p><%= task %></p>
-                            </span>
-                            <% }) %>
-                            <hr /><br />
-                        </div>
+                    <button onclick="StructureToggle(this)" class="struct-dropbtn">
+                        <%= doc.TimeFrame %> <%= i + 1 %> - <%= item.Topic %>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="struct-content">
+                        <h4><%= item.Explain %></h4>
+                        <% item.ToDo.map(task => { %>
+                        <span><i class="far fa-check-circle"></i>
+                            <p><%= task %></p>
+                        </span>
                         <% }) %>
+                        <hr /><br />
+                    </div>
+                    <% }) %>
                 </div>
                 <div class="downloadProgramStructure">
                     <a href="/assets/uploads/courses/<%= doc.Key %>/course-structure.pdf" download>
@@ -162,12 +161,12 @@
         </div>
         <div class="courseBox">
             <% if (doc.Banner) { %>
-                <div class="lang-imgs">
-                    <img src="/assets/images/svgs/html-logo.svg" />
-                    <img src="/assets/images/svgs/css-logo.svg" />
-                    <img src="/assets/images/svgs/js-logo.svg" />
-                </div>
-                <% } %>
+            <div class="lang-imgs">
+                <img src="/assets/images/svgs/html-logo.svg" />
+                <img src="/assets/images/svgs/css-logo.svg" />
+                <img src="/assets/images/svgs/js-logo.svg" />
+            </div>
+            <% } %>
             <div class="registerInfo">
                 <h2>Register Now</h2>
                 <h1>
@@ -182,22 +181,21 @@
             </div>
             <div class="selectCourse">
                 <select name="selectCourse" id="selectCourse">
-                    <option value="option1">Option1</option>
-                    <option value="option2" selected>Option2</option>
-                    <option value="option3">Option3</option>
-                    <option value="option4">Option4</option>
-                    <option value="option5">Option5</option>
+                    <option value="" selected disabled>Select Batch</option>
+                    <% doc.Batch.map(item => { %>
+                    <option value="<%= item %>"><%= item %></option>
+                    <% }) %>
                 </select>
             </div>
             <div class="registerButtons">
                 <% if(!user){ %>
-                    <button  onclick="LinkHandle('/user/login')">
-                        <i class="fal fa-bags-shopping"></i>&ensp;Buy Now
-                    </button>
+                <button onclick="LinkHandle('/user/login')">
+                    <i class="fal fa-bags-shopping"></i>&ensp;Buy Now
+                </button>
                 <% } else {  %>
-                    <button onclick="BuyClicked()">
-                        <i class="fal fa-bags-shopping"></i>&ensp;Buy Now
-                    </button>
+                <button onclick="BuyClicked()">
+                    <i class="fal fa-bags-shopping"></i>&ensp;Buy Now
+                </button>
                 <% } %>
 
                 <button>
@@ -211,7 +209,7 @@
     <script src="https://checkout.stripe.com/checkout.js" defer></script>4
     <script>
         const StripePublicKey = '<%= stripe_key %>'
-        const AMU = parseInt('<%= Price  %>')*100
+        const AMU = parseInt('<%= Price  %>') * 100
         const CourseKey = '<%= doc.Key %>'
     </script>
     <script src="/assets/js/CoursePage.js" defer></script>

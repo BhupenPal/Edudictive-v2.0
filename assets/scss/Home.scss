@@ -710,11 +710,11 @@
 
                     @include media('<=xs') {
                         font-size: 1.6rem;
-                        text-align: justify;
+                        text-align: center;
                     }
                     @include media('<=sm') {
                         font-size: 2rem;
-                        text-align: justify;
+                        text-align: center;
                     }
                     @include media('<=md','>=sm') {
                         font-size: 1.4rem;

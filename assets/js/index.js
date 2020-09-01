@@ -233,12 +233,10 @@ function slider(x) {
     }
 }
 
-console.log()
 if(window.location.pathname.includes("courses") || window.location.pathname == "/"){
     let courses_wishlist = [];
-    local_storage = localStorage.getItem("myobj")
+    let local_storage = localStorage.getItem("myobj");
     if (localStorage.length > 0) {
-        local_courses = JSON.parse(local_storage)
         for (var i = 0; i < local_courses.length; i++) {
             courses_wishlist.push(local_courses[i])
         }

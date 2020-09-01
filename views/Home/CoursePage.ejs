@@ -84,21 +84,23 @@
                 <div class="completePSAnchor" onclick="JumpTo('#downloadCourse')">
                     Read Complete Program Structure
                 </div>
-                <div class="selectCourse">
-                    <select name="selectCourse" id="selectCourse">
-                    <option value="" selected disabled>Select Batch</option>
-                        <% doc.Batch.map(item => { %>
-                        <option value="<%= item %>"><%= item %></option>
-                        <% }) %>
-                    </select>
-                </div>
                 <div class="mobileRegButtons">
-                    <button>Get demo session</button>
-                    <% if(!user){ %>
-                    <button onclick="LinkHandle('/user/login')">Buy Now</button>
-                    <% } else {  %>
-                    <button onclick="BuyClicked()">Buy Now</button>
-                    <% } %>
+                    <div class="selectCourse">
+                        <select name="selectCourse" id="selectCourse">
+                        <option value="" selected disabled>Select Batch</option>
+                            <% doc.Batch.map(item => { %>
+                            <option value="<%= item %>"><%= item %></option>
+                            <% }) %>
+                        </select>
+                    </div>
+                    <div>
+                        <button>Get demo session</button>
+                        <% if(!user){ %>
+                        <button onclick="LinkHandle('/user/login')">Buy Now</button>
+                        <% } else {  %>
+                        <button onclick="BuyClicked()">Buy Now</button>
+                        <% } %>
+                    </div>
                 </div>
             </div>
         </div>
@@ -179,15 +181,15 @@
                     <span><%= doc.Discount %>%</span>
                 </h3>
             </div>
-            <div class="selectCourse">
-                <select name="selectCourse" id="selectCourse">
-                    <option value="" selected disabled>Select Batch</option>
-                    <% doc.Batch.map(item => { %>
-                    <option value="<%= item %>"><%= item %></option>
-                    <% }) %>
-                </select>
-            </div>
             <div class="registerButtons">
+                <div class="selectCourse">
+                    <select name="selectCourse" id="selectCourse">
+                        <option value="" selected disabled>Select Batch</option>
+                        <% doc.Batch.map(item => { %>
+                        <option value="<%= item %>"><%= item %></option>
+                        <% }) %>
+                    </select>
+                </div>
                 <% if(!user){ %>
                 <button onclick="LinkHandle('/user/login')">
                     <i class="fal fa-bags-shopping"></i>&ensp;Buy Now

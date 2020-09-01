@@ -293,7 +293,7 @@
                         font: 1.5rem $font-primary;
                         font-weight: bold;
             
-                        &:last-child{
+                        &:nth-child(2){
                             background-color: #00DC67;
                             color: white;
                             padding: 1.2rem 4rem;
@@ -303,6 +303,21 @@
                             padding: 1.2rem 4rem;
                             margin-right: 1rem;
                             background-color: white;
+                        }
+                    }
+                    .selectCourse{
+                        select{
+                            font: bold 1.5rem $font-primary;
+                            height: max-content;
+                            margin: 0 1rem 0 0;
+                            color: #4F4F4F;
+                            border-radius: 0.4rem;
+                            box-shadow: 6px 6px 20px #00000029;
+                            padding: 1.2rem 1rem;
+                            option{
+                                color: #4F4F4F !important;
+                                font-weight: bold;
+                            }
                         }
                     }
                 }
@@ -310,14 +325,18 @@
                     display: flex;
                     width: 100%;
                     margin: 2rem 0 0 0;
+                    div{
+                        display: flex;
+                        place-items: center;
+                    }
                     button{
                         border-radius: 0.4rem;
                         text-align: center;
                         box-shadow: 6px 6px 20px #00000029;
-                        font: 1.5rem $font-quinary;
+                        font: 1.3rem $font-quinary;
                         font-weight: bold;
             
-                        &:last-child{
+                        &:nth-child(2){
                             background-color: #00DC67;
                             color: white;
                             padding: 1.2rem 1.1rem;
@@ -329,36 +348,56 @@
                             background-color: white;
                         }
                     }
+                    .selectCourse{
+                        select{
+                            font: bold 1.3rem $font-quinary;
+                            height: max-content;
+                            margin-right: 1rem;
+                            border-radius: 0.4rem;
+                            box-shadow: 6px 6px 20px #00000029;
+                            padding: 1.2rem 1rem;
+                            option{
+                                font-weight: bold;
+                            }
+                        }
+                    }
                 }
                 @include media('<=sm','>xs'){
                     display: flex;
-                    width: 80%;
+                    width: 100%;
+                    flex-direction: column;
                     margin: 2rem auto 0 auto;
-                    button{
-                        border-radius: 0.4rem;
-                        text-align: center;
-                        box-shadow: 6px 6px 20px #00000029;
-                        font: 1rem Product-Sans;
-                        font-weight: bold;
-            
-                        &:last-child{
-                            background-color: #00DC67;
-                            color: white;
-                            padding: 1.2rem;
-                            width: 40%;
-                        }
-                        &:first-child{
-                            color: #4F4F4F;
-                            padding: 1.2rem;
-                            margin-right: 1rem;
-                            background-color: white;
-                            width: 60%;
+                    div{
+                        display: flex;
+                        flex-direction: row;
+                        button{
+                            margin: 1rem 0 0 0;
+                            border-radius: 0.4rem;
+                            text-align: center;
+                            box-shadow: 6px 6px 20px #00000029;
+                            font: 1rem Product-Sans;
+                            font-weight: bold;
+                
+                            &:nth-child(2){
+                                background-color: #00DC67;
+                                color: white;
+                                padding: 1.2rem;
+                                width: 40%;
+                            }
+                            &:first-child{
+                                color: #4F4F4F;
+                                padding: 1.2rem 0.5rem;
+                                margin-right: 1rem;
+                                background-color: white;
+                                width: 60%;
+                            }
                         }
                     }
                 }
                 @include media('<=xs'){
                     display: flex;
                     width: 100%;
+                    flex-direction: column;
                     margin: 2rem auto 0 auto;
                     button{
                         border-radius: 0.4rem;
@@ -367,23 +406,35 @@
                         font: 1rem Product-Sans;
                         font-weight: bold;
             
-                        &:last-child{
+                        &:nth-child(2){
                             background-color: #00DC67;
                             color: white;
                             padding: 1.2rem 1.1rem;
+                            margin-top: 0.5rem;
                         }
                         &:first-child{
                             color: #4F4F4F;
-                            padding: 1.2rem 3.5rem;
+                            padding: 1.2rem 3rem;
                             margin-right: 1rem;
                             background-color: white;
                         }
                     }
+                    select{
+                        width: 21.8rem;
+                        background-color: #e6f6ff;
+                        padding: 0.8rem 1.2rem;
+                        height: max-content;
+                    }
                 }
                 @include media('<=sp'){
+                    select{
+                        width: max-content;
+                        opacity: 1;
+                    }
                     button{
                         font-size: 0.85rem;
-                        &:last-child{
+                        margin-top: 1rem;
+                        &:nth-child(2){
                             padding: 1rem 1rem;
                             width: max-content;
                         }
@@ -411,7 +462,7 @@
         width: 80%;
         margin: 0 auto;
         padding: 2rem 0;
-        min-height: 679px; //To be changed
+        min-height: 724px; //To be changed
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -576,20 +627,34 @@
             font: 22px Product-Sans;
             font-weight: bold;
 
-            &:first-child{
+            &:nth-child(2){
                 background-color: #00DC67;
                 margin-bottom: 1rem;
                 color: white;
             }
-            &:last-child{
+            &:nth-child(3){
                 color: #4F4F4F;
                 background-color: white;
             }
         }
+        select{
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 20px 1rem;
+            font: 22px $font-quinary;
+            background-color: #e6f6ff;
+            border-radius: 1rem;
+            height: max-content;
+        }
+    }
+
+    .selectCourse{
+        display: block;
     }
     @include media('<=lg'){
         display: none;
     }
+
 }
 
 .striked{
@@ -706,19 +771,26 @@
 }
 
 .selectCourse{
+    display: none;
     select{
         height: 50px;
-        width: 300px;
-        background-color: white;
+        width: max-content;
+        color: black;
         margin: 0.5rem 0;
-        color: black !important;
-        opacity: 1 !important;
-        padding: 0 1rem !important;
-        border: none !important;
+        opacity: 1;
+        padding: 0 1rem;
+        border: none;
         box-shadow: 6px 6px 15px #00000029;
         font: 1.2rem $font-primary;
         transition: 0.2s;
         cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+        &::-ms-expand{
+            display: none;
+        }
 
         option{
             color: black !important;
@@ -727,11 +799,21 @@
         &:hover{
             opacity: 0.8 !important;
         }
-        @include media('<=sm'){
-            width: 100%;
-        }
-        @include media('>sm','<=md'){
-            width: 60%;
-        }
+    }
+    @include media('<=lg'){
+        display: block;
+    }
+}
+
+.courseContaier .mainScreen .contentBox {
+    select{
+        color: black;
+        opacity: 1;
+        padding: 0 1rem;
+        border: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
     }
 }

@@ -24,8 +24,10 @@
     }
 
     .skill-section{
+
         width: 80%;
-        margin: 2rem auto;
+        height: 80vh;
+        margin: 1rem auto;
         display: flex;
         justify-content: center;
 
@@ -89,7 +91,7 @@
 
                 @include media('<=xs') {
                     width: 100%;
-                    font-size: 4.5vw;
+                    font-size: 3.5vw;
                 }
             }
     
@@ -154,7 +156,12 @@
                     margin: 25rem auto 2rem auto;
                 }
 
-                @include media('<=xs') {
+                @include media('<=xs'){
+                    margin: 380px auto 3rem auto;
+                    width: 70%;
+                }
+
+                @include media('<=sp') {
                     margin: 100vw auto 3rem auto;
                     width: 70%;
                 }
@@ -205,7 +212,13 @@
                 height: 22rem;
             }
 
-            @include media('<=xs') {
+            @include media('<=xs'){
+                height: 360px;
+                width: 360px;
+                bottom: 2.5rem;
+            }
+
+            @include media('<=sp') {
                 width: 95vw;
                 height: 95vw;
                 transform: unset;
@@ -215,6 +228,7 @@
 
         @include media('<=xxl') {
             width: 100%;
+            height: unset;
         }
 
         @include media('<=xl') {

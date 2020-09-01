@@ -12,12 +12,23 @@ function amountscrolled() {
     var docheight = getDocHeight()
     var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
     var trackLength = docheight - winheight
-    var pctScrolled = Math.floor(scrollTop / trackLength * 100) // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
+    var boxheight = document.getElementsByClassName("mainScreen")[0].clientHeight
+    // var boxheightper = boxheight / trackLength * 100
+    var headerheight = document.querySelector(".subHeader").clientHeight
+    var pctScrolled = scrollTop
     let courseBox = document.querySelector(".courseBox")
-    if (pctScrolled >= 62) {
-        courseBox.style.cssText = `position: absolute; top: 116.5%`
+    if(window.matchMedia("(min-width: 1900px)").matches){
+        if (pctScrolled >= boxheight-55) {
+            courseBox.style.cssText = `position: absolute; top: ${boxheight + headerheight + 12}px`
+        } else {
+            courseBox.removeAttribute("style")
+        }
     } else {
-        courseBox.removeAttribute("style")
+        if (pctScrolled >= boxheight-40) {
+            courseBox.style.cssText = `position: absolute; top: ${boxheight + headerheight + 12}px`
+        } else {
+            courseBox.removeAttribute("style")
+        }
     }
 }
 

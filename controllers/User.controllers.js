@@ -158,7 +158,6 @@ Router.post("/register", (req, res, next) => {
                 res.end();
               } else {
                 const SecretToken = GenerateRandom(32);
-                console.log(Password)
                 Password = await HashSalt(Password)
 
                 const NewUser = new UserModel({
@@ -175,7 +174,7 @@ Router.post("/register", (req, res, next) => {
                   SecretToken
                 });
 
-                console.log(Password)
+                NewUser.save()
 
                 // send mail with defined transport object
                 let MailHTML = verificationMail(FirstName, SecretToken)

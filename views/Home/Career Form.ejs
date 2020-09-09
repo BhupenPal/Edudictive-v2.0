@@ -25,11 +25,10 @@
   <%-include("../Components/Header.ejs") %>
   <div class="trial-container">
     <div class="trial-image">
-      <img src="/assets/img/pngs/For Colleges.png" alt="" />
-      <img src="/assets/img/svgs/college-hero.svg" alt="" />
+      <img src="/assets/img/svgs/CareerImg.svg" alt="" />
     </div>
     <div class="trial-form">
-      <form method="POST" action="/book-free-trial/college">
+      <form method="POST" action="/careers/submit">
         <h1 style="color: #004E92;">Start your career with edudictive</h1>
         <input type="text" name="Name" placeholder="Full Name" required>
         <input type="text" name="Email" placeholder="Email ID" required>
@@ -48,9 +47,9 @@
           <option value="Data Science">Data Science</option>
           <option value="Finance">Finance</option>
         </select>
-        <button type="submit" class="reg-button">
+        <button type="submit" class="reg-button" style="margin-top: 10px;">
           <div class="loader"></div>
-          Book a class
+          Submit
         </button>
       </form>
     </div>

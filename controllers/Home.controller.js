@@ -9,6 +9,7 @@ const EventModel = require("../models/Event.model");
 const EventRegister = require("../models/EventRegister.model");
 const SchoolTrialModel = require('../models/SchoolTrial.model');
 const CollegeTrialModel = require('../models/CollegeTrial.model');
+const CareerModel = require('../models/Career.model');
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
@@ -49,6 +50,12 @@ Router.get("/event/:Key/:Name", (req, res, next) => {
 
 Router.get('/careers', (req, res, next) => {
     res.render('Home/Career Form')
+})
+
+Router.post('/careers/submit', (req, res, next) => {
+    new CareerModel(req.body).save().then(() => {
+        res.render('Home/Career Success')
+    })
 })
 
 Router.get("/about-us", (req, res, next) => {
@@ -165,15 +172,31 @@ Router.get("/workshops", (req, res, next) => {
 Router.get('/api/course-filter', async (req, res, next) => {
     const filterParam = { class: req.query.enquiry }
 
-    if(filterParam.class == '') {
+    if (filterParam.class == '') {
         const record = await CourseModel
-        .find({class: { $ne: "college" }})
-        .sort({ $natural: -1 });
+            .find({ $and: [{ class: { $ne: "college" } }, { CourseType: 'Course' }] })
+            .sort({ $natural: -1 });
         return res.json(record)
     } else {
         const record = await CourseModel
-        .find(filterParam)
-        .sort({ $natural: -1 });
+            .find({ $and: [filterParam, { CourseType: 'Course' }] })
+            .sort({ $natural: -1 });
+        return res.json(record)
+    }
+})
+
+Router.get('/api/workshop-filter', async (req, res, next) => {
+    const filterParam = { class: req.query.enquiry }
+
+    if (filterParam.class == '') {
+        const record = await CourseModel
+            .find({ $and: [{ class: { $ne: "college" } }, { CourseType: 'Workshop' }] })
+            .sort({ $natural: -1 });
+        return res.json(record)
+    } else {
+        const record = await CourseModel
+            .find({ $and: [{ filterParam }, { CourseType: 'Workshop' }] })
+            .sort({ $natural: -1 });
         return res.json(record)
     }
 })

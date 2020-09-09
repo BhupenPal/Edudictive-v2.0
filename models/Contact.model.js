@@ -19,7 +19,7 @@ const contactSchema = new mongoose.Schema({
     },
     Message: {
         type: String,
-        required: true
+        // required: true
     }
 }, {timestamps: true})
 

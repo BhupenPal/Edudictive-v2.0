@@ -1,7 +1,14 @@
 let ClassEnq = "";
+let cORw = '';
 
 const GradeSelector = (selected, request) => {
     const GradeDivs = document.querySelector('.sub-filter').children
+
+    if(window.location.href.includes('/courses')) {
+        cORw = 'course-filter'
+    } else {
+        cORw = 'workshop-filter'
+    }
     
     if (selected.innerHTML.includes('Grade')) {
         GradeDivs[0].style.border = '1px solid #fff'
@@ -24,7 +31,7 @@ const GradeSelector = (selected, request) => {
 
 function Ajax() {
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", `/api/course-filter?enquiry=${ClassEnq}`, true);
+    xhr.open("GET", `/api/${cORw}?enquiry=${ClassEnq}`, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.getResponseHeader("Content-Type", "application/json");
 

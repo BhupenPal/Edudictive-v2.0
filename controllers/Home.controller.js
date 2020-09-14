@@ -140,11 +140,11 @@ Router.get("/search-courses", (req, res, next) => {
             CourseType: 'Course'
         };
         CourseModel.find(filterParam, (err, doc) => {
-            res.render('Home/AllCourse', { doc })
+            res.render('Home/AllCourse', { doc, course: true })
         })
     } else {
         CourseModel.find({ CourseType: 'Course' }, (err, doc) => {
-            res.render('Home/AllCourse', { doc })
+            res.render('Home/AllCourse', { doc, course: true })
         })
     }
 
@@ -159,11 +159,11 @@ Router.get("/workshops", (req, res, next) => {
             CourseType: 'Workshop'
         };
         CourseModel.find(filterParam, (err, doc) => {
-            res.render('Home/AllCourse', { doc })
+            res.render('Home/AllCourse', { doc, course: false })
         })
     } else {
         CourseModel.find({ CourseType: 'Workshop' }, (err, doc) => {
-            res.render('Home/AllCourse', { doc })
+            res.render('Home/AllCourse', { doc, course: false })
         })
     }
 

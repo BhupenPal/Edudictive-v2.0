@@ -21,7 +21,13 @@
             <div class="wave wave2"></div>
             <div class="wave wave3"></div>
             <div class="wave wave4"></div>
-            <h1 class="PageHeadline">Training Programs @ Edudictive</h1>
+            <h1 class="PageHeadline">
+                <% if(course) { %>
+                    Training Programs @ Edudictive
+                <% } else { %>
+                    Workshops @ Edudictive
+                <% }%>
+            </h1>
         </section>
 
         <div class="School-College-Filter">

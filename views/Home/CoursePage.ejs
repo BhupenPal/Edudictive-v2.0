@@ -97,7 +97,7 @@
                     <div>
                         <button>Get demo session</button>
                         <% if(!user){ %>
-                        <button onclick="LinkHandle('/user/login')">Buy Now</button>
+                        <button onclick="validate()">Buy Now</button>
                         <% } else {  %>
                         <button onclick="BuyClicked()">Buy Now</button>
                         <% } %>
@@ -184,7 +184,7 @@
             </div>
             <div class="registerButtons">
                 <div class="selectCourse">
-                    <select name="selectCourse" id="selectCourse">
+                    <select name="selectCourse" id="selectCourse2">
                         <option value="" selected disabled>Select Batch</option>
                         <% doc.Batch.map(item => { %>
                         <option value="<%= item %>"><%= item %></option>
@@ -192,7 +192,7 @@
                     </select>
                 </div>
                 <% if(!user){ %>
-                <button onclick="LinkHandle('/user/login')">
+                <button onclick="validate()">
                     <i class="fal fa-bags-shopping"></i>&ensp;Buy Now
                 </button>
                 <% } else {  %>
@@ -215,6 +215,7 @@
         const AMU = parseInt('<%= Price  %>') * 100
         const CourseKey = '<%= doc.Key %>'
     </script>
+    <script src="/assets/js/dependecies/swal.js"></script>
     <script src="/assets/js/CoursePage.js" defer></script>
 </body>
 

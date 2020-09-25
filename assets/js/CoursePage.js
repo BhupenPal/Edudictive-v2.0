@@ -67,3 +67,24 @@ function BuyClicked() {
         currency: 'inr'
     })
 }
+
+function validate(){
+    let BranchSelect = document.getElementsByName("selectCourse")
+    let noValue = false;
+    if(BranchSelect[0].value == '' && BranchSelect[1].value == ''){
+        noValue = true;
+    } else {
+        noValue = false;
+    }
+    if(noValue){
+        Swal.fire({
+            position: "center",
+            icon: "error",
+            title: "Please select a batch first",
+            className: "SwalApperance",
+            showConfirmButton: false,
+            showCancelButton: true,
+            timer: 10000000,
+          });
+    }
+}

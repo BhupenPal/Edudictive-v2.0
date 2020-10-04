@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/all.min.css" />
     <link rel="stylesheet" href="/assets/css/Dashboard.css" />
     <link rel="stylesheet" href="/assets/css/newheader.css">
-    <title>Profile</title>
+    <title>Edudictive | Profile</title>
     <link rel="icon" href="/assets/img/icons/Logo.svg" />
 </head>
 
@@ -19,23 +19,31 @@
     <div class="dashboard-container">
         <div class="dash-navigation">
             <ul>
-                <li class="heads inactive-head">Profile</li>
-                <li class="heads inactive-head">My Programs</li>
-                <li class="heads inactive-head">Prefrences</li>
-                <li class="heads inactive-head">Community</li>
-                <li class="heads inactive-head">Help Center</li>
-                <li class="heads inactive-head">FAQ</li>
+                <li class="heads active-head">
+                    <a href="/user/dashboard" class="heads active-head">
+                        Profile
+                    </a>
+                </li>
+                <li class="heads inactive-head">
+                    <a href="/user/dashboard/programs" class="heads inactive-head">
+                        My Programs
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="mobile-dash-nav">
             <div class="mob-link-encl">
                 <ul>
-                    <li class="heads inactive-head">Profile</li>
-                    <li class="heads inactive-head">My Programs</li>
-                    <li class="heads inactive-head">Prefrences</li>
-                    <li class="heads inactive-head">Community</li>
-                    <li class="heads inactive-head">Help Center</li>
-                    <li class="heads inactive-head">FAQ</li>
+                    <li class="heads active-head">
+                        <a href="/user/dashboard" class="heads active-head">
+                            Profile
+                        </a>
+                    </li>
+                    <li class="heads inactive-head">
+                        <a href="/user/dashboard/programs" class="heads inactive-head">
+                            My Programs
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -58,28 +66,12 @@
                         <span class="det_sp_label">Registered Phone</span>
                         <span class="det_sp_content"><%= user.Phone %></span>
                     </div>
-                    <div class="pro-btns">
-                        <button>Edit Profile</button>
-                        <button>Update Password</button>
-                    </div>
                 </div>
                 <div class="profile-pic">
                     <img src="/assets/images/svgs/account.svg" />
                 </div>
             </div>
         </div>
-        <% if(user.isAdmin) { %>
-            <div class="dash-navigation">
-                <ul>
-                    <li class="heads inactive-head">Add Course</li>
-                    <li class="heads inactive-head">Export Data</li>
-                    <li class="heads inactive-head">Prefrences</li>
-                    <li class="heads inactive-head">Community</li>
-                    <li class="heads inactive-head">Help Center</li>
-                    <li class="heads inactive-head">FAQ</li>
-                </ul>
-            </div>
-        <% } %>
     </div>
     <%-include('../Components/Footer.ejs') %>
     <script src="/assets/js/index.js"></script>

@@ -1,16 +1,16 @@
 <header class="mainHeader">
     <div class="subHeader">
         <div class="HeaderLinks">
-            <a href="/" class="logoContainer">
+            <div class="logoContainer" onclick="LinkHandle('https://www.edudictive.in')" style="cursor: pointer;">
                 <img src="/assets/img/icons/Logo.svg" alt="">
                 <img src="/assets/img/icons/Logo Font Only.svg" alt="">
-            </a>
+            </div>
     
             <div class="menuContainer">
                 <ul>
                     <a href="/"><li>Home</li></a>
                     <a href="/search-courses"><li>Courses</li></a>
-                    <a href="/workshops"><li>Workshops</li></a>
+                    <a href="/events"><li>Events</li></a>
                     <a href="/edudictive-student-partner"><li>Student Partners</li></a>
                     <a href="/about-us"><li>About</li></a>
                     <span class="moreOptions"><li>
@@ -18,44 +18,44 @@
                         <div class="moreOptionDropDown">
                             <div class="uptrip"><div class="uptri"></div></div>
                             <a href="https://blogs.edudictive.in" target="__blank"><div class="moption">Blogs</div></a>
-                            <a href="/events"><div class="moption">Events</div></a>
-                            <!-- <div class="moption">Request a Session</div> -->
+                            <!-- <a href="/"><div class="moption">Community</div></a>
+                            <div class="moption">Request a Session</div> -->
                             <a href="/contact-us"><div class="moption">Contact</div></a>
                         </div>
                     </li></span>
                 </ul>
             </div>
-        </div> 
+        </div>
 
         <div class="clientControl">
             <div class="searchContainer">
-                <form action="search-courses" class="searchBox propertyBoxInitial">
-                    <input type="text" name="enquiry" placeholder="Search for programs">
+                <div class="searchBox propertyBoxInitial">
+                    <input type="text" placeholder="Search for programs">
                     <img class="crossimage" src="/assets/images/Cross.png" alt="">
-                </form>
-                <div class="searchIcon"><img src="/assets/images/svgs/search.svg" alt=""></div>
+                </div>
+                <div class="searchIcon"><img src="/assets/images/svgs/search.svg"></div>
             </div>
             <div class="userHandler">
+                <% if(!user) { %>
                 <div class="namedHandler">Log in</div>
                 <div class="slash"></div>
                 <div class="namedHandler">Sign up</div>
+                <% } else { %>
+                    <div class="nameHandler"><img src="/assets/images/svgs/account.svg"  style="margin-left: 40px;"></div>
+                <% } %>
                 <div class="controlSettings" data-state="unclicked">
                     <div class="controlLinks">
                        <div class="controlHead">
                           <% if(!user){ %>
                              Hey user !
                           <% } else { %>
-                             Hi <%= user.FirstName %>
+                             Hi <%= user.ufName %>
                           <% } %>
                        </div>
                        <div class="controlLinkContainer">
                           <ul>
                              <li><a href="/user/dashboard">My Profile</a></li>
                              <li><a href="/user/">My Courses</a></li>
-                             <!-- <li><a href="/user/">Prefrences</a></li>
-                             <li><a href="/">Community</a></li>
-                             <li><a href="/">Help Center</a></li>
-                             <li><a href="/faq">FAQ</a></li> -->
                           </ul>
                        </div>
                     </div>
@@ -87,14 +87,15 @@
                     </div>
                  </div>
             </div>
+        
         </div>
     </div>
 
     <div class="mobileSubHeader">
-        <a href="/" class="logoContainer">
+        <div class="logoContainer" onclick="LinkHandle('https://www.edudictive.in')">
             <img src="/assets/img/icons/Logo.svg" alt="">
             <img src="/assets/img/icons/Logo Font Only.svg" alt="">
-        </a>
+        </div>
 
         <div class="hamBurgerIcon">
             <div class="hamLine"></div>
@@ -104,30 +105,29 @@
 
         <div class="mobileMenu">
             <div class="mobileSearchContainer">
-                <form action="search-courses" class="mobile-search-input">
-                    <input type="text" placeholder="Search Programs" name="enquiry">
+                <div class="mobile-search-input">
+                    <input type="text" placeholder="Search Programs">
                     <img src="/assets/images/svgs/search.svg" alt="">
-                </form>
+                </div>
             </div>
             <div class="mobileSubMenu">
                 <div class="linkContainer">
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/search-courses">Courses</a></li>
-                        <li><a href="/workshops">Workshops</a></li>
-                        <li><a href="/events">Events</a></li>
-                        <li><a href="/edudictive-student-partner">Student Partners</a></li>
-                        <li><a href="/about-us">About</a></li>
-                        <!-- <li><span>More</span></li> -->
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Courses</a></li>
+                        <li><a href="">Events</a></li>
+                        <li><a href="">Student Partners</a></li>
+                        <li><a href="">About</a></li>
+                        <li><span>More</span></li>
                     </ul>
                 </div>
                 <div class="userLogoContainer">
-                    <div class="AccBorderDiv" onclick="LinkHandle('/user/login')">
+                    <div class="AccBorderDiv">
                         <img src="/assets/images/svgs/account.svg" alt="">
                     </div>
                     <div class="tabbtns">
-                        <button onclick="LinkHandle('/user/login')">Sign In</button>
-                        <button onclick="LinkHandle('/user/register')">Register</button>
+                        <button>Sign In</button>
+                        <button>Register</button>
                     </div>
                 </div>
             </div>

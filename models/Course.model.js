@@ -36,15 +36,8 @@ const courseSchema = new mongoose.Schema({
         enum: ['Online (Live)', 'Offline', 'Online & Offline'],
         required: true
     },
-    About: {
-        type: String,
-        required: true
-    },
+    About: [String],
     WhatULearn: [String],
-    StartDate: {
-        type: String,
-        required: true
-    },
     TimeFrame: {
         type: String,
         enum: ['Day', 'Week', 'Month', 'Year'],
@@ -54,16 +47,9 @@ const courseSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    Location: {
-        type: String,
-        required: true
-    },
     WhoShouldOpt : {
         type: String,
         required: true
-    },
-    EarlyBird: {
-        type: Boolean
     },
     WhatUGet: [String],
     Batch: [String],

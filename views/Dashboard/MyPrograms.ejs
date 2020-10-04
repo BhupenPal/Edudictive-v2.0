@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include('../Components/GoogleAnalytics.ejs') %>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/Dashboard.css" />
+    <link rel="stylesheet" href="/assets/css/newheader.css">
+    <link rel="stylesheet" href="/assets/css/Allcourse.css">
+    <title>Edudictive | Profile</title>
+    <link rel="icon" href="/assets/img/icons/Logo.svg" />
+</head>
+
+<body>
+    <%-include('../Components/Header.ejs') %>
+    <div class="dashboard-container">
+        <div class="dash-navigation">
+            <ul>
+                <li class="heads inactive-head">
+                    <a href="/user/dashboard" class="heads inactive-head">
+                        Profile
+                    </a>
+                </li>
+                <li class="heads active-head">
+                    <a href="/user/dashboard/programs" class="heads active-head">
+                        My Programs
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile-dash-nav">
+            <div class="mob-link-encl">
+                <ul>
+                    <li class="heads inactive-head">
+                        <a href="/user/dashboard" class="heads inactive-head">
+                            Profile
+                        </a>
+                    </li>
+                    <li class="heads active-head">
+                        <a href="/user/dashboard/programs" class="heads active-head">
+                            My Programs
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="profile-section allCourseWrapper">
+            <div class="CourseCardWrapper">
+                <% for(let i = 0; i < doc.length; i++) { %>
+                <div id="CourseCard<%= i %>" class="course-card" data-value="<%= i %>">
+                    <div class="date-wishlist"><span>Starting <%= doc[i].StartDate %></span><span><img
+                                onclick="heartanimate(this)" src="/assets/images/svgs/heart.svg" alt=""></span></div>
+                    <div class="course-name-wrapper">
+                        <span class="course-name"><%= doc[i].CourseName %></span>
+                        <span class="course-mode"><%= doc[i].Mode %> Training Program</span>
+                    </div>
+                    <div class="ratings">
+                        <div class="rating-stars" data-rating="<%= doc[i].Rating %>">
+                        </div>
+                        <span><%= doc[i].Rating %> (<%= doc[i].TotalReview %> Reviews)</span>
+                    </div>
+                    <div class="explore-course">
+                        <button onclick="LinkHandle('/course/<%= doc[i].Key %>/<%= doc[i].Title %>')">Learn More</button>
+                        <button onclick="LinkHandle('/course/<%= doc[i].Key %>/<%= doc[i].Title %>')">Register Now</button>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <%-include('../Components/Footer.ejs') %>
+    <script src="/assets/js/index.js"></script>
+</body>
+
+</html>

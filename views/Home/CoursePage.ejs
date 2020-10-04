@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <%-include('../Components/Header.ejs') %>
+    <%-include("../Components/Header.ejs") %>
     <div class="courseContaier">
         <div class="mainScreen">
             <div class="contentBox">
@@ -69,16 +69,14 @@
                     </div>
                     <div class="programCenterAndDate">
                         <div>
-                            <h3>Starts On</h3>
-                            <span><%= doc.StartDate %></span>
+                            <h3>Available Batches</h3>
+                            <% doc.Batch.map(item => { %>
+                                <span><%= item %></span><br>
+                            <% }) %>
                         </div>
                         <div>
                             <h3>Program Length</h3>
                             <span><%= doc.Duration %></span>
-                        </div>
-                        <div>
-                            <h3>Location</h3>
-                            <span><%= doc.Location %></span>
                         </div>
                     </div>
                 </div>
@@ -97,7 +95,7 @@
                     <div>
                         <button>Get demo session</button>
                         <% if(!user){ %>
-                        <button onclick="validate()">Buy Now</button>
+                        <button onclick="LinkHandle('/user/login')">Buy Now</button>
                         <% } else {  %>
                         <button onclick="BuyClicked()">Buy Now</button>
                         <% } %>
@@ -123,8 +121,10 @@
             <div class="mob-ProgramDetails">
                 <div class="programCenterAndDate">
                     <div>
-                        <h3>Starts On</h3>
-                        <span><%= doc.StartDate %></span>
+                        <h3>Available Batches</h3>
+                        <% doc.Batch.map(item => { %>
+                            <span><%= item %></span><br>
+                        <% }) %>
                     </div>
                     <div>
                         <h3>Program Length</h3>
@@ -192,7 +192,7 @@
                     </select>
                 </div>
                 <% if(!user){ %>
-                <button onclick="validate()">
+                <button onclick="LinkHandle('/user/login')">
                     <i class="fal fa-bags-shopping"></i>&ensp;Buy Now
                 </button>
                 <% } else {  %>

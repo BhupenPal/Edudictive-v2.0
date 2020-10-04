@@ -10,6 +10,7 @@ const EventRegister = require("../models/EventRegister.model");
 const SchoolTrialModel = require('../models/SchoolTrial.model');
 const CollegeTrialModel = require('../models/CollegeTrial.model');
 const CareerModel = require('../models/Career.model');
+const CourseRegister = require('../models/CourseRegister');
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
@@ -121,7 +122,21 @@ Router.post("/purchase-course", (req, res, next) => {
                     source: req.body.stripeTokenId,
                     currency: 'inr'
                 }).then(() => {
-                    res.status(200).json({ message: 'Successfully purchased items' })
+                    new CourseRegister({
+                        UserID: req.user._id,
+                        FirstName: req.user.FirstName,
+                        LastName: req.user.LastName,
+                        Email: req.user.Email,
+                        Phone: req.user.Phone,
+                        Role: req.user.Role,
+                        InstituteName: req.user.Institute,
+                        CourseKey: doc.Key,
+                        CourseName: doc.Title
+                    })
+                        .save()
+                        .then(() => {
+                            res.status(200).json({ message: 'Successfully purchased items' })
+                        })
                     //Add course herre fore profile
                 }).catch((err) => {
                     res.status(500).josn({ message: 'Failed' })

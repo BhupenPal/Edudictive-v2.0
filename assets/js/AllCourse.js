@@ -26,7 +26,7 @@ const GradeSelector = (selected, request) => {
     }
 
     ClassEnq = request
-    Ajax()
+    // Ajax()
 }
 
 function Ajax() {
